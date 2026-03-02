@@ -55,6 +55,14 @@ class StoryWorkflowService:
         # For DB, we usually store the GCS key/URL. Here returning relative path as "key".
         return relative_path
 
+    def save_json(self, data, story_id, category, filename):
+        full_path, relative_path = self.get_storage_path(story_id, category, filename)
+        
+        with open(full_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4, default=str)
+        
+        return relative_path
+
     async def generate_full_story(self, synopsis: str, style: str):
         logger.info("Starting story generation...")
         
@@ -71,6 +79,8 @@ class StoryWorkflowService:
         self.db.commit()
         self.db.refresh(story)
         
+        self.save_json(outline_data, story.id, "", "story_outline.json")
+
         # 2. Generate Base Characters
         await self._generate_characters(story.id, outline_data.get("main_characters", []), style)
         
@@ -147,6 +157,8 @@ class StoryWorkflowService:
                 chapter.chapter_cid, chapter.title, chapter.plot_summary, style
             )
             
+            self.save_json(scene_breakdown, story_id, "chapters", f"{chapter.chapter_cid}_scenes.json")
+
             for j, scene_data in enumerate(scene_breakdown.get("scenes", [])):
                 scene = Scene(
                     chapter_id=chapter.id,
@@ -173,6 +185,8 @@ class StoryWorkflowService:
             scene.scene_sid, scene.title, scene.scene_summary, scene.primary_location, char_names, style
         )
         
+        self.save_json(detailed_scene_data, scene.chapter.story_id, "scenes", f"{scene.scene_sid}_detailed.json")
+
         # Save detailed content
         scene.initial_location_name = detailed_scene_data.get("initial_location_name")
         scene.initial_location_description = detailed_scene_data.get("initial_location_description")
