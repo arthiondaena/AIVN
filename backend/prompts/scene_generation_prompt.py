@@ -16,7 +16,7 @@ You must output a strictly structured JSON response conforming to the provided s
     - A sequence of `DialogueLine` objects.
     - Each line must have a `dialogue_id` (e.g., 's1_line1'), `speaker`, `text`, and `tone`.
     - `text`: The actual dialogue. Can include markup like [sigh].
-    - `character_pose_expression`: Optional pose description (e.g., 'hands on hips, pouting').
+    - `character_pose_expression`: Optional pose description. **IMPORTANT**: For each character, you must use one of the pre-defined poses provided in the character information. Use "Narrator" if speaker is Narrator.
     - `stage_action`: Optional action (enter, exit, screen_shake, flash).
     - `trigger_sfx`: Optional sound effect description.
 

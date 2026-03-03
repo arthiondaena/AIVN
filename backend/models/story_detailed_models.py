@@ -33,3 +33,8 @@ class SceneElaborator(BaseModel):
     choices_and_branches: Optional[List[StoryBranch]] = Field(None, description="Player choices available at the end of the main dialogue.")
 
     mid_scene_location_changes: Optional[List[LocationChange]] = Field(None, description="Background changes occurring during the main dialogue.")
+
+class CharacterPoseSet(BaseModel):
+    character_name: str = Field(..., description="The name of the character.")
+    poses: List[str] = Field(..., description="List of 15-30 unique poses and expressions (e.g., 'Neutral, standing', 'Hands on hips, angry', 'Blushing, looking away').")
+

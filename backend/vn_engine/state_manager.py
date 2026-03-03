@@ -79,6 +79,7 @@ class SceneManager:
             self.state.current_bgm = content.get("initial_bgm")
         
         # Reset dialogue counters
+        self.state.character_states = {}
         self.state.current_dialogue_index = -1
         self.state.is_waiting_for_choice = False
         self.state.current_branch_dialogue = None
@@ -129,16 +130,33 @@ class SceneManager:
                 current_line = main_dialogue[self.state.current_dialogue_index]
 
         if current_line:
-            frame["dialogue"] = current_line
             # Update character state based on this line
             speaker = current_line.get("speaker")
             pose = current_line.get("character_pose_expression")
             if speaker and speaker != "Narrator":
-                if pose:
-                    self.state.character_states[speaker] = pose
-                else:
-                    # Keep previous pose or default? 
-                    pass
+                # Only keep the current speaker in character_states
+                self.state.character_states = {speaker: pose or "default"}
+            else:
+                self.state.character_states = {}
+
+        frame = {
+            "scene_id": self.state.current_scene_id,
+            "background": self.state.current_background,
+            "bgm": self.state.current_bgm,
+            "characters": self.state.character_states,
+            "is_choice": self.state.is_waiting_for_choice,
+            "dialogue": current_line,
+            "choices": []
+        }
+
+        # If waiting for choice, return the choices
+        if self.state.is_waiting_for_choice:
+            choices_data = content.get("choices_and_branches", [])
+            frame["choices"] = [
+                {"index": i, "text": c.get("choice_text")} 
+                for i, c in enumerate(choices_data)
+            ]
+            return frame
         
         return frame
 
@@ -171,9 +189,7 @@ class SceneManager:
         main_dialogue = content.get("main_dialogue", [])
         self.state.current_dialogue_index += 1
 
-        # Check for mid-scene background changes triggered *before* this new line?
-        # The model says "trigger_after_dialogue_id". 
-        # So we should check if the PREVIOUS line triggered a change.
+        # Check for mid-scene background changes
         if self.state.current_dialogue_index > 0:
             prev_line_index = self.state.current_dialogue_index - 1
             if prev_line_index < len(main_dialogue):
@@ -187,7 +203,7 @@ class SceneManager:
         choices = content.get("choices_and_branches", [])
         if choices:
             self.state.is_waiting_for_choice = True
-            # We might want to step back the index so get_current_frame shows the last line + choices
+            # Step back the index so get_current_frame shows the last line + choices
             self.state.current_dialogue_index -= 1 
             return self.get_current_frame()
         

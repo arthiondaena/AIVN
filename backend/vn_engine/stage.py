@@ -159,22 +159,44 @@ class StageDirector:
             char.set_visible(False)
             
         char_states = frame_state.get("characters", {})
+        dialogue = frame_state.get("dialogue")
+        current_speaker = dialogue.get("speaker") if dialogue else None
+
         for name, pose in char_states.items():
+            # Only show if they are the speaker (unless it's a special scene setup, 
+            # but user requested to enforce only the character talking)
+            if current_speaker and name != current_speaker:
+                continue
+
             if name not in self.characters:
                 self.characters[name] = Character(name, self.asset_loader)
-                # We need to add sprite to render after creation
-                # But set_pose creates the sprite
             
             char = self.characters[name]
-            # Try to get path
-            # The key in assets often matches character name + "_" + pose or similar
-            # For this simple engine, let's assume assets map keys are roughly predictable or we search
-            # Actually, `loader.get_asset_path` takes (type, key).
-            # We might need to look up keys better.
-            # Simplified: Use name as key, or construct key.
-            # Warning: This is heuristic.
             
-            char.set_pose(pose, None) # Asset logic inside Character needs improvement for real paths
+            # Construct key for pose lookup: "Name_PoseDescription"
+            pose_key = f"{name}_{pose}"
+            pose_path = self.story_loader.get_asset_path("poses", pose_key)
+            
+            # Fallback 1: If pose not found, try base character image
+            if not pose_path:
+                pose_path = self.story_loader.get_asset_path("characters", name)
+            
+            # Fallback 2: Try matching with underscores
+            if not pose_path:
+                normalized_name = name.replace(" ", "_")
+                pose_path = self.story_loader.get_asset_path("characters", normalized_name)
+                if not pose_path:
+                    pose_path = self.story_loader.get_asset_path("characters", f"{normalized_name}_base")
+
+            # Fallback 3: Search for any asset starting with character name
+            if not pose_path:
+                char_assets = self.story_loader.data.get("assets", {}).get("characters", {})
+                for k, v in char_assets.items():
+                    if k.lower().startswith(name.lower().split()[0]): # Match by first name
+                        pose_path = v
+                        break
+
+            char.set_pose(pose, pose_path)
             char.set_position_name("center", self.screen_size[0]) # Default center for now
             char.set_visible(True)
             
@@ -208,18 +230,41 @@ class StageDirector:
             self.name_text_sprite.set_image(name_surf)
             # Position above textbox
             tb_rect = self.textbox_sprite.rect
-            self.name_text_sprite.set_position((tb_rect.x + 20, tb_rect.y - 40))
+            self.name_text_sprite.set_position((tb_rect.x + 20, tb_rect.y - 45))
             self.name_text_sprite.visible = True
         else:
             self.name_text_sprite.visible = False
 
-        # Render Dialogue
+        # Render Dialogue with word wrap
         if text:
-            # Simple word wrap or just single line for prototype
-            text_surf = font.render(text, True, (255, 255, 255))
-            self.dialogue_text_sprite.set_image(text_surf)
             tb_rect = self.textbox_sprite.rect
-            self.dialogue_text_sprite.set_position((tb_rect.x + 20, tb_rect.y + 20))
+            max_width = tb_rect.width - 60
+            words = text.split(' ')
+            lines = []
+            current_line = []
+            
+            for word in words:
+                test_line = ' '.join(current_line + [word])
+                w, _ = font.size(test_line)
+                if w <= max_width:
+                    current_line.append(word)
+                else:
+                    lines.append(' '.join(current_line))
+                    current_line = [word]
+            if current_line:
+                lines.append(' '.join(current_line))
+            
+            # Create a combined surface for all lines
+            line_height = font.get_linesize()
+            total_height = max(1, line_height * len(lines))
+            combined_surf = pygame.Surface((max_width, total_height), pygame.SRCALPHA)
+            
+            for i, line in enumerate(lines):
+                line_surf = font.render(line, True, (255, 255, 255))
+                combined_surf.blit(line_surf, (0, i * line_height))
+                
+            self.dialogue_text_sprite.set_image(combined_surf)
+            self.dialogue_text_sprite.set_position((tb_rect.x + 30, tb_rect.y + 25))
             self.dialogue_text_sprite.visible = True
         else:
             self.dialogue_text_sprite.visible = False

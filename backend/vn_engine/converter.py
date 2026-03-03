@@ -1,13 +1,20 @@
 import json
 import os
-import glob
+import random
 from pathlib import Path
 from typing import Dict, Any, List, Optional
+from sqlalchemy import select
+from sqlalchemy.orm import Session
+
+from core.database import SessionLocal
+from core.orm import Story, Chapter, Scene, Character, CharacterPose, Background
 
 class StoryConverter:
     def __init__(self, story_id: str, base_output_dir: str = "backend/services/output"):
-        self.story_id = story_id
+        self.story_id = int(story_id) # Ensure int for DB lookup
         self.base_dir = Path(base_output_dir) / str(story_id)
+        self.db: Session = SessionLocal()
+        
         self.screenplay: Dict[str, Any] = {
             "metadata": {},
             "assets": {
@@ -20,126 +27,201 @@ class StoryConverter:
                 "chapters": []
             }
         }
+        
+        # Cache for audio files found on disk
+        self.audio_files: List[str] = []
 
     def load_json(self, path: Path) -> Optional[Dict[str, Any]]:
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
-            print(f"Warning: File not found: {path}")
+            # print(f"Warning: File not found: {path}") # Reduce noise
             return None
         except json.JSONDecodeError:
             print(f"Error: Invalid JSON in {path}")
             return None
 
-    def scan_assets(self, asset_type: str, extensions: List[str]):
-        asset_dir = self.base_dir / asset_type
-        if not asset_dir.exists():
-            return
-
-        for ext in extensions:
-            for file_path in asset_dir.glob(f"*{ext}"):
-                # Key is the filename without extension, or potentially part of the filename
-                # For characters/backgrounds, using filename (minus ext) as key seems appropriate
-                # For audio, filename matches dialogue_id presumably
-                key = file_path.stem
-                # Store relative path from base_dir for portability
-                relative_path = file_path.relative_to(self.base_dir).as_posix()
-                self.screenplay["assets"][asset_type][key] = relative_path
-
-    def build_metadata(self):
-        outline_path = self.base_dir / "story_outline.json"
-        outline = self.load_json(outline_path)
-        if not outline:
-            return
+    def fetch_metadata(self):
+        story = self.db.get(Story, self.story_id)
+        if not story:
+            print(f"Error: Story {self.story_id} not found in database.")
+            return False
 
         self.screenplay["metadata"] = {
-            "title": outline.get("title", ""),
-            "logline": outline.get("logline", ""),
-            "author": "AI", # Placeholder or extract if available
+            "title": story.title,
+            "logline": story.logline,
+            "author": "AI",
             "version": "1.0",
-            "main_characters": outline.get("main_characters", [])
+            # We could fetch main characters names here if needed, but the scene processing handles details
+            "style": story.style
         }
-        return outline
+        return True
 
-    def build_story(self, outline: Dict[str, Any]):
-        chapters_meta = outline.get("main_chapters", [])
+    def fetch_assets(self):
+        print("Fetching assets from database...")
         
-        for index, chapter_meta in enumerate(chapters_meta):
-            chapter_id = chapter_meta.get("chapter_id")
-            chapter_title = chapter_meta.get("title")
+        # 1. Characters and Poses
+        characters = self.db.scalars(
+            select(Character).where(Character.story_id == self.story_id)
+        ).all()
+        
+        for char in characters:
+            # Store base image if available
+            if char.base_image_gcs_path:
+                # Key: Character Name (sanitized)
+                key = char.name
+                self.screenplay["assets"]["characters"][key] = char.base_image_gcs_path
             
-            print(f"Processing chapter: {chapter_id}")
+            # Store Poses
+            for pose in char.poses:
+                # Key: "CharacterName_PoseDescription" or just unique ID?
+                # The engine likely needs to look up by (Character, Expression)
+                # Let's use a composite key or a nested structure if the engine supports it.
+                # Based on previous converter, it was flat key -> path.
+                # Let's stick to flat key: "Name_Pose"
+                # But wait, the detailed scene JSON has "character_pose_expression" which is the description.
+                # So we need a way to map (Name, PoseDescription) -> Path.
+                
+                # Currently the engine might expect "Name_Expression" keys in assets['poses']?
+                # Let's map: "Name_PoseDescription" -> Path
+                pose_key = f"{char.name}_{pose.pose_description}"
+                self.screenplay["assets"]["poses"][pose_key] = pose.image_gcs_path
 
+        # 2. Backgrounds
+        backgrounds = self.db.scalars(
+            select(Background).where(Background.story_id == self.story_id)
+        ).all()
+        
+        for bg in backgrounds:
+            # Key: Background Name
+            self.screenplay["assets"]["backgrounds"][bg.name] = bg.image_gcs_path
+
+        # 3. Audio (Scan directory)
+        audio_dir = self.base_dir / "audio"
+        if audio_dir.exists():
+            for file_path in audio_dir.glob("*.wav"): # Scan for wav, maybe mp3 too
+                relative_path = file_path.relative_to(self.base_dir).as_posix()
+                self.audio_files.append(relative_path)
+                # Also add to assets map for reference by filename
+                self.screenplay["assets"]["audio"][file_path.name] = relative_path
+            
+            # Also scan mp3/ogg if needed
+            for ext in ["*.mp3", "*.ogg"]:
+                 for file_path in audio_dir.glob(ext):
+                    relative_path = file_path.relative_to(self.base_dir).as_posix()
+                    self.audio_files.append(relative_path)
+                    self.screenplay["assets"]["audio"][file_path.name] = relative_path
+
+    def build_story(self):
+        print("Building story structure from database...")
+        
+        # Fetch chapters
+        chapters = self.db.scalars(
+            select(Chapter)
+            .where(Chapter.story_id == self.story_id)
+            .order_by(Chapter.sequence_number)
+        ).all()
+        
+        for chapter in chapters:
+            print(f"Processing chapter: {chapter.title}")
+            
             chapter_data = {
-                "id": chapter_id,
-                "title": chapter_title,
-                "order": index + 1,
+                "id": chapter.chapter_cid,
+                "title": chapter.title,
+                "order": chapter.sequence_number,
                 "scenes": []
             }
-
-            # Load chapter scenes list
-            chapter_scenes_path = self.base_dir / "chapters" / f"{chapter_id}_scenes.json"
-            chapter_scenes_data = self.load_json(chapter_scenes_path)
-
-            if chapter_scenes_data and "scenes" in chapter_scenes_data:
-                for scene_meta in chapter_scenes_data["scenes"]:
-                    scene_id = scene_meta.get("scene_id")
-                    print(f"  Processing scene: {scene_id}")
+            
+            # Fetch Scenes
+            scenes = self.db.scalars(
+                select(Scene)
+                .where(Scene.chapter_id == chapter.id)
+                .order_by(Scene.sequence_number)
+            ).all()
+            
+            for scene in scenes:
+                print(f"  Processing scene: {scene.title}")
+                
+                # Construct Scene Content
+                # The Scene object has JSON fields: dialogue_content, choices_content, location_changes
+                
+                # We need to structure this into the "content" block the engine expects
+                # If we have detailed content in DB, use it.
+                
+                content = {}
+                if scene.dialogue_content:
+                    # 1. Main Dialogue
+                    content["main_dialogue"] = scene.dialogue_content
                     
-                    scene_entry = {
-                        "id": scene_id,
-                        "title": scene_meta.get("title"),
-                        "summary": scene_meta.get("scene_summary"), # Keep summary at top level for easy access
-                        "content": None
+                    # Inject Random Audio if missing
+                    # "Match it with a random audio file"
+                    if self.audio_files:
+                        for line in content.get("main_dialogue", []):
+                            # If audio_id or file not present, assign random
+                            if "audio_asset" not in line: 
+                                # Use a simple hash or random choice? User said "random".
+                                random_audio = random.choice(self.audio_files)
+                                line["audio_asset"] = random_audio 
+                                # Note: "audio_asset" should be the key in assets['audio'] or the path?
+                                # Usually keys. But our audio keys are filenames.
+                                # Let's use the filename as the key.
+                                line["audio_key"] = Path(random_audio).name
+
+                    # 2. Choices
+                    if scene.choices_content:
+                        content["choices_and_branches"] = scene.choices_content
+                        
+                    # 3. Location Changes
+                    if scene.location_changes:
+                        content["mid_scene_location_changes"] = scene.location_changes
+                    
+                    # 4. Initial State
+                    content["initial_location_name"] = scene.initial_location_name
+                    content["initial_location_description"] = scene.initial_location_description
+                    content["initial_bgm"] = scene.initial_bgm
+
+                else:
+                    # Fallback to summary if no detailed content
+                    content = {
+                        "text": scene.scene_summary,
+                        "is_placeholder": True
                     }
 
-                    # Try to load detailed scene
-                    detailed_scene_path = self.base_dir / "scenes" / f"{scene_id}_detailed.json"
-                    detailed_scene = self.load_json(detailed_scene_path)
-
-                    if detailed_scene:
-                        scene_entry["content"] = detailed_scene
-                    else:
-                        print(f"    Detailed scene not found for {scene_id}, using placeholder.")
-                        scene_entry["content"] = {
-                            "scene_id": scene_id,
-                            "text": scene_meta.get("scene_summary"),
-                            "is_placeholder": True
-                        }
-
-                    chapter_data["scenes"].append(scene_entry)
+                scene_entry = {
+                    "id": scene.scene_sid,
+                    "title": scene.title,
+                    "summary": scene.scene_summary,
+                    "content": content
+                }
+                
+                chapter_data["scenes"].append(scene_entry)
             
             self.screenplay["story"]["chapters"].append(chapter_data)
 
     def convert(self):
-        print(f"Starting conversion for story {self.story_id}...")
+        print(f"Starting database conversion for story {self.story_id}...")
         
-        # 1. Build Metadata
-        outline = self.build_metadata()
-        if not outline:
-            print("Failed to load story outline. Aborting.")
+        if not self.fetch_metadata():
             return
 
-        # 2. Scan Assets
-        self.scan_assets("characters", [".png", ".jpg", ".webp"])
-        self.scan_assets("backgrounds", [".png", ".jpg", ".webp"])
-        self.scan_assets("audio", [".wav", ".mp3", ".ogg"])
-        self.scan_assets("poses", [".png", ".jpg", ".webp"])
-
-        # 3. Build Story Structure
-        self.build_story(outline)
-
-        # 4. Save Screenplay
+        self.fetch_assets()
+        self.build_story()
+        
+        # Save Screenplay
         output_path = self.base_dir / "screenplay.json"
+        
+        # Ensure directory exists (it should if story exists)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(self.screenplay, f, indent=2)
+            json.dump(self.screenplay, f, indent=2, default=str)
         
         print(f"Screenplay generated at: {output_path}")
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Convert story files to screenplay.json")
+    parser = argparse.ArgumentParser(description="Convert story from DB to screenplay.json")
     parser.add_argument("story_id", help="ID of the story to convert")
     parser.add_argument("--base_dir", default="backend/services/output", help="Base directory for story outputs")
     

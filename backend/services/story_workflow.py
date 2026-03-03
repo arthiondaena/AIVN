@@ -13,6 +13,7 @@ from utils.voices_list import male as male_voices, female as female_voices
 from utils.removebg import remove_background_v2_batch
 from PIL import Image
 import io
+from thefuzz import process
 
 logger = logging.getLogger(__name__)
 
@@ -133,6 +134,27 @@ class StoryWorkflowService:
             self.db.commit() 
             self.db.refresh(character)
             
+            # Add base image as the first pose
+            if image_path:
+                base_pose = CharacterPose(
+                    character_id=character.id,
+                    pose_description="Neutral, standing",
+                    image_gcs_path=image_path
+                )
+                self.db.add(base_pose)
+                self.db.commit()
+
+            # Generate the list of poses for this character
+            logger.info(f"Generating pose list for {character.name}...")
+            pose_set = await self.genai_client.generate_character_pose_list(
+                character.name, character.role, character.description, style
+            )
+            
+            # Pre-generate all poses
+            for pose_desc in pose_set.get("poses", []):
+                logger.info(f"Pre-generating pose: {pose_desc} for {character.name}")
+                await self._get_or_create_character_pose(character, pose_desc, style, story_id)
+
             self.character_voices[character.id] = selected_voice
             logger.info(f"Assigned voice {selected_voice} to {character.name}")
 
@@ -178,11 +200,21 @@ class StoryWorkflowService:
     async def _elaborate_scene(self, scene: Scene, style: str):
         logger.info(f"Elaborating scene {scene.scene_sid}...")
         
-        story_chars = self.db.scalars(select(Character).where(Character.story_id == scene.chapter.story_id)).all()
-        char_names = [c.name for c in story_chars]
+        story_chars = self.db.scalars(
+            select(Character).where(Character.story_id == scene.chapter.story_id)
+        ).all()
+        
+        # Format character information with available poses
+        char_info_list = []
+        for char in story_chars:
+            poses = [p.pose_description for p in char.poses]
+            char_info = f"Name: {char.name}\nRole: {char.role}\nAvailable Poses: {', '.join(poses)}"
+            char_info_list.append(char_info)
+        
+        characters_info = "\n\n".join(char_info_list)
         
         detailed_scene_data = await self.genai_client.elaborate_scene(
-            scene.scene_sid, scene.title, scene.scene_summary, scene.primary_location, char_names, style
+            scene.scene_sid, scene.title, scene.scene_summary, scene.primary_location, characters_info, style
         )
         
         self.save_json(detailed_scene_data, scene.chapter.story_id, "scenes", f"{scene.scene_sid}_detailed.json")
@@ -219,7 +251,8 @@ class StoryWorkflowService:
                 if character:
                     if pose:
                         # Pass story_id to help with storage path
-                        await self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id)
+                        # Use existing poses only
+                        await self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id, create_if_missing=False)
                     
                     # 7. Voice selection
                     if character.voice_id:
@@ -245,10 +278,7 @@ class StoryWorkflowService:
             except Exception as e:
                 logger.error(f"Failed to generate audio for {speaker_name}: {e}")
 
-    async def _get_or_create_character_pose(self, character: Character, pose_description: str, style: str, story_id: int):
-        # Calculate embedding for the pose description
-        embedding_list = await self.genai_client.get_embedding(pose_description)
-        
+    async def _get_or_create_character_pose(self, character: Character, pose_description: str, style: str, story_id: int, create_if_missing: bool = True):
         # Check for exact match first
         existing_exact = self.db.scalars(
              select(CharacterPose).where(CharacterPose.character_id == character.id, CharacterPose.pose_description == pose_description)
@@ -257,17 +287,27 @@ class StoryWorkflowService:
         if existing_exact:
             return existing_exact
 
-        # Check for similar pose (cosine distance < 0.2)
-        # We need to use the cosine distance operator
+        # Check for similar pose using fuzzy match
+        all_poses = self.db.scalars(
+            select(CharacterPose).where(CharacterPose.character_id == character.id)
+        ).all()
         
-        similar_pose = self.db.scalars(
-            select(CharacterPose)
-            .where(CharacterPose.character_id == character.id)
-            .order_by(CharacterPose.embedding.cosine_distance(embedding_list))
-            .limit(1)
-        ).first()
-        
-        # For this implementation, let's just create new if not exact match.
+        if all_poses:
+            pose_dict = {p.pose_description: p for p in all_poses}
+            best_match_desc, score = process.extractOne(pose_description, pose_dict.keys())
+            
+            # If we are NOT allowed to create new poses, return the best match
+            if not create_if_missing:
+                logger.info(f"Fuzzy matching: '{pose_description}' -> '{best_match_desc}' (score: {score})")
+                return pose_dict[best_match_desc]
+            
+            # If allowed to create but high score match exists (> 90), reuse it
+            if score > 90:
+                logger.info(f"Fuzzy matching (high score): '{pose_description}' -> '{best_match_desc}' (score: {score})")
+                return pose_dict[best_match_desc]
+
+        if not create_if_missing:
+             return None
             
         # Get base image path for reference (if local file exists)
         reference_path = None
@@ -287,10 +327,12 @@ class StoryWorkflowService:
             filename = f"{base_filename}.png"
             # story_id/poses/filename
             path = self.save_image(image, story_id, "poses", filename)
+
+            pil_image = Image.open(io.BytesIO(image.image_bytes))
             
             # Create transparent version
             try:
-                transparent_images = remove_background_v2_batch([image])
+                transparent_images = remove_background_v2_batch([pil_image])
                 if transparent_images:
                     trans_filename = f"{base_filename}_transparent.png"
                     self.save_image(transparent_images[0], story_id, "poses", trans_filename)
@@ -300,8 +342,7 @@ class StoryWorkflowService:
             new_pose = CharacterPose(
                 character_id=character.id,
                 pose_description=pose_description,
-                image_gcs_path=path,
-                embedding=embedding_list
+                image_gcs_path=path
             )
             self.db.add(new_pose)
             self.db.commit()
@@ -343,5 +384,6 @@ if __name__ == "__main__":
     workflow = StoryWorkflowService(db)
     
     synopsis = "In a world where dreams can be shared, a young dreamer discovers they can enter others' dreams and must navigate a surreal landscape to save their loved ones."
+    synopsis = "Create a simple 1 chapter story with 2 main characters. The story should be a romantic comedy set in a high school. The main characters are a shy bookworm and a popular athlete who are forced to work together on a school project. They start off disliking each other but eventually fall in love. Include some humorous situations and heartfelt moments."
     style = "anime"
     asyncio.run(workflow.generate_full_story(synopsis, style))

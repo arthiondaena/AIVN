@@ -31,7 +31,7 @@ class GameEngine:
         self.fps = settings.get_frames_per_second()
         
         # Initialize subsystems
-        self.asset_loader = AssetLoader(str(Path(screenplay_path).parent))
+        self.asset_loader = AssetLoader("output")
         self.story_loader = StoryLoader(screenplay_path)
         self.render = Render(self.screen)
         

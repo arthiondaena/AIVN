@@ -2,7 +2,6 @@ from typing import List, Optional
 from sqlalchemy import String, Integer, ForeignKey, Text, JSON, DateTime
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
-from pgvector.sqlalchemy import Vector
 
 class Base(DeclarativeBase):
     pass
@@ -58,7 +57,6 @@ class CharacterPose(Base):
     character_id: Mapped[int] = mapped_column(ForeignKey("characters.id"))
     pose_description: Mapped[str] = mapped_column(Text)
     image_gcs_path: Mapped[str] = mapped_column(String(512))
-    embedding: Mapped[Vector] = mapped_column(Vector(768))
 
     character: Mapped["Character"] = relationship(back_populates="poses")
 

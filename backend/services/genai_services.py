@@ -16,8 +16,9 @@ from prompts.image_generation_prompt import CHARACTER_USER_PROMPT, CHARACTER_SYS
 from prompts.story_outline_prompt import STORY_OUTLINE_SYSTEM_PROMPT, STORY_OUTLINE_USER_PROMPT
 from prompts.chapter_generation_prompt import CHAPTER_GENERATION_SYSTEM_PROMPT, CHAPTER_GENERATION_USER_PROMPT
 from prompts.scene_generation_prompt import SCENE_SYSTEM_PROMPT, SCENE_USER_PROMPT
+from prompts.character_pose_prompt import CHARACTER_POSE_SYSTEM_PROMPT, CHARACTER_POSE_USER_PROMPT
 from models.story_outline_models import MainStoryOutline, ChapterToScenes
-from models.story_detailed_models import SceneElaborator
+from models.story_detailed_models import SceneElaborator, CharacterPoseSet
 
 langfuse = get_client()
 assert langfuse.auth_check(), "Langfuse auth failed - check your keys ✋"
@@ -75,10 +76,10 @@ class GenAIClient:
         )
         return json.loads(response.text)
 
-    async def elaborate_scene(self, scene_id: str, title: str, summary: str, primary_location: str, characters: list, style: str):
+    async def elaborate_scene(self, scene_id: str, title: str, summary: str, primary_location: str, characters_info: str, style: str):
         prompt = SCENE_USER_PROMPT.format(
             scene_id=scene_id, title=title, scene_summary=summary,
-            primary_location=primary_location, characters=json.dumps(characters), style=style
+            primary_location=primary_location, characters=characters_info, style=style
         )
         response = await self.client.aio.models.generate_content(
             model=settings.STORY_MODEL,
@@ -86,6 +87,18 @@ class GenAIClient:
             config=types.GenerateContentConfig(
                 system_instruction=SCENE_SYSTEM_PROMPT,
                 response_schema=SceneElaborator
+            )
+        )
+        return json.loads(response.text)
+
+    async def generate_character_pose_list(self, name: str, role: str, description: str, style: str):
+        prompt = CHARACTER_POSE_USER_PROMPT.format(name=name, role=role, description=description, style=style)
+        response = await self.client.aio.models.generate_content(
+            model=settings.STORY_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=CHARACTER_POSE_SYSTEM_PROMPT,
+                response_schema=CharacterPoseSet
             )
         )
         return json.loads(response.text)
@@ -157,29 +170,6 @@ class GenAIClient:
         data = response.candidates[0].content.parts[0].inline_data.data
         wave_file(file_path, data)
         return file_path
-
-    async def get_embedding(self, text: str):
-        # client = genai.Client(vertexai=True)
-        if not text:
-            logger.warning("get_embedding called with empty text.")
-            raise ValueError("No embedding input is provided.")
-
-        logger.info(f"Generating embedding for text length: {len(text)}")
-        try:
-            response = await self.client.aio.models.embed_content(
-                model=settings.EMBEDDING_MODEL,
-                contents=text,
-                config=types.EmbedContentConfig(
-                    output_dimensionality=768
-                )
-            )
-            # Handle potential different response structures
-            if hasattr(response, 'embeddings') and response.embeddings:
-                return response.embeddings[0].values
-            return response.embeddings
-        except Exception as e:
-            logger.error(f"Error in get_embedding: {e}")
-            raise e
 
 if __name__ == "__main__":
     import asyncio

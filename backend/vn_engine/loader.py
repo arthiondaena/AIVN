@@ -6,7 +6,7 @@ class StoryLoader:
     def __init__(self, screenplay_path: str):
         self.screenplay_path = Path(screenplay_path)
         self.data = self._load_screenplay()
-        self.base_dir = self.screenplay_path.parent
+        self.base_dir = "output"
 
     def _load_screenplay(self) -> Dict[str, Any]:
         if not self.screenplay_path.exists():
@@ -34,7 +34,12 @@ class StoryLoader:
         relative_path = type_assets.get(key)
         
         if relative_path:
-            return str(self.base_dir / relative_path)
+            if asset_type == "poses" or asset_type == "pose":
+                path_obj = Path(relative_path)
+                transparent_rel_path = path_obj.parent / f"{path_obj.stem}_transparent{path_obj.suffix}"
+                if (self.base_dir / transparent_rel_path).exists():
+                    return str(transparent_rel_path).replace("\\", "/")
+            return relative_path
         return None
 
     def get_chapters(self) -> List[Dict[str, Any]]:

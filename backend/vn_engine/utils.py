@@ -9,7 +9,7 @@ class AssetLoader:
     Responsible for loading assets (images, sounds, fonts, json).
     Based on Source_code/Application/Assets/Scripts/Universal_computing/Assets_load.py
     """
-    def __init__(self, base_path: str = "backend/services/output"):
+    def __init__(self, base_path: str = "output"):
         self.base_path = Path(base_path)
         self._font_cache: Dict[str, pygame.font.Font] = {}
         self._image_cache: Dict[str, pygame.Surface] = {}
