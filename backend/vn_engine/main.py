@@ -9,6 +9,10 @@ sys.path.append(str(Path(__file__).parents[2]))
 from backend.vn_engine.core import GameEngine
 
 def main():
+    # Force stdout to be unbuffered
+    import logging
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', force=True)
+
     parser = argparse.ArgumentParser(description="Run the Visual Novel Engine")
     parser.add_argument("--screenplay", help="Path to screenplay.json file")
     

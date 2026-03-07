@@ -5,6 +5,7 @@ import logging
 import asyncio
 from sqlalchemy.orm import Session
 from sqlalchemy import select
+from core.config import settings
 from core.orm import Story, Chapter, Scene, Character, CharacterPose, Background
 from services.genai_services import GenAIClient
 from models.story_outline_models import MainStoryOutline
@@ -195,9 +196,11 @@ class StoryWorkflowService:
                 self.db.refresh(scene)
                 
                 # 4. Elaborate Scene
-                await self._elaborate_scene(scene, style)
+                # Only generate audio for the very first scene of the first chapter
+                generate_audio = (i == 0 and j == 0)
+                await self._elaborate_scene(scene, style, generate_audio)
 
-    async def _elaborate_scene(self, scene: Scene, style: str):
+    async def _elaborate_scene(self, scene: Scene, style: str, generate_audio: bool = False):
         logger.info(f"Elaborating scene {scene.scene_sid}...")
         
         story_chars = self.db.scalars(
@@ -237,46 +240,41 @@ class StoryWorkflowService:
             style
         )
         
-        # 5. Process Characters and Dialogue
+        # 5. Process Characters (Poses & Voice Mapping Prep)
         dialogue_lines = detailed_scene_data.get("main_dialogue", [])
+        
+        # Pre-calculate voice map for the scene
+        voice_map = {}
+        for char in story_chars:
+            if char.voice_id:
+                voice_map[char.name] = char.voice_id
+            elif char.id in self.character_voices:
+                voice_map[char.name] = self.character_voices[char.id]
+        
+        # Process poses for characters appearing in the scene
+        # We iterate to ensure poses exist, even if we don't generate audio
         for line in dialogue_lines:
             speaker_name = line.get("speaker")
-            text = line.get("text")
             pose = line.get("character_pose_expression")
-            
-            voice_name = "Puck" # Default
             
             if speaker_name != "Narrator":
                 character = next((c for c in story_chars if c.name == speaker_name), None)
-                if character:
-                    if pose:
-                        # Pass story_id to help with storage path
-                        # Use existing poses only
-                        await self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id, create_if_missing=False)
-                    
-                    # 7. Voice selection
-                    if character.voice_id:
-                        voice_name = character.voice_id
-                    elif character.id in self.character_voices:
-                        voice_name = self.character_voices[character.id]
+                if character and pose:
+                    await self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id, create_if_missing=False)
+
+        # 8. Generate Audio (Only if requested)
+        if generate_audio:
+            logger.info(f"Generating full audio for scene {scene.scene_sid}...")
             
-            # 8. Generate TTS
-            audio_filename = f"{scene.id}_{line.get('dialogue_id')}.wav"
-            full_path, relative_path = self.get_storage_path(scene.chapter.story_id, "audio", audio_filename)
-            
-            try:
-                # We need to pass full path for saving, but maybe store relative?
-                # genai_client.generate_audio writes to file_path
-                await self.genai_client.generate_audio(text, full_path, voice_name=voice_name)
-                # Store audio path in DB? Not in current schema for individual lines, 
-                # but could be added to DialogueLine in JSON if we updated it, or a separate table.
-                # Current schema: audio_gcs_path in Scene is for the whole scene? No, it's Optional[str].
-                # Actually, Scene table has audio_gcs_path, but that's likely for one file.
-                # Since we generate line by line, we are just saving files to disk/GCS.
-                # We are NOT updating the DB with per-line audio paths here because the JSON blob stores dialogue.
-                # Ideally, we should update the JSON blob with the audio paths.
-            except Exception as e:
-                logger.error(f"Failed to generate audio for {speaker_name}: {e}")
+            def get_audio_path(filename):
+                full_path, _ = self.get_storage_path(scene.chapter.story_id, "audio", filename)
+                return full_path
+
+            await self.genai_client.generate_scene_audio(
+                detailed_scene_data,
+                voice_map,
+                get_audio_path
+            )
 
     async def _get_or_create_character_pose(self, character: Character, pose_description: str, style: str, story_id: int, create_if_missing: bool = True):
         # Check for exact match first
@@ -320,7 +318,8 @@ class StoryWorkflowService:
             character.description, 
             style, 
             pose=pose_description, 
-            reference_image_path=reference_path
+            reference_image_path=reference_path,
+            model=settings.POSE_MODEL
         )
         if image:
             base_filename = f"pose_{character.id}_{uuid.uuid4().hex[:8]}"

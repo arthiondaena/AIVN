@@ -21,4 +21,6 @@ dependencies = [
     "thefuzz>=0.22.1",
     "python-Levenshtein>=0.23.0",
     "withoutbg>=1.0.2",
+    "google-cloud-texttospeech>=2.34.0",
+    "pyaudio>=0.2.14",
 ]

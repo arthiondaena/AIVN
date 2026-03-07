@@ -19,6 +19,7 @@ from prompts.scene_generation_prompt import SCENE_SYSTEM_PROMPT, SCENE_USER_PROM
 from prompts.character_pose_prompt import CHARACTER_POSE_SYSTEM_PROMPT, CHARACTER_POSE_USER_PROMPT
 from models.story_outline_models import MainStoryOutline, ChapterToScenes
 from models.story_detailed_models import SceneElaborator, CharacterPoseSet
+from vn_engine.cache_manager import CacheManager
 
 langfuse = get_client()
 assert langfuse.auth_check(), "Langfuse auth failed - check your keys ✋"
@@ -48,6 +49,7 @@ def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
 class GenAIClient:
     def __init__(self):
         self.client = genai.Client(api_key=settings.VERTEX_API_KEY)
+        self.cache_manager = CacheManager()
         # self.client = genai.Client(vertexai=True)
 
     async def generate_story_structure(self, story_text: str, style: str):
@@ -103,7 +105,7 @@ class GenAIClient:
         )
         return json.loads(response.text)
 
-    async def generate_character_image(self, description: str, style: str, pose: str = None, reference_image_path: str = None):
+    async def generate_character_image(self, description: str, style: str, pose: str = None, reference_image_path: str = None, model: str = None):
         pose = pose if pose else "Full body"
         prompt = CHARACTER_USER_PROMPT.format(character_description=description, pose=pose, style=style)
         
@@ -119,9 +121,12 @@ class GenAIClient:
             except Exception as e:
                 logger.warning(f"Could not load reference image at {reference_image_path}: {e}")
 
+        if model is None:
+            model = settings.IMAGE_MODEL
+
         try:
             response = await self.client.aio.models.generate_content(
-                model=settings.IMAGE_MODEL,
+                model=model,
                 contents=contents,
                 config=types.GenerateContentConfig(
                     response_modalities=['IMAGE'],
@@ -148,6 +153,127 @@ class GenAIClient:
 
         except Exception as e:
             logger.error(f"Error generating background image: {e}")
+
+    async def generate_scene_audio(self, scene_data: dict, voice_map: dict, output_dir_callback):
+        """
+        Generates audio for all dialogue lines in a scene.
+        output_dir_callback: function(filename) -> full_path
+        """
+        tasks = []
+        
+        # Helper to process a list of dialogue lines
+        async def process_lines(lines):
+            for line in lines:
+                speaker = line.get("speaker")
+                text = line.get("text")
+                dialogue_id = line.get("dialogue_id")
+                
+                if not text or not speaker or speaker == "Narrator":
+                    continue
+                    
+                voice_name = voice_map.get(speaker, "Puck")
+                filename = f"{scene_data.get('id')}_{dialogue_id}.wav"
+                full_path = output_dir_callback(filename)
+                
+                # Check if exists? Maybe not, just overwrite or let generate_audio handle it
+                # We can run these in parallel
+                tasks.append(self.generate_audio(text, full_path, voice_name))
+
+        # 1. Main Dialogue
+        await process_lines(scene_data.get("main_dialogue", []))
+        
+        # 2. Branches
+        for choice in scene_data.get("choices_and_branches", []):
+            await process_lines(choice.get("branching_dialogue", []))
+            
+        # Execute all audio generation tasks concurrently
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # Log errors
+        for i, res in enumerate(results):
+            if isinstance(res, Exception):
+                logger.error(f"Error generating audio for scene {scene_data.get('id')}: {res}")
+        
+        return len(tasks)
+
+    def generate_audio_sync(self, text: str, voice_name: str = "Puck") -> str:
+        """
+        Synchronous version of audio generation for use in background threads.
+        """
+        # 1. Check cache
+        cache_path = self.cache_manager.get_cache_path(text, voice_name)
+        if self.cache_manager.exists(cache_path):
+            logger.info(f"Audio cache hit for text: {text[:20]}...")
+            return str(cache_path)
+
+        # 2. Generate
+        logger.info(f"Generating audio (sync) for: {text[:20]}...")
+        
+        try:
+            # Use the synchronous client (no .aio)
+            response = self.client.models.generate_content(
+                model=settings.AUDIO_MODEL,
+                contents=text,
+                config=types.GenerateContentConfig(
+                    response_modalities=["AUDIO"],
+                    speech_config=types.SpeechConfig(
+                        voice_config=types.VoiceConfig(
+                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                voice_name=voice_name
+                            )
+                        )
+                    )
+                )
+            )
+            
+            # Extract audio bytes
+            if response.candidates and response.candidates[0].content.parts:
+                data = response.candidates[0].content.parts[0].inline_data.data
+                wave_file(str(cache_path), data)
+                return str(cache_path)
+            else:
+                logger.error("No audio content in response")
+                return None
+
+        except Exception as e:
+            logger.error(f"Error generating audio: {e}")
+            return None
+
+    async def generate_audio_stream(self, text: str, voice_name: str = "Puck"):
+        """
+        Generates audio for the given text using streaming and yields audio chunks.
+        """
+        logger.info(f"Generating audio (streaming) for: {text[:20]}...")
+        
+        try:
+            # When using generate_content_stream for audio, we need to ensure the client treats it correctly.
+            # The error "Model tried to generate text" suggests it might need a specific prompt structure or just the text.
+            # For TTS specifically, usually we just send the text.
+            
+            # Using a system instruction to enforce audio only might help?
+            # Or ensuring we don't ask it to "generate" text.
+            
+            async for chunk in await self.client.aio.models.generate_content_stream(
+                model=settings.AUDIO_MODEL,
+                contents=text, 
+                config=types.GenerateContentConfig(
+                    response_modalities=["AUDIO"],
+                    system_instruction="You are a text-to-speech system. Your only task is to generate audio for the provided text. Do not generate any text response.",
+                    speech_config=types.SpeechConfig(
+                        voice_config=types.VoiceConfig(
+                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
+                                voice_name=voice_name
+                            )
+                        )
+                    )
+                )
+            ):
+                if chunk.candidates and chunk.candidates[0].content.parts:
+                    # Yield the raw bytes of the audio chunk
+                    yield chunk.candidates[0].content.parts[0].inline_data.data
+        except Exception as e:
+            logger.error(f"Error generating audio stream: {e}")
+            yield None
 
     async def generate_audio(self, text: str, file_path: str, voice_name: str = "Puck"):
         # Assuming it's used via generate_content with audio modality or speech config

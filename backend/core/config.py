@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     # Models
     STORY_MODEL: str = "gemini-3-flash-preview"
     IMAGE_MODEL: str = "gemini-3-pro-image-preview"
+    POSE_MODEL: str = "gemini-3.1-flash-image-preview"
     AUDIO_MODEL: str = "gemini-2.5-pro-preview-tts"
 
 settings = Settings()

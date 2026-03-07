@@ -22,7 +22,10 @@ class GameEngine:
     Based on Source_code/Application/Assets/Scripts/Core/Game_Master.py
     """
     def __init__(self, screenplay_path: str):
+        print("DEBUG: GameEngine initialized", flush=True)
         pygame.init()
+        # Initialize mixer with settings matching the generated audio (24kHz)
+        pygame.mixer.init(frequency=24000, size=-16, channels=2, buffer=4096) 
         pygame.display.set_caption(settings.get_window_title())
         
         self.screen_size = settings.get_window_size()
@@ -52,6 +55,7 @@ class GameEngine:
         try:
             self.current_frame = self.scene_manager.start_story()
             self.stage_director.update_stage(self.current_frame)
+            self._update_audio() # Play initial audio if any
             self._update_ui_state()
             self.is_running = True
             self._run_loop()
@@ -111,6 +115,7 @@ class GameEngine:
             if 0 <= index < len(choices):
                 self.current_frame = self.scene_manager.make_choice(index)
                 self.stage_director.update_stage(self.current_frame)
+                self._update_audio()
                 self._update_ui_state()
         except Exception as e:
             print(f"Error making choice {index}: {e}")
@@ -132,12 +137,58 @@ class GameEngine:
 
             self.current_frame = self.scene_manager.next()
             self.stage_director.update_stage(self.current_frame)
+            self._update_audio()
             self._update_ui_state()
             
         except Exception as e:
             print(f"Error advancing story: {e}")
             import traceback
             traceback.print_exc()
+
+    def _update_audio(self):
+        """Handles voiceover playback for the current frame."""
+        print("DEBUG: _update_audio called", flush=True)
+        if not self.current_frame:
+            print("DEBUG: No current frame", flush=True)
+            return
+
+        # Stop previous voiceover
+        # We might want to keep BGM playing, so we should use a specific channel for voice
+        # But for now, pygame.mixer.music is usually BGM, and we can use Sound for voice.
+        
+        audio_path = self.current_frame.get("audio_path")
+        print(f"DEBUG: Current state audio path: {audio_path}", flush=True)
+        
+        # Stop any currently playing voice on the dedicated voice channel
+        # We'll reserve Channel 0 for voice
+        voice_channel = pygame.mixer.Channel(0)
+        if voice_channel.get_busy():
+            voice_channel.stop()
+
+        if audio_path:
+            # Ensure path is absolute or correct relative to CWD
+            # The engine runs from root, audio paths from cache might be relative to backend or absolute
+            p_path = Path(audio_path)
+            if not p_path.is_absolute():
+                # Try to resolve relative to CWD
+                if not p_path.exists():
+                     # Try relative to backend if needed, though typically cache paths are absolute or relative to root
+                     pass
+
+            if p_path.exists():
+                try:
+                    print(f"DEBUG: Playing audio: {audio_path}", flush=True)
+                    print(f"[DEBUG] Playing audio: {p_path}")
+                    sound = pygame.mixer.Sound(str(p_path))
+                    # Set volume explicitly just in case
+                    sound.set_volume(1.0)
+                    voice_channel.play(sound)
+                except Exception as e:
+                    print(f"Failed to play audio {audio_path}: {e}")
+            else:
+                print(f"[DEBUG] Audio file not found: {p_path}")
+        else:
+             pass # No audio for this line
 
     def _update_ui_state(self):
         if not self.current_frame:
