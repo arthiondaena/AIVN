@@ -8,7 +8,6 @@ dependencies = [
     "google-auth>=2.48.0",
     "google-cloud-storage>=3.9.0",
     "google-genai>=1.65.0",
-    "langfuse>=3.14.5",
     "moviepy>=2.2.1",
     "openinference-instrumentation-google-genai>=0.1.12",
     "pillow>=11.3.0",
@@ -23,4 +22,6 @@ dependencies = [
     "withoutbg>=1.0.2",
     "google-cloud-texttospeech>=2.34.0",
     "pyaudio>=0.2.14",
+    "structlog>=25.5.0",
+    "langsmith>=0.7.14",
 ]
