@@ -48,7 +48,7 @@ Render the character in this exact pose, expressing this specific emotion.
 - Format: High resolution, centered composition.
 - Background: A pure, solid contrasting background (exact opposite of the character color) to allow for easy background removal and compositing later.
 - Consistency: The character must look like the same person from previous generations. Carefully review the provided reference image (if included via inline_data) and match the facial structure and proportions exactly.
-- IMPORTANT: Generate exactly ONE full-body sprite of the character.
+- IMPORTANT: Generate exactly ONE single character sprite. Do NOT generate character sheets, multiple versions, or multiple characters in the same image. The image should contain ONLY one instance of the character.
 """
 
 CHARACTER_USER_PROMPT = """

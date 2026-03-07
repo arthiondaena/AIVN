@@ -1,3 +1,4 @@
+import os
 from typing import Dict, Any, List, Optional
 import threading
 import logging
@@ -58,60 +59,76 @@ class SceneManager:
 
     def _get_voice_for_speaker(self, speaker_name: str) -> str:
         """
-        Maps a speaker name to a voice ID.
+        Maps a speaker name to a voice ID using metadata from the story.
         """
-        # Hardcoding for the demo/task based on known characters
+        voices = self.loader.metadata.get("voices", {})
+        
+        # Exact match
+        if speaker_name in voices:
+            return voices[speaker_name]
+            
+        # Partial match (fallback)
+        for name, voice in voices.items():
+            if name in speaker_name or speaker_name in name:
+                return voice
+                
+        # Hardcoding fallback for specific known names if still missing
         if "Haruka" in speaker_name:
             return "Kore" 
         if "Kenji" in speaker_name:
             return "Puck"
         if "Tanaka" in speaker_name:
             return "Fenrir"
+            
         return "Puck"
 
-    def _trigger_prefetch(self, lines_to_fetch: List[Dict]):
+    def _trigger_scene_prefetch(self, scene_id: str):
         """
-        Triggers background pre-fetching for the given dialogue lines.
+        Prefetches audio for the entire scene using async generation in a background thread.
         """
         if not self.genai_client:
             return
 
-        def run_prefetch():
-            # Use synchronous generation in the background thread to avoid event loop conflicts
-            for line in lines_to_fetch:
-                text = line.get("text")
-                speaker = line.get("speaker")
-                
-                if not text or not speaker or speaker == "Narrator":
-                    continue
-                    
-                voice_name = self._get_voice_for_speaker(speaker)
-                
-                try:
-                    # Fire and forget - cache manager handles duplicates
-                    self.genai_client.generate_audio_sync(text, voice_name)
-                except Exception as e:
-                    logger.error(f"Error prefetching audio for '{text[:15]}...': {e}")
-
-        # Start a thread to run the sync tasks
-        t = threading.Thread(target=run_prefetch, daemon=True)
-        t.start()
-
-    def _trigger_scene_prefetch(self, scene_id: str):
-        """
-        Prefetches audio for the entire scene.
-        """
         content = self.loader.get_scene_content(scene_id)
         if not content:
             return
             
-        lines = content.get("main_dialogue", [])
-        # Also include branches
+        # Prepare voice map
+        voice_map = {}
+        speakers = set()
+        for line in content.get("main_dialogue", []):
+            if line.get("speaker"):
+                speakers.add(line["speaker"])
         for branch in content.get("choices_and_branches", []):
-            lines.extend(branch.get("branching_dialogue", []))
+            for line in branch.get("branching_dialogue", []):
+                if line.get("speaker"):
+                    speakers.add(line["speaker"])
+        
+        for speaker in speakers:
+            voice_map[speaker] = self._get_voice_for_speaker(speaker)
+
+        def run_async_prefetch():
+            import asyncio
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
             
-        if lines:
-            self._trigger_prefetch(lines)
+            def get_audio_path(filename):
+                return str(self.loader.screenplay_path.parent / "audio" / filename)
+
+            try:
+                loop.run_until_complete(self.genai_client.generate_scene_audio(
+                    content,
+                    voice_map,
+                    get_audio_path
+                ))
+            except Exception as e:
+                logger.error(f"Error in async prefetch for scene {scene_id}: {e}")
+            finally:
+                loop.close()
+
+        # Start a thread to run the async task
+        t = threading.Thread(target=run_async_prefetch, daemon=True)
+        t.start()
 
     def start_story(self):
         """Initializes the story at the first scene of the first chapter."""
@@ -257,12 +274,34 @@ class SceneManager:
                 # Only keep the current speaker in character_states
                 self.state.character_states = {speaker: pose or "default"}
                 
-                # Get audio path
-                if self.genai_client and text:
+                # 1. Try to find pre-generated audio asset
+                audio_key = current_line.get("audio_key")
+                if audio_key:
+                    rel_path = self.loader.get_asset_path("audio", audio_key)
+                    if rel_path:
+                        potential_path = os.path.join(self.loader.base_dir, rel_path)
+                        if os.path.exists(potential_path):
+                            audio_path = potential_path
+                            print(f"DEBUG: Found pre-generated audio asset: {audio_path}", flush=True)
+
+                # 2. Check if the audio file exists at the expected path (output/{story_id}/audio/{scene_id}_{dialogue_id}.wav)
+                if not audio_path:
+                    dialogue_id = current_line.get("dialogue_id")
+                    filename = f"{self.state.current_scene_id}_{dialogue_id}.wav"
+                    expected_path = self.loader.screenplay_path.parent / "audio" / filename
+                    if expected_path.exists():
+                        audio_path = str(expected_path)
+                        print(f"DEBUG: Found auto-generated audio: {audio_path}", flush=True)
+
+                # 3. Get audio path from TTS generation if not found
+                if not audio_path and self.genai_client and text:
                     voice_name = self._get_voice_for_speaker(speaker)
+                    dialogue_id = current_line.get("dialogue_id")
+                    filename = f"{self.state.current_scene_id}_{dialogue_id}.wav"
+                    expected_path = str(self.loader.screenplay_path.parent / "audio" / filename)
                     try:
                         print(f"DEBUG: Generating audio for '{text[:20]}...' with voice {voice_name}", flush=True)
-                        audio_path = self.genai_client.generate_audio_sync(text, voice_name)
+                        audio_path = self.genai_client.generate_audio_sync(text, expected_path, voice_name)
                         print(f"DEBUG: Generated audio path: {audio_path}", flush=True)
                     except Exception as e:
                         print(f"DEBUG: Failed to get audio path: {e}", flush=True)

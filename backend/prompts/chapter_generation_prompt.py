@@ -15,6 +15,7 @@ You must output a strictly structured JSON response conforming to the provided s
 ### Guidelines:
 - Ensure smooth transitions between scenes.
 - Each scene should focus on a specific location or continuous time block.
+- **IMPORTANT**: When summarizing scenes, only use the characters defined in the story outline. No new characters should be introduced as speakers.
 """
 
 CHAPTER_GENERATION_USER_PROMPT = """

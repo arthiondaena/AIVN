@@ -21,6 +21,7 @@ class MainStoryOutline(BaseModel):
     title: str = Field(..., description="The title of the visual novel.")
     logline: str = Field(..., description="A compelling one-sentence summary of the story.")
     main_characters: List[CharacterSpriteInfo] = Field(..., description="Information required to create sprites for the main cast.")
+    side_characters: List[CharacterSpriteInfo] = Field(default_factory=list, description="Information required to create sprites for any side characters that appear in the story.")
     main_chapters: List[ChapterOutline] = Field(..., description="The sequential outline of all major chapters in the game.")
 
 class SceneOutline(BaseModel):

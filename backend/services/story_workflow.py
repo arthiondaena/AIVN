@@ -2,6 +2,7 @@ import json
 import os
 import uuid
 import logging
+import structlog
 import asyncio
 from sqlalchemy.orm import Session
 from sqlalchemy import select
@@ -14,9 +15,10 @@ from utils.voices_list import male as male_voices, female as female_voices
 from utils.removebg import remove_background_v2_batch
 from PIL import Image
 import io
+import re
 from thefuzz import process
 
-logger = logging.getLogger(__name__)
+logger = structlog.getLogger(__name__)
 
 VOICES = {
     "male": male_voices,
@@ -31,6 +33,7 @@ class StoryWorkflowService:
         if not os.path.exists(self.output_dir):
             os.makedirs(self.output_dir)
         
+        self.semaphore = asyncio.Semaphore(10)
         # Cache for character voices within a session/run
         self.character_voices = {}
 
@@ -83,45 +86,31 @@ class StoryWorkflowService:
         
         self.save_json(outline_data, story.id, "", "story_outline.json")
 
-        # 2. Generate Base Characters
-        await self._generate_characters(story.id, outline_data.get("main_characters", []), style)
+        # 2. Generate All Characters (Main + Side)
+        main_characters = outline_data.get("main_characters", [])
+        side_characters = outline_data.get("side_characters", [])
+        
+        await self._generate_characters(story.id, main_characters, style, is_side=False)
+        await self._generate_characters(story.id, side_characters, style, is_side=True)
         
         # 3. Create Chapter Outline & Scenes
         await self._generate_chapters(story.id, outline_data.get("main_chapters", []), style)
         
         return story
 
-    async def _generate_characters(self, story_id, characters_data, style):
-        logger.info(f"Generating {len(characters_data)} characters...")
+    async def _generate_characters(self, story_id, characters_data, style, is_side: bool = False):
+        logger.info(f"Generating {len(characters_data)} {'side' if is_side else 'main'} characters...")
         used_voices = set()
+        char_tasks = []
 
+        # Pre-assign voices and create records sequentially to ensure IDs are available
         for char_data in characters_data:
-            # Generate base image (neutral pose)
-            description = char_data.get("appearance")
-            image = await self.genai_client.generate_character_image(description, style, pose="Neutral, standing")
-            
-            image_filename = f"{char_data.get('name').replace(' ', '_')}_base.png"
-            image_path = ""
-            if image:
-                # story_id/characters/filename
-                image_path = self.save_image(image, story_id, "characters", image_filename)
-                
-                # Create transparent version
-                # try:
-                #     transparent_images = remove_background_v2_batch([image])
-                #     if transparent_images:
-                #         trans_filename = f"{char_data.get('name').replace(' ', '_')}_base_transparent.png"
-                #         self.save_image(transparent_images[0], story_id, "characters", trans_filename)
-                # except Exception as e:
-                #     logger.error(f"Failed to generate transparent image for {char_data.get('name')}: {e}")
-            
-            # Assign voice
             gender = char_data.get("gender", "female").lower()
             voice_options = VOICES.get(gender, VOICES["female"])
-            # Simple round-robin or first available
             selected_voice = next((v for v in voice_options if v not in used_voices), voice_options[0])
             used_voices.add(selected_voice)
             
+            description = char_data.get("appearance")
             character = Character(
                 story_id=story_id,
                 name=char_data.get("name"),
@@ -129,39 +118,57 @@ class StoryWorkflowService:
                 gender=gender,
                 voice_id=selected_voice,
                 description=description,
-                base_image_gcs_path=image_path
+                base_image_gcs_path=""
             )
             self.db.add(character)
             self.db.commit() 
             self.db.refresh(character)
-            
-            # Add base image as the first pose
-            if image_path:
-                base_pose = CharacterPose(
-                    character_id=character.id,
-                    pose_description="Neutral, standing",
-                    image_gcs_path=image_path
-                )
-                self.db.add(base_pose)
-                self.db.commit()
-
-            # Generate the list of poses for this character
-            logger.info(f"Generating pose list for {character.name}...")
-            pose_set = await self.genai_client.generate_character_pose_list(
-                character.name, character.role, character.description, style
-            )
-            
-            # Pre-generate all poses
-            for pose_desc in pose_set.get("poses", []):
-                logger.info(f"Pre-generating pose: {pose_desc} for {character.name}")
-                await self._get_or_create_character_pose(character, pose_desc, style, story_id)
-
             self.character_voices[character.id] = selected_voice
-            logger.info(f"Assigned voice {selected_voice} to {character.name}")
+
+            async def process_character(char_obj, char_info, is_side_char):
+                # Generate base image
+                async with self.semaphore:
+                    image = await self.genai_client.generate_character_image(char_obj.description, style, pose="Neutral, standing")
+                
+                image_path = ""
+                if image:
+                    image_path = self.save_image(image, story_id, str(char_obj.id), "base.png")
+                    char_obj.base_image_gcs_path = image_path
+                    self.db.commit()
+                    
+                    base_pose = CharacterPose(
+                        character_id=char_obj.id,
+                        pose_description="Neutral, standing",
+                        image_gcs_path=image_path
+                    )
+                    self.db.add(base_pose)
+                    self.db.commit()
+
+                # Generate pose list
+                logger.info(f"Generating pose list for {char_obj.name}...")
+                pose_count = "10-15" if is_side_char else "15-30"
+                async with self.semaphore:
+                    pose_set = await self.genai_client.generate_character_pose_list(
+                        char_obj.name, char_obj.role, char_obj.description, style, pose_count=pose_count
+                    )
+                
+                # Pre-generate all poses in parallel
+                pose_tasks = []
+                for pose_desc in pose_set.get("poses", []):
+                    pose_tasks.append(self._get_or_create_character_pose(char_obj, pose_desc, style, story_id))
+                
+                await asyncio.gather(*pose_tasks)
+                logger.info(f"Finished generating all assets for {char_obj.name}")
+
+            char_tasks.append(process_character(character, char_data, is_side))
+
+        await asyncio.gather(*char_tasks)
 
     async def _generate_chapters(self, story_id, chapters_data, style):
         logger.info(f"Generating {len(chapters_data)} chapters...")
+        chapter_tasks = []
         
+        # Create chapter records first
         for i, chap_data in enumerate(chapters_data):
             chapter = Chapter(
                 story_id=story_id,
@@ -174,31 +181,40 @@ class StoryWorkflowService:
             self.db.add(chapter)
             self.db.commit()
             self.db.refresh(chapter)
-            
-            # Generate Scenes for this chapter
-            scene_breakdown = await self.genai_client.generate_chapter_scenes(
-                chapter.chapter_cid, chapter.title, chapter.plot_summary, style
-            )
-            
-            self.save_json(scene_breakdown, story_id, "chapters", f"{chapter.chapter_cid}_scenes.json")
 
-            for j, scene_data in enumerate(scene_breakdown.get("scenes", [])):
-                scene = Scene(
-                    chapter_id=chapter.id,
-                    scene_sid=scene_data.get("scene_id"),
-                    title=scene_data.get("title"),
-                    primary_location=scene_data.get("primary_location"),
-                    scene_summary=scene_data.get("scene_summary"),
-                    sequence_number=j + 1
-                )
-                self.db.add(scene)
-                self.db.commit()
-                self.db.refresh(scene)
+            async def process_chapter(chap_obj, chap_info):
+                # 1. Generate Chapter Scenes
+                async with self.semaphore:
+                    scene_breakdown = await self.genai_client.generate_chapter_scenes(
+                        chap_obj.chapter_cid, chap_obj.title, chap_obj.plot_summary, style
+                    )
                 
-                # 4. Elaborate Scene
-                # Only generate audio for the very first scene of the first chapter
-                generate_audio = (i == 0 and j == 0)
-                await self._elaborate_scene(scene, style, generate_audio)
+                self.save_json(scene_breakdown, story_id, "chapters", f"{chap_obj.chapter_cid}_scenes.json")
+
+                # 2. Create Scene records
+                scene_tasks = []
+                for j, scene_data in enumerate(scene_breakdown.get("scenes", [])):
+                    scene = Scene(
+                        chapter_id=chap_obj.id,
+                        scene_sid=scene_data.get("scene_id"),
+                        title=scene_data.get("title"),
+                        primary_location=scene_data.get("primary_location"),
+                        scene_summary=scene_data.get("scene_summary"),
+                        sequence_number=j + 1
+                    )
+                    self.db.add(scene)
+                    self.db.commit()
+                    self.db.refresh(scene)
+                    
+                    # 4. Elaborate Scene (only first scene first chapter gets audio)
+                    generate_audio = (chap_obj.sequence_number == 1 and j == 0)
+                    scene_tasks.append(self._elaborate_scene(scene, style, generate_audio))
+                
+                await asyncio.gather(*scene_tasks)
+
+            chapter_tasks.append(process_chapter(chapter, chap_data))
+        
+        await asyncio.gather(*chapter_tasks)
 
     async def _elaborate_scene(self, scene: Scene, style: str, generate_audio: bool = False):
         logger.info(f"Elaborating scene {scene.scene_sid}...")
@@ -216,9 +232,10 @@ class StoryWorkflowService:
         
         characters_info = "\n\n".join(char_info_list)
         
-        detailed_scene_data = await self.genai_client.elaborate_scene(
-            scene.scene_sid, scene.title, scene.scene_summary, scene.primary_location, characters_info, style
-        )
+        async with self.semaphore:
+            detailed_scene_data = await self.genai_client.elaborate_scene(
+                scene.scene_sid, scene.title, scene.scene_summary, scene.primary_location, characters_info, style
+            )
         
         self.save_json(detailed_scene_data, scene.chapter.story_id, "scenes", f"{scene.scene_sid}_detailed.json")
 
@@ -251,8 +268,8 @@ class StoryWorkflowService:
             elif char.id in self.character_voices:
                 voice_map[char.name] = self.character_voices[char.id]
         
-        # Process poses for characters appearing in the scene
-        # We iterate to ensure poses exist, even if we don't generate audio
+        # Process poses for characters appearing in the scene in parallel
+        pose_ensure_tasks = []
         for line in dialogue_lines:
             speaker_name = line.get("speaker")
             pose = line.get("character_pose_expression")
@@ -260,7 +277,9 @@ class StoryWorkflowService:
             if speaker_name != "Narrator":
                 character = next((c for c in story_chars if c.name == speaker_name), None)
                 if character and pose:
-                    await self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id, create_if_missing=False)
+                    pose_ensure_tasks.append(self._get_or_create_character_pose(character, pose, style, scene.chapter.story_id, create_if_missing=False))
+
+        await asyncio.gather(*pose_ensure_tasks)
 
         # 8. Generate Audio (Only if requested)
         if generate_audio:
@@ -314,18 +333,25 @@ class StoryWorkflowService:
              reference_path = os.path.join(self.output_dir, character.base_image_gcs_path)
 
         # Generate Image
-        image = await self.genai_client.generate_character_image(
-            character.description, 
-            style, 
-            pose=pose_description, 
-            reference_image_path=reference_path,
-            model=settings.POSE_MODEL
-        )
+        async with self.semaphore:
+            image = await self.genai_client.generate_character_image(
+                character.description, 
+                style, 
+                pose=pose_description, 
+                reference_image_path=reference_path,
+                model=settings.POSE_MODEL
+            )
         if image:
-            base_filename = f"pose_{character.id}_{uuid.uuid4().hex[:8]}"
+            # Sanitize pose description for filename (remove invalid Windows characters)
+            clean_pose = re.sub(r'[^a-z0-9_]', '', pose_description.lower().replace(" ", "_"))[:50]
+            if not clean_pose:
+                clean_pose = uuid.uuid4().hex[:8]
+                
+            base_filename = f"pose_{clean_pose}"
             filename = f"{base_filename}.png"
-            # story_id/poses/filename
-            path = self.save_image(image, story_id, "poses", filename)
+            
+            # {story_id}/{character_id}/{filename}
+            path = self.save_image(image, story_id, str(character.id), filename)
 
             pil_image = Image.open(io.BytesIO(image.image_bytes))
             
@@ -334,7 +360,7 @@ class StoryWorkflowService:
                 transparent_images = remove_background_v2_batch([pil_image])
                 if transparent_images:
                     trans_filename = f"{base_filename}_transparent.png"
-                    self.save_image(transparent_images[0], story_id, "poses", trans_filename)
+                    self.save_image(transparent_images[0], story_id, str(character.id), trans_filename)
             except Exception as e:
                 logger.error(f"Failed to generate transparent pose image: {e}")
             
@@ -359,9 +385,13 @@ class StoryWorkflowService:
             return bg
             
         # Generate
-        image = await self.genai_client.generate_background_image(description, style)
+        async with self.semaphore:
+            image = await self.genai_client.generate_background_image(description, style)
         if image:
-            filename = f"{name.replace(' ', '_')}.png"
+            clean_name = re.sub(r'[^a-z0-9_]', '', name.lower().replace(" ", "_"))[:50]
+            if not clean_name:
+                clean_name = uuid.uuid4().hex[:8]
+            filename = f"{clean_name}.png"
             path = self.save_image(image, story_id, "backgrounds", filename)
             
             bg = Background(
@@ -384,5 +414,5 @@ if __name__ == "__main__":
     
     synopsis = "In a world where dreams can be shared, a young dreamer discovers they can enter others' dreams and must navigate a surreal landscape to save their loved ones."
     synopsis = "Create a simple 1 chapter story with 2 main characters. The story should be a romantic comedy set in a high school. The main characters are a shy bookworm and a popular athlete who are forced to work together on a school project. They start off disliking each other but eventually fall in love. Include some humorous situations and heartfelt moments."
-    style = "anime"
+    style = "manhwa"
     asyncio.run(workflow.generate_full_story(synopsis, style))

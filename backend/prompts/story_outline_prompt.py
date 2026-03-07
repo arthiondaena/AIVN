@@ -14,8 +14,9 @@ You must output a strictly structured JSON response conforming to the provided s
     - A concise, engaging logline.
 
 2.  **Characters**:
-    - Identify the main cast (protagonist, antagonist, key supporting characters).
+    - Identify the entire cast: the **main_characters** (protagonist, antagonist, key supporting characters) and **side_characters** (any other characters that will speak or appear in the story).
     - Provide a `name`, `role`, and `gender` for each.
+    - IMPORTANT: Every character that will have a speaking line in the story MUST be defined here. No "generic" characters or unnamed NPCs are allowed as speakers unless they are listed in this character set.
     - IMPORTANT: The `appearance` must be highly detailed and visually focused. It must describe their physical appearance, clothing, distinguishing features, and signature expressions, heavily flavored by the required style. This description will be used to generate consistent character sprites later.
 
 3.  **Chapters**:

@@ -48,13 +48,20 @@ class StoryConverter:
             print(f"Error: Story {self.story_id} not found in database.")
             return False
 
+        # Fetch character voices
+        characters = self.db.scalars(
+            select(Character).where(Character.story_id == self.story_id)
+        ).all()
+        voices = {char.name: char.voice_id for char in characters if char.voice_id}
+
         self.screenplay["metadata"] = {
             "title": story.title,
             "logline": story.logline,
             "author": "AI",
             "version": "1.0",
             # We could fetch main characters names here if needed, but the scene processing handles details
-            "style": story.style
+            "style": story.style,
+            "voices": voices
         }
         return True
 
@@ -154,19 +161,15 @@ class StoryConverter:
                     # 1. Main Dialogue
                     content["main_dialogue"] = scene.dialogue_content
                     
-                    # Inject Random Audio if missing
-                    # "Match it with a random audio file"
-                    if self.audio_files:
-                        for line in content.get("main_dialogue", []):
-                            # If audio_id or file not present, assign random
-                            if "audio_asset" not in line: 
-                                # Use a simple hash or random choice? User said "random".
-                                random_audio = random.choice(self.audio_files)
-                                line["audio_asset"] = random_audio 
-                                # Note: "audio_asset" should be the key in assets['audio'] or the path?
-                                # Usually keys. But our audio keys are filenames.
-                                # Let's use the filename as the key.
-                                line["audio_key"] = Path(random_audio).name
+                    # Match with existing audio files if present
+                    # Workflow saves them as {scene_id}_{dialogue_id}.wav
+                    for line in content.get("main_dialogue", []):
+                        expected_filename = f"{scene.scene_sid}_{line.get('dialogue_id')}.wav"
+                        expected_filename2 = f"None_{line.get('dialogue_id')}.wav"
+                        if expected_filename in self.screenplay["assets"]["audio"]:
+                            line["audio_key"] = expected_filename
+                        if expected_filename2 in self.screenplay["assets"]["audio"]:
+                            line["audio_key"] = expected_filename2
 
                     # 2. Choices
                     if scene.choices_content:
@@ -223,7 +226,7 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Convert story from DB to screenplay.json")
     parser.add_argument("story_id", help="ID of the story to convert")
-    parser.add_argument("--base_dir", default="backend/services/output", help="Base directory for story outputs")
+    parser.add_argument("--base_dir", default="output", help="Base directory for story outputs")
     
     args = parser.parse_args()
     

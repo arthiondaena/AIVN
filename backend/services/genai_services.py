@@ -1,14 +1,13 @@
-import base64
+import asyncio
 import json
-import logging
+import structlog
 import wave
 import os
 
 from google import genai
 from google.genai import types
 from google.genai.types import GenerateContentResponse
-from langfuse import get_client
-from openinference.instrumentation.google_genai import GoogleGenAIInstrumentor
+from langsmith.wrappers import wrap_gemini
 
 from core.config import settings
 from prompts.image_generation_prompt import CHARACTER_USER_PROMPT, CHARACTER_SYSTEM_PROMPT, BACKGROUND_USER_PROMPT, \
@@ -21,13 +20,8 @@ from models.story_outline_models import MainStoryOutline, ChapterToScenes
 from models.story_detailed_models import SceneElaborator, CharacterPoseSet
 from vn_engine.cache_manager import CacheManager
 
-langfuse = get_client()
-assert langfuse.auth_check(), "Langfuse auth failed - check your keys ✋"
-
-GoogleGenAIInstrumentor().instrument()
-
 # Configure logging
-logger = logging.getLogger(__name__)
+logger = structlog.getLogger(__name__)
 
 
 def extract_image_from_response(response: GenerateContentResponse):
@@ -48,7 +42,8 @@ def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
 
 class GenAIClient:
     def __init__(self):
-        self.client = genai.Client(api_key=settings.VERTEX_API_KEY)
+        self.client = wrap_gemini(genai.Client(api_key=settings.VERTEX_API_KEY))
+        self.vertex_client = wrap_gemini(genai.Client(vertexai=True))
         self.cache_manager = CacheManager()
         # self.client = genai.Client(vertexai=True)
 
@@ -93,8 +88,8 @@ class GenAIClient:
         )
         return json.loads(response.text)
 
-    async def generate_character_pose_list(self, name: str, role: str, description: str, style: str):
-        prompt = CHARACTER_POSE_USER_PROMPT.format(name=name, role=role, description=description, style=style)
+    async def generate_character_pose_list(self, name: str, role: str, description: str, style: str, pose_count: str = "15-30"):
+        prompt = CHARACTER_POSE_USER_PROMPT.format(name=name, role=role, description=description, style=style, pose_count=pose_count)
         response = await self.client.aio.models.generate_content(
             model=settings.STORY_MODEL,
             contents=prompt,
@@ -172,10 +167,10 @@ class GenAIClient:
                     continue
                     
                 voice_name = voice_map.get(speaker, "Puck")
-                filename = f"{scene_data.get('id')}_{dialogue_id}.wav"
+                scene_id = scene_data.get('id') or scene_data.get('scene_id')
+                filename = f"{scene_id}_{dialogue_id}.wav"
                 full_path = output_dir_callback(filename)
                 
-                # Check if exists? Maybe not, just overwrite or let generate_audio handle it
                 # We can run these in parallel
                 tasks.append(self.generate_audio(text, full_path, voice_name))
 
@@ -187,31 +182,31 @@ class GenAIClient:
             await process_lines(choice.get("branching_dialogue", []))
             
         # Execute all audio generation tasks concurrently
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-        
-        # Log errors
-        for i, res in enumerate(results):
-            if isinstance(res, Exception):
-                logger.error(f"Error generating audio for scene {scene_data.get('id')}: {res}")
+        if tasks:
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+            
+            # Log errors
+            for res in results:
+                if isinstance(res, Exception):
+                    logger.error(f"Error generating audio task: {res}")
         
         return len(tasks)
 
-    def generate_audio_sync(self, text: str, voice_name: str = "Puck") -> str:
+    def generate_audio_sync(self, text: str, file_path: str, voice_name: str = "Puck") -> str:
         """
-        Synchronous version of audio generation for use in background threads.
+        Synchronous version of audio generation that saves to a specific path.
         """
-        # 1. Check cache
-        cache_path = self.cache_manager.get_cache_path(text, voice_name)
-        if self.cache_manager.exists(cache_path):
-            logger.info(f"Audio cache hit for text: {text[:20]}...")
-            return str(cache_path)
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+            return file_path
 
-        # 2. Generate
-        logger.info(f"Generating audio (sync) for: {text[:20]}...")
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        logger.info(f"Generating audio (sync) to: {file_path}")
         
         try:
             # Use the synchronous client (no .aio)
-            response = self.client.models.generate_content(
+            response = self.vertex_client.models.generate_content(
                 model=settings.AUDIO_MODEL,
                 contents=text,
                 config=types.GenerateContentConfig(
@@ -229,8 +224,8 @@ class GenAIClient:
             # Extract audio bytes
             if response.candidates and response.candidates[0].content.parts:
                 data = response.candidates[0].content.parts[0].inline_data.data
-                wave_file(str(cache_path), data)
-                return str(cache_path)
+                wave_file(file_path, data)
+                return file_path
             else:
                 logger.error("No audio content in response")
                 return None
@@ -253,7 +248,7 @@ class GenAIClient:
             # Using a system instruction to enforce audio only might help?
             # Or ensuring we don't ask it to "generate" text.
             
-            async for chunk in await self.client.aio.models.generate_content_stream(
+            async for chunk in await self.vertex_client.aio.models.generate_content_stream(
                 model=settings.AUDIO_MODEL,
                 contents=text, 
                 config=types.GenerateContentConfig(
@@ -276,8 +271,14 @@ class GenAIClient:
             yield None
 
     async def generate_audio(self, text: str, file_path: str, voice_name: str = "Puck"):
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+            return file_path
+
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
         # Assuming it's used via generate_content with audio modality or speech config
-        response = await self.client.aio.models.generate_content(
+        response = await self.vertex_client.aio.models.generate_content(
             model=settings.AUDIO_MODEL,
             contents=text,
             config=types.GenerateContentConfig(
@@ -300,6 +301,7 @@ class GenAIClient:
 if __name__ == "__main__":
     import asyncio
     client = GenAIClient()
-    description = "Haru’s younger sister, aged 14. She has long, flowing silver hair adorned with small, glowing star-shaped hairpins. She wears a traditional white yukata with a modern twist, featuring patterns of koi fish that appear to swim across the fabric. In the dream world, she is often surrounded by translucent, glowing butterflies. Her expression is ethereal and serene, though her eyes appear glassy and distant while trapped in the dream-state."
-    img = asyncio.run(client.generate_character_image(description, "anime", "full body"))
-    img.save("character_image.png")
+    # description = "Haru’s younger sister, aged 14. She has long, flowing silver hair adorned with small, glowing star-shaped hairpins. She wears a traditional white yukata with a modern twist, featuring patterns of koi fish that appear to swim across the fabric. In the dream world, she is often surrounded by translucent, glowing butterflies. Her expression is ethereal and serene, though her eyes appear glassy and distant while trapped in the dream-state."
+    # img = asyncio.run(client.generate_character_image(description, "anime", "full body"))
+    # img.save("character_image.png")
+    asyncio.run(client.generate_audio("Hello, testing 1,2,3", "test.wav"))
