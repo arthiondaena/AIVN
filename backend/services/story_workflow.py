@@ -414,5 +414,5 @@ if __name__ == "__main__":
     
     synopsis = "In a world where dreams can be shared, a young dreamer discovers they can enter others' dreams and must navigate a surreal landscape to save their loved ones."
     synopsis = "Create a simple 1 chapter story with 2 main characters. The story should be a romantic comedy set in a high school. The main characters are a shy bookworm and a popular athlete who are forced to work together on a school project. They start off disliking each other but eventually fall in love. Include some humorous situations and heartfelt moments."
-    style = "manhwa"
+    style = "American Cartoon"
     asyncio.run(workflow.generate_full_story(synopsis, style))

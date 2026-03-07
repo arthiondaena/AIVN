@@ -147,9 +147,7 @@ class GameEngine:
 
     def _update_audio(self):
         """Handles voiceover playback for the current frame."""
-        print("DEBUG: _update_audio called", flush=True)
         if not self.current_frame:
-            print("DEBUG: No current frame", flush=True)
             return
 
         # Stop previous voiceover
@@ -157,7 +155,6 @@ class GameEngine:
         # But for now, pygame.mixer.music is usually BGM, and we can use Sound for voice.
         
         audio_path = self.current_frame.get("audio_path")
-        print(f"DEBUG: Current state audio path: {audio_path}", flush=True)
         
         # Stop any currently playing voice on the dedicated voice channel
         # We'll reserve Channel 0 for voice

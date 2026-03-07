@@ -93,6 +93,10 @@ class SceneManager:
         if not content:
             return
             
+        # Ensure scene_id is present in the data passed to the generator
+        if isinstance(content, dict):
+            content["scene_id"] = scene_id
+
         # Prepare voice map
         voice_map = {}
         speakers = set()
@@ -109,14 +113,19 @@ class SceneManager:
 
         def run_async_prefetch():
             import asyncio
+            from backend.services.genai_services import GenAIClient
+            
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
+            
+            # Create a fresh client instance bound to THIS thread's event loop
+            local_genai_client = GenAIClient()
             
             def get_audio_path(filename):
                 return str(self.loader.screenplay_path.parent / "audio" / filename)
 
             try:
-                loop.run_until_complete(self.genai_client.generate_scene_audio(
+                loop.run_until_complete(local_genai_client.generate_scene_audio(
                     content,
                     voice_map,
                     get_audio_path
@@ -195,11 +204,7 @@ class SceneManager:
 
         # Set initial background
         if content.get("initial_location_name"):
-            # Try to find asset path, or just use the name/desc
-            bg_name = content.get("initial_location_name")
-            # In a real app, we'd look up the file path from assets
-            # self.state.current_background = self.loader.get_asset_path("backgrounds", bg_name)
-            self.state.current_background = bg_name 
+            self.state.current_background = content.get("initial_location_name") 
 
         # Set initial BGM
         if content.get("initial_bgm"):
@@ -213,8 +218,7 @@ class SceneManager:
         self.state.current_branch_dialogue_index = -1
         self.state.pending_scene_jump = None
         
-        # Trigger prefetch for the NEXT scene whenever we enter a new scene
-        # This ensures we are always one step ahead
+        # Trigger prefetch for the NEXT scene
         self._prefetch_next_scene()
 
     def get_current_frame(self) -> Dict[str, Any]:
@@ -235,14 +239,12 @@ class SceneManager:
 
         # If waiting for choice, return the choices
         if self.state.is_waiting_for_choice:
-            choices_data = content.get("choices_and_branches", [])
+            choices_data = content.get("choices_and_branches") or []
             frame["choices"] = [
                 {"index": i, "text": c.get("choice_text")} 
                 for i, c in enumerate(choices_data)
             ]
-            # When waiting for choice, we usually display the last dialogue line or a prompt
-            # For now, let's assume we keep displaying the last main dialogue line
-            main_dialogue = content.get("main_dialogue", [])
+            main_dialogue = content.get("main_dialogue") or []
             if main_dialogue and self.state.current_dialogue_index < len(main_dialogue):
                 frame["dialogue"] = main_dialogue[self.state.current_dialogue_index]
             return frame
@@ -251,25 +253,19 @@ class SceneManager:
         current_line = None
         
         if self.state.current_branch_dialogue:
-            # We are in a branch
             if 0 <= self.state.current_branch_dialogue_index < len(self.state.current_branch_dialogue):
                 current_line = self.state.current_branch_dialogue[self.state.current_branch_dialogue_index]
         else:
-            # We are in main dialogue
-            main_dialogue = content.get("main_dialogue", [])
+            main_dialogue = content.get("main_dialogue") or []
             if 0 <= self.state.current_dialogue_index < len(main_dialogue):
                 current_line = main_dialogue[self.state.current_dialogue_index]
 
         audio_path = None
         if current_line:
-            print(f"DEBUG: Current line: {current_line.get('text', 'No text')[:30]}...", flush=True)
-            # Update character state based on this line
             speaker = current_line.get("speaker")
             pose = current_line.get("character_pose_expression")
             text = current_line.get("text")
             
-            print(f"DEBUG: Speaker: {speaker}", flush=True)
-
             if speaker and speaker != "Narrator":
                 # Only keep the current speaker in character_states
                 self.state.character_states = {speaker: pose or "default"}
@@ -282,16 +278,14 @@ class SceneManager:
                         potential_path = os.path.join(self.loader.base_dir, rel_path)
                         if os.path.exists(potential_path):
                             audio_path = potential_path
-                            print(f"DEBUG: Found pre-generated audio asset: {audio_path}", flush=True)
 
-                # 2. Check if the audio file exists at the expected path (output/{story_id}/audio/{scene_id}_{dialogue_id}.wav)
+                # 2. Check if the audio file exists at the expected path
                 if not audio_path:
                     dialogue_id = current_line.get("dialogue_id")
                     filename = f"{self.state.current_scene_id}_{dialogue_id}.wav"
                     expected_path = self.loader.screenplay_path.parent / "audio" / filename
                     if expected_path.exists():
                         audio_path = str(expected_path)
-                        print(f"DEBUG: Found auto-generated audio: {audio_path}", flush=True)
 
                 # 3. Get audio path from TTS generation if not found
                 if not audio_path and self.genai_client and text:
@@ -300,11 +294,8 @@ class SceneManager:
                     filename = f"{self.state.current_scene_id}_{dialogue_id}.wav"
                     expected_path = str(self.loader.screenplay_path.parent / "audio" / filename)
                     try:
-                        print(f"DEBUG: Generating audio for '{text[:20]}...' with voice {voice_name}", flush=True)
                         audio_path = self.genai_client.generate_audio_sync(text, expected_path, voice_name)
-                        print(f"DEBUG: Generated audio path: {audio_path}", flush=True)
                     except Exception as e:
-                        print(f"DEBUG: Failed to get audio path: {e}", flush=True)
                         logger.error(f"Failed to get audio path: {e}")
             else:
                 self.state.character_states = {}
@@ -322,7 +313,7 @@ class SceneManager:
 
         # If waiting for choice, return the choices
         if self.state.is_waiting_for_choice:
-            choices_data = content.get("choices_and_branches", [])
+            choices_data = content.get("choices_and_branches") or []
             frame["choices"] = [
                 {"index": i, "text": c.get("choice_text")} 
                 for i, c in enumerate(choices_data)
@@ -333,12 +324,10 @@ class SceneManager:
 
     def next(self) -> Dict[str, Any]:
         """Advances the story state."""
-        print("DEBUG: SceneManager.next called", flush=True)
         # Trigger prefetch for subsequent lines
         self._check_prefetch()
 
         if self.state.is_waiting_for_choice:
-            # Cannot advance if waiting for choice
             return self.get_current_frame()
 
         content = self.loader.get_scene_content(self.state.current_scene_id)

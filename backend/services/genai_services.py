@@ -175,11 +175,11 @@ class GenAIClient:
                 tasks.append(self.generate_audio(text, full_path, voice_name))
 
         # 1. Main Dialogue
-        await process_lines(scene_data.get("main_dialogue", []))
+        await process_lines(scene_data.get("main_dialogue") or [])
         
         # 2. Branches
-        for choice in scene_data.get("choices_and_branches", []):
-            await process_lines(choice.get("branching_dialogue", []))
+        for choice in (scene_data.get("choices_and_branches") or []):
+            await process_lines(choice.get("branching_dialogue") or [])
             
         # Execute all audio generation tasks concurrently
         if tasks:
@@ -292,11 +292,23 @@ class GenAIClient:
                 )
             )
         )
-        # Extract audio bytes
-        # response.parts[0].inline_data.data (bytes)
-        data = response.candidates[0].content.parts[0].inline_data.data
-        wave_file(file_path, data)
-        return file_path
+        
+        # Extract audio bytes from any part that contains inline_data
+        audio_data = None
+        if response.candidates and response.candidates[0].content and response.candidates[0].content.parts:
+            for part in response.candidates[0].content.parts:
+                if part.inline_data:
+                    audio_data = part.inline_data.data
+                    break
+        
+        if audio_data:
+            wave_file(file_path, audio_data)
+            return file_path
+        else:
+            # Log the response text if available for debugging
+            resp_text = getattr(response, 'text', 'No text in response')
+            logger.error(f"No audio content in response for file: {file_path}. Response text: {resp_text[:100]}")
+            return None
 
 if __name__ == "__main__":
     import asyncio
