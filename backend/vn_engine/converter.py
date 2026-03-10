@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import logging
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from sqlalchemy import select
@@ -8,6 +9,8 @@ from sqlalchemy.orm import Session
 
 from core.database import SessionLocal
 from core.orm import Story, Chapter, Scene, Character, CharacterPose, Background
+
+logger = logging.getLogger(__name__)
 
 class StoryConverter:
     def __init__(self, story_id: str, base_output_dir: str = "backend/services/output"):
@@ -36,16 +39,16 @@ class StoryConverter:
             with open(path, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
-            # print(f"Warning: File not found: {path}") # Reduce noise
+            # logger.warning(f"File not found: {path}") # Reduce noise
             return None
         except json.JSONDecodeError:
-            print(f"Error: Invalid JSON in {path}")
+            logger.error(f"Invalid JSON in {path}")
             return None
 
     def fetch_metadata(self):
         story = self.db.get(Story, self.story_id)
         if not story:
-            print(f"Error: Story {self.story_id} not found in database.")
+            logger.error(f"Story {self.story_id} not found in database.")
             return False
 
         # Fetch character voices
@@ -66,7 +69,7 @@ class StoryConverter:
         return True
 
     def fetch_assets(self):
-        print("Fetching assets from database...")
+        logger.info("Fetching assets from database...")
         
         # 1. Characters and Poses
         characters = self.db.scalars(
@@ -121,7 +124,7 @@ class StoryConverter:
                     self.screenplay["assets"]["audio"][file_path.name] = relative_path
 
     def build_story(self):
-        print("Building story structure from database...")
+        logger.info("Building story structure from database...")
         
         # Fetch chapters
         chapters = self.db.scalars(
@@ -131,7 +134,7 @@ class StoryConverter:
         ).all()
         
         for chapter in chapters:
-            print(f"Processing chapter: {chapter.title}")
+            logger.info(f"Processing chapter: {chapter.title}")
             
             chapter_data = {
                 "id": chapter.chapter_cid,
@@ -148,7 +151,7 @@ class StoryConverter:
             ).all()
             
             for scene in scenes:
-                print(f"  Processing scene: {scene.title}")
+                logger.info(f"  Processing scene: {scene.title}")
                 
                 # Construct Scene Content
                 # The Scene object has JSON fields: dialogue_content, choices_content, location_changes
@@ -203,7 +206,7 @@ class StoryConverter:
             self.screenplay["story"]["chapters"].append(chapter_data)
 
     def convert(self):
-        print(f"Starting database conversion for story {self.story_id}...")
+        logger.info(f"Starting database conversion for story {self.story_id}...")
         
         if not self.fetch_metadata():
             return
@@ -220,7 +223,8 @@ class StoryConverter:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(self.screenplay, f, indent=2, default=str)
         
-        print(f"Screenplay generated at: {output_path}")
+        logger.info(f"Screenplay generated at: {output_path}")
+        return str(output_path)
 
 if __name__ == "__main__":
     import argparse

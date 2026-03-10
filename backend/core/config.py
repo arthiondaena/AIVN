@@ -7,7 +7,7 @@ load_dotenv()
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env', env_file_encoding='utf-8', extra='allow')
     GOOGLE_APPLICATION_CREDENTIALS: str = None
-    GOOGLE_CLOUD_BUCKET: str = "visualnovel"
+    GOOGLE_CLOUD_BUCKET: str = "aivn"
     DATABASE_URL: str = "sqlite:///vn_story.db"
     VERTEX_API_KEY: str = None
     REMOVEBG_API_KEY: str = None
@@ -21,4 +21,6 @@ class Settings(BaseSettings):
 settings = Settings()
 
 if __name__ == "__main__":
-    print(settings.GOOGLE_APPLICATION_CREDENTIALS)
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.debug(settings.GOOGLE_APPLICATION_CREDENTIALS)

@@ -24,4 +24,6 @@ dependencies = [
     "pyaudio>=0.2.14",
     "structlog>=25.5.0",
     "langsmith>=0.7.14",
+    "sentry-sdk>=2.54.0",
+    "structlog-sentry>=2.2.1",
 ]

@@ -1,5 +1,6 @@
 import pygame
 import sys
+import logging
 from typing import Optional, Dict, List
 from pathlib import Path
 
@@ -16,13 +17,15 @@ from backend.vn_engine.state_manager import SceneManager, GameState
 from backend.vn_engine.graphics import Render, Sprite
 from backend.vn_engine.stage import StageDirector
 
+logger = logging.getLogger(__name__)
+
 class GameEngine:
     """
     Main engine class managing the game loop, input, and state updates.
     Based on Source_code/Application/Assets/Scripts/Core/Game_Master.py
     """
     def __init__(self, screenplay_path: str):
-        print("DEBUG: GameEngine initialized", flush=True)
+        logger.info("Initializing GameEngine...")
         pygame.init()
         # Initialize mixer with settings matching the generated audio (24kHz)
         pygame.mixer.init(frequency=24000, size=-16, channels=2, buffer=4096) 
@@ -60,7 +63,7 @@ class GameEngine:
             self.is_running = True
             self._run_loop()
         except Exception as e:
-            print(f"Failed to start engine: {e}")
+            logger.error(f"Failed to start engine: {e}")
             import traceback
             traceback.print_exc()
 
@@ -118,7 +121,7 @@ class GameEngine:
                 self._update_audio()
                 self._update_ui_state()
         except Exception as e:
-            print(f"Error making choice {index}: {e}")
+            logger.error(f"Error making choice {index}: {e}")
             import traceback
             traceback.print_exc()
 
@@ -131,7 +134,7 @@ class GameEngine:
             # Actually next() returns the *next* state.
             # If current frame says "END", we stop or show credits.
             if self.current_frame and self.current_frame.get("scene_id") == "END":
-                print("Story Ended.")
+                logger.info("Story Ended.")
                 self.is_running = False
                 return
 
@@ -141,7 +144,7 @@ class GameEngine:
             self._update_ui_state()
             
         except Exception as e:
-            print(f"Error advancing story: {e}")
+            logger.error(f"Error advancing story: {e}")
             import traceback
             traceback.print_exc()
 
@@ -174,16 +177,16 @@ class GameEngine:
 
             if p_path.exists():
                 try:
-                    print(f"DEBUG: Playing audio: {audio_path}", flush=True)
-                    print(f"[DEBUG] Playing audio: {p_path}")
+                    logger.debug(f"Playing audio: {audio_path}")
+                    logger.debug(f"Playing audio: {p_path}")
                     sound = pygame.mixer.Sound(str(p_path))
                     # Set volume explicitly just in case
                     sound.set_volume(1.0)
                     voice_channel.play(sound)
                 except Exception as e:
-                    print(f"Failed to play audio {audio_path}: {e}")
+                    logger.error(f"Failed to play audio {audio_path}: {e}")
             else:
-                print(f"[DEBUG] Audio file not found: {p_path}")
+                logger.debug(f"Audio file not found: {p_path}")
         else:
              pass # No audio for this line
 

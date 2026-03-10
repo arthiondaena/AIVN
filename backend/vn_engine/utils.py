@@ -3,6 +3,9 @@ from pathlib import Path
 from typing import Optional, Dict, Any
 import json
 import os
+import logging
+
+logger = logging.getLogger(__name__)
 
 class AssetLoader:
     """
@@ -20,7 +23,7 @@ class AssetLoader:
     def load_json(self, relative_path: str) -> Dict[str, Any]:
         full_path = self.base_path / relative_path
         if not full_path.exists():
-            print(f"Warning: JSON file not found: {full_path}")
+            logger.warning(f"JSON file not found: {full_path}")
             return {}
             
         with open(full_path, 'r', encoding='utf-8') as f:
@@ -34,7 +37,7 @@ class AssetLoader:
         if not full_path.exists():
             # Try finding it relative to project root if not in output dir
             # Or just warn
-            print(f"Warning: Image file not found: {full_path}")
+            logger.warning(f"Image file not found: {full_path}")
             return None
 
         try:
@@ -46,7 +49,7 @@ class AssetLoader:
             self._image_cache[relative_path] = image
             return image
         except pygame.error as e:
-            print(f"Error loading image {full_path}: {e}")
+            logger.error(f"Error loading image {full_path}: {e}")
             return None
 
     def load_font(self, font_name: Optional[str], size: int) -> pygame.font.Font:

@@ -1,6 +1,6 @@
 import asyncio
 import json
-import structlog
+import logging
 import wave
 import os
 
@@ -21,7 +21,7 @@ from models.story_detailed_models import SceneElaborator, CharacterPoseSet
 from vn_engine.cache_manager import CacheManager
 
 # Configure logging
-logger = structlog.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
 
 def extract_image_from_response(response: GenerateContentResponse):
@@ -49,12 +49,11 @@ class GenAIClient:
 
     async def generate_story_structure(self, story_text: str, style: str):
         prompt = STORY_OUTLINE_USER_PROMPT.format(story_text=story_text, style=style)
-        # await self.client.aio.models.list() # list is likely sync or needed? Maybe skip listing.
         response = await self.client.aio.models.generate_content(
             model=settings.STORY_MODEL, # fast model for structure
             contents=prompt,
             config=types.GenerateContentConfig(
-                # response_mime_type="application/json"
+                response_mime_type="application/json",
                 system_instruction=STORY_OUTLINE_SYSTEM_PROMPT,
                 response_schema=MainStoryOutline
             )
@@ -67,6 +66,7 @@ class GenAIClient:
             model=settings.STORY_MODEL,
             contents=prompt,
             config=types.GenerateContentConfig(
+                response_mime_type="application/json",
                 system_instruction=CHAPTER_GENERATION_SYSTEM_PROMPT,
                 response_schema=ChapterToScenes
             )
@@ -82,6 +82,7 @@ class GenAIClient:
             model=settings.STORY_MODEL,
             contents=prompt,
             config=types.GenerateContentConfig(
+                response_mime_type="application/json",
                 system_instruction=SCENE_SYSTEM_PROMPT,
                 response_schema=SceneElaborator
             )
@@ -94,6 +95,7 @@ class GenAIClient:
             model=settings.STORY_MODEL,
             contents=prompt,
             config=types.GenerateContentConfig(
+                response_mime_type="application/json",
                 system_instruction=CHARACTER_POSE_SYSTEM_PROMPT,
                 response_schema=CharacterPoseSet
             )
@@ -313,7 +315,7 @@ class GenAIClient:
 if __name__ == "__main__":
     import asyncio
     client = GenAIClient()
-    # description = "Haru’s younger sister, aged 14. She has long, flowing silver hair adorned with small, glowing star-shaped hairpins. She wears a traditional white yukata with a modern twist, featuring patterns of koi fish that appear to swim across the fabric. In the dream world, she is often surrounded by translucent, glowing butterflies. Her expression is ethereal and serene, though her eyes appear glassy and distant while trapped in the dream-state."
-    # img = asyncio.run(client.generate_character_image(description, "anime", "full body"))
-    # img.save("character_image.png")
-    asyncio.run(client.generate_audio("Hello, testing 1,2,3", "test.wav"))
+    description = "Haru’s younger sister, aged 14. She has long, flowing silver hair adorned with small, glowing star-shaped hairpins. She wears a traditional white yukata with a modern twist, featuring patterns of koi fish that appear to swim across the fabric. In the dream world, she is often surrounded by translucent, glowing butterflies. Her expression is ethereal and serene, though her eyes appear glassy and distant while trapped in the dream-state."
+    img = asyncio.run(client.generate_character_image(description, "anime", "full body"))
+    img.save("character_image.png")
+    # asyncio.run(client.generate_audio("Hello, testing 1,2,3", "test.wav"))

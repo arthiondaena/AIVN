@@ -1,5 +1,2 @@
-- Streaming TTS generation
-- Narrator improvements
-- Change nano banana pro to nano banana
-- Add side characters
-- Meaningful names and paths for poses ({story_id}/{character_id}/pose.png)
+- Change from pygame to iframe type output
+- Robust background remover

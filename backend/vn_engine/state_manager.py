@@ -5,6 +5,7 @@ import logging
 from dataclasses import dataclass, field
 from .loader import StoryLoader
 
+from backend.services.genai_services import GenAIClient
 
 logger = logging.getLogger(__name__)
 
@@ -50,7 +51,6 @@ class SceneManager:
 
     def _init_genai_client(self):
         try:
-            from backend.services.genai_services import GenAIClient
             self.genai_client = GenAIClient()
         except ImportError:
             logger.warning("Could not import GenAIClient. TTS will be disabled.")
@@ -286,17 +286,6 @@ class SceneManager:
                     expected_path = self.loader.screenplay_path.parent / "audio" / filename
                     if expected_path.exists():
                         audio_path = str(expected_path)
-
-                # 3. Get audio path from TTS generation if not found
-                if not audio_path and self.genai_client and text:
-                    voice_name = self._get_voice_for_speaker(speaker)
-                    dialogue_id = current_line.get("dialogue_id")
-                    filename = f"{self.state.current_scene_id}_{dialogue_id}.wav"
-                    expected_path = str(self.loader.screenplay_path.parent / "audio" / filename)
-                    try:
-                        audio_path = self.genai_client.generate_audio_sync(text, expected_path, voice_name)
-                    except Exception as e:
-                        logger.error(f"Failed to get audio path: {e}")
             else:
                 self.state.character_states = {}
 
@@ -427,7 +416,7 @@ class SceneManager:
                     self.state.current_dialogue_index = 0
                     return
         
-        print(f"Warning: Target scene {target_scene_id} not found.")
+        logger.warning(f"Target scene {target_scene_id} not found.")
         # Fallback to linear
         self._transition_to_next_linear_scene()
 
@@ -457,7 +446,7 @@ class SceneManager:
                     self.state.current_dialogue_index = 0
                 else:
                     # Empty chapter? Skip or end?
-                    print("Next chapter has no scenes. Ending story.")
+                    logger.info("Next chapter has no scenes. Ending story.")
                     self.state.current_scene_id = "END"
             else:
                 # End of story

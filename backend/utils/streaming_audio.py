@@ -1,7 +1,10 @@
 import os
 import pyaudio
+import logging
 from google.cloud import texttospeech
 from core.config import settings
+
+logger = logging.getLogger(__name__)
 
 # Configuration
 # PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT")
@@ -27,7 +30,7 @@ def play_streaming_tts(prompt, text):
         output=True
     )
 
-    print(f"Streaming audio from model: {MODEL_NAME}...")
+    logger.info(f"Streaming audio from model: {MODEL_NAME}...")
 
     # 2. Define the Request Generator
     # The API requires a generator that yields requests.
@@ -62,10 +65,10 @@ def play_streaming_tts(prompt, text):
                 stream.write(response.audio_content)
 
     except Exception as e:
-        print(f"Error occurred: {e}")
+        logger.error(f"Error occurred: {e}")
     finally:
         # 4. Cleanup
-        print("\nStream finished.")
+        logger.info("Stream finished.")
         stream.stop_stream()
         stream.close()
         p.terminate()

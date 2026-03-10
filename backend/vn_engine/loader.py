@@ -1,6 +1,9 @@
 import json
+import logging
 from pathlib import Path
 from typing import Dict, Any, Optional, List
+
+logger = logging.getLogger(__name__)
 
 class StoryLoader:
     def __init__(self, screenplay_path: str):

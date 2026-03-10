@@ -1,8 +1,11 @@
 import pygame
+import logging
 from typing import Dict, Optional, List, Tuple, Any
 from .graphics import Sprite, Render
 from .utils import AssetLoader
 from .loader import StoryLoader
+
+logger = logging.getLogger(__name__)
 
 class Character:
     """

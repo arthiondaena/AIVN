@@ -2,7 +2,6 @@ import json
 import os
 import uuid
 import logging
-import structlog
 import asyncio
 from sqlalchemy.orm import Session
 from sqlalchemy import select
@@ -18,7 +17,7 @@ import io
 import re
 from thefuzz import process
 
-logger = structlog.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
 VOICES = {
     "male": male_voices,
