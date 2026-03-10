@@ -46,8 +46,15 @@ def main():
     parser.add_argument("--style", type=str, default="anime style, high quality", help="Visual style for backgrounds and characters")
     parser.add_argument("--story_id", type=int, help="Optional: Skip generation and use existing story ID")
     parser.add_argument("--skip_game", action="store_true", help="Only generate the story and screenplay, don't run the game")
+    parser.add_argument("--web", action="store_true", help="Run the web server instead of the Pygame engine")
     
     args = parser.parse_args()
+
+    if args.web:
+        import uvicorn
+        logger.info("Starting AIVN Web Server...")
+        uvicorn.run("api_app:app", host="0.0.0.0", port=8000, reload=True)
+        return
 
     # Step 1: Story Generation
     story_id = args.story_id

@@ -42,9 +42,17 @@ def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
 
 class GenAIClient:
     def __init__(self):
-        self.client = wrap_gemini(genai.Client(api_key=settings.VERTEX_API_KEY))
-        self.vertex_client = wrap_gemini(genai.Client(vertexai=True))
+        self.client = genai.Client(api_key=settings.VERTEX_API_KEY)
+        self.vertex_client = genai.Client(vertexai=True)
         self.cache_manager = CacheManager()
+
+        # Try to wrap client with langsmith
+        try:
+            self.client = wrap_gemini(self.client)
+            self.vertex_client = wrap_gemini(self.vertex_client)
+        except Exception as e:
+            logger.warning(f"Could not wrap client with langsmith: {e}")
+
         # self.client = genai.Client(vertexai=True)
 
     async def generate_story_structure(self, story_text: str, style: str):

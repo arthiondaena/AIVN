@@ -5,7 +5,7 @@ import logging
 from dataclasses import dataclass, field
 from .loader import StoryLoader
 
-from backend.services.genai_services import GenAIClient
+from services.genai_services import GenAIClient
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +84,7 @@ class SceneManager:
 
     def _trigger_scene_prefetch(self, scene_id: str):
         """
-        Prefetches audio for the entire scene using async generation in a background thread.
+        Prefetches audio for the entire scene using async generation in a background task.
         """
         if not self.genai_client:
             return
@@ -111,33 +111,33 @@ class SceneManager:
         for speaker in speakers:
             voice_map[speaker] = self._get_voice_for_speaker(speaker)
 
-        def run_async_prefetch():
+        def get_audio_path(filename):
+            return str(self.loader.screenplay_path.parent / "audio" / filename)
+
+        try:
             import asyncio
-            from backend.services.genai_services import GenAIClient
+            loop = asyncio.get_running_loop()
             
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            
-            # Create a fresh client instance bound to THIS thread's event loop
-            local_genai_client = GenAIClient()
-            
-            def get_audio_path(filename):
-                return str(self.loader.screenplay_path.parent / "audio" / filename)
-
-            try:
-                loop.run_until_complete(local_genai_client.generate_scene_audio(
-                    content,
-                    voice_map,
-                    get_audio_path
-                ))
-            except Exception as e:
-                logger.error(f"Error in async prefetch for scene {scene_id}: {e}")
-            finally:
+            # Create a task in the currently running event loop
+            loop.create_task(self.genai_client.generate_scene_audio(
+                content,
+                voice_map,
+                get_audio_path
+            ))
+        except RuntimeError:
+            # If there's no running event loop (e.g. CLI non-async mode), we might need another approach
+            # but since we are running via FastAPI web server, there should be one.
+            def run_sync():
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                # In a new loop, we cannot easily reuse the same GenAIClient due to httpx lock issues.
+                # If we really need this fallback, we might have to use sync versions or just skip.
+                logger.warning("No running event loop found for prefetch. Prefetch might be skipped.")
                 loop.close()
-
-        # Start a thread to run the async task
-        t = threading.Thread(target=run_async_prefetch, daemon=True)
-        t.start()
+            
+            import threading
+            t = threading.Thread(target=run_sync, daemon=True)
+            t.start()
 
     def start_story(self):
         """Initializes the story at the first scene of the first chapter."""

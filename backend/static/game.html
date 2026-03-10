@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIVN Game Client</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: black; color: white;
+            font-family: sans-serif; overflow: hidden;
+        }
+        #game-container {
+            position: relative; width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+        }
+        #background-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center; z-index: 1;
+        }
+        #character-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2; pointer-events: none; display: flex;
+            justify-content: center; align-items: flex-end;
+        }
+        .character-sprite {
+            max-height: 80%; width: auto; object-fit: contain;
+        }
+        #ui-layer {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 30%;
+            z-index: 3; display: flex; justify-content: center; align-items: flex-end;
+            padding-bottom: 20px;
+        }
+        #dialogue-box {
+            width: 80%; background: rgba(0, 0, 0, 0.7); border: 2px solid #fff;
+            border-radius: 10px; padding: 20px; box-sizing: border-box;
+            cursor: pointer;
+        }
+        #speaker-name { font-weight: bold; font-size: 1.2em; margin-bottom: 10px; color: #aaa; }
+        #dialogue-text { font-size: 1.1em; line-height: 1.4; }
+        #choices-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 4; display: none; flex-direction: column;
+            justify-content: center; align-items: center; background: rgba(0,0,0,0.5);
+        }
+        .choice-btn {
+            background-color: #323296; color: white; border: 2px solid #5555ff;
+            padding: 15px 30px; margin: 10px; font-size: 1.2em; border-radius: 5px;
+            cursor: pointer; width: 60%; text-align: center;
+        }
+        .choice-btn:hover { background-color: #5555ff; }
+    </style>
+</head>
+<body>
+    <div id="game-container" onclick="advanceStory()">
+        <div id="background-layer"></div>
+        <div id="character-layer">
+            <!-- Characters dynamically added here -->
+            <img id="char-img" class="character-sprite" src="" style="display:none;" />
+        </div>
+        
+        <div id="ui-layer">
+            <div id="dialogue-box" onclick="event.stopPropagation(); advanceStory();">
+                <div id="speaker-name"></div>
+                <div id="dialogue-text">Click to start...</div>
+            </div>
+        </div>
+
+        <div id="choices-layer">
+            <!-- Choices dynamically added here -->
+        </div>
+        
+        <audio id="voice-audio" autoplay></audio>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const storyId = urlParams.get('story_id') || '2';
+        
+        const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        const wsUrl = `${wsProtocol}//${window.location.host}/ws/game/${storyId}`;
+        
+        let ws;
+        let isWaitingForChoice = false;
+
+        function connect() {
+            ws = new WebSocket(wsUrl);
+            ws.onopen = () => { console.log("Connected to game engine"); };
+            ws.onmessage = (event) => {
+                const frame = JSON.parse(event.data);
+                handleFrame(frame);
+            };
+            ws.onerror = (error) => { console.error("WebSocket Error:", error); };
+            ws.onclose = () => { console.log("WebSocket connection closed."); };
+        }
+
+        function handleFrame(frame) {
+            console.log("Received frame:", frame);
+            if (frame.error) {
+                document.getElementById('dialogue-text').innerText = "Error: " + frame.error;
+                return;
+            }
+            if (frame.scene_id === "END") {
+                document.getElementById('speaker-name').innerText = "System";
+                document.getElementById('dialogue-text').innerText = "The End.";
+                return;
+            }
+
+            // Update Background
+            if (frame.background_url) {
+                document.getElementById('background-layer').style.backgroundImage = `url('${frame.background_url}')`;
+            }
+
+            // Update Characters
+            const charLayer = document.getElementById('character-layer');
+            charLayer.innerHTML = '';
+            if (frame.characters && Object.keys(frame.characters).length > 0) {
+                for (const [charName, posePath] of Object.entries(frame.characters)) {
+                    const img = document.createElement('img');
+                    img.className = 'character-sprite';
+                    // We now expect the backend to provide the full URL path, e.g., /assets/11/characters/char/pose.png
+                    img.src = posePath;
+                    // Fallback handling if image not found:
+                    img.onerror = () => { img.style.display = 'none'; };
+                    charLayer.appendChild(img);
+                }
+            }
+
+            // Update Dialogue
+            if (frame.dialogue) {
+                document.getElementById('speaker-name').innerText = frame.dialogue.speaker || "";
+                document.getElementById('dialogue-text').innerText = frame.dialogue.text || "";
+            }
+
+            // Update Audio
+            const audioEl = document.getElementById('voice-audio');
+            if (frame.audio_url) {
+                audioEl.src = frame.audio_url;
+                audioEl.play().catch(e => console.error("Audio playback failed:", e));
+            } else {
+                // If there's no audio for this frame, stop any currently playing audio
+                audioEl.pause();
+                audioEl.currentTime = 0;
+            }
+
+            // Handle Choices
+            isWaitingForChoice = frame.is_choice || false;
+            const choicesLayer = document.getElementById('choices-layer');
+            if (isWaitingForChoice && frame.choices) {
+                choicesLayer.innerHTML = '';
+                frame.choices.forEach(choice => {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-btn';
+                    btn.innerText = choice.text;
+                    btn.onclick = (e) => {
+                        e.stopPropagation(); // Prevent advancing the story when clicking a choice
+                        makeChoice(choice.index);
+                    };
+                    choicesLayer.appendChild(btn);
+                });
+                choicesLayer.style.display = 'flex';
+                document.getElementById('dialogue-box').style.pointerEvents = 'none';
+            } else {
+                choicesLayer.style.display = 'none';
+                document.getElementById('dialogue-box').style.pointerEvents = 'auto';
+            }
+        }
+
+        function advanceStory() {
+            if (!isWaitingForChoice && ws && ws.readyState === WebSocket.OPEN) {
+                // Pause current audio immediately upon clicking to advance
+                const audioEl = document.getElementById('voice-audio');
+                audioEl.pause();
+                
+                ws.send(JSON.stringify({ action: "advance" }));
+            }
+        }
+
+        function makeChoice(index) {
+            if (isWaitingForChoice && ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ action: "choice", index: index }));
+                document.getElementById('choices-layer').style.display = 'none';
+            }
+        }
+
+        window.onload = connect;
+    </script>
+</body>
+</html>

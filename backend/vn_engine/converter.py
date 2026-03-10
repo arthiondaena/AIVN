@@ -2,6 +2,7 @@ import json
 import os
 import random
 import logging
+import difflib
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from sqlalchemy import select
@@ -174,9 +175,45 @@ class StoryConverter:
                         if expected_filename2 in self.screenplay["assets"]["audio"]:
                             line["audio_key"] = expected_filename2
 
+                        # Fuzzy match character poses
+                        speaker = line.get("speaker")
+                        pose_expr = line.get("character_pose_expression")
+                        if speaker and pose_expr:
+                            prefix = f"{speaker}_"
+                            speaker_poses = [k for k in self.screenplay["assets"]["poses"].keys() if k.startswith(prefix)]
+                            if speaker_poses:
+                                pose_descriptions = [k[len(prefix):] for k in speaker_poses]
+                                matches = difflib.get_close_matches(pose_expr, pose_descriptions, n=1, cutoff=0.9)
+                                if matches:
+                                    line["character_pose_expression"] = f"{matches[0]}"
+                                else:
+                                    line["character_pose_expression"] = speaker_poses[0]
+
                     # 2. Choices
                     if scene.choices_content:
                         content["choices_and_branches"] = scene.choices_content
+                        for choice in content["choices_and_branches"]:
+                            for line in choice.get("branching_dialogue", []):
+                                expected_filename = f"{scene.scene_sid}_{line.get('dialogue_id')}.wav"
+                                expected_filename2 = f"None_{line.get('dialogue_id')}.wav"
+                                if expected_filename in self.screenplay["assets"]["audio"]:
+                                    line["audio_key"] = expected_filename
+                                if expected_filename2 in self.screenplay["assets"]["audio"]:
+                                    line["audio_key"] = expected_filename2
+
+                                # Fuzzy match character poses
+                                speaker = line.get("speaker")
+                                pose_expr = line.get("character_pose_expression")
+                                if speaker and pose_expr:
+                                    prefix = f"{speaker}_"
+                                    speaker_poses = [k for k in self.screenplay["assets"]["poses"].keys() if k.startswith(prefix)]
+                                    if speaker_poses:
+                                        pose_descriptions = [k[len(prefix):] for k in speaker_poses]
+                                        matches = difflib.get_close_matches(pose_expr, pose_descriptions, n=1, cutoff=0.9)
+                                        if matches:
+                                            line["character_pose_expression"] = f"{matches[0]}"
+                                        else:
+                                            line["character_pose_expression"] = speaker_poses[0]
                         
                     # 3. Location Changes
                     if scene.location_changes:
