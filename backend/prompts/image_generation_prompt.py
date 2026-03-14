@@ -46,7 +46,8 @@ Render the character in this exact pose, expressing this specific emotion.
 
 ### Rendering Instructions:
 - Format: High resolution, centered composition.
-- Background: A pure, solid contrasting background (exact opposite of the character color) to allow for easy background removal and compositing later.
+- Background: A pure, solid green background to allow for easy background removal and compositing later.
+- Color Constraint: The character MUST NOT wear or contain any green color (no green clothing, no green accessories, no green eyes, no green hair), to ensure the background removal process works flawlessly.
 - Consistency: The character must look like the same person from previous generations. Carefully review the provided reference image (if included via inline_data) and match the facial structure and proportions exactly.
 - IMPORTANT: Generate exactly ONE single character sprite. Do NOT generate character sheets, multiple versions, or multiple characters in the same image. The image should contain ONLY one instance of the character.
 """

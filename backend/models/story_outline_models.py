@@ -11,6 +11,10 @@ class CharacterSpriteInfo(BaseModel):
     gender: Literal["male", "female"] = Field(..., description="Gender of the character.")
     appearance: str = Field(..., description="Detailed physical description for generating the base character sprite.")
 
+class BackgroundLocationInfo(BaseModel):
+    name: str = Field(..., description="Name of the background location.")
+    description: str = Field(..., description="Detailed description of the location for generating an image.")
+
 class ChapterOutline(BaseModel):
     chapter_id: str = Field(..., description="Unique identifier for the chapter (e.g., 'act1_chapter1').")
     title: str = Field(..., description="A short, descriptive title for the chapter.")
@@ -20,6 +24,7 @@ class ChapterOutline(BaseModel):
 class MainStoryOutline(BaseModel):
     title: str = Field(..., description="The title of the visual novel.")
     logline: str = Field(..., description="A compelling one-sentence summary of the story.")
+    available_backgrounds: List[BackgroundLocationInfo] = Field(..., description="A list of core background locations to be used in the story.")
     main_characters: List[CharacterSpriteInfo] = Field(..., description="Information required to create sprites for the main cast.")
     side_characters: List[CharacterSpriteInfo] = Field(default_factory=list, description="Information required to create sprites for any side characters that appear in the story.")
     main_chapters: List[ChapterOutline] = Field(..., description="The sequential outline of all major chapters in the game.")

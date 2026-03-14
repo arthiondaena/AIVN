@@ -1,2 +1,0 @@
-- Change from pygame to iframe type output
-- Robust background remover

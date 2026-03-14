@@ -76,9 +76,11 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const storyId = urlParams.get('story_id') || '2';
+        const backendUrl = urlParams.get('backend_url') || 'http://localhost:8000';
         
-        const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = `${wsProtocol}//${window.location.host}/ws/game/${storyId}`;
+        const wsProtocol = backendUrl.startsWith('https') ? 'wss:' : 'ws:';
+        const backendHost = backendUrl.replace(/^https?:\/\//, '');
+        const wsUrl = `${wsProtocol}//${backendHost}/ws/game/${storyId}`;
         
         let ws;
         let isWaitingForChoice = false;
@@ -108,7 +110,8 @@
 
             // Update Background
             if (frame.background_url) {
-                document.getElementById('background-layer').style.backgroundImage = `url('${frame.background_url}')`;
+                const bgUrl = frame.background_url.startsWith('http') ? frame.background_url : `${backendUrl}${frame.background_url.startsWith('/') ? '' : '/'}${frame.background_url}`;
+                document.getElementById('background-layer').style.backgroundImage = `url('${bgUrl}')`;
             }
 
             // Update Characters
@@ -119,7 +122,7 @@
                     const img = document.createElement('img');
                     img.className = 'character-sprite';
                     // We now expect the backend to provide the full URL path, e.g., /assets/11/characters/char/pose.png
-                    img.src = posePath;
+                    img.src = posePath.startsWith('http') ? posePath : `${backendUrl}${posePath.startsWith('/') ? '' : '/'}${posePath}`;
                     // Fallback handling if image not found:
                     img.onerror = () => { img.style.display = 'none'; };
                     charLayer.appendChild(img);
@@ -135,7 +138,7 @@
             // Update Audio
             const audioEl = document.getElementById('voice-audio');
             if (frame.audio_url) {
-                audioEl.src = frame.audio_url;
+                audioEl.src = frame.audio_url.startsWith('http') ? frame.audio_url : `${backendUrl}${frame.audio_url.startsWith('/') ? '' : '/'}${frame.audio_url}`;
                 audioEl.play().catch(e => console.error("Audio playback failed:", e));
             } else {
                 // If there's no audio for this frame, stop any currently playing audio

@@ -14,7 +14,7 @@ from core.orm import Story, Chapter, Scene, Character, CharacterPose, Background
 logger = logging.getLogger(__name__)
 
 class StoryConverter:
-    def __init__(self, story_id: str, base_output_dir: str = "backend/services/output"):
+    def __init__(self, story_id: str, base_output_dir: str = "output"):
         self.story_id = int(story_id) # Ensure int for DB lookup
         self.base_dir = Path(base_output_dir) / str(story_id)
         self.db: Session = SessionLocal()

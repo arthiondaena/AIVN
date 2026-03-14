@@ -32,6 +32,7 @@ dependencies = [
     { name = "sqlalchemy" },
     { name = "structlog" },
     { name = "structlog-sentry" },
+    { name = "tenacity" },
     { name = "thefuzz" },
     { name = "withoutbg" },
 ]
@@ -58,6 +59,7 @@ requires-dist = [
     { name = "sqlalchemy", specifier = ">=2.0.47" },
     { name = "structlog", specifier = ">=25.5.0" },
     { name = "structlog-sentry", specifier = ">=2.2.1" },
+    { name = "tenacity", specifier = ">=9.1.4" },
     { name = "thefuzz", specifier = ">=0.22.1" },
     { name = "withoutbg", specifier = ">=1.0.2" },
 ]

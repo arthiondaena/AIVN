@@ -9,14 +9,22 @@ class Settings(BaseSettings):
     GOOGLE_APPLICATION_CREDENTIALS: str = None
     GOOGLE_CLOUD_BUCKET: str = "aivn"
     DATABASE_URL: str = "sqlite:///vn_story.db"
-    VERTEX_API_KEY: str = None
+    GEMINI_API_KEY: str = None
     REMOVEBG_API_KEY: str = None
 
     # Models
-    STORY_MODEL: str = "gemini-3-flash-preview"
-    IMAGE_MODEL: str = "gemini-3-pro-image-preview"
+    STORY_MODEL: str = "gemini-2.5-flash"
+    IMAGE_MODEL_MAIN: str = "gemini-3-pro-image-preview"
+    IMAGE_MODEL: str = "gemini-3.1-flash-image-preview"
     POSE_MODEL: str = "gemini-3.1-flash-image-preview"
+    POSE_FALLBACK_MODEL: str = "gemini-2.5-flash-image"
     AUDIO_MODEL: str = "gemini-2.5-pro-preview-tts"
+    AUDIO_FALLBACK_MODEL: str = "gemini-2.5-flash-preview-tts"
+
+    # Generation settings
+    MAIN_CHAR_POSE_COUNT: str = "5"
+    SIDE_CHAR_POSE_COUNT: str = "3"
+    BACKGROUND_COUNT: int = 5
 
 settings = Settings()
 

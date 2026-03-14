@@ -19,9 +19,15 @@ You must output a strictly structured JSON response conforming to the provided s
     - IMPORTANT: Every character that will have a speaking line in the story MUST be defined here. No "generic" characters or unnamed NPCs are allowed as speakers unless they are listed in this character set.
     - IMPORTANT: The `appearance` must be highly detailed and visually focused. It must describe their physical appearance, clothing, distinguishing features, and signature expressions, heavily flavored by the required style. This description will be used to generate consistent character sprites later.
 
-3.  **Chapters**:
+3.  **Backgrounds**:
+    - Provide exactly {background_count} key background locations (`available_backgrounds`) where the story takes place.
+    - IMPORTANT: Do not generate more or fewer than {background_count} backgrounds.
+    - Provide a `name` and highly detailed `description` for each background, suitable for generating the setting's image in the requested style.
+
+4.  **Chapters**:
     - Divide the story into 3 to 5 logical chapters.
-    - For each chapter, provide a `title`, `primary_location`, and a `plot_summary`.
+    - For each chapter, provide a `title`, `primary_location`, and a `plot_summary`. 
+    - IMPORTANT: The `primary_location` MUST be one of the backgrounds explicitly listed in `available_backgrounds`.
     - The `plot_summary` should be a highly detailed summary of the events, conflicts, and resolutions that occur in this chapter.
 
 ### Guidelines:

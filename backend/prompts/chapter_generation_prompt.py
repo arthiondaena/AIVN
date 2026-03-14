@@ -9,7 +9,7 @@ You must output a strictly structured JSON response conforming to the provided s
 2.  **scenes**: A list of scenes. Each scene must include:
     - `scene_id`: A unique identifier for the scene (e.g., 'act1_chapter1_scene1').
     - `title`: A short title.
-    - `primary_location`: The main location.
+    - `primary_location`: The main location. IMPORTANT: This MUST be one of the locations from <AVAILABLE_BACKGROUND_LOCATIONS>.
     - `scene_summary`: A detailed summary of the scene's events.
 
 ### Guidelines:
@@ -26,6 +26,10 @@ ID: {chapter_id}
 Title: {title}
 Summary: {plot_summary}
 </CHAPTER_INFO>
+
+<AVAILABLE_BACKGROUND_LOCATIONS>
+{available_backgrounds}
+</AVAILABLE_BACKGROUND_LOCATIONS>
 
 <STYLE>
 {style}

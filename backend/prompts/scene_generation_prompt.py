@@ -8,7 +8,7 @@ You must output a strictly structured JSON response conforming to the provided s
 1.  **Scene Metadata**:
     - `scene_id`: The ID of the scene.
     - `characters_present`: List of character names in the scene.
-    - `initial_location_name`: The name of the starting location.
+    - `initial_location_name`: The name of the starting location. MUST be one of the locations in <AVAILABLE_BACKGROUND_LOCATIONS>.
     - `initial_location_description`: A prompt-ready description of the background art.
     - `initial_bgm`: The background music description.
 
@@ -48,6 +48,10 @@ Primary Location: {primary_location}
 <CHARACTERS>
 {characters}
 </CHARACTERS>
+
+<AVAILABLE_BACKGROUND_LOCATIONS>
+{available_backgrounds}
+</AVAILABLE_BACKGROUND_LOCATIONS>
 
 <STYLE>
 {style}
