@@ -19,7 +19,6 @@ from prompts.scene_generation_prompt import SCENE_SYSTEM_PROMPT, SCENE_USER_PROM
 from prompts.character_pose_prompt import CHARACTER_POSE_SYSTEM_PROMPT, CHARACTER_POSE_USER_PROMPT
 from models.story_outline_models import MainStoryOutline, ChapterToScenes
 from models.story_detailed_models import SceneElaborator, CharacterPoseSet
-from vn_engine.cache_manager import CacheManager
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -51,8 +50,6 @@ class GenAIClient:
     def __init__(self):
         self.client = genai.Client(vertexai=True, location="global")
         self.gemini_client = genai.Client(api_key=settings.GEMINI_API_KEY)
-
-        self.cache_manager = CacheManager()
 
         # Try to wrap client with langsmith
         try:
