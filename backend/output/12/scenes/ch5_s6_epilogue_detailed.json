@@ -1,0 +1,171 @@
+{
+    "scene_id": "ch5_s6_epilogue",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Giyu Tomioka",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Ubuyashiki Estate - The Final Meeting",
+    "initial_location_description": "A serene traditional Japanese courtyard bathed in the soft golden light of a setting sun. Wisteria petals drift slowly through the air, and the remaining members of the Demon Slayer Corps stand in a formal line.",
+    "initial_bgm": "soft nostalgic piano and strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s6_line1",
+            "speaker": "Giyu Tomioka",
+            "text": "With the defeat of the progenitor... the mission of the Demon Slayer Corps is finally complete.",
+            "tone": "Solemn and steady, carrying the weight of a thousand-year-old struggle finally ending.",
+            "character_pose_expression": "Slightly bowed head, eyes closed, solemn expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line2",
+            "speaker": "Giyu Tomioka",
+            "text": "As of this moment... the Demon Slayer Corps is officially disbanded. You have all done enough.",
+            "tone": "A heavy pause followed by a voice filled with relief and profound respect.",
+            "character_pose_expression": "Neutral standing, hands at sides, stoic expression",
+            "stage_action": null,
+            "trigger_sfx": "distant wind chimes"
+        },
+        {
+            "dialogue_id": "s6_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "To everyone who fought... to everyone we lost... thank you for allowing us to see this day.",
+            "tone": "Choked with emotion but vibrating with deep, sincere gratitude.",
+            "character_pose_expression": "Deep bow of respect, hands pressed to thighs",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line4",
+            "speaker": "Nezuko Kamado",
+            "text": "It's over... Tanjiro. The sun is so warm now.",
+            "tone": "Soft, melodic, and full of wonder at a world no longer defined by fear.",
+            "character_pose_expression": "Standing neutrally, hands folded in front, calm pink eyes",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line5",
+            "speaker": "Narrator",
+            "text": "And so, the blades were sheathed. The scars remained, but the night was no longer something to be feared. Time, relentless and kind, began to flow forward.",
+            "tone": "Warm and narrative, like a storybook closing its final chapter.",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "camera shutter click"
+        },
+        {
+            "dialogue_id": "s6_line6",
+            "speaker": "Narrator",
+            "text": "Decades turned into a century. The world moved on, taller and brighter, fueled by a peace bought with the blood of the brave.",
+            "tone": "Transcendent and rhythmic, bridging the gap between eras.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "city traffic ambience fading in"
+        },
+        {
+            "dialogue_id": "s6_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "Hey! Wait up! We're going to be late for the opening ceremony!",
+            "tone": "The 'Vocal Smile': Bright, sunny, and explicitly inviting, full of youthful energy.",
+            "character_pose_expression": "Bright wide-eyed smile, looking directly at the viewer",
+            "stage_action": "enter",
+            "trigger_sfx": "running footsteps on pavement"
+        },
+        {
+            "dialogue_id": "s6_line8",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "Don't run so fast! My heart can't take this much cardio in the morning!",
+            "tone": "Comically dramatic but genuinely happy, lacking the old notes of true terror.",
+            "character_pose_expression": "Smiling brightly with closed eyes, hugging himself in a moment of joy",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line9",
+            "speaker": "Inosuke Hashibira",
+            "text": "Move aside! I'll be the first one through the school gates! I'm the king of the morning commute!",
+            "tone": "Boisterous and competitive, filled with unbridled confidence.",
+            "character_pose_expression": "Mask removed, smirking confidently, holding both swords over shoulders with a cocky grin",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line10",
+            "speaker": "Nezuko Kamado",
+            "text": "Be careful, everyone! The crosswalk is still red!",
+            "tone": "Cheerful and caring, the voice of a sister watching over her friends.",
+            "character_pose_expression": "Waving one hand enthusiastically, bright and cheerful eyes",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s6_line11",
+            "speaker": "Giyu Tomioka",
+            "text": "Peace... it suits them well.",
+            "tone": "A soft whisper, barely audible, filled with a peaceful melancholy.",
+            "character_pose_expression": "A faint, barely visible smile, eyes softened, looking down",
+            "stage_action": null,
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Look at the old family photograph.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Narrator",
+                    "text": "On a shelf in a modern apartment, a faded photograph sits. It shows a group of young people with swords, smiling through their exhaustion.",
+                    "tone": "Quiet and reflective.",
+                    "character_pose_expression": null,
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "My ancestors really had a lot of spirit, didn't they? I'll make sure to live my life to the fullest for them too.",
+                    "tone": "Determined and grateful, a promise kept across generations.",
+                    "character_pose_expression": "Standing neutrally, gentle smile, hands at sides",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "end_credits"
+        },
+        {
+            "choice_text": "Run toward the future with your friends.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Come on, everyone! The sun is finally up, and we have the whole day ahead of us!",
+                    "tone": "Radiant and optimistic, looking toward the horizon.",
+                    "character_pose_expression": "Enthusiastic thumbs up, beaming smile",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "laughter of many people"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Narrator",
+                    "text": "They ran forward, their silhouettes merging with the vibrant light of the modern city, leaving the shadows of the past behind forever.",
+                    "tone": "Epic and concluding.",
+                    "character_pose_expression": null,
+                    "stage_action": "flash",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "end_credits"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s6_line6",
+            "new_location_name": "Modern-Day Tokyo - Shibuya Crossing",
+            "visual_description": "A vibrant, hyper-modern cityscape with massive digital billboards, towering glass buildings, and a sea of people in modern clothing crossing the street under a brilliant blue sky."
+        }
+    ]
+}

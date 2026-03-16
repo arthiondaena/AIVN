@@ -1,0 +1,35 @@
+{
+    "chapter_id": "ch1_snow_and_blood",
+    "scenes": [
+        {
+            "scene_id": "ch1_s1_the_discovery",
+            "title": "Tragedy in the Snow",
+            "primary_location": "Kamado Family House",
+            "scene_summary": "Tanjiro walks through the heavy snow after a day of selling charcoal in the village. As he approaches his home, he is hit by the overwhelming scent of blood. He finds his siblings and mother slaughtered outside and inside the cabin. Amidst the carnage, he finds Nezuko still warm. He desperately hoists her onto his back and runs toward the village, hoping to find a doctor to save her while the snow falls relentlessly."
+        },
+        {
+            "scene_id": "ch1_s2_giyu_intervention",
+            "title": "The Water Hashira",
+            "primary_location": "Snowy Mountain Path",
+            "scene_summary": "Nezuko suddenly transforms into a demon and attacks Tanjiro while he carries her. Before he can react, Giyu Tomioka arrives to behead the new demon. Tanjiro throws himself between them, pleading for his sister's life and promising to find a cure. Giyu is initially dismissive until Nezuko defies her demonic instincts to protect Tanjiro from Giyu's blade. Moved by this unprecedented bond, Giyu spares her, places a bamboo muzzle on her, and tells Tanjiro to seek out Sakonji Urokodaki at Mt. Sagiri."
+        },
+        {
+            "scene_id": "ch1_s3_urokodaki_meeting",
+            "title": "The Master of Mt. Sagiri",
+            "primary_location": "Mt. Sagiri Base",
+            "scene_summary": "Tanjiro arrives at the foot of Mt. Sagiri with Nezuko hidden in a basket. He is intercepted by a masked man, Sakonji Urokodaki. Urokodaki tests Tanjiro's resolve by making him climb a trap-laden mountain in the thin air before dawn. Despite his exhaustion, Tanjiro succeeds through his sense of smell and sheer willpower. Urokodaki recognizes Tanjiro's potential and formally accepts him as a student."
+        },
+        {
+            "scene_id": "ch1_s4_training_ordeal",
+            "title": "The Path of Water",
+            "primary_location": "Mt. Sagiri Slopes",
+            "scene_summary": "Over the next two years, Tanjiro undergoes a grueling training regimen. He practices the ten forms of Water Breathing and learns to control his breath to maximize his physical strength. He spends his days dodging lethal traps and swinging his sword until his hands bleed. During this time, Nezuko remains in a deep, supernatural sleep, which Urokodaki believes is her way of recovering energy without consuming human flesh."
+        },
+        {
+            "scene_id": "ch1_s5_the_boulder",
+            "title": "The Final Trial",
+            "primary_location": "Sacred Clearing on Mt. Sagiri",
+            "scene_summary": "Urokodaki leads Tanjiro to a massive, moss-covered boulder and tells him he has nothing more to teach. He declares that Tanjiro can only proceed to the Final Selection if he manages to slice the stone in half with his katana. After months of mental and physical struggle, Tanjiro focuses his Water Breathing technique to its absolute limit. In a single, fluid strike, he successfully splits the massive boulder, proving he is ready to face the demons that took his family."
+        }
+    ]
+}

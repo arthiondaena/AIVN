@@ -1,0 +1,128 @@
+{
+    "scene_id": "ch4_s4_dawn_approaches",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Village Outskirts - Dense Brush",
+    "initial_location_description": "A thick, claustrophobic thicket of tangled bushes and gnarled tree roots at the edge of the Swordsmith Village. The air is misty, and the sky is a deep indigo transitioning into a pale morning orange.",
+    "initial_bgm": "Tense and cinematic orchestral with driving percussion",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s4_line1",
+            "speaker": "Narrator",
+            "text": "The scent of fear and old blood hangs heavy in the air. The true Hantengu, a pathetic, mouse-sized creature, scurries desperately through the undergrowth.",
+            "tone": "Gritty and immersive, building suspense through low-frequency narration.",
+            "character_pose_expression": null,
+            "trigger_sfx": "brush rustling and rapid tiny footsteps"
+        },
+        {
+            "dialogue_id": "s4_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "I can see you! You won't escape... not this time! [heavy breathing] I have to end this before the sun rises!",
+            "tone": "Determined and strained, voice cracking with exhaustion and resolve.",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+            "trigger_sfx": "heavy footsteps on grass"
+        },
+        {
+            "dialogue_id": "s4_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "Total Concentration... Sun Breathing... Waltz!",
+            "tone": "A guttural, focused shout that resonates with power and spiritual focus.",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "fire whooshing"
+        },
+        {
+            "dialogue_id": "s4_line4",
+            "speaker": "Narrator",
+            "text": "A brilliant arc of crimson fire cuts through the darkness. The blade find its mark, severing the tiny neck of the demon in a single, blazing stroke.",
+            "tone": "Epic and triumphant, though laced with the weight of the finality.",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "sharp sword slash"
+        },
+        {
+            "dialogue_id": "s4_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] It's... it's finally over. He's crumbling away. We... we did it, Nezuko.",
+            "tone": "Exhausted and relieved, the vocal chords sounding dry and worn out.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "trigger_sfx": "demon disintegrating sound effect"
+        },
+        {
+            "dialogue_id": "s4_line6",
+            "speaker": "Narrator",
+            "text": "But the relief is short-lived. As the demon vanishes, the canopy above thins out. The first direct rays of the sun pierce through the trees, striking the ground with golden heat.",
+            "tone": "Suddenly urgent and ominous, shifting from triumph to immediate dread.",
+            "character_pose_expression": null,
+            "trigger_sfx": "ambient morning birds chirping"
+        },
+        {
+            "dialogue_id": "s4_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "The sun? No... wait! Nezuko, get down!",
+            "tone": "Sudden, sharp terror. A high-pitched realization of immediate danger.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s4_line8",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled, pained crying]",
+            "tone": "Muffled by the bamboo, but clearly expressing agony and physical shock.",
+            "character_pose_expression": "Sad expression, furrowed brows, teary eyes looking downward",
+            "trigger_sfx": "sizzling sound"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Cover Nezuko with your body!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b1_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Nezuko! Stay behind me! I'll protect you, just hang on!",
+                    "tone": "Hysterical and fiercely protective, sobbing through the command.",
+                    "character_pose_expression": "Shielding someone, arms spread wide, protective glare",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "rapid cloth rustling"
+                },
+                {
+                    "dialogue_id": "s4_b1_2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro throws himself over his sister, his own body acting as a shield against the rising sun as her skin begins to smoke.",
+                    "tone": "Tragic and intense, focusing on the bond between the siblings.",
+                    "character_pose_expression": null
+                }
+            ]
+        },
+        {
+            "choice_text": "Desperately search for the wooden box!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b2_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "The box! Where is it?! I have to get her inside right now!",
+                    "tone": "Frantic and disjointed, eyes scanning the area with wild desperation.",
+                    "character_pose_expression": "Crying with a pained expression, hand clutching his chest",
+                    "trigger_sfx": "frantic searching through leaves"
+                },
+                {
+                    "dialogue_id": "s4_b2_2",
+                    "speaker": "Narrator",
+                    "text": "He looks back to where the box fell during the struggle, but the distance is too great. The sun is rising faster than he can reach it.",
+                    "tone": "Hopeless and heavy, emphasizing the cruelty of the timing.",
+                    "character_pose_expression": null
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s4_line4",
+            "new_location_name": "The Sun-Drenched Clearing",
+            "visual_description": "A rocky, open plateau at the edge of the forest. The sun's golden rim is visible over the mountains, casting long shadows and illuminating the dust in the air. Nezuko is standing in a patch of direct light."
+        }
+    ]
+}

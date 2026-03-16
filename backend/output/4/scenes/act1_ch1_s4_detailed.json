@@ -1,0 +1,173 @@
+{
+    "scene_id": "act1_ch1_s4",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho",
+        "Mr. Han",
+        "Lee Hana"
+    ],
+    "initial_location_name": "Classroom 2-B",
+    "initial_location_description": "A vibrant manhwa-style classroom with large windows letting in golden afternoon light. Desks are arranged in neat rows, and a chalkboard in the front is covered in complex literature notes. The atmosphere is thick with the post-lunch lethargy of high school students.",
+    "initial_bgm": "upbeat academic tension with light woodwinds",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s4_line1",
+            "speaker": "Min Seo-yoon",
+            "text": "Do you have any idea how much work this project actually entails, Ji-ho? It's not just 'googling a few facts' and calling it a day.",
+            "tone": "Determined and lecture-like; the voice of a student council president reaching her limit.",
+            "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line2",
+            "speaker": "Kang Ji-ho",
+            "text": "Relax, Seo-yoon. You worry enough for the both of us. It\u2019s a presentation, not a thesis for the Ministry of Education.",
+            "tone": "Teasing and breezy, completely unfazed by her intensity.",
+            "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "Oh, is that so? Then maybe you should see the 'light reading' I've prepared for our first draft!",
+            "tone": "Challenging; she's about to make a point and she knows she's right.",
+            "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+            "stage_action": null,
+            "trigger_sfx": "zipper sliding open quickly"
+        },
+        {
+            "dialogue_id": "s4_line4",
+            "speaker": "Narrator",
+            "text": "With a flourish that could only be described as 'theatrical overachiever,' Seo-yoon begins hauling massive, leather-bound research volumes out of her bag. One, two... five... eight... they pile up into a precarious tower on the edge of the shared desk.",
+            "tone": "Observational and slightly comedic.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "heavy book thuds"
+        },
+        {
+            "dialogue_id": "s4_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "Whoa! Are you trying to build a fortress or a bibliography? Wait, I think I just got a text...",
+            "tone": "Stunned and slightly mocking, but quickly distracted.",
+            "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line6",
+            "speaker": "Narrator",
+            "text": "Ji-ho shifts his weight to reach into his pocket. His oversized varsity jacket\u2014loose and unzipped\u2014flares out like a cape.",
+            "tone": "Descriptive of a looming disaster.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line7",
+            "speaker": "Min Seo-yoon",
+            "text": "Ji-ho, watch your sleeve\u2014! [gasp]",
+            "tone": "Urgent and panicked.",
+            "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "fabric snagging sound"
+        },
+        {
+            "dialogue_id": "s4_line8",
+            "speaker": "Narrator",
+            "text": "It happens in slow motion. The corner of his sleeve catches the spine of the topmost book. The entire 'Research Mountain' tilts, wavers, and then succumbs to gravity.",
+            "tone": "Dramatic manhwa-style narration.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "loud cascading book thuds"
+        },
+        {
+            "dialogue_id": "s4_line9",
+            "speaker": "Mr. Han",
+            "text": "What in the world is that racket?!",
+            "tone": "Startled and authoritative, breaking the sudden silence of the class.",
+            "character_pose_expression": "Shocked expression, eyes wide behind glasses, grip loosening on the wooden pointer.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line10",
+            "speaker": "Lee Hana",
+            "text": "Omo! Seo-yoon, are you okay? It looks like a library exploded over there!",
+            "tone": "Shocked and slightly amused, looking over from her desk.",
+            "character_pose_expression": "Deeply surprised, both hands on her cheeks, mouth in an 'O' shape.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line11",
+            "speaker": "Min Seo-yoon",
+            "text": "KANG JI-HO! You literal walking disaster area! Do you have any coordination at all?!",
+            "tone": "Explosive and furious; her face is turning as red as a beet.",
+            "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line12",
+            "speaker": "Kang Ji-ho",
+            "text": "Me?! You're the one who brought an entire wing of the national library to school! It's a safety hazard!",
+            "tone": "Defensive and loud, matching her energy to hide his embarrassment.",
+            "character_pose_expression": "Aggressive stance, gritting teeth, sharp glare, fists clenched at his sides.",
+            "stage_action": null,
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Keep shouting at him.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Safety hazard? My research is the only thing keeping this team's grades alive, you... you varsity-jacketed menace!",
+                    "tone": "Escalating frustration, her hands are shaking with anger.",
+                    "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s4_b1_line2",
+                    "speaker": "Mr. Han",
+                    "text": "That is enough! Both of you, pick up those books and see me after class. My ears are ringing!",
+                    "tone": "Strict and exhausted.",
+                    "character_pose_expression": "Sighing with eyes closed, hand rubbing the bridge of his nose, looking tired and overworked.",
+                    "stage_action": null,
+                    "trigger_sfx": "ruler slapping desk"
+                }
+            ],
+            "leads_to_scene_id": "act1_ch1_s5_detention"
+        },
+        {
+            "choice_text": "Stop and start cleaning up.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "[Deep breath] I... I can't even deal with you right now. Just... just help me pick them up before Mr. Han gives us a demerit.",
+                    "tone": "Controlled but icy, trying to regain her composure.",
+                    "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s4_b2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Fine. My bad, okay? I'll grab the heavy ones. You don't have to look like you're about to cry.",
+                    "tone": "Softening slightly, looking away to hide his guilt.",
+                    "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "act1_ch1_s5_cleanup"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

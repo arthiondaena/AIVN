@@ -1,0 +1,47 @@
+{
+    "chapter_id": "ch3_mugen_train",
+    "scenes": [
+        {
+            "scene_id": "ch3_s1_boarding_the_mugen",
+            "title": "The Flame Hashira's Appetite",
+            "primary_location": "Mugen Train - Passenger Car",
+            "scene_summary": "Tanjiro, Zenitsu, and Inosuke board the mysterious Mugen Train and locate the Flame Hashira, Kyojuro Rengoku, who is loudly enjoying multiple bento boxes. After the initial eccentric introduction, Rengoku explains their mission to investigate the disappearance of over forty passengers and several demon slayers. The group settles in as the train departs, unaware that Enmu has already set a trap via the conductor's ticket-punching ritual."
+        },
+        {
+            "scene_id": "ch3_s2_the_dream_trap",
+            "title": "Dreams of What Was",
+            "primary_location": "Dream Realm / Train Interior",
+            "scene_summary": "The demon slayers fall into a deep, supernatural slumber controlled by Enmu's Blood Demon Art. Tanjiro finds himself back in the mountains with his deceased family, experiencing a heart-wrenching vision of a life where the tragedy never occurred. Meanwhile, Enmu's human agents enter the dreams to locate and destroy the slayers' spiritual cores to kill them in the real world."
+        },
+        {
+            "scene_id": "ch3_s3_awakening_and_ascent",
+            "title": "Severing the Nightmare",
+            "primary_location": "Mugen Train - Roof",
+            "scene_summary": "Realizing the deception through his father's spiritual guidance, Tanjiro commits the desperate act of cutting his own neck within the dream to force himself awake. He confronts Enmu on the roof of the train. Enmu repeatedly attempts to put Tanjiro back to sleep, but Tanjiro's sheer willpower and repetitive self-sacrifice in the dream state allow him to remain conscious and resist the demon's influence."
+        },
+        {
+            "scene_id": "ch3_s4_the_train_merger",
+            "title": "Fusion and Counter-Attack",
+            "primary_location": "Mugen Train - Full Length",
+            "scene_summary": "Enmu reveals he has fused his body with the train itself, turning the entire vehicle into a demon. Rengoku, Zenitsu, and Inosuke wake up and begin defending the passengers from the flesh-tendrils consuming the cars. Tanjiro and Inosuke locate the demon's neck bone beneath the engine floor. Using a coordinated effort, Tanjiro unleashes a Hinokami Kagura strike to decapitate the train and end Enmu's life."
+        },
+        {
+            "scene_id": "ch3_s5_upper_moon_intrusion",
+            "title": "The Arrival of Akaza",
+            "primary_location": "Train Crash Site - Clearing",
+            "scene_summary": "As the group recovers from the train's derailment, the atmosphere suddenly shifts. Akaza, Upper Moon Three, descends upon the site with overwhelming power. He ignores the injured boys and focuses on Rengoku, recognizing his immense strength. Akaza offers to turn Rengoku into a demon so they can perfect their combat skills through eternity, an offer Rengoku instantly and firmly rejects."
+        },
+        {
+            "scene_id": "ch3_s6_the_flame_burns_out",
+            "title": "A Hashira's Final Stand",
+            "primary_location": "Train Crash Site - Clearing",
+            "scene_summary": "A high-speed battle erupts between Rengoku and Akaza. Despite Rengoku's incredible Flame Breathing techniques, Akaza's regenerative abilities give him the upper hand. In a final, desperate surge of power, Rengoku uses his Esoteric Art to pin Akaza down as the sun begins to rise. Panicked by the sunlight, Akaza tears his own arms off to escape into the shadows, leaving a mortally wounded Rengoku behind."
+        },
+        {
+            "scene_id": "ch3_s7_set_your_heart_ablaze",
+            "title": "Legacy of the Flame",
+            "primary_location": "Train Crash Site - Dawn",
+            "scene_summary": "As the sun rises, Rengoku uses his final moments to speak with Tanjiro. He provides leads regarding the Hinokami Kagura and leaves a moving message for his family and the young slayers, telling them to 'Set your heart ablaze.' Rengoku passes away with a smile after seeing a vision of his mother. Tanjiro, Zenitsu, and Inosuke are left devastated but resolved to honor his sacrifice by becoming stronger."
+        }
+    ]
+}

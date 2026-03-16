@@ -1,0 +1,41 @@
+{
+    "chapter_id": "ch5_eternal_dawn",
+    "scenes": [
+        {
+            "scene_id": "ch5_s1_incursion",
+            "title": "Collapse into Infinity",
+            "primary_location": "Ubuyashiki Estate",
+            "scene_summary": "The peace of the night is shattered as Muzan Kibutsuji launches a surprise assault on the Demon Slayer headquarters. Before the Hashira can coordinate a counter-attack, Nakime activates the Infinity Castle, pulling everyone into a gravity-defying dimension of endless rooms and shifting corridors. The Slayers are forcefully separated, scattered throughout the castle to face individual trials against the remaining Upper Moons."
+        },
+        {
+            "scene_id": "ch5_s2_labyrinth",
+            "title": "The Price of Victory",
+            "primary_location": "Infinity Castle",
+            "scene_summary": "Inside the shifting fortress, the Demon Slayers engage in high-stakes duels against the Upper Moon demons. Tanjiro and the Hashira push their bodies beyond their limits, suffering severe injuries and losses. Despite the overwhelming power of their foes, the Slayers' resolve remains unbroken, eventually leading to the defeat of the Upper Moons and the destruction of the castle's anchor, forcing the battlefield back to the surface."
+        },
+        {
+            "scene_id": "ch5_s3_dawn_battle",
+            "title": "The Count Down to Sunrise",
+            "primary_location": "Tokyo City Streets",
+            "scene_summary": "The battle spills onto the city streets as the sun begins to approach the horizon. Muzan, now a massive and grotesque form, fights with primal ferocity while being hindered by the multiple poisons Tamayo successfully administered. Tanjiro and the surviving Hashira form a desperate circle around the Demon King, using every ounce of their remaining strength to pin him down and prevent his escape into the shadows as the first light of dawn appears."
+        },
+        {
+            "scene_id": "ch5_s4_demon_king",
+            "title": "The New Threat",
+            "primary_location": "Tokyo City Streets",
+            "scene_summary": "Muzan is vaporized by the rising sun, but he manages to inject his entire consciousness and blood into Tanjiro at the moment of his death. Tanjiro undergoes a horrific transformation, becoming the new Demon King. Unlike Muzan, Tanjiro is immediately immune to sunlight. He loses control of his senses and begins to lash out at his exhausted friends, posing a threat even greater than the one they just defeated."
+        },
+        {
+            "scene_id": "ch5_s5_restoration",
+            "title": "Bonds of Humanity",
+            "primary_location": "Tokyo City Streets",
+            "scene_summary": "Nezuko reaches the battlefield and embraces her brother, pleading for him to return to her. Seizing a narrow opening, Kanao uses her final Breath technique to deliver the last remaining dose of the demon-to-human medicine. Inside a spiritual void, Tanjiro battles Muzan's lingering ghost, supported by the hands of his fallen comrades. He successfully rejects the demon blood and reverts to human form, finally ending the era of demons."
+        },
+        {
+            "scene_id": "ch5_s6_epilogue",
+            "title": "A World Without Shadows",
+            "primary_location": "Modern-Day Tokyo",
+            "scene_summary": "The Demon Slayer Corps holds its final meeting and officially disbands, having achieved their thousand-year goal. The narrative shifts forward in time to a vibrant, modern-day Tokyo. The descendants and reincarnations of the Slayers live peaceful, ordinary lives, free from the fear of the dark. The memory of the sacrifice is immortalized in old photographs and family stories, ensuring that the sunrise of peace lasts forever."
+        }
+    ]
+}

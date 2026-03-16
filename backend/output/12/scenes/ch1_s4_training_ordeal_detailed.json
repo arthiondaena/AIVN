@@ -1,0 +1,122 @@
+{
+    "scene_id": "ch1_s4_training_ordeal",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Mt. Sagiri - The Death Trap Slopes",
+    "initial_location_description": "A rugged mountainside shrouded in thick white mist. Sharp logs, jagged stones, and hidden pits are rigged as traps among the dense cedar trees. The air is visibly thin and biting cold.",
+    "initial_bgm": "Rhythmic, driving percussion with a sense of urgency and traditional Japanese flutes",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s4_line1",
+            "speaker": "Narrator",
+            "text": "Time on Mt. Sagiri flows like a mountain stream\u2014persistent, cold, and carving away the softness of the boy who first arrived here.",
+            "tone": "Stoic and timeless; like a legend being told by a fire.",
+            "character_pose_expression": null,
+            "trigger_sfx": "Cold mountain wind howling"
+        },
+        {
+            "dialogue_id": "s4_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] Hah... hah... the air... it's so thin today. It feels like... my lungs are being scraped by needles.",
+            "tone": "Strained and rasping; every word is a battle against the altitude.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "trigger_sfx": "Rapid, heavy breathing"
+        },
+        {
+            "dialogue_id": "s4_line3",
+            "speaker": "Narrator",
+            "text": "For two grueling years, Urokodaki\u2019s training pushes Tanjiro to the brink. Every day begins with a descent through a forest of lethal traps.",
+            "tone": "Informative and grave.",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s4_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "I can smell them! The scent of thread... and old wood! There!",
+            "tone": "Urgent and focused; the 'Battle Shout' where the voice is projected from the core.",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "Log trap swinging and crashing"
+        },
+        {
+            "dialogue_id": "s4_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "Water Breathing... First Form... Minamo Giri!",
+            "tone": "Sharp and piercing; a sudden release of built-up pressure.",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+            "stage_action": "flash",
+            "trigger_sfx": "Water splashing and sword slash"
+        },
+        {
+            "dialogue_id": "s4_line6",
+            "speaker": "Narrator",
+            "text": "Even when his hands bleed and his muscles scream for release, he does not stop. He cannot stop. Not while Nezuko remains trapped in her silent slumber.",
+            "tone": "Somber and empathetic.",
+            "character_pose_expression": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Check on Nezuko's condition.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b1_line1",
+                    "speaker": "Narrator",
+                    "text": "Inside the small hut at the foot of the mountain, Nezuko lies still. She has not opened her eyes for months, her body surviving on nothing but sleep.",
+                    "tone": "Quiet and reverent.",
+                    "character_pose_expression": null
+                },
+                {
+                    "dialogue_id": "s4_b1_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "...",
+                    "tone": "Silent; the sound of peaceful, rhythmic breathing.",
+                    "character_pose_expression": "Sitting cross-legged, looking relaxed with closed eyes"
+                },
+                {
+                    "dialogue_id": "s4_b1_line3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[whispering] Sleep well, Nezuko. Urokodaki-san says you're recovering your strength. I'll become a slayer... I'll find a way to turn you back. I promise.",
+                    "tone": "Soft and vowed; a low-pitched promise heavy with familial love.",
+                    "character_pose_expression": "Looking down in somber reflection, hand near his forehead scar"
+                }
+            ]
+        },
+        {
+            "choice_text": "Push through the final form training.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Total Concentration Breathing... expand the lungs... let the oxygen reach every cell in my blood!",
+                    "tone": "Intense and vibrating; you can hear the physical effort in his chest.",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low"
+                },
+                {
+                    "dialogue_id": "s4_b2_line2",
+                    "speaker": "Narrator",
+                    "text": "The repetitive swinging of the sword becomes a meditation. Thousands of strikes daily turn his sword into an extension of his own arm.",
+                    "tone": "Driven and rhythmic.",
+                    "character_pose_expression": null,
+                    "trigger_sfx": "Rapid sword swishing"
+                },
+                {
+                    "dialogue_id": "s4_b2_line3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I will not break! Again! One more time!",
+                    "tone": "Gravely and fierce; the voice of a man who has conquered his own pain.",
+                    "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face"
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s4_line6",
+            "new_location_name": "Urokodaki's Hut - Interior",
+            "visual_description": "The interior of a modest wooden hut. Sunlight filters through a small window, illuminating dust motes. Nezuko lies on a futon in the corner, looking peaceful and still."
+        }
+    ]
+}

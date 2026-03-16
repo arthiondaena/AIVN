@@ -1,0 +1,151 @@
+{
+    "scene_id": "ch2_s6_the_blood_oath",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Tamayo"
+    ],
+    "initial_location_name": "Ruins of the Hidden House",
+    "initial_location_description": "A traditional Japanese estate shattered by battle. Broken wood, torn paper doors, and cracked stone tiles are illuminated by the pale moonlight. The air is thick with the scent of blood and the lingering pink mist of Tamayo's blood demon art.",
+    "initial_bgm": "Tense orchestral strings fading into a somber, melancholic melody",
+    "main_dialogue": [
+        {
+            "dialogue_id": "ch2_s6_l1",
+            "speaker": "Narrator",
+            "text": "The battle has reached its gruesome end. Yahaba is gone, but Susamaru remains, trapped within the intoxicating haze of Tamayo's Blood Demon Art.",
+            "tone": "Deep and evocative, setting a grim atmosphere with a low, resonant resonance.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "wind whistling through ruins"
+        },
+        {
+            "dialogue_id": "ch2_s6_l2",
+            "speaker": "Tamayo",
+            "text": "It is over. Tell me, little demon... what is the name of the man who turned you? Who is your master?",
+            "tone": "Hypnotic and smooth, with a chilling undercurrent of command that rings like a silver bell.",
+            "character_pose_expression": "Darker expression, shadows over misty purple eyes, reflecting her demonic nature",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "ch2_s6_l3",
+            "speaker": "Narrator",
+            "text": "Tricked by the scent, the girl screams out the forbidden name: 'Lord Kibutsuji!'",
+            "tone": "Sharp and sudden, mimicking the realization of a fatal mistake.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "flesh tearing sound"
+        },
+        {
+            "dialogue_id": "ch2_s6_l4",
+            "speaker": "Tanjiro Kamado",
+            "text": "[gasp] What... what is happening to her? Her own body is...!",
+            "tone": "Breathless and horrified, with a shaky, high-pitched tremor of genuine shock.",
+            "character_pose_expression": "Comically shocked, white circular eyes, jaw dropped",
+            "stage_action": "flash",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "ch2_s6_l5",
+            "speaker": "Tamayo",
+            "text": "It is the Kibutsuji curse. He leaves no room for betrayal. Those who utter his name are destroyed from within by the very cells he gave them.",
+            "tone": "Sorrowful and heavy, the voice weighted by centuries of witnessing Muzan's cruelty.",
+            "character_pose_expression": "Looking down, hand on chest, sorrowful and empathetic expression",
+            "stage_action": null,
+            "trigger_sfx": "thud"
+        },
+        {
+            "dialogue_id": "ch2_s6_l6",
+            "speaker": "Tanjiro Kamado",
+            "text": "Even his own subordinates... he treats them like disposable tools. It's unforgivable.",
+            "tone": "Low and simmering with a quiet, burning indignation that feels like glowing embers.",
+            "character_pose_expression": "Looking down in somber reflection, hand near his forehead scar",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "ch2_s6_l7",
+            "speaker": "Tamayo",
+            "text": "Tanjiro, please. The samples. Before the blood dries, we must collect what remains of these Twelve Kizuki aspirants.",
+            "tone": "Urgent but professional, the tone shifting to the clinical focus of a surgeon.",
+            "character_pose_expression": "Speaking firmly, head held high, authoritative but kind",
+            "stage_action": null,
+            "trigger_sfx": "clinking of glass vials"
+        },
+        {
+            "dialogue_id": "ch2_s6_l8",
+            "speaker": "Narrator",
+            "text": "Tanjiro carefully extracts the blood from the remains. This is the first step toward a cure for Nezuko.",
+            "tone": "Reverent and hopeful, building toward a sense of hard-won progress.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "ch2_s6_l9",
+            "speaker": "Tamayo",
+            "text": "Kibutsuji's reach is long. Yushiro and I must move our clinic immediately to avoid further pursuit. Our time here is at an end.",
+            "tone": "Pragmatic and wary, with a subtle hint of regret for the short-lived sanctuary.",
+            "character_pose_expression": "Neutral standing, hands folded in kimono sleeves, serene expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Thank Tamayo for her help.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "ch2_s6_b1_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Thank you for everything, Lady Tamayo. Without you, we wouldn't have survived this night.",
+                    "tone": "Earnest and overflowing with warmth, a bright and clear delivery that emphasizes his sincerity.",
+                    "character_pose_expression": "Deep bow of respect, hands pressed to thighs",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "ch2_s6_b1_l2",
+                    "speaker": "Tamayo",
+                    "text": "It is I who should thank you. You have given me hope that the cycle of blood can finally be broken.",
+                    "tone": "Soft and glowing, a 'Vocal Smile' where the warmth is audible in every syllable.",
+                    "character_pose_expression": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch3_s1_new_orders"
+        },
+        {
+            "choice_text": "Promise to bring more blood samples.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "ch2_s6_b2_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I will find more of them. I'll get you the blood of the Twelve Kizuki, no matter what it takes!",
+                    "tone": "Determined and fierce, the voice ringing with a powerful, youthful resolve.",
+                    "character_pose_expression": "Adjusting the straps of the wooden box on his back",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "ch2_s6_b2_l2",
+                    "speaker": "Tamayo",
+                    "text": "Be careful, Tanjiro. The path you walk is fraught with shadows far darker than these.",
+                    "tone": "Cautionary and maternal, a whispered warning that lingers in the air.",
+                    "character_pose_expression": "Reaching out a hand, expression of concern and gentle comfort",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch3_s1_new_orders"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "ch2_s6_l9",
+            "new_location_name": "Front Gate of the Ruined Estate",
+            "visual_description": "The entrance to the hidden doctor's home, now visible as the concealment spells fade. The sun begins to peek over the horizon, casting a golden-orange glow over the path ahead."
+        }
+    ]
+}

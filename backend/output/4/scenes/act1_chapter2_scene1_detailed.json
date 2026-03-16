@@ -1,0 +1,134 @@
+{
+    "scene_id": "act1_chapter2_scene1",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Library - Secluded Corner",
+    "initial_location_description": "A quiet, dusty corner of the high school library. Shafts of golden afternoon light pierce through tall, narrow windows, illuminating dust motes dancing over rows of ancient, leather-bound books. A heavy oak table is covered in neatly organized notebooks and a single, thick calculus textbook.",
+    "initial_bgm": "low-fi academic ambient with a hint of ticking clock",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "The library is a cathedral of silence, preserved in dust and the scent of old paper. Seo-yoon sits in the center of it, her workspace a masterpiece of organization.",
+            "tone": "Neutral and descriptive, setting a tranquil mood."
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "[sigh] Three minutes late. He\u2019s already falling behind and we haven't even opened the book.",
+            "tone": "The 'Studious Perfectionist': Crisp, precise, and layered with a hint of mounting impatience.",
+            "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Narrator",
+            "text": "The heavy silence is suddenly shattered by the sound of squeaking sneakers and the heavy thud of a designer backpack hitting the floor.",
+            "tone": "Abrupt and jarring.",
+            "trigger_sfx": "loud backpack thud"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Kang Ji-ho",
+            "text": "My bad, my bad. The coach wouldn't let us off the court until I finished my free throws. It\u2019s like he thinks I actually care about my stats.",
+            "tone": "Casual and breezy, trying to mask his discomfort with the quiet environment.",
+            "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Min Seo-yoon",
+            "text": "Your 'stats' won't get you into a university if you fail this midterm. Sit down, Ji-ho. We're on page forty-two.",
+            "tone": "Strict and authoritative, like a teacher who has run out of patience.",
+            "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression."
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Kang Ji-ho",
+            "text": "Forty-two. Right. Got it. [whispering] Man, it\u2019s like a tomb in here. How do you breathe with all this dust?",
+            "tone": "Muttered and restless, clearly feeling claustrophobic.",
+            "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+            "trigger_sfx": "chair scraping against floor"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Narrator",
+            "text": "Ji-ho sits, but 'settling in' is not in his vocabulary. His right leg begins to bounce rhythmically, vibrating the entire table. He pulls a pen from his pocket and begins spinning it around his thumb with practiced ease.",
+            "tone": "Rhythmic and distracting.",
+            "trigger_sfx": "pen clicking and spinning sound"
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Min Seo-yoon",
+            "text": "The derivative of a function represents the rate of change... are you even listening? Your pen is making a clicking sound every time it hits the table.",
+            "tone": "Strained patience; the sound of someone trying not to snap.",
+            "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+        },
+        {
+            "dialogue_id": "s1_line9",
+            "speaker": "Kang Ji-ho",
+            "text": "I'm listening! You said... rate of... something. Look, it\u2019s just hard to focus when I feel like a librarian is going to jump out and tackle me for breathing too loud.",
+            "tone": "Defensive but playful, trying to deflect his lack of understanding.",
+            "character_pose_expression": "Confused expression, tilting head to the side, hand ruffling his messy undercut hair."
+        },
+        {
+            "dialogue_id": "s1_line10",
+            "speaker": "Min Seo-yoon",
+            "text": "[heavy sigh] If you spent half as much energy on calculus as you do on spinning that pen, we\u2019d be done by now. Look at the graph. If 'x' approaches zero, what happens to the slope?",
+            "tone": "Exhausted and clinical.",
+            "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm."
+        },
+        {
+            "dialogue_id": "s1_line11",
+            "speaker": "Kang Ji-ho",
+            "text": "The slope... it... uh... it goes on vacation? Man, I don't know. My brain feels like it's being squeezed by a vice.",
+            "tone": "The 'Vocal Shrug': Dispirited and genuinely lost.",
+            "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Scold him for his lack of effort.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Kang Ji-ho! This is serious. I\u2019m giving up my free time to help you, and you\u2019re treating this like a joke. Put the pen down and FOCUS.",
+                    "tone": "Sharp and commanding.",
+                    "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                    "stage_action": "screen_shake"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Whoa, okay, okay! Teacher Seo-yoon is in the building. Pen is down. See? Totally focused.",
+                    "tone": "Startled and slightly intimidated, but still trying to maintain his cool.",
+                    "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene2_strict"
+        },
+        {
+            "choice_text": "Try to use a basketball analogy.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "[sigh] Fine. Think of the slope like the arc of your shot. If the angle is too steep, what happens to the ball's trajectory?",
+                    "tone": "Reluctant but helpful, simplifying her language.",
+                    "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "The arc? Oh! Well, it hits the backboard too hard. Wait... so the derivative is just the angle of the shot at a specific moment?",
+                    "tone": "Sudden realization; bright and energetic.",
+                    "character_pose_expression": "Leaning forward slightly, sharp cat-like eyes with a playful glint, one eyebrow raised."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene2_patience"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

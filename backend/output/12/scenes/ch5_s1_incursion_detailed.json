@@ -1,0 +1,150 @@
+{
+    "scene_id": "ch5_s1_incursion",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Muzan Kibutsuji",
+        "Giyu Tomioka",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira",
+        "Kyojuro Rengoku",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Ubuyashiki Estate",
+    "initial_location_description": "The serene Ubuyashiki Estate under a cold, full moon. The traditional wooden courtyard is bathed in silver light, but an unnatural, thick mist begins to roll across the pebble floor.",
+    "initial_bgm": "tense orchestral building with a low drone",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "The stillness of the night is not a sign of peace, but the held breath of a predator.",
+            "tone": "Suspenseful and low, setting a grim atmosphere.",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[gasp] This scent... it's thick, like rotting flowers and old blood. Everyone, get back!",
+            "tone": "Urgent and panicked, with a sharp intake of breath.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "trigger_sfx": "heartbeat thumping"
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Muzan Kibutsuji",
+            "text": "So, the little sparks have gathered to be extinguished. How incredibly... tedious.",
+            "tone": "The 'Vocal Smile': You must hear the grin in the audio. The soft palate is always raised to keep the tone bright, sunny, and explicitly inviting.",
+            "character_pose_expression": "Neutral standing, cold expression, eyes fixed forward.",
+            "stage_action": "enter",
+            "trigger_sfx": "ominous wind whoosh"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Giyu Tomioka",
+            "text": "Kibutsuji Muzan. You dare show yourself here?",
+            "tone": "Stoic and icy, controlled fury vibrating beneath the surface.",
+            "character_pose_expression": "Hand resting on katana hilt, looking forward, serious expression"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Kyojuro Rengoku",
+            "text": "The Flame of Justice will not flicker in your presence, Demon King! We shall strike you down this very night!",
+            "tone": "Heroic, booming, and filled with unwavering conviction.",
+            "character_pose_expression": "Battle Stance, low crouch, hand gripping katana hilt, intense focused gaze"
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "NO NO NO NO! THAT'S HIM?! WE'RE DEAD! WE'RE ALL JUST SIDE DISHES NOW!",
+            "tone": "High-pitched, hysterical screeching.",
+            "character_pose_expression": "Hands on head, mouth wide open in a panicked scream"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Inosuke Hashibira",
+            "text": "SHUT UP MONITSU! I'VE BEEN WAITING FOR A BIG FISH TO FRY! COME AT ME, PINSTRIPE PANTS!",
+            "tone": "Aggressive, gravelly, and overconfident.",
+            "character_pose_expression": "Wearing boar mask, hands on hips, head tilted back, laughing loudly and aggressively"
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Your bravado is as pathetic as your breathing techniques. Nakime... send them to their rooms.",
+            "tone": "Coldly bored, dismissive and sharp.",
+            "character_pose_expression": "Smirking cruelly, one hand touching his chin thoughtfully."
+        },
+        {
+            "dialogue_id": "s1_line_biwa",
+            "speaker": "Narrator",
+            "text": "A single, sharp 'twang' of a biwa echoes through the air, and the ground beneath the Slayers simply... ceases to exist.",
+            "tone": "Dramatic and sudden.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "sharp biwa string pluck"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Reach out for Giyu!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Giyu-san! Grab my hand!",
+                    "tone": "Desperate and straining.",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword"
+                },
+                {
+                    "dialogue_id": "b1_line2",
+                    "speaker": "Giyu Tomioka",
+                    "text": "Tanjiro! Don't let go! We have to\u2014",
+                    "tone": "Urgent, losing his usual composure.",
+                    "character_pose_expression": "Reaching out a hand to stop someone, urgent expression"
+                },
+                {
+                    "dialogue_id": "b1_line3",
+                    "speaker": "Narrator",
+                    "text": "The shifting architecture of the Infinity Castle slams a sliding door between them, severing their grip.",
+                    "tone": "Tragic and final.",
+                    "character_pose_expression": null,
+                    "trigger_sfx": "sliding door slam"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s2_giyu_separation"
+        },
+        {
+            "choice_text": "Protect Nezuko!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Nezuko! Stay close! I won't let them take you!",
+                    "tone": "Protective and fierce.",
+                    "character_pose_expression": "Shielding someone, arms spread wide, protective glare"
+                },
+                {
+                    "dialogue_id": "b2_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[Muffled grunt of determination]",
+                    "tone": "Muffled but fiercely loyal.",
+                    "character_pose_expression": "Clenching fists, eyes narrowed in a fierce glare"
+                },
+                {
+                    "dialogue_id": "b2_line3",
+                    "speaker": "Narrator",
+                    "text": "The gravity reverses, pulling Tanjiro upward while Nezuko is dragged into a side corridor by a shifting wall.",
+                    "tone": "Chaos and disorientation.",
+                    "character_pose_expression": null,
+                    "stage_action": "flash"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s2_nezuko_separation"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s1_line_biwa",
+            "new_location_name": "Infinity Castle",
+            "visual_description": "An impossible, endless fortress. Thousands of wooden rooms, staircases that lead into the ceiling, and paper doors are arranged in a chaotic, non-Euclidean geometry that stretches into infinity."
+        }
+    ]
+}

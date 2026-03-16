@@ -1,0 +1,153 @@
+{
+    "scene_id": "ch2_s2_encounter_with_muzan",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Muzan Kibutsuji"
+    ],
+    "initial_location_name": "Asakusa - Main Thoroughfare",
+    "initial_location_description": "A bustling Tokyo street at night, illuminated by bright electric lights and colorful shop signs. Crowds of people in traditional and western clothing fill the stone-paved road under a dark, moonlit sky.",
+    "initial_bgm": "tense and driving rhythmic strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] This scent... it's thick. It's the same smell from my house! It's right here in the middle of the city!",
+            "tone": "Desperate and frantic, breathing heavily with urgency.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "crowd bustling and footsteps"
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Narrator",
+            "text": "Tanjiro pushes through the vibrant crowd of Asakusa, his eyes darting between the well-dressed pedestrians until they lock onto a man in a white suit and a black fedora.",
+            "tone": "Narrative and suspenseful.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "I've got you! Stop!",
+            "tone": "Commanding and filled with righteous fury.",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+            "stage_action": "enter",
+            "trigger_sfx": "fabric rustling"
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Narrator",
+            "text": "Tanjiro reaches out and grabs the man's shoulder. The man turns around slowly, and Tanjiro's heart stops. In his arms, the man is carrying a small, human girl. A woman in a kimono walks beside him.",
+            "tone": "Ominous and shocking.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": "heartbeat pulse"
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Is there something I can do for you? You seem to be in quite a hurry, young man.",
+            "tone": "Polite, calm, and unsettlingly mundane.",
+            "character_pose_expression": "Wearing a soft, deceptive smile, hand on his hat in a polite gesture",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Tanjiro Kamado",
+            "text": "[stammering] Wh-What? You... you're living here? As a human?",
+            "tone": "Utterly bewildered and horrified.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Do I know you? You're frightening my daughter. Please, let go of my sleeve.",
+            "tone": "Mildly concerned, hiding a lethal edge beneath a mask of civility.",
+            "character_pose_expression": "Furrowing his brows in a fake display of human concern.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Narrator",
+            "text": "As Muzan speaks, his hand brushes past a passing man. With a movement too fast for the human eye, his sharp fingernail draws a tiny scratch on the stranger's neck.",
+            "tone": "Chilling and clinical.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "flash",
+            "trigger_sfx": "sharp slicing sound"
+        },
+        {
+            "dialogue_id": "s2_line9",
+            "speaker": "Muzan Kibutsuji",
+            "text": "[whispering] Now, let us see how you handle this distraction.",
+            "tone": "Cold and murderous, intended only for Tanjiro's ears.",
+            "character_pose_expression": "Standing in profile, head turned toward the viewer, eyes sharp and lethal.",
+            "stage_action": null,
+            "trigger_sfx": "distorted whisper"
+        },
+        {
+            "dialogue_id": "s2_line10",
+            "speaker": "Narrator",
+            "text": "The passing man suddenly collapses, his body contorting and muscles bulging unnaturally. Within seconds, he lets out a beastly roar and lunges at his own wife, his teeth elongating into fangs.",
+            "tone": "Violent and chaotic.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "monstrous growl and screaming"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Restrain the new demon!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_choice1_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Stop! Don't hurt her! I have to help them, even if it means letting him get away!",
+                    "tone": "Heroic and panicked, prioritizing lives over vengeance.",
+                    "character_pose_expression": "Shielding someone, arms spread wide, protective glare",
+                    "stage_action": null,
+                    "trigger_sfx": "sword unsheathing"
+                },
+                {
+                    "dialogue_id": "s2_choice1_l2",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "[thought] Such a weak, emotional boy. You'll never reach me.",
+                    "tone": "Dismissive and arrogant.",
+                    "character_pose_expression": "Turning his back, looking over his shoulder with a murderous gaze.",
+                    "stage_action": "exit",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch2_s3_asakusa_chaos"
+        },
+        {
+            "choice_text": "Don't let Muzan escape!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_choice2_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Kibutsuji! You won't get away! I'll follow you to the ends of the earth!",
+                    "tone": "Furious and vengeful.",
+                    "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s2_choice2_l2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro tries to pursue, but the crowd screams as the new demon begins tearing into the screaming woman. The duty of a Demon Slayer wars with his hatred.",
+                    "tone": "Tense and agonizing.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "bone crushing sound"
+                }
+            ],
+            "leads_to_scene_id": "ch2_s3_asakusa_chaos"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

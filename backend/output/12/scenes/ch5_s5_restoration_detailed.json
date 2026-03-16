@@ -1,0 +1,168 @@
+{
+    "scene_id": "ch5_s5_restoration",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Muzan Kibutsuji",
+        "Giyu Tomioka",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira",
+        "Kyojuro Rengoku",
+        "Tamayo"
+    ],
+    "initial_location_name": "Tokyo City Streets - Ruined",
+    "initial_location_description": "The aftermath of the final battle in Tokyo, buildings reduced to skeletal remains, dawn's first light breaking through a haze of dust and blood-mist.",
+    "initial_bgm": "tense orchestral with mournful strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_line1",
+            "speaker": "Narrator",
+            "text": "The air is heavy with the scent of iron and despair. Tanjiro, now a mindless vessel for Muzan's remaining essence, snarls at the survivors.",
+            "tone": "Somber and weighted with gravity",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "monstrous growl"
+        },
+        {
+            "dialogue_id": "s5_line2",
+            "speaker": "Nezuko Kamado",
+            "text": "Onii-chan! Please, stop! Don't let him take you away!",
+            "tone": "Desperate, cracking with emotion and tearful plea",
+            "character_pose_expression": "Running with short quick steps, arms flailing slightly in a small form",
+            "stage_action": "enter",
+            "trigger_sfx": "footsteps on rubble"
+        },
+        {
+            "dialogue_id": "s5_line3",
+            "speaker": "Giyu Tomioka",
+            "text": "Nezuko, stay back! He isn't himself anymore!",
+            "tone": "Urgent and strained, heavy with exhaustion",
+            "character_pose_expression": "Reaching out a hand to stop someone, urgent expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line4",
+            "speaker": "Nezuko Kamado",
+            "text": "[sobbing] I don't care! I'm not leaving him! We're going home together!",
+            "tone": "Fierce determination through thick tears",
+            "character_pose_expression": "Sad expression, furrowed brows, teary eyes looking downward",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line5",
+            "speaker": "Narrator",
+            "text": "Nezuko throws her arms around the monstrous Tanjiro. In the chaos, a flicker of purple movement catches Giyu's eye\u2014Kanao leaps forward with a syringe.",
+            "tone": "Breathless and cinematic",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "glass vial shattering"
+        },
+        {
+            "dialogue_id": "s5_line6",
+            "speaker": "Tanjiro Kamado",
+            "text": "GAAAHHHH! [struggling]",
+            "tone": "Agonized, animalistic scream",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "heartbeat thumping"
+        },
+        {
+            "dialogue_id": "s5_line7",
+            "speaker": "Narrator",
+            "text": "As the medicine enters his blood, Tanjiro's consciousness is plunged into a blinding white abyss.",
+            "tone": "Ethereal and transitioning",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "ringing tone"
+        },
+        {
+            "dialogue_id": "s5_line8",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Do not resist, Tanjiro! You are my successor! You will inherit my immortality and conquer the sun!",
+            "tone": "The 'Vocal Smile': Manipulative, bright, and explicitly inviting yet poisonous",
+            "character_pose_expression": "Fingers steepled in front of his face, a dark, manipulative smile.",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line9",
+            "speaker": "Tanjiro Kamado",
+            "text": "No... I don't want this... I want to be human! I want to go back to my friends!",
+            "tone": "Strained and pained, but growing in resolve",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line10",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Set your heart ablaze, young Kamado! Do not let the darkness extinguish your soul!",
+            "tone": "Booming, enthusiastic, and filled with unwavering strength",
+            "character_pose_expression": "Action, pointing forward with determination, eyes wide and fiery, shouting",
+            "stage_action": "enter",
+            "trigger_sfx": "fire whooshing"
+        },
+        {
+            "dialogue_id": "s5_line11",
+            "speaker": "Tamayo",
+            "text": "The medicine is working, Tanjiro. Reach for the hands that love you.",
+            "tone": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+            "character_pose_expression": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line12",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Silence! You are mine! You will stay here in the darkness forever!",
+            "tone": "Teeth bared in a vicious snarl, eyes wide with uncontrollable rage",
+            "character_pose_expression": "Shouting with mouth wide open, hand reaching out to grasp or crush.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "thunder crash"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Reject Muzan's blood and reach for Nezuko.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Muzan... you're wrong. I'm not alone! Everyone is helping me!",
+                    "tone": "Powerful, resolute, and surging with hope",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "stage_action": "flash",
+                    "trigger_sfx": "glowing aura"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Narrator",
+                    "text": "Dozens of hands\u2014the spirits of the fallen Hashira and his family\u2014push Tanjiro upward, away from Muzan's grasping claws.",
+                    "tone": "Triumphant and emotional",
+                    "character_pose_expression": null,
+                    "stage_action": null,
+                    "trigger_sfx": "heavenly choir"
+                },
+                {
+                    "dialogue_id": "br1_line3",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "NO! WAIT! DON'T LEAVE ME HERE ALONE! TANJIROOO!",
+                    "tone": "Desperate, shrinking, and full of genuine terror",
+                    "character_pose_expression": "Eyes widened in genuine shock, pupils shrinking to tiny points.",
+                    "stage_action": "exit",
+                    "trigger_sfx": "shattering sound"
+                }
+            ],
+            "leads_to_scene_id": "ch6_s1_epilogue"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s5_line7",
+            "new_location_name": "The Spiritual Void",
+            "visual_description": "An endless, shimmering white expanse where reality feels fluid, occasionally rippling with the memories of those who have passed."
+        }
+    ]
+}

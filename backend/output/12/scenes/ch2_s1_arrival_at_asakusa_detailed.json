@@ -1,0 +1,136 @@
+{
+    "scene_id": "ch2_s1_arrival_at_asakusa",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Muzan Kibutsuji"
+    ],
+    "initial_location_name": "Asakusa City Streets",
+    "initial_location_description": "A vibrant, bustling cityscape of early 20th century Tokyo at night. Towering Western-style brick buildings are illuminated by glowing electric streetlamps and colorful neon signs. Crowds of people in both traditional kimonos and modern suits fill the wide stone-paved streets. Steam rises from street-side food stalls.",
+    "initial_bgm": "vibrant but overwhelming jazz-fused orchestral",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "The night air of Asakusa isn't filled with the scent of pine or snow, but with the heavy, electric hum of modern progress.",
+            "tone": "Descriptive and cinematic"
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[stuttering] Is it always... this bright at night?! The buildings are so tall, they're scraping the stars!",
+            "tone": "Wide-eyed wonder and complete disorientation",
+            "character_pose_expression": "Comically shocked, white circular eyes, jaw dropped",
+            "stage_action": "flash"
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Narrator",
+            "text": "Tanjiro clings to Nezuko's hand, feeling like a small fish tossed into a roaring ocean of people and artificial light.",
+            "tone": "Observational"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko, don't let go! This city is... it's dizzying. How can people live with all this noise?",
+            "tone": "Anxious and protective",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled hums]",
+            "tone": "Calm and curious",
+            "character_pose_expression": "Tilted head, curious expression, one hand touching the bamboo muzzle"
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Narrator",
+            "text": "They retreat to a small, quiet udon stall at the edge of the district, seeking a moment of respite from the crowd.",
+            "tone": "Soft and grounding"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "[exhaling] Let's just eat something and rest for a bit. Excuse me, sir! A bowl of Yamakake Udon, please.",
+            "tone": "Exhausted but trying to be polite",
+            "character_pose_expression": "Sitting cross-legged, resting, gentle expression"
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Narrator",
+            "text": "The vendor hands him a steaming bowl. But as the vapor rises, it brings a scent that freezes the blood in Tanjiro's veins.",
+            "tone": "Suddenly chilling and high-stakes"
+        },
+        {
+            "dialogue_id": "s1_line9",
+            "speaker": "Tanjiro Kamado",
+            "text": "...! [gasp] This scent... I know this smell. It's the one from my house!",
+            "tone": "Sudden, sharp realization bordering on terror",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "high pitched ringing sound"
+        },
+        {
+            "dialogue_id": "s1_line10",
+            "speaker": "Narrator",
+            "text": "The ceramic bowl slips from his hands, shattering on the ground. The udon is forgotten as his instincts take over.",
+            "tone": "Urgent and intense",
+            "trigger_sfx": "ceramic bowl breaking"
+        },
+        {
+            "dialogue_id": "s1_line11",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko, stay here! I have to find him!",
+            "tone": "Desperate and determined",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Push through the crowd recklessly",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro shoves past pedestrians, his eyes darting frantically as the scent grows thicker, more suffocating.",
+                    "tone": "Frantic and fast-paced"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[panting] Out of my way! He's here... he's right here!",
+                    "tone": "Increasingly panicked and aggressive",
+                    "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face"
+                }
+            ],
+            "leads_to_scene_id": "ch2_s2_meeting_muzan"
+        },
+        {
+            "choice_text": "Focus your senses to pinpoint him",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro closes his eyes for a split second, filtering out the smell of oil, perfume, and smoke to find that one rot-filled trail.",
+                    "tone": "Focused and methodical"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "There. Between the streetlamp and the carriage... I won't let you get away!",
+                    "tone": "Cold, sharp focus",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low"
+                }
+            ],
+            "leads_to_scene_id": "ch2_s2_meeting_muzan"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s1_line11",
+            "new_location_name": "Asakusa Main Thoroughfare",
+            "visual_description": "The center of the district, packed with people. In the middle of the crowd, a man in a black fedora and white suit stands with his back to the camera, radiating an aura of absolute coldness."
+        }
+    ]
+}

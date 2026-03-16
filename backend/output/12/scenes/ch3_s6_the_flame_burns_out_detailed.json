@@ -1,0 +1,163 @@
+{
+    "scene_id": "ch3_s6_the_flame_burns_out",
+    "characters_present": [
+        "Kyojuro Rengoku",
+        "Tanjiro Kamado",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Train Crash Site - Clearing",
+    "initial_location_description": "A scorched clearing in the forest near the mangled remains of the Mugen Train. Dust and smoke hang in the air, illuminated by the first faint, cool light of dawn breaking through the trees.",
+    "initial_bgm": "High-stakes orchestral battle theme with frantic strings and booming brass",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s6_line1",
+            "speaker": "Narrator",
+            "text": "The air vibrates with the sheer force of the collision. Kyojuro Rengoku stands at the center of a crater, his breathing heavy and ragged.",
+            "tone": "Suspenseful and heavy with gravitas.",
+            "character_pose_expression": "Narrator",
+            "trigger_sfx": "distant explosion rumble"
+        },
+        {
+            "dialogue_id": "s6_line2",
+            "speaker": "Kyojuro Rengoku",
+            "text": "[panting] I will... fulfill my duty! I will not allow anyone here to die!",
+            "tone": "Resolute and defiant, voice cracking slightly from exhaustion but filled with unwavering fire.",
+            "character_pose_expression": "Wounded, breathing heavily, slight blood on forehead, fierce smile through pain",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s6_line3",
+            "speaker": "Narrator",
+            "text": "Before him, the Upper Moon Three, Akaza, laughs with a manic glee, his shattered ribs and torn flesh knitting back together in seconds.",
+            "tone": "Ominous and chilling.",
+            "character_pose_expression": "Narrator"
+        },
+        {
+            "dialogue_id": "s6_line4",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Set your heart ablaze! Flame Breathing, Esoteric Art... Ninth Form: Rengoku!!",
+            "tone": "A thunderous, soul-shaking roar that echoes across the mountainside.",
+            "character_pose_expression": "Battle Stance, low crouch, hand gripping katana hilt, intense focused gaze",
+            "stage_action": "flash",
+            "trigger_sfx": "roaring fire eruption"
+        },
+        {
+            "dialogue_id": "s6_line5",
+            "speaker": "Narrator",
+            "text": "Kyojuro transforms into a literal dragon of flame, charging forward. Akaza meets him head-on, his fist plunging deep into Rengoku's chest even as the Hashira's blade carves into the demon's neck.",
+            "tone": "Visceral and tragic description of the impact.",
+            "character_pose_expression": "Narrator",
+            "trigger_sfx": "flesh tearing and metal clashing"
+        },
+        {
+            "dialogue_id": "s6_line6",
+            "speaker": "Tanjiro Kamado",
+            "text": "RENGOKU-SAN!! NO!!",
+            "tone": "Desperate, throat-tearing scream of pure agony and helplessness.",
+            "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s6_line7",
+            "speaker": "Narrator",
+            "text": "Rengoku does not move. He grips Akaza's arms with superhuman strength, locking the demon in place as the first rays of sunlight crest the horizon.",
+            "tone": "Tense and expectant, the turning point of the struggle.",
+            "character_pose_expression": "Narrator",
+            "trigger_sfx": "shimmering light chime"
+        },
+        {
+            "dialogue_id": "s6_line8",
+            "speaker": "Narrator",
+            "text": "Akaza's eyes widen. Panic\u2014pure, animalistic terror\u2014overtakes him as the sun touches the treetops. He tries to pull away, but Rengoku's grip is a vice of iron.",
+            "tone": "Frantic and urgent.",
+            "character_pose_expression": "Narrator"
+        },
+        {
+            "dialogue_id": "s6_line9",
+            "speaker": "Kyojuro Rengoku",
+            "text": "I... won't... let go!",
+            "tone": "Strained and guttural, every word a struggle against death.",
+            "character_pose_expression": "Wounded, breathing heavily, slight blood on forehead, fierce smile through pain"
+        },
+        {
+            "dialogue_id": "s6_line10",
+            "speaker": "Narrator",
+            "text": "With a sickening sound of rending flesh, Akaza tears his own arms off, abandoning his limbs to Rengoku's grasp as he lunges into the safety of the dark woods.",
+            "tone": "Brutal and fast-paced.",
+            "character_pose_expression": "Narrator",
+            "trigger_sfx": "bone breaking and wet tearing"
+        },
+        {
+            "dialogue_id": "s6_line11",
+            "speaker": "Tanjiro Kamado",
+            "text": "DON'T RUN AWAY, YOU COWARD! DON'T RUN AWAY!",
+            "tone": "Explosive rage mixed with sobbing grief, voice breaking under the weight of the injustice.",
+            "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+            "stage_action": "screen_shake"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Run to Rengoku's side",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[sobbing] Rengoku-san! Please, hold on! I'll... I'll find a way to stop the bleeding!",
+                    "tone": "Panic-stricken and desperate, hands trembling as he reaches out.",
+                    "character_pose_expression": "Crying with a pained expression, hand clutching his chest"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Inosuke Hashibira",
+                    "text": "Don't just stand there, Kentaro! Do something! He's... he's not moving!",
+                    "tone": "Angry to hide his absolute shock, his voice wobbling behind the mask.",
+                    "character_pose_expression": "Mask removed, clenching teeth, determined expression",
+                    "trigger_sfx": "heavy breathing"
+                },
+                {
+                    "dialogue_id": "br1_line3",
+                    "speaker": "Kyojuro Rengoku",
+                    "text": "Don't... don't look like that, young Kamado. I have just a few more things to say.",
+                    "tone": "Peaceful and strangely calm, the 'vocal smile' returning as he accepts his end.",
+                    "character_pose_expression": "Proud, hand on chest, standing tall, beaming with a radiant smile"
+                }
+            ],
+            "leads_to_scene_id": "ch3_s7_final_words"
+        },
+        {
+            "choice_text": "Stare in stunned silence",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro falls to his knees, the weight of the moment crushing the breath from his lungs. The clearing is silent, save for the crackle of dying fires.",
+                    "tone": "Somber and hollow.",
+                    "character_pose_expression": "Narrator"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Inosuke Hashibira",
+                    "text": "He won... he didn't let anyone die... but why does it feel like we lost?",
+                    "tone": "Quiet and hollow, the bravado completely gone.",
+                    "character_pose_expression": "Mask removed, looking down, sad and quiet, hair covering part of the face after a defeat"
+                },
+                {
+                    "dialogue_id": "br2_line3",
+                    "speaker": "Kyojuro Rengoku",
+                    "text": "Come closer... both of you. There is no need to cry.",
+                    "tone": "Gentle and warm, like a father comforting his children.",
+                    "character_pose_expression": "Proud, hand on chest, standing tall, beaming with a radiant smile"
+                }
+            ],
+            "leads_to_scene_id": "ch3_s7_final_words"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s6_line8",
+            "new_location_name": "Train Crash Site - Golden Dawn",
+            "visual_description": "The clearing is now bathed in the brilliant, golden light of the rising sun. The light catches the falling embers and the blood-stained grass, creating a beautiful, tragic contrast with the violence of the battle."
+        }
+    ]
+}

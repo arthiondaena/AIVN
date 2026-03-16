@@ -1,0 +1,121 @@
+{
+    "scene_id": "ch4_s2_sudden_onslaught",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Village Residential Quarters",
+    "initial_location_description": "A traditional tatami-matted guest room within the Swordsmith Village. Soft moonlight filters through the paper shoji doors, illuminating a peaceful interior that is about to be shattered.",
+    "initial_bgm": "tense low-frequency suspense with occasional sharp violin notes",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Narrator",
+            "text": "The quiet of the Swordsmith Village is absolute, the kind of stillness that precedes a great storm. But for those with sharpened senses, the air begins to thicken.",
+            "tone": "Suspenseful and low-pitched, setting a dread-filled atmosphere."
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[sniffing] This scent... it's not like the others. It's thick, putrid... and it's right on the other side of that door!",
+            "tone": "Urgent and alarmed; the voice should catch slightly with the sudden realization of danger.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "trigger_sfx": "subtle heart-thumping sound"
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Narrator",
+            "text": "The sliding door creaks open with agonizing slowness. A pathetic, trembling figure crawls into the room\u2014Upper Moon Four, Hantengu.",
+            "tone": "Chilling and descriptive.",
+            "stage_action": "enter",
+            "trigger_sfx": "slow wood creaking"
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko, get back! Don't let your guard down for even a second!",
+            "tone": "Authoritative and protective; a sharp command born from survival instinct.",
+            "character_pose_expression": "Gripping the hilt of his Nichirin sword, determined glare",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Nezuko Kamado",
+            "text": "Mmmgh!",
+            "tone": "Muffled but fiercely determined; the sound of someone ready to fight to the death.",
+            "character_pose_expression": "Aggressive combat stance, lowered center of gravity, veins bulging on forehead, sharp slit pupils"
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Narrator",
+            "text": "In a flash of blue, the Mist Hashira, Muichiro Tokito, strikes with blinding speed. He severs the demon's head, but instead of crumbling into ash, the body begins to convulse and split.",
+            "tone": "Fast-paced and intense.",
+            "trigger_sfx": "sword slicing through flesh"
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "It didn't die?! It's splitting in two! Muichiro, watch out\u2014!",
+            "tone": "Desperate and panicked; a high-energy shout of warning.",
+            "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+            "stage_action": "flash"
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Narrator",
+            "text": "One of the new entities swings a leaf-shaped fan. A colossal gust of wind erupts, blowing the Mist Hashira out of the building and into the distant forest. Tanjiro and Nezuko are left alone as the ceiling collapses.",
+            "tone": "Chaos-filled and heavy with the sound of destruction.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "massive explosion of wind and wood snapping"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Protect Nezuko and focus on the angry demon (Sekido)",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Nezuko, stay behind me! This one with the staff... the air around him is crackling with electricity!",
+                    "tone": "Determined and strategic; focused despite the overwhelming pressure.",
+                    "character_pose_expression": "Shielding someone, arms spread wide, protective glare"
+                },
+                {
+                    "dialogue_id": "s2_b1_line2",
+                    "speaker": "Narrator",
+                    "text": "The demon Sekido raises his staff. Lightning arcs across the tatami mats, forcing Tanjiro to move with desperate speed.",
+                    "tone": "Intense action narration.",
+                    "trigger_sfx": "electrical crackling"
+                }
+            ],
+            "leads_to_scene_id": "ch4_s3_thunder_and_wind"
+        },
+        {
+            "choice_text": "Lunge at the carefree demon (Karaku) to stop the wind",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "If I can just take out the one with the fan, we can stop the building from being leveled! Nezuko, follow my lead!",
+                    "tone": "Brave and offensive; his voice is filled with the fire of battle.",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword"
+                },
+                {
+                    "dialogue_id": "s2_b2_line2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro leaps through the debris, but Karaku only laughs, swinging his fan once more to create a localized vacuum.",
+                    "tone": "Menacing and fast-paced.",
+                    "trigger_sfx": "rushing wind gust"
+                }
+            ],
+            "leads_to_scene_id": "ch4_s3_wind_struggle"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s2_line8",
+            "new_location_name": "Destroyed Residential Quarter",
+            "visual_description": "The once-orderly room is now a wreckage of splintered wood and torn mats. Dust hangs thick in the air under the moonlight, and the building is half-open to the night sky."
+        }
+    ]
+}

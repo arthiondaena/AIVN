@@ -1,0 +1,136 @@
+{
+    "scene_id": "ch2_s4_the_hidden_sanctuary",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Tamayo"
+    ],
+    "initial_location_name": "Tamayo\u2019s Hidden Clinic",
+    "initial_location_description": "A traditional Japanese house hidden behind an illusory wall. The interior is a serene clinic filled with the scent of medicinal herbs, antique scrolls, and soft lantern light. Wisteria patterns decorate some of the screens.",
+    "initial_bgm": "mystical and serene traditional Japanese flute",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "Passing through the illusory wall felt like stepping into a different world. The bustling streets of Asakusa vanished, replaced by a quiet, secluded manor.",
+            "tone": "mysterious and atmospheric"
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "The scent... it's so different here. It's clean, like medicine and old paper. Even though she's a demon, there's no scent of blood.",
+            "tone": "Surprised, eyes wide, mouth open in shock",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression"
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Tamayo",
+            "text": "Welcome to my home, Tanjiro Kamado. Please, make yourselves comfortable. This house is protected by a blood demon art that keeps it hidden from the eyes of Kibutsuji.",
+            "tone": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+            "character_pose_expression": "Neutral standing, hands folded in kimono sleeves, serene expression"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled hum]",
+            "tone": "Looking up with wide innocent eyes, hands by sides",
+            "character_pose_expression": "Looking up with wide innocent eyes, hands by sides"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Tamayo",
+            "text": "I have spent over two hundred years studying the physiology of our kind. My goal is simple, yet daunting: I wish to create a medicine that can turn a demon back into a human.",
+            "tone": "Speaking firmly, head held high, authoritative but kind",
+            "character_pose_expression": "Holding a glass vial of medicine, looking at it with intense focus"
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Tanjiro Kamado",
+            "text": "A medicine... to make Nezuko human again? You truly think it's possible?",
+            "tone": "Bright wide-eyed smile, looking directly at the viewer",
+            "character_pose_expression": "Bright wide-eyed smile, looking directly at the viewer"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Tamayo",
+            "text": "It is. But for that, I require your assistance. First, I must study Nezuko\u2019s blood. She is a unique case, existing without consuming human flesh.",
+            "tone": "Finger to chin, looking away in deep thought or contemplation",
+            "character_pose_expression": "Finger to chin, looking away in deep thought or contemplation"
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Tamayo",
+            "text": "Second... I need blood samples from demons closely related to Muzan Kibutsuji. Specifically, the Twelve Kizuki. Their blood contains a higher concentration of his essence.",
+            "tone": "Darker expression, shadows over misty purple eyes, reflecting her demonic nature",
+            "character_pose_expression": "Darker expression, shadows over misty purple eyes, reflecting her demonic nature"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "I'll do it! I'll get you those samples.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_branch1_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "If it means saving Nezuko and stopping Muzan, I'll face any demon you ask! Please, take whatever you need from us.",
+                    "tone": "Enthusiastic thumbs up, beaming smile",
+                    "character_pose_expression": "Enthusiastic thumbs up, beaming smile"
+                },
+                {
+                    "dialogue_id": "s1_branch1_2",
+                    "speaker": "Tamayo",
+                    "text": "Your resolve is admirable, Tanjiro. Thank you. I promise to do everything in my power to\u2014",
+                    "tone": "Closed eyes, smiling softly, radiating a calm aura",
+                    "character_pose_expression": "Closed eyes, smiling softly, radiating a calm aura"
+                },
+                {
+                    "dialogue_id": "s1_branch1_3",
+                    "speaker": "Narrator",
+                    "text": "[CRASH] A sudden, violent explosion of wood and plaster cuts her off. Temari balls smash through the walls, obliterating the serene atmosphere!",
+                    "tone": "tense and chaotic",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "loud explosion and wood splintering"
+                }
+            ]
+        },
+        {
+            "choice_text": "Will Nezuko be safe during this study?",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_branch2_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I want her to be human again more than anything, but... she's already been through so much. Will the blood extraction hurt her?",
+                    "tone": "Sad and sympathetic expression, eyes softened, hand extended",
+                    "character_pose_expression": "Sad and sympathetic expression, eyes softened, hand extended"
+                },
+                {
+                    "dialogue_id": "s1_branch2_2",
+                    "speaker": "Tamayo",
+                    "text": "I will be as gentle as possible. Her safety and well-being are paramount to my research.",
+                    "tone": "Reaching out a hand, expression of concern and gentle comfort",
+                    "character_pose_expression": "Reaching out a hand, expression of concern and gentle comfort"
+                },
+                {
+                    "dialogue_id": "s1_branch2_3",
+                    "speaker": "Narrator",
+                    "text": "[THUD] The conversation is silenced by a massive impact. A projectile tears through the wall, narrowly missing Tanjiro!",
+                    "tone": "terrifying and sudden",
+                    "stage_action": "flash",
+                    "trigger_sfx": "heavy impact and crumbling masonry"
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s1_branch1_3",
+            "new_location_name": "Ruined Clinic",
+            "visual_description": "The serene clinic is now a scene of chaos. A wooden wall has been smashed inward by a heavy projectile. Dust and splinters fill the air, and the magical barrier outside has been shattered."
+        },
+        {
+            "trigger_after_dialogue_id": "s1_branch2_3",
+            "new_location_name": "Ruined Clinic",
+            "visual_description": "The serene clinic is now a scene of chaos. A wooden wall has been smashed inward by a heavy projectile. Dust and splinters fill the air, and the magical barrier outside has been shattered."
+        }
+    ]
+}

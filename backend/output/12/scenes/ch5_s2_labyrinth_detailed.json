@@ -1,0 +1,151 @@
+{
+    "scene_id": "ch5_s2_labyrinth",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Giyu Tomioka",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira",
+        "Kyojuro Rengoku",
+        "Muzan Kibutsuji",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Infinity Castle",
+    "initial_location_description": "A dizzying, impossible architecture of wooden rooms, sliding shoji doors, and staircases defying gravity, floating in a dark, endless void. Blood spatters the tatami mats, and the air is thick with the scent of ozone and demons.",
+    "initial_bgm": "Intense cinematic orchestral with heavy drums and choir",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Narrator",
+            "text": "The air in the Infinity Castle is thick with the metallic tang of blood and the suffocating pressure of Upper Moon magic. The structure groans as it shifts, rooms rotating in a maddening dance.",
+            "tone": "Suspenseful and oppressive",
+            "character_pose_expression": "Narrator",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "loud wooden grinding and shifting"
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] It's... it's not over yet! We have to find the anchor! Giyu-san, can you still move?",
+            "tone": "Determined and breathless; his voice cracks with exhaustion but carries an iron will.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "stage_action": null,
+            "trigger_sfx": "heavy breathing"
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Giyu Tomioka",
+            "text": "Don't worry about me. Focus on your breathing. If we lose our rhythm now, the castle will swallow us whole.",
+            "tone": "The 'Stoic Mentor': Low, steady, and grounding, despite the visible strain in his posture.",
+            "character_pose_expression": "Defensive swordsman stance, knees slightly bent, sword held horizontally",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Inosuke Hashibira",
+            "text": "I'm gonna rip this place apart! My skin is tingling\u2014the big boss is close! I can feel him!",
+            "tone": "Aggressive and wild; his voice is raspy and filled with adrenaline-fueled rage.",
+            "character_pose_expression": "Mask removed, clenching teeth, determined expression, leaning on one serrated sword for support",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "[whispering] I can hear it... the sound of the castle's heart. It's right behind that wall...",
+            "tone": "Eerily calm and focused; the 'God of Thunder' persona has taken over, cold and precise.",
+            "character_pose_expression": "Low crouching stance, hand gripping the gold-hilted Nichirin sword, serious aura",
+            "stage_action": null,
+            "trigger_sfx": "electric sparking sound"
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Muzan Kibutsuji",
+            "text": "How tedious. You crawl through my domain like insects, leaving trails of blood as if they were symbols of hope. You are merely delays to the inevitable.",
+            "tone": "Utter disdain; a voice of absolute superiority that vibrates with hidden, murderous intent.",
+            "character_pose_expression": "Hand extended forward, palm up, an expression of utter disdain.",
+            "stage_action": "flash",
+            "trigger_sfx": "ominous bass drop"
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Set your heart ablaze, young Kamado! The dawn is coming, and no fortress of shadows can withstand the heat of a righteous soul!",
+            "tone": "Boisterous and inspiring; his voice acts as a beacon of warmth and unyielding courage.",
+            "character_pose_expression": "Action, pointing forward with determination, eyes wide and fiery, shouting",
+            "stage_action": null,
+            "trigger_sfx": "flame whoosh"
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Tanjiro Kamado",
+            "text": "Everyone... lend me your strength for one last strike! Hinokami Kagura!",
+            "tone": "Fierce and resolute; a battle cry that channels the spirits of all his fallen comrades.",
+            "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "roaring fire"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Aim for the Central Pillar!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "branch1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "If we break the main support, the whole castle will collapse! HAAAAA!",
+                    "tone": "Explosive and desperate effort.",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+                    "stage_action": "flash",
+                    "trigger_sfx": "glass shattering"
+                },
+                {
+                    "dialogue_id": "branch1_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[muffled shout of encouragement]",
+                    "tone": "Determined and fierce.",
+                    "character_pose_expression": "Determined look, furrowed brows, standing tall and protective",
+                    "stage_action": null,
+                    "trigger_sfx": "demonic aura flare"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s3_surface_arrival"
+        },
+        {
+            "choice_text": "Protect the Wounded!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "branch2_line1",
+                    "speaker": "Giyu Tomioka",
+                    "text": "I'll hold the line! Tanjiro, take the opening now!",
+                    "tone": "Urgent and self-sacrificing.",
+                    "character_pose_expression": "Mid-draw of katana, intense focus, sharp blue eyes",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "clashing steel"
+                },
+                {
+                    "dialogue_id": "branch2_line2",
+                    "speaker": "Narrator",
+                    "text": "Using the Hashira's defense as a shield, Tanjiro finds the narrow path to the anchor.",
+                    "tone": "Narrative climax.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": "flash",
+                    "trigger_sfx": "heartbeat thumping"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s3_surface_arrival"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "branch1_line2",
+            "new_location_name": "The Surface - Ruined City",
+            "visual_description": "The debris of the Infinity Castle erupts from the ground into the cool night air. The moon hangs low over a destroyed city block, smoke rising from the craters."
+        },
+        {
+            "trigger_after_dialogue_id": "branch2_line2",
+            "new_location_name": "The Surface - Ruined City",
+            "visual_description": "With a deafening roar of wood and stone, the Slayers are catapulted out of the collapsing dimension, landing hard on the cold, moonlit streets of the city."
+        }
+    ]
+}

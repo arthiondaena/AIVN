@@ -1,0 +1,123 @@
+{
+    "scene_id": "ch4_s1_hidden_hamlet",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Giyu Tomioka"
+    ],
+    "initial_location_name": "Swordsmith Village Entrance",
+    "initial_location_description": "A vibrant mountain village hidden by thick white mist. Rows of traditional wooden workshops line the stone paths, with steam billowing from natural hot springs in the background. Cherry blossoms drift through the air, and the rhythmic sound of hammers hitting steel echoes from the distance.",
+    "initial_bgm": "Peaceful traditional Japanese strings with a soft, misty flute melody.",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "The journey was arduous, involving several blindfolded transfers and different guides to maintain total secrecy, but the air finally changes.",
+            "tone": "Omniscient and serene; the delivery is slow and melodic, emphasizing the hidden beauty of the location."
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[sniff] The scent of iron... and sulphur from the hot springs. It's thick in the air. We've finally arrived, Nezuko.",
+            "tone": "Earnest and relieved; a bright, youthful energy that feels like a weight has been lifted.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "trigger_sfx": "soft mountain breeze"
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled humming]",
+            "tone": "Curious and gentle; the sound is soft and inquisitive through her bamboo muzzle.",
+            "character_pose_expression": "Peeking out from behind a corner, only eyes and hair visible"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Narrator",
+            "text": "Tanjiro reaches back to check the hilt of his sword. After the brutal combat in the Entertainment District, the steel is notched and weary\u2014just like its master.",
+            "tone": "Observant and grounded; a neutral narrative voice that highlights the physical toll of battle."
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "I hope Mr. Haganezuka isn't too furious about the state of this blade. I can already imagine him chasing me with a kitchen knife...",
+            "tone": "Nervous and contemplative; a slight tremor of comedic fear in the voice.",
+            "character_pose_expression": "Thinking deeply, hand on chin, eyes closed",
+            "trigger_sfx": "distant rhythmic hammering on steel"
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Giyu Tomioka",
+            "text": "He will be. A swordsmith's pride is etched into the steel they forge. To chip it is to insult their soul.",
+            "tone": "Calm and monotonous; the tone is steady, like a still pond, carrying no hint of surprise.",
+            "character_pose_expression": "Neutral standing, hands at sides, stoic expression",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "Tomioka-san! I didn't know you were assigned to the village as well!",
+            "tone": "Genuinely surprised and welcoming; the voice rises in pitch with excitement.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "trigger_sfx": "footsteps on stone"
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Giyu Tomioka",
+            "text": "I am not assigned. I am here for a replacement. This place is the lifeblood of the Demon Slayer Corps. Without these smiths, we are just men with broken toys.",
+            "tone": "Direct and authoritative; a firm delivery that brook no argument.",
+            "character_pose_expression": "Looking directly forward, eyebrows slightly furrowed, determined gaze"
+        },
+        {
+            "dialogue_id": "s1_line9",
+            "speaker": "Narrator",
+            "text": "In the distance, Tanjiro catches a glimpse of the Love Hashira, Mitsuri Kanroji, laughing as she walks toward the springs, and the Mist Hashira, Muichiro Tokito, staring vacantly at the swirling mist.",
+            "tone": "Descriptive and wide; the voice expands to take in the presence of the other powerful warriors nearby."
+        },
+        {
+            "dialogue_id": "s1_line10",
+            "speaker": "Tanjiro Kamado",
+            "text": "It feels so peaceful here. It's hard to believe we're still at war with Muzan's forces while a place like this exists.",
+            "tone": "Speaking calmly; a gentle and reflective tone that carries a hint of melancholy.",
+            "character_pose_expression": "Speaking calmly, one hand raised in a small gesture"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Ask Giyu about the village's secrecy.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Giyu Tomioka",
+                    "text": "If the demons found this place, the Corps would fall within days. The secrecy is our strongest shield.",
+                    "tone": "Grim and realistic; a heavy tone that emphasizes the stakes."
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I'll do everything in my power to make sure that never happens.",
+                    "tone": "Resolute and fiery; the 'Vocal Smile' replaced by sheer determination.",
+                    "character_pose_expression": "Gripping the hilt of his Nichirin sword, determined glare"
+                }
+            ]
+        },
+        {
+            "choice_text": "Ask about the other Hashira present.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Kanroji-san and Tokito-san are here too... Is there a special meeting happening?",
+                    "tone": "Inquisitive and polite; the tone of a student asking a teacher.",
+                    "character_pose_expression": "Puzzled expression, tilting his head to the side"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Giyu Tomioka",
+                    "text": "Coincidence, likely. Or perhaps the flow of fate is pulling us all toward a single point.",
+                    "tone": "Philosophical and detached; the voice trails off as if he is lost in thought.",
+                    "character_pose_expression": "Both hands resting on scabbard, eyes closed in thought"
+                }
+            ]
+        }
+    ]
+}

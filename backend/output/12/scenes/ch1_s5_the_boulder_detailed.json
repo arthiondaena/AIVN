@@ -1,0 +1,142 @@
+{
+    "scene_id": "ch1_s5_the_boulder",
+    "characters_present": [
+        "Tanjiro Kamado"
+    ],
+    "initial_location_name": "Sacred Clearing on Mt. Sagiri",
+    "initial_location_description": "A dense, foggy forest clearing on the slope of Mt. Sagiri. In the center sits a massive, ancient boulder, taller than a man, covered in thick green moss and wrapped in a weathered shimenawa rope with paper talismans. The air is thick with mist and the smell of damp earth.",
+    "initial_bgm": "Tense and atmospheric traditional Japanese strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_l1",
+            "speaker": "Narrator",
+            "text": "For over a year, Tanjiro had endured the grueling training of the mountain. Today, his master brought him to this silent clearing for a final, impossible task.",
+            "tone": "Solemn and narratively heavy",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s5_l2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] This... this is the final trial? But... it's just a rock. A massive, solid rock!",
+            "tone": "Breathless and overwhelmed with disbelief",
+            "character_pose_expression": "Comically shocked, white circular eyes, jaw dropped",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s5_l3",
+            "speaker": "Narrator",
+            "text": "The masked man's voice was cold and final: 'I have nothing more to teach you. Slice this boulder in half, and I will allow you to enter the Final Selection.'",
+            "tone": "A deep, echoing ultimatum of a master",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s5_l4",
+            "speaker": "Tanjiro Kamado",
+            "text": "Slice a boulder...? My katana would shatter before the stone even chipped. [gulp]",
+            "tone": "Quietly terrified, internal monologue",
+            "character_pose_expression": "Thinking deeply, hand on chin, eyes closed"
+        },
+        {
+            "dialogue_id": "s5_l5",
+            "speaker": "Narrator",
+            "text": "Weeks turned into months. Tanjiro struck the stone every day until his hands bled and his blade felt like lead, but the moss-covered giant remained unyielding.",
+            "tone": "Somber, showing the passage of time",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s5_l6",
+            "speaker": "Tanjiro Kamado",
+            "text": "[gasping] I can't... I can't give up. Nezuko is waiting. I have to be the one to save her!",
+            "tone": "Exhausted but fueled by desperate love",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face"
+        },
+        {
+            "dialogue_id": "s5_l7",
+            "speaker": "Narrator",
+            "text": "In the stillness of the mountain air, Tanjiro closes his eyes. He stops trying to hit the rock. He starts trying to feel the flow of the water within his own breath.",
+            "tone": "Mystical and focused",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s5_l8",
+            "speaker": "Tanjiro Kamado",
+            "text": "I see it... the opening thread. It's faint, but it's there. The scent of the strike!",
+            "tone": "Sharply focused, a moment of sudden enlightenment",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "trigger_sfx": "soft wind whistling"
+        },
+        {
+            "dialogue_id": "s5_l9",
+            "speaker": "Tanjiro Kamado",
+            "text": "Total Concentration... Water Breathing...!",
+            "tone": "A low, vibrating growl of absolute power",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Strike with the flow of the river!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b1_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Fourth Form: Striking Tide!",
+                    "tone": "A fierce, echoing battle cry",
+                    "character_pose_expression": "Combat stance, knees bent, hand on sword hilt ready to draw",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "loud blade unsheathing"
+                },
+                {
+                    "dialogue_id": "s5_b1_l2",
+                    "speaker": "Narrator",
+                    "text": "A flash of blue light tears through the mist. The sound of steel meeting stone is not a clink, but a thunderous crack.",
+                    "tone": "Epic and climactic",
+                    "character_pose_expression": null,
+                    "stage_action": "flash",
+                    "trigger_sfx": "massive stone splitting"
+                },
+                {
+                    "dialogue_id": "s5_b1_l3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[panting] I... I did it. It's open. The way is finally open.",
+                    "tone": "Weak but profoundly relieved",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "trigger_sfx": "thud of two heavy stones falling"
+                }
+            ],
+            "leads_to_scene_id": "ch1_s6_final_selection_departure"
+        },
+        {
+            "choice_text": "Trust in the strength of your resolve!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b2_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I will not let my family's deaths be in vain! BREAK!!",
+                    "tone": "Emotionally charged and screaming",
+                    "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "heavy explosion sound"
+                },
+                {
+                    "dialogue_id": "s5_b2_l2",
+                    "speaker": "Narrator",
+                    "text": "The blade connects with such force that the mountain itself seems to tremble. The rope snaps, and the boulder cleaves in two clean halves.",
+                    "tone": "Powerful and definitive",
+                    "character_pose_expression": null,
+                    "stage_action": "flash",
+                    "trigger_sfx": "shattering rock"
+                },
+                {
+                    "dialogue_id": "s5_b2_l3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Wait for me, Nezuko. I'm coming for the one who did this to us.",
+                    "tone": "Coldly determined, a promise of vengeance",
+                    "character_pose_expression": "Gripping the hilt of his Nichirin sword, determined glare"
+                }
+            ],
+            "leads_to_scene_id": "ch1_s6_final_selection_departure"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

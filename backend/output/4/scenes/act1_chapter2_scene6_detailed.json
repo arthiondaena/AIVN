@@ -1,0 +1,136 @@
+{
+    "scene_id": "act1_chapter2_scene6",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "Empty Gym Bleachers",
+    "initial_location_description": "The high school gymnasium during golden hour. Long, orange light beams cut through the dust motes, reflecting off the polished wooden floors. The basketball hoops cast long, skeletal shadows. The silence is heavy and echoing, a stark contrast to the usual roar of the crowd.",
+    "initial_bgm": "melancholic acoustic guitar with soft, lingering piano notes",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s6_line1",
+            "speaker": "Narrator",
+            "text": "The squeak of sneakers and the rhythmic bounce of basketballs have finally faded, leaving behind a silence that feels almost heavy.",
+            "tone": "Contemplative and quiet; a 'Weighted Silence' that signals a shift from the day's frantic energy."
+        },
+        {
+            "dialogue_id": "s6_line2",
+            "speaker": "Kang Ji-ho",
+            "text": "[sighs] Everyone's gone. It's weird when it's this quiet. Makes you think too much.",
+            "tone": "Exhausted honesty; the 'Post-Adrenaline Slump' where the bravado has been stripped away.",
+            "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+            "trigger_sfx": "distant hum of the school ventilation system"
+        },
+        {
+            "dialogue_id": "s6_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "Thinking isn't always a bad thing, Kang Ji-ho. Though... after today's accident, I suppose a little mental silence would be a relief.",
+            "tone": "Soft and empathetic; the 'Library Whisper'\u2014gentle but carrying weight.",
+            "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+        },
+        {
+            "dialogue_id": "s6_line4",
+            "speaker": "Kang Ji-ho",
+            "text": "You probably think I'm just some arrogant jock who lives for the spotlight, right? That I do this because I love people screaming my name?",
+            "tone": "Self-deprecating and cynical; a bitter 'Half-Laugh' that doesn't reach his eyes.",
+            "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+        },
+        {
+            "dialogue_id": "s6_line5",
+            "speaker": "Min Seo-yoon",
+            "text": "I... I try not to make assumptions. But you do seem to thrive on the attention.",
+            "tone": "Cautious and observant; a 'Measured Response' that avoids direct confrontation.",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+        },
+        {
+            "dialogue_id": "s6_line6",
+            "speaker": "Kang Ji-ho",
+            "text": "I thrive on it because I have to. I'm not playing for fun. If I don't get a sports scholarship, there's no university. No future. My family... we can't afford it otherwise.",
+            "tone": "Raw and vulnerable; 'The Brittle Truth'\u2014the sound of someone admitting a secret they\u2019ve kept hidden behind ego.",
+            "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+        },
+        {
+            "dialogue_id": "s6_line7",
+            "speaker": "Min Seo-yoon",
+            "text": "[whispering] A scholarship... so that's why you push yourself until you're literally breaking.",
+            "tone": "Breathless realization; 'The Soft Epiphany' where the pieces finally click together.",
+            "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise."
+        },
+        {
+            "dialogue_id": "s6_line8",
+            "speaker": "Kang Ji-ho",
+            "text": "Every missed shot feels like a door closing. It\u2019s not talent, Seo-yoon. It\u2019s armor. If I\u2019m the 'star player,' nobody sees how terrified I am of failing.",
+            "tone": "Intense and focused; 'The Unmasked Gaze'\u2014direct and painfully honest.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        },
+        {
+            "dialogue_id": "s6_line9",
+            "speaker": "Min Seo-yoon",
+            "text": "I think... I understand that better than I\u2019d like to admit. These books? The straight A's? They aren't just because I like studying.",
+            "tone": "Quiet confession; 'The Trembling Truth'\u2014low-pitched and slightly shaky.",
+            "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected."
+        },
+        {
+            "dialogue_id": "s6_line10",
+            "speaker": "Min Seo-yoon",
+            "text": "They're a shield. If I'm busy reading, I don't have to talk to anyone. If I'm the 'top student,' I'm 'eccentric' instead of just... socially terrified. I use my grades to hide because I\u2019m scared of being judged for who I actually am.",
+            "tone": "A 'Vulnerable Rush' of words; finally letting the pressure out after holding it in for years.",
+            "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered."
+        },
+        {
+            "dialogue_id": "s6_line11",
+            "speaker": "Kang Ji-ho",
+            "text": "So I'm a jock because I'm poor, and you're a genius because you're shy. We're both just playing parts, aren't we?",
+            "tone": "Warm and gentle; a 'Knowing Smile'\u2014the tone is bright and explicitly inviting common ground.",
+            "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Acknowledge the shared 'Armor'.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s6_branch1_1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "I guess we are. It\u2019s exhausting, isn't it? Carrying all that weight alone.",
+                    "tone": "Relieved and soft; 'The Shared Burden'\u2014a tone of deep connection.",
+                    "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                },
+                {
+                    "dialogue_id": "s6_branch1_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Yeah. But maybe... sitting here right now... the weight feels a little lighter.",
+                    "tone": "Sincere and peaceful; 'The Quiet Comfort'\u2014a relaxed, deep vocal quality.",
+                    "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking."
+                }
+            ]
+        },
+        {
+            "choice_text": "Try to lighten the mood.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s6_branch2_1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Well, at least your 'armor' involves a cool jacket. Mine just involves papercuts and ink stains.",
+                    "tone": "Playful and light; a 'Gentle Tease'\u2014the voice is airy and smiling.",
+                    "character_pose_expression": "One hand over her mouth, eyes closed, giggling softly with a light blush."
+                },
+                {
+                    "dialogue_id": "s6_branch2_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "[laughs] Hey, those ink stains are intimidating! Very scholarly. I'll stick to the sweat, thanks.",
+                    "tone": "A 'Hearty Laugh'; bright, resonant, and genuinely amused.",
+                    "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s6_line8",
+            "new_location_name": "Bleachers - Extreme Close Up",
+            "visual_description": "The camera zooms in tightly on the two protagonists. The background is blurred into a bokeh of orange and gold. The focus is entirely on the sincerity in their eyes as the distance between them\u2014both physical and emotional\u2014decreases."
+        }
+    ]
+}

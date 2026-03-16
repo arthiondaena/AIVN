@@ -1,0 +1,115 @@
+{
+    "scene_id": "chapter_3_scene_1",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Rooftop",
+    "initial_location_description": "Nighttime rooftop of a prestigious Korean high school. The scene is bathed in deep blues and purples, contrasted by the warm, glittering golden grid of Seoul's skyline in the distance. Two laptops are open on a low concrete ledge, their screens casting a soft white-blue glow on the characters. A cool breeze lightly rustles their hair.",
+    "initial_bgm": "Lo-fi hip-hop with soft piano and ambient city wind noise",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Narrator",
+            "text": "The only sounds are the distant hum of traffic and the rapid-fire tapping of keys on a keyboard.",
+            "tone": "Atmospheric and quiet.",
+            "character_pose_expression": null,
+            "stage_action": null
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "Almost... there. I just need to reformat the references for the third slide and...",
+            "tone": "Determined and focused, muttering under her breath.",
+            "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious.",
+            "trigger_sfx": "Rapid keyboard typing"
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Kang Ji-ho",
+            "text": "I've got the final animations synced. Just hit that button, Seo-yoon. Let\u2019s put this thing to bed.",
+            "tone": "Intense but eager, leaning into the work.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Min Seo-yoon",
+            "text": "Done! [click] It's uploading now... and... saved.",
+            "tone": "Exhaling a long-held breath, voice softening with relief.",
+            "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face.",
+            "trigger_sfx": "Digital chime of a successful upload"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "Hell yes! Presentation finished, and it\u2019s not even midnight yet.",
+            "tone": "Triumphant and energetic, a sudden burst of joy.",
+            "character_pose_expression": "Victory pose, making a V-sign with his fingers, bright grin, designer sneakers visible.",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Narrator",
+            "text": "As the laptops go dim, the silence of the school rooftop becomes heavy, but no longer tense. The stress of the deadline evaporates, leaving something softer in its place.",
+            "tone": "Introspective and gentle.",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Min Seo-yoon",
+            "text": "Wait... the clock. Ji-ho, it's only 10:30 PM. We finished... three hours ahead of schedule?",
+            "tone": "Shocked, eyes widening as she looks at her screen.",
+            "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open."
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Kang Ji-ho",
+            "text": "Guess we're a better team than we thought. Or maybe you're just a slave-driver who makes me work faster.",
+            "tone": "Playful and teasing, with a hint of genuine admiration.",
+            "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "The city looks beautiful from up here.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Look at all those lights. Everyone down there is still rushing around, but up here... it feels like time stopped.",
+                    "tone": "Dreamy and thoughtful, voice trailing off.",
+                    "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile."
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Yeah. It's rare to see it like this. Usually, I'm just looking at the road when I'm biking. It's... nice to just look.",
+                    "tone": "Soft and sincere, his gaze turning from the city to her.",
+                    "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                }
+            ],
+            "leads_to_scene_id": "chapter_3_scene_2"
+        },
+        {
+            "choice_text": "It's so quiet... I'm not used to this.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Is it always this quiet at night? I can almost hear my own heart beating.",
+                    "tone": "Vulnerable and slightly embarrassed.",
+                    "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered."
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Don't get too spooked. I'm right here. Besides, the silence is better than Mr. Han's lectures, right?",
+                    "tone": "Gentle teasing, trying to ease her nerves while leaning closer.",
+                    "character_pose_expression": "Leaning forward slightly, sharp cat-like eyes with a playful glint, one eyebrow raised."
+                }
+            ],
+            "leads_to_scene_id": "chapter_3_scene_2"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

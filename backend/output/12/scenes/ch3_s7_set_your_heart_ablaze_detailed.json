@@ -1,0 +1,153 @@
+{
+    "scene_id": "ch3_s7_set_your_heart_ablaze",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Kyojuro Rengoku",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Train Crash Site - Dawn",
+    "initial_location_description": "The wreckage of the Mugen Train lies scattered across the landscape. The dark blue of night is bleeding into a soft, golden-orange dawn. Smoke rises from the twisted metal, and the air is thick with dust and the smell of cooling iron.",
+    "initial_bgm": "slow melancholic piano with swelling strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s7_line1",
+            "speaker": "Narrator",
+            "text": "The sun begins to crest over the horizon, its light touching the devastation of the battle. The demon has fled, but the price of victory is written in the blood on the grass.",
+            "tone": "Solemn and heavy with a touch of cinematic grandeur.",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s7_line2",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Young Kamado... come closer. Let us have... one last talk.",
+            "tone": "Laborious but warm. You can hear the 'Vocal Smile' despite the physical agony; the tone is bright and inviting.",
+            "character_pose_expression": "Wounded, breathing heavily, slight blood on forehead, fierce smile through pain"
+        },
+        {
+            "dialogue_id": "s7_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "[sobbing] Rengoku-san! Please, don't try to speak! There must be a way to stop the bleeding!",
+            "tone": "Desperate and cracking with grief. High-pitched with the strain of holding back a flood of tears.",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest"
+        },
+        {
+            "dialogue_id": "s7_line4",
+            "speaker": "Kyojuro Rengoku",
+            "text": "It is alright. My end is here. Listen... go to my family home. You may find records there... regarding the Hinokami Kagura. My father... he will know.",
+            "tone": "Determined and instructional. The voice is thinning but remains steady and focused.",
+            "character_pose_expression": "Serious, hand on katana hilt, sharp focused gaze, firm expression"
+        },
+        {
+            "dialogue_id": "s7_line5",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Tell my brother, Senjuro... to follow his heart. And tell my father... to take care of his body.",
+            "tone": "Soft and affectionate. The 'Vocal Smile' is fully present here, conveying deep familial love.",
+            "character_pose_expression": "Proud, hand on chest, standing tall, beaming with a radiant smile"
+        },
+        {
+            "dialogue_id": "s7_line6",
+            "speaker": "Kyojuro Rengoku",
+            "text": "And you... all of you. Believe in yourselves. No matter how weak or unworthy you feel... keep your heart burning. Grit your teeth and move forward.",
+            "tone": "Inspirational and powerful. A final surge of energy that rings out like a bell.",
+            "character_pose_expression": "Action, pointing forward with determination, eyes wide and fiery, shouting",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s7_line7",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Set your heart ablaze!",
+            "tone": "The ultimate command. It is both a roar and a blessing.",
+            "character_pose_expression": "Proud, hand on chest, standing tall, beaming with a radiant smile",
+            "trigger_sfx": "intense fire whoosh"
+        },
+        {
+            "dialogue_id": "s7_line8",
+            "speaker": "Narrator",
+            "text": "Rengoku's eyes drift toward the light. For a moment, he is no longer at the crash site. He sees a woman with kind eyes and a noble spirit standing before him.",
+            "tone": "Ethereal and peaceful.",
+            "character_pose_expression": null,
+            "stage_action": "flash"
+        },
+        {
+            "dialogue_id": "s7_line9",
+            "speaker": "Kyojuro Rengoku",
+            "text": "[whispering] Mother... did I... did I do my duty? Did I use my strength well?",
+            "tone": "Childlike and hopeful. The voice is a soft breath.",
+            "character_pose_expression": "Focused, kneeling in seiza position, hands on thighs, calm but intense expression"
+        },
+        {
+            "dialogue_id": "s7_line10",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Ah... I see. Thank you.",
+            "tone": "Pure joy. A final exhale of absolute contentment.",
+            "character_pose_expression": "Laughter, head tilted back, eyes closed, mouth wide open in hearty laughter"
+        },
+        {
+            "dialogue_id": "s7_line11",
+            "speaker": "Narrator",
+            "text": "With a final, radiant smile, the Flame Hashira's head falls still. The flame has gone out, leaving only the warmth of his legacy.",
+            "tone": "Quiet and final.",
+            "character_pose_expression": null,
+            "trigger_sfx": "distant crow cawing"
+        },
+        {
+            "dialogue_id": "s7_line12",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "[wailing] No... no! Rengoku-san! Wake up! Please!",
+            "tone": "Hysterical and heartbroken. Unfiltered grief.",
+            "character_pose_expression": "Crying heavily with snot bubbles, clutching his yellow haori",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s7_line13",
+            "speaker": "Inosuke Hashibira",
+            "text": "Don't... don't cry! He told us to be strong! We're training! We're going to get stronger!",
+            "tone": "Shaky and forced. You can hear the voice trembling behind the bravado.",
+            "character_pose_expression": "Mask removed, looking down, sad and quiet, hair covering part of the face after a defeat",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s7_line14",
+            "speaker": "Tanjiro Kamado",
+            "text": "He protected us... until the very end. We can't let his sacrifice be for nothing. We will move forward.",
+            "tone": "Somber but carrying a new, iron-clad resolve. The tone of a man who has grown years in a single night.",
+            "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Vow to carry on his legacy.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I will never forget these words. I will set my heart ablaze, Rengoku-san. I promise!",
+                    "tone": "Fierce and swearing an oath.",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword"
+                }
+            ],
+            "leads_to_scene_id": "ch4_s1_recovery"
+        },
+        {
+            "choice_text": "Mourn the loss in silence.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_1",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro bows his head low, the weight of the Hashira's sword hilt cold in his hand. The silence of the dawn is his only answer.",
+                    "tone": "Introspective and quiet.",
+                    "character_pose_expression": null
+                }
+            ],
+            "leads_to_scene_id": "ch4_s1_recovery"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s7_line7",
+            "new_location_name": "Train Crash Site - Golden Hour",
+            "visual_description": "The sun has fully risen, bathing the scene in a brilliant, almost holy gold light. The shadows of the wreckage are long and the dust sparkles in the air."
+        }
+    ]
+}

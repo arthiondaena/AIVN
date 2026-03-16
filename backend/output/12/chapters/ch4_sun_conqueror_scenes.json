@@ -1,0 +1,35 @@
+{
+    "chapter_id": "ch4_sun_conqueror",
+    "scenes": [
+        {
+            "scene_id": "ch4_s1_hidden_hamlet",
+            "title": "The Hidden Hamlet",
+            "primary_location": "Swordsmith Village Entrance",
+            "scene_summary": "Tanjiro arrives at the secretive Swordsmith Village seeking a replacement for his chipped blade. While settling in, he encounters the aloof Mist Hashira, Muichiro Tokito, and the bubbly Love Hashira, Mitsuri Kanroji. The atmosphere is peaceful as Tanjiro learns about the legendary swordsmiths' craft and the village's importance to the Demon Slayer Corps, unaware that their secret location has been compromised."
+        },
+        {
+            "scene_id": "ch4_s2_sudden_onslaught",
+            "title": "Sudden Onslaught",
+            "primary_location": "Village Residential Quarters",
+            "scene_summary": "The tranquility is shattered when Upper Moon Four, Hantengu, and Upper Moon Five, Gyokko, launch a surprise attack. Gyokko's grotesque vase-monsters terrorize the villagers while Hantengu infiltrates Tanjiro's room. A chaotic battle erupts; Muichiro is initially blown away by Hantengu's wind powers, leaving Tanjiro and Nezuko to face the regenerating and splitting forms of the Emotion Demons alone."
+        },
+        {
+            "scene_id": "ch4_s3_evolving_flame",
+            "title": "The Evolving Flame",
+            "primary_location": "Forest Near the Village",
+            "scene_summary": "As Hantengu's manifestations\u2014Sekido, Karaku, Aizetsu, and Urogi\u2014overwhelm the heroes, Tanjiro realizes he must push his limits. Mitsuri Kanroji arrives to defend the village, showcasing her unique Love Breathing. Amidst the carnage, Tanjiro focuses his breathing, combining his traditional techniques with the Hinokami Kagura to refine his Sun Breathing, allowing him to cut through the hardened necks of the manifestations."
+        },
+        {
+            "scene_id": "ch4_s4_dawn_approaches",
+            "title": "Dawn Approaches",
+            "primary_location": "Village Outskirts",
+            "scene_summary": "The fight reaches its climax as the sun begins to peek over the horizon. Tanjiro pursues the tiny, true body of Hantengu through the brush. He successfully decapitates the demon using a final, desperate Sun Breathing strike, but in his triumph, he realizes Nezuko is trapped in the open air as the first rays of sunlight hit her skin."
+        },
+        {
+            "scene_id": "ch4_s5_the_miracle",
+            "title": "The Miracle of the Sun",
+            "primary_location": "Open Clearing",
+            "scene_summary": "Tanjiro shields Nezuko with his body, weeping as he expects her to disintegrate. However, Nezuko pushes him away and stands up, her demonic features receding as she survives the sunlight. She utters her first words in years, greeting her brother in the morning light. The scene shifts to Muzan Kibutsuji, who senses this shift and declares that his search for the Blue Spider Lily is over, as Nezuko is now the key to his ultimate conquest."
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+    "scene_id": "act1_ch1_s2",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho",
+        "Mr. Han",
+        "Lee Hana"
+    ],
+    "initial_location_name": "Classroom 2-B",
+    "initial_location_description": "A vibrant, sun-drenched high school classroom in a clean manhwa art style. Large windows show a clear blue sky. The chalkboard is filled with notes about the 'History Term Project', and students are buzzing with nervous energy in their wooden desks.",
+    "initial_bgm": "upbeat school atmosphere with a hint of tension",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Mr. Han",
+            "text": "[Tapping the board] Quiet down, everyone. I have the finalized list for the History Term Project partners.",
+            "tone": "Authoritative and dry. The sound of a teacher who has done this a thousand times and just wants to finish the period.",
+            "character_pose_expression": "Holding wooden pointer, tapping it against open palm, stern disciplinary look",
+            "trigger_sfx": "rhythmic wooden tapping on a chalkboard"
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Lee Hana",
+            "text": "[Whispering] Please let us be together, Seo-yoon! If I get paired with one of the guys from the soccer team, my GPA is toast.",
+            "tone": "The 'Conspiratorial Whisper': leaning in close, voice low but high-pitched with anxiety and excitement.",
+            "character_pose_expression": "Whispering a secret, one hand cupped near her mouth, leaning in with a conspiratorial glint in her eyes"
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "Don't worry, Hana. We usually end up in the same bracket. Just... stay positive.",
+            "tone": "Calm and steady, though there is a hint of underlying nervousness in her breath.",
+            "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious"
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Mr. Han",
+            "text": "Moving on. Park Min-ji and Lee Hana...",
+            "tone": "Flat and monotonous.",
+            "character_pose_expression": "Adjusting wire-rimmed glasses with one finger, looking downward intensely"
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Lee Hana",
+            "text": "Nooo! My GPA!",
+            "tone": "Exaggerated despair, mock-crying.",
+            "character_pose_expression": "Completely exhausted, slumped shoulders, blank expression with 'soul leaving body' effect"
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Mr. Han",
+            "text": "And finally... Min Seo-yoon. You will be working with... Kang Ji-ho.",
+            "tone": "Final and absolute. He closes the book with a definitive snap.",
+            "character_pose_expression": "Standing straight, holding attendance book against chest, neutral expression",
+            "trigger_sfx": "book slamming shut"
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Narrator",
+            "text": "The world seems to stop for a moment. The air in the classroom grows heavy as the name 'Kang Ji-ho' echoes against the walls.",
+            "tone": "Dramatic and heavy narration.",
+            "character_pose_expression": "Narrator"
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Min Seo-yoon",
+            "text": "Wait... [Stuttering] Mr. Han? Did you say... Ji-ho? As in, the guy who hasn't opened a textbook since the orientation?",
+            "tone": "Pure shock, voice cracking slightly with disbelief and rising panic.",
+            "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s2_line9",
+            "speaker": "Mr. Han",
+            "text": "The list is final, Seo-yoon. Perhaps your 'studious influence' will do him some good. Now, everyone, get to your partners.",
+            "tone": "Dismissive and tired, already moving toward his desk to sit down.",
+            "character_pose_expression": "Sighing with eyes closed, hand rubbing the bridge of his nose, looking tired and overworked"
+        },
+        {
+            "dialogue_id": "s2_line10",
+            "speaker": "Narrator",
+            "text": "Seo-yoon turns slowly, her neck feeling stiff. In the very last row, leaned back against the window, sits the source of her upcoming academic nightmare.",
+            "tone": "Tense and cinematic narration.",
+            "character_pose_expression": "Narrator"
+        },
+        {
+            "dialogue_id": "s2_line11",
+            "speaker": "Kang Ji-ho",
+            "text": "Looks like you're stuck with me, Class President. Try not to make it too boring, okay?",
+            "tone": "The 'Lazy Drawl': slow, melodic, and deeply irritating. Every word drips with casual confidence.",
+            "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+            "trigger_sfx": "basketball spinning sound"
+        },
+        {
+            "dialogue_id": "s2_line12",
+            "speaker": "Min Seo-yoon",
+            "text": "[Thinking] This is a disaster. A complete, unmitigated disaster. I can't let him ruin my perfect record.",
+            "tone": "Internal monologue: Sharp, frantic, and judgmental.",
+            "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Confront him immediately.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_b1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Listen, Ji-ho. If we're doing this, you're following my schedule. No basketball, no excuses, and no being late!",
+                    "tone": "Determined and bossy, attempting to take control of the situation.",
+                    "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                },
+                {
+                    "dialogue_id": "s2_b1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Whoa, scary. You always this intense, or is it just for me?",
+                    "tone": "Playful and mocking, completely unfazed by her outburst.",
+                    "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                }
+            ],
+            "leads_to_scene_id": "act1_ch1_s3_confrontation"
+        },
+        {
+            "choice_text": "Ask Mr. Han to change partners.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s2_b2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Sir, I really think I would be more productive with someone else. Our... learning styles are quite different.",
+                    "tone": "Polite but desperate, pleading with her eyes.",
+                    "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose."
+                },
+                {
+                    "dialogue_id": "s2_b2_line2",
+                    "speaker": "Mr. Han",
+                    "text": "Different is good, Seo-yoon. It builds character. My decision stands.",
+                    "tone": "Firm and final.",
+                    "character_pose_expression": "Chin resting on interlaced fingers, cold and analytical gaze directed forward"
+                },
+                {
+                    "dialogue_id": "s2_b2_line3",
+                    "speaker": "Kang Ji-ho",
+                    "text": "[Laughing] Ouch. Rejected by the teacher. Don't worry, I won't bite.",
+                    "tone": "Hearty and amused.",
+                    "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                }
+            ],
+            "leads_to_scene_id": "act1_ch1_s3_acceptance"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

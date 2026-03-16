@@ -1,0 +1,131 @@
+{
+    "scene_id": "chapter_3_scene_4",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Rooftop - Dawn",
+    "initial_location_description": "The rooftop of the high school under a bleeding predawn sky. Soft, painterly hues of indigo, violet, and pale gold stretch across the horizon. The metal railing is damp with dew, reflecting the first light. Manhwa style with high contrast between the cool shadows and the warm light of the approaching sun.",
+    "initial_bgm": "A swell of emotional piano and slow-building cinematic strings.",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_4_line1",
+            "speaker": "Narrator",
+            "text": "The air on the rooftop is crisp, carrying the quiet stillness that only exists in the moments before the world wakes up.",
+            "tone": "Atmospheric and peaceful"
+        },
+        {
+            "dialogue_id": "s3_4_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "[softly] It's so quiet... I never imagined the school could feel this peaceful. Like we're the only two people left in the world.",
+            "tone": "Breathless and contemplative",
+            "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+        },
+        {
+            "dialogue_id": "s3_4_line3",
+            "speaker": "Kang Ji-ho",
+            "text": "I used to come up here to get away from the noise. But today... I don't feel like hiding anymore.",
+            "tone": "Honest and vulnerable",
+            "character_pose_expression": "Adjusting his school uniform collar, looking into the distance with a cool, stoic expression."
+        },
+        {
+            "dialogue_id": "s3_4_line4",
+            "speaker": "Min Seo-yoon",
+            "text": "Ji-ho... after everything that happened with the club, and the exams... do you think things will really change for us?",
+            "tone": "Apprehensive but hopeful",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+        },
+        {
+            "dialogue_id": "s3_4_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "They already have. I'm not the same person I was when we first met. You did that to me, Seo-yoon.",
+            "tone": "Deep and sincere",
+            "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+        },
+        {
+            "dialogue_id": "s3_4_line6",
+            "speaker": "Narrator",
+            "text": "He steps closer, the gap between them narrowing until the only thing between them is the morning breeze.",
+            "tone": "Heightened tension",
+            "trigger_sfx": "Soft wind whistling"
+        },
+        {
+            "dialogue_id": "s3_4_line7",
+            "speaker": "Kang Ji-ho",
+            "text": "I don't want to just be your 'project' or your classmate. I want to be the one standing next to you when the sun comes up every day.",
+            "tone": "Intense and romantic",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        },
+        {
+            "dialogue_id": "s3_4_line8",
+            "speaker": "Min Seo-yoon",
+            "text": "[whispering] Ji-ho...",
+            "tone": "Emotional and vulnerable",
+            "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Lean in closer",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_4_b1_1",
+                    "speaker": "Narrator",
+                    "text": "Seo-yoon tilts her head up, her heart hammering against her ribs like a trapped bird.",
+                    "tone": "Dramatic and romantic"
+                },
+                {
+                    "dialogue_id": "s3_4_b1_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Finally...",
+                    "tone": "A low, satisfied whisper",
+                    "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "Sound of a heartbeat thumping"
+                },
+                {
+                    "dialogue_id": "s3_4_b1_3",
+                    "speaker": "Narrator",
+                    "text": "The first ray of golden light breaks over the horizon, catching the dust motes in the air as their lips finally meet in a soft, certain kiss.",
+                    "tone": "Crescendo",
+                    "stage_action": "flash"
+                }
+            ],
+            "leads_to_scene_id": "epilogue_1"
+        },
+        {
+            "choice_text": "Hold his hand",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_4_b2_1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "I'm not going anywhere. We'll face whatever comes next together.",
+                    "tone": "Determined and loving",
+                    "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge."
+                },
+                {
+                    "dialogue_id": "s3_4_b2_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "That's all I needed to hear.",
+                    "tone": "Relieved and tender",
+                    "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+                },
+                {
+                    "dialogue_id": "s3_4_b2_3",
+                    "speaker": "Narrator",
+                    "text": "Ji-ho doesn't wait for another word. He cups her cheek and leans down, sealing the promise with a kiss as the city below begins to glow with morning light.",
+                    "tone": "Warm and sweet",
+                    "stage_action": "flash"
+                }
+            ],
+            "leads_to_scene_id": "epilogue_1"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s3_4_line8",
+            "new_location_name": "School Rooftop - Sunrise",
+            "visual_description": "The sun has finally crested the horizon, flooding the rooftop in brilliant gold and vibrant orange light. The long shadows are being chased away, and the characters are illuminated in a warm, ethereal glow."
+        }
+    ]
+}

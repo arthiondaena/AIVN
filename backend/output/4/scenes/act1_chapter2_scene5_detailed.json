@@ -1,0 +1,144 @@
+{
+    "scene_id": "act1_chapter2_scene5",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "Gym Sidelines",
+    "initial_location_description": "The edge of a high school gymnasium. Polished amber wood floors reflecting the harsh overhead fluorescent lights. In the background, stacked blue gym mats and a mesh bin filled with basketballs are visible. The atmosphere is quiet and secluded compared to the main court area.",
+    "initial_bgm": "Soft, fluttering acoustic guitar melody",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_line1",
+            "speaker": "Narrator",
+            "text": "The echoing squeaks of sneakers on the far court fade into the background as Ji-ho kneels beside Seo-yoon on the polished floor.",
+            "tone": "Atmospheric and quiet."
+        },
+        {
+            "dialogue_id": "s5_line2",
+            "speaker": "Kang Ji-ho",
+            "text": "Easy there. Don't try to stand up too fast. You took a pretty hard spill.",
+            "tone": "The 'Protective Hero': A grounded, steady register with a hint of concern. Lowered pitch to create an intimate, private space.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "[whispering] I'm fine, really... It was just a clumsy trip. I should have been looking where I was going.",
+            "tone": "The 'Shy Protagonist': Soft and slightly breathy, with a rising inflection at the end to show uncertainty and embarrassment.",
+            "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line4",
+            "speaker": "Kang Ji-ho",
+            "text": "Stay here. I'm getting the kit from the equipment room. Don't you dare move.",
+            "tone": "The 'Arrogant but Caring': Commanding and firm, yet without any real bite. A playful authoritative edge.",
+            "character_pose_expression": "Neutral, standing",
+            "stage_action": "exit",
+            "trigger_sfx": "footsteps receding"
+        },
+        {
+            "dialogue_id": "s5_line5",
+            "speaker": "Narrator",
+            "text": "A moment later, Ji-ho returns with a white plastic box. He settles onto his haunches, the distance between them shrinking significantly.",
+            "tone": "Observational and slightly romantic.",
+            "stage_action": "enter",
+            "trigger_sfx": "plastic case latch clicking"
+        },
+        {
+            "dialogue_id": "s5_line6",
+            "speaker": "Kang Ji-ho",
+            "text": "Give me your leg. I need to clean this before it gets worse.",
+            "tone": "The 'Focused Caretaker': Soft and direct. The tone is stripped of its usual bravado, replaced by genuine gentleness.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line7",
+            "speaker": "Narrator",
+            "text": "Seo-yoon watches as his large, calloused hands\u2014the hands of an athlete\u2014handle the antiseptic wipe with surprising delicacy. The contrast is startling; the same hands that aggressively dribble a ball are now barely brushing her skin.",
+            "tone": "Descriptive and sensory-focused."
+        },
+        {
+            "dialogue_id": "s5_line8",
+            "speaker": "Min Seo-yoon",
+            "text": "[Sharp intake of breath] ...It's cold.",
+            "tone": "The 'Startled React': A quick, high-pitched gasp followed by a soft, trembling murmur.",
+            "character_pose_expression": "blushing intensely and appearing shy.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line9",
+            "speaker": "Kang Ji-ho",
+            "text": "I know. It'll only sting for a second. Just look at me, okay?",
+            "tone": "The 'Vocal Smile': Bright and inviting. You can hear the reassurance in the warmth of the tone.",
+            "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line10",
+            "speaker": "Narrator",
+            "text": "He leans down, his face inches from her knee. To her shock, he blows a soft, cool breath over the stinging scrape to dull the pain of the antiseptic.",
+            "tone": "Intimate and breathless."
+        },
+        {
+            "dialogue_id": "s5_line11",
+            "speaker": "Min Seo-yoon",
+            "text": "[Internal] My heart... why is it beating so loud? He's so close I can smell the faint scent of his laundry detergent and the citrus of his shampoo.",
+            "tone": "The 'Dazed Romantic': Dreamy, low-volume internal monologue, heavy with realization.",
+            "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered.",
+            "stage_action": null,
+            "trigger_sfx": "heartbeat thumping"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Thank him softly.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_branch1_1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Thank you, Ji-ho. You... you're actually really good at this.",
+                    "tone": "Grateful and sincere with a shy smile.",
+                    "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                },
+                {
+                    "dialogue_id": "s5_branch1_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Don't get used to it. I don't play nurse for just anybody.",
+                    "tone": "Playful and smug, returning to his typical confident self.",
+                    "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene6"
+        },
+        {
+            "choice_text": "Pull your leg away in embarrassment.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_branch2_1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "I can do the rest! Really! It's\u2014it's too much!",
+                    "tone": "High-pitched and flustered panic.",
+                    "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered."
+                },
+                {
+                    "dialogue_id": "s5_branch2_2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Whoa! Careful! You're going to knock the kit over. Fine, fine, take the bandage.",
+                    "tone": "Surprised and slightly amused.",
+                    "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene6"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

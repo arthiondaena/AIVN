@@ -4,7 +4,7 @@ name: CI/CD to Google Cloud Run
 on:
   push:
     branches:
-      - main # Change this to your main branch name
+      - dev # Change this to your main branch name
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }} # Set this in GitHub Secrets

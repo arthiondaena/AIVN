@@ -1,0 +1,41 @@
+{
+    "chapter_id": "ch2_asakusa_encounter",
+    "scenes": [
+        {
+            "scene_id": "ch2_s1_arrival_at_asakusa",
+            "title": "The Overwhelming Glow of Asakusa",
+            "primary_location": "Asakusa City Streets",
+            "scene_summary": "Tanjiro and Nezuko arrive in the bustling, brightly lit district of Asakusa. Tanjiro is visibly disoriented and overwhelmed by the modern architecture, the crowds, and the electric lights. While attempting to settle down for a bowl of udon at a street cart, he suddenly catches a scent he can never forget\u2014the same scent left at his home the day his family was slaughtered. Dropping his bowl, he follows the trail through the dense crowd in a desperate pursuit."
+        },
+        {
+            "scene_id": "ch2_s2_encounter_with_muzan",
+            "title": "A Demon in Human Skin",
+            "primary_location": "Asakusa - Main Thoroughfare",
+            "scene_summary": "Tanjiro pushes through the crowd and reaches out to grab the man carrying the scent. He is shocked to find Muzan Kibutsuji living as a seemingly normal human father with a human wife and daughter. Muzan maintains a calm, cold facade, feigning confusion. To create a distraction and avoid a public scene, Muzan subtly scratches a passing man's neck, injecting him with blood and instantly transforming him into a violent demon. The city street erupts into chaos as the new demon attacks his own wife."
+        },
+        {
+            "scene_id": "ch2_s3_tamayos_intervention",
+            "title": "The Illusion of the Enchantress",
+            "primary_location": "Asakusa - Distraction Site",
+            "scene_summary": "Tanjiro chooses to restrain the newly turned demon rather than pursue Muzan, prioritizing the preservation of life. As the police arrive and struggle to handle the situation, Tamayo and Yushiro intervene. Tamayo uses her 'Scent of Illusory Blood: Visual Dream' technique to shroud the area in floral patterns, blinding the onlookers and calming the situation. She reveals herself as a demon who has broken free of Muzan's curse and offers Tanjiro and Nezuko a place of safety."
+        },
+        {
+            "scene_id": "ch2_s4_the_hidden_sanctuary",
+            "title": "A Proposal of Hope",
+            "primary_location": "Tamayo\u2019s Hidden Clinic",
+            "scene_summary": "Yushiro leads Tanjiro and Nezuko through a magical barrier into a hidden house. Inside, Tamayo explains her medical research into demon physiology and her goal to find a cure for Nezuko's condition. She asks Tanjiro for two favors: to allow her to study Nezuko's blood and to retrieve blood samples from demons closely related to Muzan. The peaceful moment is shattered when Susamaru and Yahaba, two powerful demons acting as Muzan's assassins, track them down and launch a devastating attack on the house."
+        },
+        {
+            "scene_id": "ch2_s5_battle_against_the_twelve_kizuki",
+            "title": "Temari and Arrows",
+            "primary_location": "The Courtyard of the Hidden House",
+            "scene_summary": "A high-stakes battle begins in the courtyard. Susamaru uses her multiple arms to hurl explosive Temari balls with lethal force, while Yahaba uses invisible 'Koketsu Arrows' to manipulate the trajectory of everything in the field, including Tanjiro himself. Tanjiro struggles to adapt to the shifting vectors of Yahaba's attacks. Nezuko enters the fray to support him, showing increased physical strength and regeneration. Through teamwork and Tanjiro's strategic use of Water Breathing forms, they manage to sever Yahaba's head, though the demon's final spiteful attack nearly crushes Tanjiro."
+        },
+        {
+            "scene_id": "ch2_s6_the_blood_oath",
+            "title": "Aftermath and New Paths",
+            "primary_location": "Ruins of the Hidden House",
+            "scene_summary": "With Yahaba gone, Tamayo uses a specialized drug to trick Susamaru into saying Muzan's name, triggering the Kibutsuji curse that destroys her from within. Tanjiro, though injured, collects the blood samples for Tamayo. Tamayo and Yushiro prepare to move their clinic to a new location to avoid further pursuit. Tanjiro and Nezuko share a final, respectful goodbye with their new allies, solidified by the hope that a cure for Nezuko is finally within reach as they prepare for their next mission."
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "scene_id": "ch1_s2_giyu_intervention",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Giyu Tomioka"
+    ],
+    "initial_location_name": "Snowy Mountain Path",
+    "initial_location_description": "A steep, winding mountain path blanketed in thick, pristine white snow. Tall, dark pine trees weighed down by frost line the edges. The air is thick with a heavy blizzard, blurring the horizon into a greyish-white haze.",
+    "initial_bgm": "tense orchestral with high-pitched strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Narrator",
+            "text": "The wind howls, biting at Tanjiro's skin as he carries his unconscious sister through the mounting drifts.",
+            "tone": "Cold and desolate atmosphere."
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko... hang on... just a little further... I'll get you to a doctor!",
+            "tone": "Exhausted and desperate, voice cracking with every breath.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face"
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Narrator",
+            "text": "Suddenly, Nezuko's body contorts. A low, guttural growl vibrates from her throat as she snaps her eyes open\u2014now a piercing, slit-pupil pink.",
+            "tone": "Terrifying and sudden transformation.",
+            "trigger_sfx": "demonic growling"
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Nezuko Kamado",
+            "text": "[Snarls and pounces]",
+            "tone": "Animalistic and predatory.",
+            "character_pose_expression": "Crouched on all fours, predatory gaze, ready to pounce",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko! What are you\u2014?! Stop! It's me!",
+            "tone": "Panic-stricken and confused.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock"
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Narrator",
+            "text": "The blue glint of steel flashes through the falling snow, aiming directly for Nezuko's neck.",
+            "tone": "Sharp and lethal.",
+            "trigger_sfx": "sword unsheathing"
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Giyu Tomioka",
+            "text": "Step back.",
+            "tone": "Cold, clinical, and devoid of emotion.",
+            "character_pose_expression": "Mid-draw of katana, intense focus, sharp blue eyes",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Tanjiro Kamado",
+            "text": "Wait! Don't hurt her! She's my sister!",
+            "tone": "A frantic plea for mercy.",
+            "character_pose_expression": "Shielding someone, arms spread wide, protective glare"
+        },
+        {
+            "dialogue_id": "s2_line9",
+            "speaker": "Giyu Tomioka",
+            "text": "Your sister is gone. That thing is a demon. If I don't kill it, it will kill you and then find its next meal.",
+            "tone": "Matter-of-fact and dismissive.",
+            "character_pose_expression": "Stern gaze, sword pointed downwards, intimidating posture"
+        },
+        {
+            "dialogue_id": "s2_line10",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Crying] Please! I'll find a way to fix her! I'll find a cure! I won't let her hurt anyone!",
+            "tone": "Pure anguish and desperate resolve.",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest"
+        },
+        {
+            "dialogue_id": "s2_line11",
+            "speaker": "Giyu Tomioka",
+            "text": "Don't give others a chance to kill you! Stop your pathetic groveling! If that were enough to change anything, your family wouldn't be dead!",
+            "tone": "Harsh and booming, a stern lecture delivered with iron authority.",
+            "character_pose_expression": "Pointing forward with one finger, authoritative expression"
+        },
+        {
+            "dialogue_id": "s2_line12",
+            "speaker": "Narrator",
+            "text": "Giyu lunges to finish the job, but something impossible happens. Nezuko breaks free from Giyu's grasp and leaps in front of Tanjiro.",
+            "tone": "Shocking and defiant.",
+            "trigger_sfx": "quick footsteps in snow"
+        },
+        {
+            "dialogue_id": "s2_line13",
+            "speaker": "Nezuko Kamado",
+            "text": "[Protective growl]",
+            "tone": "Fiercely protective and defiant.",
+            "character_pose_expression": "Determined look, furrowed brows, standing tall and protective"
+        },
+        {
+            "dialogue_id": "s2_line14",
+            "speaker": "Giyu Tomioka",
+            "text": "She... she's protecting him? Despite her hunger?",
+            "tone": "Genuine shock hidden beneath a stoic mask.",
+            "character_pose_expression": "Surprised expression, eyes slightly widened, hand near sword"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Swear to protect her no matter what.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I swear on my life! I will never let her hurt a human, and I will find a way to save her!",
+                    "tone": "Immovable determination.",
+                    "character_pose_expression": "Gripping the hilt of his Nichirin sword, determined glare"
+                },
+                {
+                    "dialogue_id": "b1_line2",
+                    "speaker": "Giyu Tomioka",
+                    "text": "Very well. Let us see if your resolve holds.",
+                    "tone": "Solemn and testing.",
+                    "character_pose_expression": "Both hands resting on scabbard, eyes closed in thought"
+                }
+            ]
+        },
+        {
+            "choice_text": "Ask Giyu for help.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "You're strong... please, tell me what I must do! How can I save her?",
+                    "tone": "Humble and seeking guidance.",
+                    "character_pose_expression": "Deep bow of respect, hands pressed to thighs"
+                },
+                {
+                    "dialogue_id": "b2_line2",
+                    "speaker": "Giyu Tomioka",
+                    "text": "Strength is not given, boy. It is forged. But I will point the way.",
+                    "tone": "Calm and slightly softer.",
+                    "character_pose_expression": "Looking down at a student, calm and mentoring posture"
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s2_line14",
+            "new_location_name": "Snowy Mountain Path - Aftermath",
+            "visual_description": "The blizzard has calmed slightly. The snow is disturbed by the footprints of the struggle. Giyu stands over the siblings, his shadow long against the white ground."
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "scene_id": "chapter_3_scene_3",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Rooftop",
+    "initial_location_description": "A high-angle view of the school rooftop under a deep indigo night sky sprinkled with brilliant stars. The city lights of Seoul twinkle like a distant galaxy on the horizon. A cold breeze rustles the laundry hanging on nearby lines, and the silver moonlight casts long, dramatic shadows across the concrete floor.",
+    "initial_bgm": "soft, pensive piano melody with a slight lo-fi beat",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The air on the rooftop is chilly, but the silence between us feels even heavier. The city below hums, oblivious to the quiet tension up here.",
+            "tone": "Atmospheric and quiet; setting a reflective mood."
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Kang Ji-ho",
+            "text": "[thud] ...That\u2019s the last of the sketches for the final presentation.",
+            "tone": "A heavy, final exhale. The sound of a chapter closing.",
+            "character_pose_expression": "Thinking posture, hand on chin, eyes looking up and to the side with a pensive look.",
+            "trigger_sfx": "sketchbook closing firmly"
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "They look amazing, Ji-ho. We actually did it. I didn't think we'd finish the whole proposal by tonight.",
+            "tone": "Soft and appreciative, with a hint of fatigue.",
+            "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Kang Ji-ho",
+            "text": "Yeah. We did.",
+            "tone": "Distracted and distant, as if his mind is elsewhere.",
+            "character_pose_expression": "Adjusting his school uniform collar, looking into the distance with a cool, stoic expression."
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "You know... I used to see everything as a series of mechanics. School, sports, even people.",
+            "tone": "Introspective and vulnerable; dropping the usual arrogant facade.",
+            "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Kang Ji-ho",
+            "text": "Life was just a game to be optimized. If I wasn't winning, or if I wasn't the best, it was just wasted XP. A waste of time.",
+            "tone": "Slightly bitter but honest self-reflection.",
+            "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Min Seo-yoon",
+            "text": "Ji-ho...",
+            "tone": "A soft whisper of concern.",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+        },
+        {
+            "dialogue_id": "s3_line8",
+            "speaker": "Kang Ji-ho",
+            "text": "But this project... the hours we spent arguing over color palettes and character arcs... it didn't feel like a grind.",
+            "tone": "Warm and nostalgic, even though the events just happened.",
+            "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+        },
+        {
+            "dialogue_id": "s3_line9",
+            "speaker": "Kang Ji-ho",
+            "text": "It felt... real. More real than any high score I've ever hit. Being with you... it changed the math.",
+            "tone": "The 'Vocal Smile': You must hear the grin in the audio; bright, sunny, and explicitly inviting.",
+            "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+        },
+        {
+            "dialogue_id": "s3_line10",
+            "speaker": "Kang Ji-ho",
+            "text": "I don't want the partnership to end just because the project is over, Seo-yoon. I don't want to go back to just 'optimizing' my life alone.",
+            "tone": "Steady and resolute, looking her directly in the eyes.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "I don't want it to end either.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "I... I feel the same way. I was actually worried you'd be glad to finally be rid of my 'nagging'.",
+                    "tone": "Relieved and sweet, with a small emotional catch in her voice.",
+                    "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Hah! Your nagging is the only thing that keeps my ego in check. It's a vital game mechanic now.",
+                    "tone": "Teasing and joyful.",
+                    "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                }
+            ]
+        },
+        {
+            "choice_text": "Is this your way of asking for a Round 2?",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "So... are you saying you're ready for a Round 2? Because I still have a lot of notes on your character designs.",
+                    "tone": "Playful and spirited, trying to hide her blushing face.",
+                    "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile."
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Bring it on, Seo-yoon. I'm not giving up my spot as your Player Two that easily.",
+                    "tone": "A cheeky, confident smirk.",
+                    "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": null
+}

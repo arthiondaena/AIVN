@@ -1,0 +1,189 @@
+{
+    "scene_id": "chapter_3_scene_2",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Rooftop",
+    "initial_location_description": "A scenic high school rooftop during the golden hour. The sky is a gradient of deep orange and soft violet. A chain-link fence lines the edge, with the city's silhouette in the distance. The lighting is warm and cinematic, casting long shadows across the concrete floor.",
+    "initial_bgm": "soft, melancholic acoustic guitar melody",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Min Seo-yoon",
+            "text": "I was looking over the final slides again, Ji-ho. I still can't get over those illustrations. Where did you even find them?",
+            "tone": "Warm and appreciative. The 'Vocal Smile' is evident as she admires the work.",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "The style is so consistent... almost professional. Did you have to pay a high licensing fee for these? I should really reimburse you for half.",
+            "tone": "Thoughtful and sincere, with a hint of concern about the cost.",
+            "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Kang Ji-ho",
+            "text": "Uh, no. There's no fee. I didn't get them from some stock image site, Seo-yoon.",
+            "tone": "A bit hesitant and bashful, lacking his usual bravado.",
+            "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Min Seo-yoon",
+            "text": "Then where? A freelancer? You shouldn't have spent your own money on our group project like that.",
+            "tone": "Inquisitive and slightly insistent.",
+            "character_pose_expression": "Head tilted, scratching her cheek with one finger, looking confused and uncertain.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "[sigh] Just... look. I've been meaning to show you this anyway.",
+            "tone": "Quiet and vulnerable, exhaling as if letting go of a secret.",
+            "character_pose_expression": "Neutral, standing",
+            "stage_action": "enter",
+            "trigger_sfx": "zipper opening"
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Narrator",
+            "text": "Ji-ho reaches into his bag and pulls out a worn, leather-bound sketchbook. The edges are frayed, and the leather is darkened by years of use.",
+            "tone": "Atmospheric and observant.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": "thud of a heavy book"
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Kang Ji-ho",
+            "text": "Here. Everything from the slides is in here. Along with... some other stuff.",
+            "tone": "Soft and hopeful, though his voice wavers slightly.",
+            "character_pose_expression": "Offering the book toward the viewer with both hands, looking hopeful and slightly shy.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line8",
+            "speaker": "Min Seo-yoon",
+            "text": "You... you drew these? Every single one of them?",
+            "tone": "Breathless with shock and dawning realization.",
+            "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "paper rustling"
+        },
+        {
+            "dialogue_id": "s3_line9",
+            "speaker": "Kang Ji-ho",
+            "text": "Yeah. I didn't want to say anything while we were working. I didn't want you to feel... pressured to use them just because I was the one drawing.",
+            "tone": "Earnest and gentle, eyes crinkling with a genuine warmth.",
+            "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line10",
+            "speaker": "Narrator",
+            "text": "Seo-yoon takes the book, her fingers trembling slightly as she flips past the project sketches. But then, the subject matter changes.",
+            "tone": "Tense and expectant.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": "rapid page turning"
+        },
+        {
+            "dialogue_id": "s3_line11",
+            "speaker": "Min Seo-yoon",
+            "text": "[gasps] Ji-ho... this is...",
+            "tone": "Faint and overwhelmed with emotion.",
+            "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise.",
+            "stage_action": "flash",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line12",
+            "speaker": "Narrator",
+            "text": "The pages are filled with her. Seo-yoon hunched over a desk, Seo-yoon laughing at a joke she tried to hide, Seo-yoon pouting over a difficult math problem. Every sketch is rendered with incredible detail and obvious affection.",
+            "tone": "Romantic and descriptive.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line13",
+            "speaker": "Min Seo-yoon",
+            "text": "You've been watching me this whole time? You caught the way I look when I'm tired... even the way I hold my glasses...",
+            "tone": "Vulnerable and deeply touched, her voice dropping to a whisper.",
+            "character_pose_expression": "Clutching her book tightly to her chest, blushing intensely and appearing shy.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line14",
+            "speaker": "Kang Ji-ho",
+            "text": "I, uh... you're a good subject! Very expressive! It's just... technical practice, I swear!",
+            "tone": "Completely panicked and embarrassed, his face turning a deep crimson.",
+            "character_pose_expression": "Completely flustered, face beet red, trying to hide his face with his varsity jacket.",
+            "stage_action": null,
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Tell him they are beautiful.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "They're more than practice, Ji-ho. They're beautiful. I didn't know you saw me this way... it's like seeing myself through your eyes.",
+                    "tone": "Soft and relieved, a genuine connection forming.",
+                    "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s3_b1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "I... I'm glad you don't think it's creepy. I just couldn't help it. Every time you'd focus on something, the light would hit you and I just had to draw.",
+                    "tone": "Sincere and deeply honest.",
+                    "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "chapter_3_scene_3"
+        },
+        {
+            "choice_text": "Tease him for being a 'secret fan.'",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "So, Kang Ji-ho is actually the president of my secret fan club? I should have known you were paying such close attention.",
+                    "tone": "Playful and teasing, trying to break the heavy tension.",
+                    "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s3_b2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Don't get cocky, Librarian! I just needed a model who didn't move much because they're always stuck in a book!",
+                    "tone": "Defensive but playful, returning to his usual banter though his blush remains.",
+                    "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "chapter_3_scene_3"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

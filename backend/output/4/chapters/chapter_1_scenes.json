@@ -1,0 +1,35 @@
+{
+    "chapter_id": "chapter_1",
+    "scenes": [
+        {
+            "scene_id": "act1_ch1_s1",
+            "title": "The Weight of the Grade",
+            "primary_location": "Classroom 2-B",
+            "scene_summary": "Mr. Han stands at the front of the classroom, his glasses reflecting the harsh fluorescent lights as he slams a heavy textbook onto the podium. He announces the 'Local Heritage Project,' a high-stakes history assignment that will account for 40% of the students' final grade. Seo-yoon, a top student, immediately begins highlighting her notes, her anxiety rising as she mentally prepares for a solo victory, only for Mr. Han to crush her hopes by announcing that the project will be done in randomized pairs."
+        },
+        {
+            "scene_id": "act1_ch1_s2",
+            "title": "The Unlucky Pairing",
+            "primary_location": "Classroom 2-B",
+            "scene_summary": "The room is filled with murmurs as Mr. Han reads the list of partners. Seo-yoon's heart sinks when her name is paired with Kang Ji-ho. She turns to see Ji-ho in the back of the room, leaning back in his chair and spinning a basketball on his finger, looking completely unbothered by the academic catastrophe that just befell her. Their eyes meet briefly\u2014Seo-yoon\u2019s glare is sharp and judgmental, while Ji-ho offers a lazy, playful smirk that only irritates her more."
+        },
+        {
+            "scene_id": "act1_ch1_s3",
+            "title": "Oil and Water",
+            "primary_location": "Seo-yoon's Desk",
+            "scene_summary": "Ji-ho drags his chair over to Seo-yoon\u2019s desk, the screech of the metal legs echoing her internal frustration. Seo-yoon immediately pulls out a meticulous project schedule, but Ji-ho dismisses it, jokingly suggesting they just 'wing it' or find a short YouTube video to summarize. The tension escalates as Seo-yoon calls him an 'academically indifferent jock' and Ji-ho counters by calling her a 'stiff, boring bookworm' who needs to learn how to breathe."
+        },
+        {
+            "scene_id": "act1_ch1_s4",
+            "title": "The Research Avalanche",
+            "primary_location": "Classroom 2-B",
+            "scene_summary": "In an attempt to prove how much work is required, Seo-yoon pulls out a literal mountain of research books from her bag. As Ji-ho reaches for his phone, his oversized athletic jacket catches the corner of the stack. In a slow-motion manhwa-style disaster, the books tumble across the floor with a series of loud thuds. The entire class goes silent, watching as the duo erupts into a public bickering match, with Seo-yoon accusing Ji-ho of being a walking disaster area."
+        },
+        {
+            "scene_id": "act1_ch1_s5",
+            "title": "The Ultimatum",
+            "primary_location": "Classroom 2-B",
+            "scene_summary": "The argument is silenced by the shadow of Mr. Han looming over them. Looking unimpressed by their lack of cooperation, Mr. Han delivers a final blow: if they don't produce a viable draft of their project proposal by tomorrow morning, they will both be assigned two weeks of after-school detention and receive an automatic failing grade for the first milestone. Left with no choice, Seo-yoon and Ji-ho exchange a look of mutual dread, realizing they are forced to work together through the night."
+        }
+    ]
+}

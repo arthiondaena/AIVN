@@ -168,9 +168,9 @@ test/
 .env
 gen-lang-client.json
 test_genai_client.py
-output/
+#output/
 
-*.db*
+#*.db*
 
 # Front end
 frontend/node_modules/

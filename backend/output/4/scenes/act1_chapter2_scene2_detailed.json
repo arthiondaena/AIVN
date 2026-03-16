@@ -1,0 +1,67 @@
+{
+    "scene_id": "act1_chapter2_scene2",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Library",
+    "initial_location_description": "A quiet, sun-drenched school library with tall wooden bookshelves and rows of study desks. In the foreground, a messy table is covered in history textbooks and open notebooks. Dust motes dance in the light.",
+    "initial_bgm": "soft, studious acoustic guitar",
+    "main_dialogue": [
+        {
+            "dialogue_id": "act1_c2_s2_line1",
+            "speaker": "Narrator",
+            "text": "The air in the library is heavy with the scent of old paper and the palpable weight of Ji-ho's complete lack of interest in the 19th century.",
+            "tone": "Neutral, descriptive narration"
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "[sigh] Ji-ho, for the third time... Napoleon wasn't 'just camping' in the center. It was a strategic retreat to bait the coalition forces.",
+            "tone": "The 'Academic Strain': Strained, slightly high-pitched, and words clipped with polite frustration.",
+            "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line3",
+            "speaker": "Kang Ji-ho",
+            "text": "It sounds like a lot of walking just to get punched in the face, Seo-yoon. Why didn't he just go for the fast break?",
+            "tone": "Dull and uninterested, voice dropping in pitch toward the end of the sentence.",
+            "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line4",
+            "speaker": "Min Seo-yoon",
+            "text": "[gasp] A fast break? Wait...",
+            "tone": "The 'Moment of Realization': A sharp intake of breath followed by a sudden, intense focus.",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line5",
+            "speaker": "Narrator",
+            "text": "Seo-yoon notices a sketch of a basketball court in the margins of Ji-ho's notebook. She grabs his pen with a sudden, predatory speed.",
+            "tone": "Intense, cinematic narration",
+            "trigger_sfx": "pen scratching loudly on paper"
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line6",
+            "speaker": "Min Seo-yoon",
+            "text": "Give me that. Look. This isn't a battlefield, Ji-ho. This is the fourth quarter. Napoleon is the point guard.",
+            "tone": "The 'Tactical Shift': Deep, rhythmic, and full of newfound bravado. Like a coach in a locker room.",
+            "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+        },
+        {
+            "dialogue_id": "act1_c2_s2_line7",
+            "speaker": "Kang Ji-ho",
+            "text": "...Napoleon is the point guard? Go on.",
+            "tone": "Intrigued and surprised, voice rising in pitch.",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "act1_c2_s2_line7",
+            "new_location_name": "Imaginary Manhwa Battlefield",
+            "visual_description": "A stylized, manhwa-style background where a grassy 19th-century battlefield is overlaid with the glowing lines of a basketball court. Chibi versions of Napoleon and soldiers are wearing jerseys over their uniforms."
+        }
+    ]
+}

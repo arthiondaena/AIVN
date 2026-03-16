@@ -1,0 +1,144 @@
+{
+    "scene_id": "ch5_s3_dawn_battle",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Muzan Kibutsuji",
+        "Giyu Tomioka",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Tokyo City Streets - Dawn",
+    "initial_location_description": "A wide Tokyo boulevard devastated by combat. Shattered cobblestones, overturned carts, and crumbling brick buildings line the path. The sky in the east is turning a deep violet and pale orange as the sun approaches the horizon, casting long, dramatic shadows.",
+    "initial_bgm": "High-stakes orchestral with frantic strings and a ticking clock motif",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The air is thick with the scent of blood and ozone. The night is dying, and the King of Demons knows it.",
+            "tone": "Grave and cinematic narration",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "distant wind howling through ruins"
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Curse you... Tamayo... What have you put inside me?! My cells... they are destroying themselves!",
+            "tone": "Raspy, choked with rage and physiological agony",
+            "character_pose_expression": "Teeth bared in a vicious snarl, eyes wide with uncontrollable rage.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "flesh squelching and mutating"
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] We won't let you... get away this time! Everyone, stay focused! The sun is almost here!",
+            "tone": "Exhausted but fiercely determined, voice cracking with effort",
+            "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look.",
+            "stage_action": null,
+            "trigger_sfx": "heartbeat pounding"
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Giyu Tomioka",
+            "text": "Don't stop moving. If we lose our grip for even a second, he'll burrow into the ground.",
+            "tone": "Cold, professional, but clearly at the limit of physical endurance",
+            "character_pose_expression": "Defensive swordsman stance, knees slightly bent, sword held horizontally.",
+            "stage_action": null,
+            "trigger_sfx": "sword ringing against stone"
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Inosuke Hashibira",
+            "text": "GRAAAAAH! I don't care how big you get, you overstuffed caterpillar! I'm gonna mince you into snacks!",
+            "tone": "Boisterous and defiant, masking intense pain",
+            "character_pose_expression": "Mask removed, clenching teeth, determined expression, leaning on one serrated sword for support.",
+            "stage_action": null,
+            "trigger_sfx": "Inosuke's swords clashing"
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "Just... a little longer... We have to hold him... we have to...",
+            "tone": "Low, focused, vibrating with the intensity of God Speed",
+            "character_pose_expression": "Low crouching stance, hand gripping the gold-hilted Nichirin sword, serious aura.",
+            "stage_action": "flash",
+            "trigger_sfx": "electricity crackling"
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Muzan Kibutsuji",
+            "text": "BEGONE, YOU INSIGNIFICANT PESTS!",
+            "tone": "A deafening, inhuman roar of pure desperation",
+            "character_pose_expression": "Shouting with mouth wide open, hand reaching out to grasp or crush.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "massive explosion of flesh"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Drive your blade into his central mass!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Hinokami Kagura... Burning Bone, Summer Sun!",
+                    "tone": "Maximum effort, a warrior's final scream",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low.",
+                    "stage_action": "flash",
+                    "trigger_sfx": "roaring fire"
+                },
+                {
+                    "dialogue_id": "s3_b1_line2",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "Agh! The sun... the sun is already burning me through your blade!",
+                    "tone": "Panic-stricken, high-pitched shrieking",
+                    "character_pose_expression": "Eyes widened in genuine shock, pupils shrinking to tiny points.",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "sizzling flesh"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s4_sunrise_climax"
+        },
+        {
+            "choice_text": "Signal the others to pin his limbs down!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Giyu-san! Inosuke! Now! Pin him against the wall!",
+                    "tone": "Authoritative and urgent",
+                    "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward.",
+                    "stage_action": "enter",
+                    "trigger_sfx": "heavy footsteps"
+                },
+                {
+                    "dialogue_id": "s3_b2_line2",
+                    "speaker": "Giyu Tomioka",
+                    "text": "Understood. Eleventh Form: Dead Calm!",
+                    "tone": "Stoic and decisive",
+                    "character_pose_expression": "Mid-draw of katana, intense focus, sharp blue eyes.",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "water flowing sound"
+                },
+                {
+                    "dialogue_id": "s3_b2_line3",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "Let go! Let go of me, you filthy humans!",
+                    "tone": "Hysterical and terrified",
+                    "character_pose_expression": "Clenching his fist tightly, body trembling with suppressed fury.",
+                    "stage_action": null,
+                    "trigger_sfx": "heavy metal chains or bindings"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s4_sunrise_climax"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s3_line7",
+            "new_location_name": "Tokyo Streets - The First Light",
+            "visual_description": "The sun's corona begins to peek over the distant buildings. A brilliant, harsh gold light starts to wash over the street, turning the dust into sparkling embers."
+        }
+    ]
+}

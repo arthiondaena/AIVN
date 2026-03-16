@@ -1,0 +1,136 @@
+{
+    "scene_id": "ch1_s1_the_discovery",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Kamado Family House - Exterior",
+    "initial_location_description": "A modest wooden house on a snowy mountain ridge. The heavy gray sky hangs low, and thick snowflakes drift silently through the air. The path leading to the front door is obscured by fresh drifts.",
+    "initial_bgm": "hollow whistling wind and soft melancholic piano",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_l1",
+            "speaker": "Narrator",
+            "text": "The air is freezing, biting through Tanjiro's thin haori as he nears the end of his long trek home.",
+            "tone": "Cold and somber narration",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s1_l2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] I'm almost there... I hope everyone is still awake. I managed to sell all the charcoal, so we can have a proper New Year's feast.",
+            "tone": "Exhausted but hopeful, forced optimism through heavy breathing",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "trigger_sfx": "crunching snow footsteps"
+        },
+        {
+            "dialogue_id": "s1_l3",
+            "speaker": "Tanjiro Kamado",
+            "text": "[sniff] ...Wait. What is that?",
+            "tone": "Sudden confusion shifting into sharp alarm",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression"
+        },
+        {
+            "dialogue_id": "s1_l4",
+            "speaker": "Narrator",
+            "text": "The scent of winter and woodsmoke is suddenly overwhelmed by something metallic and thick. The smell of blood.",
+            "tone": "Ominous and chilling",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s1_l5",
+            "speaker": "Tanjiro Kamado",
+            "text": "M-Mom?! Everyone?! Hanako! Takeo!",
+            "tone": "Panic-stricken and desperate",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "fast running in snow"
+        },
+        {
+            "dialogue_id": "s1_l6",
+            "speaker": "Narrator",
+            "text": "He rounds the corner of the house and collapses to his knees. The snow is no longer white; it is stained a horrific, steaming crimson.",
+            "tone": "Grave and tragic",
+            "character_pose_expression": null,
+            "stage_action": "flash"
+        },
+        {
+            "dialogue_id": "s1_l7",
+            "speaker": "Tanjiro Kamado",
+            "text": "No... No! Why? Who would do this?! God, please... why?!",
+            "tone": "High-pitched, soul-crushing grief and disbelief",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest"
+        },
+        {
+            "dialogue_id": "s1_l8",
+            "speaker": "Narrator",
+            "text": "Among the bodies of his siblings and mother, he finds Nezuko. She is slumped over, her body shielding Rokuta.",
+            "tone": "Mournful",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s1_l9",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko? Nezuko! You're... you're still warm! Your heart is still beating!",
+            "tone": "A frantic spark of hope amidst absolute despair",
+            "character_pose_expression": "Sad and sympathetic expression, eyes softened, hand extended"
+        },
+        {
+            "dialogue_id": "s1_l10",
+            "speaker": "Tanjiro Kamado",
+            "text": "I have to get you to the village. I have to find a doctor! Just stay with me, Nezuko! Don't die!",
+            "tone": "Urgent and determined, voice cracking with tears",
+            "character_pose_expression": "Adjusting the straps of the wooden box on his back"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Run as fast as possible down the mountain.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_b1_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "My lungs burn, but I can't stop! I won't let you die too!",
+                    "tone": "Fierce determination, breathing becoming a rhythmic grunt",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+                    "trigger_sfx": "heavy wind gusts"
+                },
+                {
+                    "dialogue_id": "s1_b1_l2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[low, guttural growl]",
+                    "tone": "Unnatural and pained vocalization",
+                    "character_pose_expression": "Huddled down, hugging knees, looking scared and vulnerable"
+                }
+            ],
+            "leads_to_scene_id": "ch1_s2_the_attack"
+        },
+        {
+            "choice_text": "Try to talk to her to keep her conscious.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_b2_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Stay with me, Nezuko! Remember what Mom said? We're going to see the festival next year! Keep your eyes open!",
+                    "tone": "Desperate pleading, trying to sound encouraging through tears",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword"
+                },
+                {
+                    "dialogue_id": "s1_b2_l2",
+                    "speaker": "Narrator",
+                    "text": "Nezuko's body twitches on his back, her breathing becoming ragged and strange.",
+                    "tone": "Foreboding",
+                    "character_pose_expression": null
+                }
+            ],
+            "leads_to_scene_id": "ch1_s2_the_attack"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s1_l10",
+            "new_location_name": "Snowy Mountain Path",
+            "visual_description": "A narrow, treacherous trail winding down the steep mountain. The snow is falling so heavily it creates a white-out effect, with gnarled pine trees looming like ghosts in the mist."
+        }
+    ]
+}

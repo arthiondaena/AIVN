@@ -1,0 +1,178 @@
+{
+    "scene_id": "ch1_s3_urokodaki_meeting",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Base of Mt. Sagiri",
+    "initial_location_description": "A dense, misty forest at the foot of a towering mountain. Dark pine trees loom like giants, and the air is thick with a cold, damp fog. The ground is uneven and covered in moss.",
+    "initial_bgm": "mysterious and atmospheric with low woodwinds",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_1",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] We're finally here, Nezuko. Mt. Sagiri. The air... it feels so heavy.",
+            "tone": "Determined but physically strained. The voice is thick with fatigue but carries a core of resolve.",
+            "character_pose_expression": "Adjusting the straps of the wooden box on his back",
+            "stage_action": null,
+            "trigger_sfx": "heavy footsteps on damp leaves"
+        },
+        {
+            "dialogue_id": "s3_2",
+            "speaker": "Narrator",
+            "text": "Out of the thick mountain mist, a figure emerges. A man wearing a bright red tengu mask and a blue kimono patterned with clouds stands silently, his presence as immovable as the mountain itself.",
+            "tone": "Stoic and observational.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "enter",
+            "trigger_sfx": "ominous wind whistle"
+        },
+        {
+            "dialogue_id": "s3_3",
+            "speaker": "Tanjiro Kamado",
+            "text": "Who... who are you? I'm looking for Sakonji Urokodaki! Giyu Tomioka sent me!",
+            "tone": "Startled and breathless, shouting slightly to be heard through the fog.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_4",
+            "speaker": "Narrator",
+            "text": "The masked man does not move. 'You are too weak,' he says, his voice a gravelly rumble behind the mask. 'If you cannot even handle the thin air at the base, you will never survive the peak.'",
+            "tone": "Harsh, blunt, and authoritative. A voice that demands respect and admits no weakness.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_5",
+            "speaker": "Tanjiro Kamado",
+            "text": "I can do it! I'll do whatever it takes to help Nezuko! Please, give me a chance!",
+            "tone": "Desperate but burning with a fierce, underlying fire. High energy and pleading.",
+            "character_pose_expression": "Deep bow of respect, hands pressed to thighs",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_6",
+            "speaker": "Narrator",
+            "text": "The man turns and vanishes into the mist with impossible speed. 'Follow me. If you reach the summit before dawn, I will consider you.'",
+            "tone": "Cold and challenging.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "exit",
+            "trigger_sfx": "fast movement through brush"
+        },
+        {
+            "dialogue_id": "s3_7",
+            "speaker": "Tanjiro Kamado",
+            "text": "Wait! Don't leave! [gasp] I have to keep up... I can't lose his scent!",
+            "tone": "Urgent and frantic, struggling against the lack of oxygen.",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+            "stage_action": "screen_shake",
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Rely on your sense of smell to detect the hidden traps.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b1_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[sniffing] I can smell it... the scent of fresh lacquer and sharpened iron... there's a trap right there!",
+                    "tone": "Highly focused and analytical. The 'Eureka' moment.",
+                    "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+                    "stage_action": null,
+                    "trigger_sfx": "sharp intake of breath"
+                },
+                {
+                    "dialogue_id": "s3_b1_2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro leaps over a hidden tripwire just as a barrage of sharpened logs swings through the space he occupied a second ago.",
+                    "tone": "Tense and action-oriented.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "heavy log swinging"
+                },
+                {
+                    "dialogue_id": "s3_b1_3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[exhausted] I... I made it to the top... I'm still... breathing...",
+                    "tone": "Utterly drained but victorious. A quiet, raspy whisper.",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "stage_action": null,
+                    "trigger_sfx": "labored breathing"
+                },
+                {
+                    "dialogue_id": "s3_b1_4",
+                    "speaker": "Narrator",
+                    "text": "The masked man stands by a small hut. He watches Tanjiro collapse at his feet. 'You have a keen nose, boy. And more importantly, you did not give up. I am Sakonji Urokodaki. Your training begins now.'",
+                    "tone": "Respectful and solemn. A slight softening of the previous harshness.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch1_s4_training_start"
+        },
+        {
+            "choice_text": "Push through with sheer physical speed and reflexes.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b2_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I just have to... be faster! I won't let some traps stop me!",
+                    "tone": "Aggressive and stubborn. Pushing his body past its limits.",
+                    "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "fast running footsteps"
+                },
+                {
+                    "dialogue_id": "s3_b2_2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro is battered by stones and nearly falls into a pit of bamboo spikes. He is bleeding and bruised, but his legs refuse to stop moving.",
+                    "tone": "Grim and visceral.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": "flash",
+                    "trigger_sfx": "wood snapping"
+                },
+                {
+                    "dialogue_id": "s3_b2_3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Is... that the hut? I... did it...",
+                    "tone": "Faint and wavering. The voice of someone on the verge of fainting.",
+                    "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+                    "stage_action": null,
+                    "trigger_sfx": "body collapsing on grass"
+                },
+                {
+                    "dialogue_id": "s3_b2_4",
+                    "speaker": "Narrator",
+                    "text": "Urokodaki catches the boy before he hits the ground. 'Your technique was reckless, but your spirit is iron. I will teach you the way of the sword.'",
+                    "tone": "Stern but acknowledging. The voice of a master impressed by grit.",
+                    "character_pose_expression": "Narrator",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch1_s4_training_start"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s3_7",
+            "new_location_name": "Mt. Sagiri - High Slopes",
+            "visual_description": "The fog is even denser here. The ground is littered with leaves and hidden pits. Bamboo traps and swinging logs are visible through the haze, and the air is noticeably thinner."
+        },
+        {
+            "trigger_after_dialogue_id": "s3_b1_2",
+            "new_location_name": "Urokodaki's Hut",
+            "visual_description": "A small, modest wooden hut perched on a ledge near the summit. A small garden and a training clearing are visible. The first rays of the morning sun are beginning to turn the sky a soft purple."
+        },
+        {
+            "trigger_after_dialogue_id": "s3_b2_2",
+            "new_location_name": "Urokodaki's Hut",
+            "visual_description": "A small, modest wooden hut perched on a ledge near the summit. A small garden and a training clearing are visible. The first rays of the morning sun are beginning to turn the sky a soft purple."
+        }
+    ]
+}

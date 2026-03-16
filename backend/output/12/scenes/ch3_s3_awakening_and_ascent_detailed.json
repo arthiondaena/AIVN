@@ -1,0 +1,61 @@
+{
+    "scene_id": "ch3_s3_awakening_and_ascent",
+    "characters_present": [
+        "Tanjiro Kamado"
+    ],
+    "initial_location_name": "Dream World - Snowy Forest",
+    "initial_location_description": "A hauntingly beautiful snowy forest at night. The air is thick with falling snow, and the moon casts a cold, pale light through the skeletal trees. It is a place of peaceful, yet suffocating, memories.",
+    "initial_bgm": "ethereal and melancholic strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The warmth of his family's presence feels so real, yet a sharp instinct pierces through the bliss. This snow... it doesn't smell of home. It smells of blood and incense.",
+            "tone": "Suspenseful and low, building realization."
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[whispering] No... this isn't right. I'm on the train. We were fighting... I'm in a dream!",
+            "tone": "The 'Realization': Starts shaky and uncertain, then sharpens into sudden, cold clarity.",
+            "character_pose_expression": "Looking down in somber reflection, hand near his forehead scar",
+            "trigger_sfx": "soft wind howling"
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Narrator",
+            "text": "The voice of his father resonates from the void: 'Tanjiro, you must wake up! Cut it! Cut what needs to be severed!'",
+            "tone": "Authoritative and ghostly, echoing with spiritual weight."
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "I understand now. To wake up from a dream within a dream... I have to die here. I have to take my own life!",
+            "tone": "The 'Hardened Resolve': Firm, unwavering, and devoid of fear despite the horrific realization.",
+            "character_pose_expression": "Gripping the hilt of his Nichirin sword, determined glare"
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "Forgive me, everyone! I will see you again in the waking world!",
+            "tone": "Pained but resolute, a shout of absolute conviction.",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "sharp blade slash"
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Narrator",
+            "text": "Tanjiro swings his blade against his own neck. The world of snow shatters like glass, replaced by the roar of iron wheels and the freezing wind of reality.",
+            "tone": "Violent and sudden, marking a transition.",
+            "stage_action": "flash"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s3_line6",
+            "new_location_name": "Mugen Train - Roof",
+            "visual_description": "The top of the moving steam engine under a dark, starry sky. Thick black smoke billows from the funnel, and the wind whips violently across the metal surface."
+        }
+    ]
+}

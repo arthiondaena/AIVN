@@ -1,0 +1,41 @@
+{
+    "chapter_id": "chapter_2",
+    "scenes": [
+        {
+            "scene_id": "act1_chapter2_scene1",
+            "title": "Silence in the Stacks",
+            "primary_location": "School Library",
+            "scene_summary": "Seo-yoon sits at a secluded table, her books organized with military precision. Ji-ho arrives late, looking entirely out of place in the silent atmosphere. He tries to focus, but his leg bounces incessantly, and he keeps spinning his pen like a basketball. The tension between them is thick; Seo-yoon is frustrated by his lack of concentration, while Ji-ho feels suffocated by the dusty air and the weight of the textbooks. Every time Seo-yoon explains a concept, it seems to go over his head, leading to a series of awkward silences and heavy sighs."
+        },
+        {
+            "scene_id": "act1_chapter2_scene2",
+            "title": "The Full-Court Press Strategy",
+            "primary_location": "School Library",
+            "scene_summary": "Recognizing that traditional teaching isn't working, Seo-yoon changes her tactics. In a comedic, manhwa-style montage, she begins drawing basketball courts on the margins of Ji-ho's history notes. She explains the Napoleonic Wars using 'offensive transitions' and 'zone defense' metaphors. Ji-ho\u2019s eyes finally light up as he starts to grasp the material. The scene features stylized visual humor, with 'chibi' versions of the duo appearing in his imagination to reenact historical battles as high-stakes basketball games. For the first time, they find a rhythm that works for both of them."
+        },
+        {
+            "scene_id": "act1_chapter2_scene3",
+            "title": "From Books to Boards",
+            "primary_location": "School Gym",
+            "scene_summary": "The duo moves to the gym as Ji-ho\u2019s scheduled practice time begins. Seo-yoon sits on the bottom row of the bleachers, attempting to continue her own studies while Ji-ho warms up. The atmosphere shifts from the stuffy library to the energetic, echoing gym. Seo-yoon finds herself frequently distracted from her reading, watching Ji-ho\u2019s athletic grace and the intense focus he puts into every shot. She begins to see a side of him that isn't the 'lazy student' she initially assumed him to be."
+        },
+        {
+            "scene_id": "act1_chapter2_scene4",
+            "title": "The Stray Ball",
+            "primary_location": "School Gym",
+            "scene_summary": "During a vigorous drill, a ball is deflected wildly toward the sidelines where Seo-yoon is sitting. Caught off guard while she was looking down at a page, she doesn't have time to react. The ball strikes her shoulder, knocking her off the bleacher bench. She falls to the floor, scraping her knee in the process. Ji-ho immediately stops his drill, ignoring the coach and his teammates, and sprints across the court with a look of genuine panic on his face."
+        },
+        {
+            "scene_id": "act1_chapter2_scene5",
+            "title": "Careful Hands",
+            "primary_location": "Gym Sidelines",
+            "scene_summary": "Ji-ho reaches Seo-yoon and helps her sit up. He quickly retrieves a first aid kit from the equipment room. In a classic heart-fluttering manhwa moment, the 'camera' focuses on his gentle hands as he carefully cleans the small scrape on her knee with an antiseptic wipe. The physical proximity makes Seo-yoon\u2019s heart race, and she notices the contrast between his rough, calloused 'athlete' hands and the tenderness of his touch. He blows softly on the wound to dull the sting, causing a flush to creep up Seo-yoon\u2019s neck."
+        },
+        {
+            "scene_id": "act1_chapter2_scene6",
+            "title": "Unfiltered Truths",
+            "primary_location": "Empty Gym Bleachers",
+            "scene_summary": "As the gym empties out after practice, Ji-ho and Seo-yoon remain on the bleachers. The vulnerability of the accident leads to a deeper conversation. Ji-ho confesses the immense pressure he\u2019s under; he isn't just playing for fun, but because a sports scholarship is his only way to afford university. In turn, Seo-yoon admits that her obsession with books and grades is a shield\u2014she uses them to hide because she\u2019s terrified of social interactions and being judged. They realize they both use their respective 'talents' as armor. The scene ends with a soft, understanding smile shared between them, the ice between them officially broken."
+        }
+    ]
+}

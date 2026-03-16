@@ -1,0 +1,148 @@
+{
+    "scene_id": "ch5_s4_demon_king",
+    "characters_present": [
+        "Muzan Kibutsuji",
+        "Tanjiro Kamado",
+        "Giyu Tomioka",
+        "Nezuko Kamado",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Tokyo City Streets - Dawn of the Final Battle",
+    "initial_location_description": "The ruined streets of Tokyo at the crack of dawn. Debris and shattered wood litter the cobblestones. The first rays of gold sunlight pierce through the thick smoke and dust of the battle, casting long, dramatic shadows over the exhausted demon slayers.",
+    "initial_bgm": "Tense orchestral with high-pitched strings and a rhythmic, pounding heartbeat",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_line1",
+            "speaker": "Muzan Kibutsuji",
+            "text": "[Desperate gasping] This... this cannot be the end! After a thousand years... the sun... it burns!",
+            "tone": "The 'Vicious Snarl': Raspy, desperate, and filled with a frantic terror that cracks the usual aristocratic composure.",
+            "character_pose_expression": "Teeth bared in a vicious snarl, eyes wide with uncontrollable rage.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "sizzling flesh and distant thunder"
+        },
+        {
+            "dialogue_id": "s1_line2",
+            "speaker": "Narrator",
+            "text": "The Demon King\u2019s body begins to flake away like burnt paper, the morning light unforgiving. But in his final moment, his eyes lock onto the broken boy before him.",
+            "tone": "Solemn and heavy, like a funeral bell.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_line3",
+            "speaker": "Muzan Kibutsuji",
+            "text": "Tanjiro Kamado... you will be the one. My dream... my immortality... I entrust it all to you! Take my blood!",
+            "tone": "The 'Malicious Legacy': A sudden shift to a high-pitched, frenzied obsession, dripping with dark triumph.",
+            "character_pose_expression": "Hand extended forward, palm up, an expression of utter disdain.",
+            "stage_action": "flash",
+            "trigger_sfx": "heartbeat pulse sound"
+        },
+        {
+            "dialogue_id": "s1_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Agonized scream] GAAAAAAHHHH! My head... it feels like it's exploding!",
+            "tone": "Pure, unadulterated agony; the sound of a voice being torn apart from the inside.",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "visceral squelching sound"
+        },
+        {
+            "dialogue_id": "s1_line5",
+            "speaker": "Giyu Tomioka",
+            "text": "Tanjiro! Muzan is gone, but... what is this pressure? Why aren't you disintegrating in the sun?!",
+            "tone": "Sharp and panicked; the stoic mask completely shattered by a new, impossible horror.",
+            "character_pose_expression": "Surprised expression, eyes slightly widened, hand near sword.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_line6",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "[Sobbing] No... no, no, no! The sound coming from him... it's not Tanjiro anymore! It's something... monstrous!",
+            "tone": "Comedic terror turned into genuine, high-pitched weeping; a sound of absolute despair.",
+            "character_pose_expression": "Jumping back in shock, eyes widened and pupils shrunk.",
+            "stage_action": null,
+            "trigger_sfx": "static-like buzzing sound"
+        },
+        {
+            "dialogue_id": "s1_line7",
+            "speaker": "Inosuke Hashibira",
+            "text": "Hey, Kentaro! Stop it! The fight is over! Stop making that creepy face!",
+            "tone": "Brash and loud, but with a noticeable tremor of uncertainty and fear behind the bravado.",
+            "character_pose_expression": "Mask removed, clenching teeth, determined expression, leaning on one serrated sword for support.",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_line8",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Deep, guttural growl] ...Hungry... So... hungry...",
+            "tone": "The 'Demon King': Hollow, distorted, and devoid of any human warmth. The pitch is lower, echoing with a supernatural resonance.",
+            "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "beastial roar"
+        },
+        {
+            "dialogue_id": "s1_line9",
+            "speaker": "Narrator",
+            "text": "The sun is fully up now. The rays hit Tanjiro's skin, but instead of burning, he stands tall. A new mark spreads across his face, and his pupils narrow into lethal slits.",
+            "tone": "The 'Chilling Realization': Cold and clinical, marking the birth of a disaster.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "flash",
+            "trigger_sfx": "eerie shimmering sound"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Giyu: 'Everyone, get back! I'll handle this!'",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b1_line1",
+                    "speaker": "Giyu Tomioka",
+                    "text": "He's become a demon... and he's conquered the sun. If we don't stop him now, humanity is finished!",
+                    "tone": "The 'Grim Executioner': Steely, cold, and heavy with the weight of a duty he never wanted.",
+                    "character_pose_expression": "Mid-draw of katana, intense focus, sharp blue eyes.",
+                    "stage_action": null,
+                    "trigger_sfx": "sword unsheathing"
+                },
+                {
+                    "dialogue_id": "b1_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[Muffled cry] Mmmph! Mmmph!",
+                    "tone": "Desperate and pleading, her voice vibrating behind the bamboo.",
+                    "character_pose_expression": "Reaching out a hand toward the viewer, pleading expression.",
+                    "stage_action": "enter",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch5_s5_final_confrontation"
+        },
+        {
+            "choice_text": "Zenitsu: 'Tanjiro, please! Come back to us!'",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "b2_line1",
+                    "speaker": "Zenitsu Agatsuma",
+                    "text": "Tanjiro! You're the kindest person I know! Don't let that monster win! Fight it!",
+                    "tone": "The 'Pathetic Plea': Cracking with emotion, raw and begging for a miracle.",
+                    "character_pose_expression": "Kneeling on the ground, hands outstretched in a begging gesture, tearful eyes.",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "b2_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "[Feral roar] ROOOOOAAAAR!",
+                    "tone": "Animalistic and violent; no traces of the boy remain.",
+                    "character_pose_expression": "Combat stance, knees bent, hand on sword hilt ready to draw.",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "glass shattering"
+                }
+            ],
+            "leads_to_scene_id": "ch5_s5_internal_struggle"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

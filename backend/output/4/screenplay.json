@@ -1,0 +1,2294 @@
+{
+  "metadata": {
+    "title": "Love in the Margin",
+    "logline": "When a reclusive top student and the school's star basketball player are paired for a mandatory history project, they discover that life's most important lessons aren't found in textbooks or on the court.",
+    "author": "AI",
+    "version": "1.0",
+    "style": "manhwa",
+    "voices": {
+      "Min Seo-yoon": "Achernar",
+      "Kang Ji-ho": "Achird",
+      "Mr. Han": "Achird",
+      "Lee Hana": "Achernar"
+    }
+  },
+  "assets": {
+    "characters": {
+      "Min Seo-yoon": "4\\9\\base.png",
+      "Kang Ji-ho": "4\\10\\base.png",
+      "Mr. Han": "4\\11\\base.png",
+      "Lee Hana": "4\\12\\base.png"
+    },
+    "backgrounds": {
+      "Seo-yoon's Desk": "4\\backgrounds\\seoyoons_desk.png",
+      "Classroom 2-B": "4\\backgrounds\\classroom_2b.png",
+      "School Rooftop": "4\\backgrounds\\school_rooftop.png",
+      "School Rooftop - Dawn": "4\\backgrounds\\school_rooftop__dawn.png",
+      "School Gym": "4\\backgrounds\\school_gym.png",
+      "Gym Sidelines": "4\\backgrounds\\gym_sidelines.png",
+      "School Library": "4\\backgrounds\\school_library.png",
+      "Empty Gym Bleachers": "4\\backgrounds\\empty_gym_bleachers.png",
+      "School Library - Secluded Corner": "4\\backgrounds\\school_library__secluded_corner.png"
+    },
+    "audio": {
+      "act1_ch1_s1_act1_ch1_s1_b1_1.wav": "audio/act1_ch1_s1_act1_ch1_s1_b1_1.wav",
+      "act1_ch1_s1_act1_ch1_s1_b1_2.wav": "audio/act1_ch1_s1_act1_ch1_s1_b1_2.wav",
+      "act1_ch1_s1_act1_ch1_s1_b2_1.wav": "audio/act1_ch1_s1_act1_ch1_s1_b2_1.wav",
+      "act1_ch1_s1_act1_ch1_s1_b2_2.wav": "audio/act1_ch1_s1_act1_ch1_s1_b2_2.wav",
+      "act1_ch1_s1_act1_ch1_s1_d2.wav": "audio/act1_ch1_s1_act1_ch1_s1_d2.wav",
+      "act1_ch1_s1_act1_ch1_s1_d4.wav": "audio/act1_ch1_s1_act1_ch1_s1_d4.wav",
+      "act1_ch1_s1_act1_ch1_s1_d5.wav": "audio/act1_ch1_s1_act1_ch1_s1_d5.wav",
+      "act1_ch1_s1_act1_ch1_s1_d6.wav": "audio/act1_ch1_s1_act1_ch1_s1_d6.wav",
+      "act1_ch1_s1_act1_ch1_s1_d7.wav": "audio/act1_ch1_s1_act1_ch1_s1_d7.wav",
+      "act1_ch1_s1_act1_ch1_s1_d8.wav": "audio/act1_ch1_s1_act1_ch1_s1_d8.wav",
+      "act1_ch1_s1_act1_ch1_s1_d9.wav": "audio/act1_ch1_s1_act1_ch1_s1_d9.wav"
+    },
+    "poses": {
+      "Min Seo-yoon_Neutral, standing": "4\\9\\base.png",
+      "Min Seo-yoon_Looking down, clutching her book tightly to her chest, blushing intensely and appearing shy.": "4\\9\\pose_looking_down_clutching_her_book_tightly_to_her_che.png",
+      "Min Seo-yoon_Startled, holding the book high to hide the lower half of her face, eyes wide with surprise.": "4\\9\\pose_startled_holding_the_book_high_to_hide_the_lower_h.png",
+      "Min Seo-yoon_One hand on her chin, looking upward thoughtfully while holding her book under one arm.": "4\\9\\pose_one_hand_on_her_chin_looking_upward_thoughtfully_w.png",
+      "Min Seo-yoon_Leaning forward slightly, looking over the rim of her glasses with a curious expression.": "4\\9\\pose_leaning_forward_slightly_looking_over_the_rim_of_h.png",
+      "Min Seo-yoon_Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze.": "4\\9\\pose_standing_straight_clutching_a_thick_book_to_her_ch.png",
+      "Min Seo-yoon_Holding an open book in both hands, eyes looking down in a calm reading pose.": "4\\9\\pose_holding_an_open_book_in_both_hands_eyes_looking_do.png",
+      "Min Seo-yoon_Adjusting her rose-gold glasses with her middle finger, looking focused and studious.": "4\\9\\pose_adjusting_her_rosegold_glasses_with_her_middle_fin.png",
+      "Min Seo-yoon_Pouting, arms crossed over her book, looking away with a slightly annoyed expression.": "4\\9\\pose_pouting_arms_crossed_over_her_book_looking_away_wi.png",
+      "Min Seo-yoon_One hand over her mouth, eyes closed, giggling softly with a light blush.": "4\\9\\pose_one_hand_over_her_mouth_eyes_closed_giggling_softl.png",
+      "Min Seo-yoon_Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered.": "4\\9\\pose_waving_one_hand_dismissively_in_a_panic_blushing_h.png",
+      "Min Seo-yoon_Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered.": "4\\9\\pose_pulling_the_oversized_cardigan_collar_up_to_cover_.png",
+      "Min Seo-yoon_Holding the book behind her back, tilting her head with a gentle, questioning smile.": "4\\9\\pose_holding_the_book_behind_her_back_tilting_her_head_.png",
+      "Min Seo-yoon_Head tilted down, book hanging loosely by her side, looking sad and dejected.": "4\\9\\pose_head_tilted_down_book_hanging_loosely_by_her_side_.png",
+      "Min Seo-yoon_Eyes closed, one hand on her chest, a soft and relieved smile on her face.": "4\\9\\pose_eyes_closed_one_hand_on_her_chest_a_soft_and_relie.png",
+      "Min Seo-yoon_Determined gaze, holding the book firmly in both hands as if preparing for a challenge.": "4\\9\\pose_determined_gaze_holding_the_book_firmly_in_both_ha.png",
+      "Min Seo-yoon_Hugging the book like a pillow, looking off to the side with a dreamy, dazed smile.": "4\\9\\pose_hugging_the_book_like_a_pillow_looking_off_to_the_.png",
+      "Min Seo-yoon_Rubbing one eye, yawning slightly, holding the book loosely under her arm, looking sleepy.": "4\\9\\pose_rubbing_one_eye_yawning_slightly_holding_the_book_.png",
+      "Min Seo-yoon_Offering the book toward the viewer with both hands, looking hopeful and slightly shy.": "4\\9\\pose_offering_the_book_toward_the_viewer_with_both_hand.png",
+      "Min Seo-yoon_Small wave with one hand while holding the book against her hip, smiling warmly.": "4\\9\\pose_small_wave_with_one_hand_while_holding_the_book_ag.png",
+      "Min Seo-yoon_Hands clasped together over her book, bowing her head slightly in an apologetic pose.": "4\\9\\pose_hands_clasped_together_over_her_book_bowing_her_he.png",
+      "Min Seo-yoon_Hands thrown up slightly in shock, about to drop her book, jaw slightly open.": "4\\9\\pose_hands_thrown_up_slightly_in_shock_about_to_drop_he.png",
+      "Min Seo-yoon_Head tilted, scratching her cheek with one finger, looking confused and uncertain.": "4\\9\\pose_head_tilted_scratching_her_cheek_with_one_finger_l.png",
+      "Min Seo-yoon_Clenching her fists by her chest, eyes sparkling with excitement and wonder.": "4\\9\\pose_clenching_her_fists_by_her_chest_eyes_sparkling_wi.png",
+      "Min Seo-yoon_Index finger to her lips in a shushing gesture, looking around cautiously.": "4\\9\\pose_index_finger_to_her_lips_in_a_shushing_gesture_loo.png",
+      "Min Seo-yoon_Pointing forward with a serious expression, glasses reflecting a slight glint.": "4\\9\\pose_pointing_forward_with_a_serious_expression_glasses.png",
+      "Kang Ji-ho_Neutral, standing": "4\\10\\base.png",
+      "Kang Ji-ho_Standing tall, hands in pockets, signature arrogant smirk, varsity jacket slung over one shoulder.": "4\\10\\pose_standing_tall_hands_in_pockets_signature_arrogant_.png",
+      "Kang Ji-ho_Leaning forward slightly, sharp cat-like eyes with a playful glint, one eyebrow raised.": "4\\10\\pose_leaning_forward_slightly_sharp_catlike_eyes_with_a.png",
+      "Kang Ji-ho_Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.": "4\\10\\pose_hand_behind_head_rubbing_neck_looking_away_with_a_.png",
+      "Kang Ji-ho_Arms crossed, serious expression, brow furrowed, jacket hanging off shoulders.": "4\\10\\pose_arms_crossed_serious_expression_brow_furrowed_jack.png",
+      "Kang Ji-ho_Slumping slightly, leaning against an invisible wall, hand over mouth while yawning.": "4\\10\\pose_slumping_slightly_leaning_against_an_invisible_wal.png",
+      "Kang Ji-ho_Walking forward confidently, one hand fixing his messy chestnut hair, looking directly at viewer.": "4\\10\\pose_walking_forward_confidently_one_hand_fixing_his_me.png",
+      "Kang Ji-ho_Wiping sweat from his forehead with the back of his hand, breathing heavily, athletic and focused.": "4\\10\\pose_wiping_sweat_from_his_forehead_with_the_back_of_hi.png",
+      "Kang Ji-ho_Teasing posture, winking with a cheeky grin, tongue slightly peeking out.": "4\\10\\pose_teasing_posture_winking_with_a_cheeky_grin_tongue_.png",
+      "Kang Ji-ho_Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.": "4\\10\\pose_warm_genuine_smile_eyes_crinkling_at_the_corners_o.png",
+      "Kang Ji-ho_Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder.": "4\\10\\pose_startled_expression_eyes_wide_mouth_slightly_open_.png",
+      "Kang Ji-ho_Thinking posture, hand on chin, eyes looking up and to the side with a pensive look.": "4\\10\\pose_thinking_posture_hand_on_chin_eyes_looking_up_and_.png",
+      "Kang Ji-ho_Hands on hips, head tilted back, laughing heartily with eyes closed.": "4\\10\\pose_hands_on_hips_head_tilted_back_laughing_heartily_w.png",
+      "Kang Ji-ho_Looking down his nose with a cold, half-lidded gaze, arms folded tightly.": "4\\10\\pose_looking_down_his_nose_with_a_cold_halflidded_gaze_.png",
+      "Kang Ji-ho_Pointing forward, shouting with an angry and determined expression, eyes narrowed.": "4\\10\\pose_pointing_forward_shouting_with_an_angry_and_determ.png",
+      "Kang Ji-ho_Casual talking, one hand gesturing, mouth open mid-sentence, relaxed and friendly eyes.": "4\\10\\pose_casual_talking_one_hand_gesturing_mouth_open_midse.png",
+      "Kang Ji-ho_Victory pose, making a V-sign with his fingers, bright grin, designer sneakers visible.": "4\\10\\pose_victory_pose_making_a_vsign_with_his_fingers_brigh.png",
+      "Kang Ji-ho_Aggressive stance, gritting teeth, sharp glare, fists clenched at his sides.": "4\\10\\pose_aggressive_stance_gritting_teeth_sharp_glare_fists.png",
+      "Kang Ji-ho_Annoyed, rolling eyes while clicking his tongue, hand on hip, looking away.": "4\\10\\pose_annoyed_rolling_eyes_while_clicking_his_tongue_han.png",
+      "Kang Ji-ho_Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.": "4\\10\\pose_sitting_on_an_invisible_chair_one_leg_crossed_over.png",
+      "Kang Ji-ho_Confused expression, tilting head to the side, hand ruffling his messy undercut hair.": "4\\10\\pose_confused_expression_tilting_head_to_the_side_hand_.png",
+      "Kang Ji-ho_Adjusting his school uniform collar, looking into the distance with a cool, stoic expression.": "4\\10\\pose_adjusting_his_school_uniform_collar_looking_into_t.png",
+      "Kang Ji-ho_Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.": "4\\10\\pose_somber_expression_looking_down_at_the_ground_shado.png",
+      "Kang Ji-ho_Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.": "4\\10\\pose_intense_focus_leaning_in_close_sharp_eyes_fixed_fo.png",
+      "Kang Ji-ho_Protective stance, stepping forward, arm extended out to the side, fierce protective gaze.": "4\\10\\pose_protective_stance_stepping_forward_arm_extended_ou.png",
+      "Kang Ji-ho_Completely flustered, face beet red, trying to hide his face with his varsity jacket.": "4\\10\\pose_completely_flustered_face_beet_red_trying_to_hide_.png",
+      "Mr. Han_Neutral, standing": "4\\11\\base.png",
+      "Mr. Han_Standing straight, holding attendance book against chest, neutral expression": "4\\11\\pose_standing_straight_holding_attendance_book_against_.png",
+      "Mr. Han_Holding the attendance book open with one hand, looking down with a disappointed frown": "4\\11\\pose_holding_the_attendance_book_open_with_one_hand_loo.png",
+      "Mr. Han_Leaning forward slightly, hands clasped behind his back, inquisitive expression": "4\\11\\pose_leaning_forward_slightly_hands_clasped_behind_his_.png",
+      "Mr. Han_Sighing with eyes closed, hand rubbing the bridge of his nose, looking tired and overworked": "4\\11\\pose_sighing_with_eyes_closed_hand_rubbing_the_bridge_o.png",
+      "Mr. Han_Clutching the wooden pointer tightly at his side, face contorted in suppressed anger": "4\\11\\pose_clutching_the_wooden_pointer_tightly_at_his_side_f.png",
+      "Mr. Han_Holding wooden pointer, tapping it against open palm, stern disciplinary look": "4\\11\\pose_holding_wooden_pointer_tapping_it_against_open_pal.png",
+      "Mr. Han_Adjusting wire-rimmed glasses with one finger, looking downward intensely": "4\\11\\pose_adjusting_wirerimmed_glasses_with_one_finger_looki.png",
+      "Mr. Han_Looking over the top of his glasses, one eyebrow raised in suspicion": "4\\11\\pose_looking_over_the_top_of_his_glasses_one_eyebrow_ra.png",
+      "Mr. Han_Pointing the wooden pointer forward authoritatively, mouth open as if lecturing": "4\\11\\pose_pointing_the_wooden_pointer_forward_authoritativel.png",
+      "Mr. Han_A rare, slight smirk of pride, nodding slowly with arms crossed": "4\\11\\pose_a_rare_slight_smirk_of_pride_nodding_slowly_with_a.png",
+      "Mr. Han_Shocked expression, eyes wide behind glasses, grip loosening on the wooden pointer": "4\\11\\pose_shocked_expression_eyes_wide_behind_glasses_grip_l.png",
+      "Mr. Han_Confused expression, tilting head while looking at the attendance book": "4\\11\\pose_confused_expression_tilting_head_while_looking_at_.png",
+      "Mr. Han_Looking to the side, hand covering his mouth as if coughing or thinking deeply": "4\\11\\pose_looking_to_the_side_hand_covering_his_mouth_as_if_.png",
+      "Mr. Han_Both hands resting on his hips, exasperated expression with slumped shoulders": "4\\11\\pose_both_hands_resting_on_his_hips_exasperated_express.png",
+      "Mr. Han_Chin resting on interlaced fingers, cold and analytical gaze directed forward": "4\\11\\pose_chin_resting_on_interlaced_fingers_cold_and_analyt.png",
+      "Lee Hana_Neutral, standing": "4\\12\\base.png",
+      "Lee Hana_Pouting with puffed-out cheeks, arms crossed, looking slightly to the side": "4\\12\\pose_pouting_with_puffedout_cheeks_arms_crossed_looking.png",
+      "Lee Hana_Neutral standing, hands at her sides, bright and friendly smile": "4\\12\\pose_neutral_standing_hands_at_her_sides_bright_and_fri.png",
+      "Lee Hana_Talking excitedly, one hand raised as if gesturing, eyes wide and sparkling": "4\\12\\pose_talking_excitedly_one_hand_raised_as_if_gesturing_.png",
+      "Lee Hana_Thinking, index finger on her chin, looking up with one eye squinted": "4\\12\\pose_thinking_index_finger_on_her_chin_looking_up_with_.png",
+      "Lee Hana_Deeply surprised, both hands on her cheeks, mouth in an 'O' shape": "4\\12\\pose_deeply_surprised_both_hands_on_her_cheeks_mouth_in.png",
+      "Lee Hana_Signature pose: making double peace signs near her cheeks, winking playfully": "4\\12\\pose_signature_pose_making_double_peace_signs_near_her_.png",
+      "Lee Hana_Teasing, leaning forward, pulling down one lower eyelid and sticking her tongue out": "4\\12\\pose_teasing_leaning_forward_pulling_down_one_lower_eye.png",
+      "Lee Hana_Cheering enthusiastically, both fists pumped in the air, eyes closed and grinning": "4\\12\\pose_cheering_enthusiastically_both_fists_pumped_in_the.png",
+      "Lee Hana_Confused, tilting her head to the side, scratching her blonde bob with a small frown": "4\\12\\pose_confused_tilting_her_head_to_the_side_scratching_h.png",
+      "Lee Hana_Angry and defensive, hands on hips, glaring with a slight pout": "4\\12\\pose_angry_and_defensive_hands_on_hips_glaring_with_a_s.png",
+      "Lee Hana_Trend-setter pose: making a small finger heart with one hand, winking warmly": "4\\12\\pose_trendsetter_pose_making_a_small_finger_heart_with_.png",
+      "Lee Hana_Completely exhausted, slumped shoulders, blank expression with 'soul leaving body' effect": "4\\12\\pose_completely_exhausted_slumped_shoulders_blank_expre.png",
+      "Lee Hana_Blushing heavily, fingers entwined nervously, looking down at her shoes": "4\\12\\pose_blushing_heavily_fingers_entwined_nervously_lookin.png",
+      "Lee Hana_Whispering a secret, one hand cupped near her mouth, leaning in with a conspiratorial glint in her eyes": "4\\12\\pose_whispering_a_secret_one_hand_cupped_near_her_mouth.png",
+      "Lee Hana_Proudly showing off, grasping her yellow backpack straps, standing tall with a confident smirk": "4\\12\\pose_proudly_showing_off_grasping_her_yellow_backpack_s.png"
+    }
+  },
+  "story": {
+    "chapters": [
+      {
+        "id": "chapter_1",
+        "title": "The Unlucky Draw",
+        "order": 1,
+        "scenes": [
+          {
+            "id": "act1_ch1_s1",
+            "title": "The Weight of the Grade",
+            "summary": "Mr. Han stands at the front of the classroom, his glasses reflecting the harsh fluorescent lights as he slams a heavy textbook onto the podium. He announces the 'Local Heritage Project,' a high-stakes history assignment that will account for 40% of the students' final grade. Seo-yoon, a top student, immediately begins highlighting her notes, her anxiety rising as she mentally prepares for a solo victory, only for Mr. Han to crush her hopes by announcing that the project will be done in randomized pairs.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "act1_ch1_s1_d1",
+                  "speaker": "Narrator",
+                  "text": "The air in Classroom 2-B is thick with the scent of floor wax and the collective anxiety of thirty students.",
+                  "tone": "Suspenseful and immersive. A low, cinematic whisper that sets a high-stakes tone.",
+                  "character_pose_expression": null,
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d2",
+                  "speaker": "Mr. Han",
+                  "text": "[SLAM] Pay attention!",
+                  "tone": "The 'Thunderous Authority': A sharp, explosive volume that commands immediate silence and triggers a flinch response.",
+                  "character_pose_expression": "Clutching the wooden pointer tightly at his side, face contorted in suppressed anger",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "Heavy textbook slamming onto wood",
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d2.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d3",
+                  "speaker": "Lee Hana",
+                  "text": "Ugh... my heart literally just stopped. Does he have to be so dramatic first thing in the morning?",
+                  "tone": "The 'Drained Complaint': A breathless, quiet whine that sounds like the speaker has already given up on the day.",
+                  "character_pose_expression": "Completely exhausted, slumped shoulders, blank expression with 'soul leaving body' effect",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d4",
+                  "speaker": "Mr. Han",
+                  "text": "This semester\u2019s centerpiece is the 'Local Heritage Project.' It is a comprehensive historical analysis that will account for 40% of your final grade.",
+                  "tone": "The 'Cold Lecturer': Monotone, precise, and devoid of empathy, emphasizing the weight of the percentage.",
+                  "character_pose_expression": "Adjusting wire-rimmed glasses with one finger, looking downward intensely",
+                  "stage_action": null,
+                  "trigger_sfx": "Clink of glasses being adjusted",
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d4.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d5",
+                  "speaker": "Min Seo-yoon",
+                  "text": "(40%... That\u2019s the difference between a perfect GPA and second place. I can\u2019t afford even a single mistake.)",
+                  "tone": "Internal thought. Rapid-fire, high-pitched inner monologue reflecting extreme focus and rising panic.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious.",
+                  "stage_action": null,
+                  "trigger_sfx": "Scribbling of a highlighter on paper",
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d5.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[Yawn] 40%? Sounds like a lot of work for a history trip.",
+                  "tone": "The 'Arrogant Drawl': Lazy, slow, and purposefully disrespectful. Each word is stretched to show lack of interest.",
+                  "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning.",
+                  "stage_action": null,
+                  "trigger_sfx": null,
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d6.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d7",
+                  "speaker": "Mr. Han",
+                  "text": "Before you begin your solo outlines... there is a change in the curriculum this year.",
+                  "tone": "The 'Calculating Reveal': Slowing down the pace to build tension, with a slight edge of sadistic glee.",
+                  "character_pose_expression": "Chin resting on interlaced fingers, cold and analytical gaze directed forward",
+                  "stage_action": null,
+                  "trigger_sfx": null,
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d7.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "(A change? No, no, no... please just let it be a normal essay.)",
+                  "tone": "Nervous and frantic. The voice is shaky, mirroring her tightening grip on her pen.",
+                  "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                  "stage_action": null,
+                  "trigger_sfx": null,
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d8.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d9",
+                  "speaker": "Mr. Han",
+                  "text": "To encourage 'collaboration,' this project will be completed in randomized pairs. No exceptions.",
+                  "tone": "The 'Final Verdict': Firm and immovable, delivered like a judge passing a sentence.",
+                  "character_pose_expression": "Pointing the wooden pointer forward authoritatively, mouth open as if lecturing",
+                  "stage_action": "flash",
+                  "trigger_sfx": "Dramatic chime or heartbeat sound",
+                  "audio_key": "act1_ch1_s1_act1_ch1_s1_d9.wav"
+                },
+                {
+                  "dialogue_id": "act1_ch1_s1_d10",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Randomized?! But sir\u2014!",
+                  "tone": "The 'Panic Spike': High-pitched and sharp, the sound of a carefully built world crumbling down.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": null
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Protest the decision.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "act1_ch1_s1_b1_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Sir, this project is too important to leave to chance! My grade shouldn't depend on someone else's effort!",
+                      "tone": "Defiant and desperate. The voice cracks slightly under the weight of her anxiety.",
+                      "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "act1_ch1_s1_b1_2",
+                      "speaker": "Mr. Han",
+                      "text": "Sit down, Min Seo-yoon. In the real world, you don't choose your colleagues.",
+                      "tone": "Cold and dismissive. A verbal shut-down that leaves no room for argument.",
+                      "character_pose_expression": "Looking over the top of his glasses, one eyebrow raised in suspicion",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s2"
+                },
+                {
+                  "choice_text": "Accept it silently and pray for a good partner.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "act1_ch1_s1_b2_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "[Exhale] Please... just let it be Hana. Or anyone who knows how to open a textbook.",
+                      "tone": "The 'Desperate Prayer': Soft, breathless, and heavy with dread.",
+                      "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "act1_ch1_s1_b2_2",
+                      "speaker": "Lee Hana",
+                      "text": "Don't look at me like that, Seo-yoon! I'll try my best if we're together! Probably!",
+                      "tone": "Playful and slightly defensive. A cheerful, bouncy melody to her voice.",
+                      "character_pose_expression": "Pouting with puffed-out cheeks, arms crossed, looking slightly to the side",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s2"
+                }
+              ],
+              "initial_location_name": "Classroom 2-B",
+              "initial_location_description": "A crisp, modern high school classroom in a sharp manhwa style. The sunlight filters through large windows, but the mood is dominated by the harsh, cold glow of overhead fluorescent lights. Rows of wooden desks are filled with students in neat uniforms. At the front, a wide green chalkboard is wiped clean, and a sturdy wooden podium stands central.",
+              "initial_bgm": "tense academic atmosphere with low rhythmic ticking"
+            }
+          },
+          {
+            "id": "act1_ch1_s2",
+            "title": "The Unlucky Pairing",
+            "summary": "The room is filled with murmurs as Mr. Han reads the list of partners. Seo-yoon's heart sinks when her name is paired with Kang Ji-ho. She turns to see Ji-ho in the back of the room, leaning back in his chair and spinning a basketball on his finger, looking completely unbothered by the academic catastrophe that just befell her. Their eyes meet briefly\u2014Seo-yoon\u2019s glare is sharp and judgmental, while Ji-ho offers a lazy, playful smirk that only irritates her more.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s2_line1",
+                  "speaker": "Mr. Han",
+                  "text": "[Tapping the board] Quiet down, everyone. I have the finalized list for the History Term Project partners.",
+                  "tone": "Authoritative and dry. The sound of a teacher who has done this a thousand times and just wants to finish the period.",
+                  "character_pose_expression": "Holding wooden pointer, tapping it against open palm, stern disciplinary look",
+                  "trigger_sfx": "rhythmic wooden tapping on a chalkboard"
+                },
+                {
+                  "dialogue_id": "s2_line2",
+                  "speaker": "Lee Hana",
+                  "text": "[Whispering] Please let us be together, Seo-yoon! If I get paired with one of the guys from the soccer team, my GPA is toast.",
+                  "tone": "The 'Conspiratorial Whisper': leaning in close, voice low but high-pitched with anxiety and excitement.",
+                  "character_pose_expression": "Whispering a secret, one hand cupped near her mouth, leaning in with a conspiratorial glint in her eyes"
+                },
+                {
+                  "dialogue_id": "s2_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Don't worry, Hana. We usually end up in the same bracket. Just... stay positive.",
+                  "tone": "Calm and steady, though there is a hint of underlying nervousness in her breath.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious"
+                },
+                {
+                  "dialogue_id": "s2_line4",
+                  "speaker": "Mr. Han",
+                  "text": "Moving on. Park Min-ji and Lee Hana...",
+                  "tone": "Flat and monotonous.",
+                  "character_pose_expression": "Adjusting wire-rimmed glasses with one finger, looking downward intensely"
+                },
+                {
+                  "dialogue_id": "s2_line5",
+                  "speaker": "Lee Hana",
+                  "text": "Nooo! My GPA!",
+                  "tone": "Exaggerated despair, mock-crying.",
+                  "character_pose_expression": "Completely exhausted, slumped shoulders, blank expression with 'soul leaving body' effect"
+                },
+                {
+                  "dialogue_id": "s2_line6",
+                  "speaker": "Mr. Han",
+                  "text": "And finally... Min Seo-yoon. You will be working with... Kang Ji-ho.",
+                  "tone": "Final and absolute. He closes the book with a definitive snap.",
+                  "character_pose_expression": "Standing straight, holding attendance book against chest, neutral expression",
+                  "trigger_sfx": "book slamming shut"
+                },
+                {
+                  "dialogue_id": "s2_line7",
+                  "speaker": "Narrator",
+                  "text": "The world seems to stop for a moment. The air in the classroom grows heavy as the name 'Kang Ji-ho' echoes against the walls.",
+                  "tone": "Dramatic and heavy narration.",
+                  "character_pose_expression": "Narrator"
+                },
+                {
+                  "dialogue_id": "s2_line8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Wait... [Stuttering] Mr. Han? Did you say... Ji-ho? As in, the guy who hasn't opened a textbook since the orientation?",
+                  "tone": "Pure shock, voice cracking slightly with disbelief and rising panic.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+                  "stage_action": "screen_shake"
+                },
+                {
+                  "dialogue_id": "s2_line9",
+                  "speaker": "Mr. Han",
+                  "text": "The list is final, Seo-yoon. Perhaps your 'studious influence' will do him some good. Now, everyone, get to your partners.",
+                  "tone": "Dismissive and tired, already moving toward his desk to sit down.",
+                  "character_pose_expression": "Sighing with eyes closed, hand rubbing the bridge of his nose, looking tired and overworked"
+                },
+                {
+                  "dialogue_id": "s2_line10",
+                  "speaker": "Narrator",
+                  "text": "Seo-yoon turns slowly, her neck feeling stiff. In the very last row, leaned back against the window, sits the source of her upcoming academic nightmare.",
+                  "tone": "Tense and cinematic narration.",
+                  "character_pose_expression": "Narrator"
+                },
+                {
+                  "dialogue_id": "s2_line11",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Looks like you're stuck with me, Class President. Try not to make it too boring, okay?",
+                  "tone": "The 'Lazy Drawl': slow, melodic, and deeply irritating. Every word drips with casual confidence.",
+                  "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+                  "trigger_sfx": "basketball spinning sound"
+                },
+                {
+                  "dialogue_id": "s2_line12",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[Thinking] This is a disaster. A complete, unmitigated disaster. I can't let him ruin my perfect record.",
+                  "tone": "Internal monologue: Sharp, frantic, and judgmental.",
+                  "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Confront him immediately.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s2_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Listen, Ji-ho. If we're doing this, you're following my schedule. No basketball, no excuses, and no being late!",
+                      "tone": "Determined and bossy, attempting to take control of the situation.",
+                      "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                    },
+                    {
+                      "dialogue_id": "s2_b1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Whoa, scary. You always this intense, or is it just for me?",
+                      "tone": "Playful and mocking, completely unfazed by her outburst.",
+                      "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s3_confrontation"
+                },
+                {
+                  "choice_text": "Ask Mr. Han to change partners.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s2_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Sir, I really think I would be more productive with someone else. Our... learning styles are quite different.",
+                      "tone": "Polite but desperate, pleading with her eyes.",
+                      "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose."
+                    },
+                    {
+                      "dialogue_id": "s2_b2_line2",
+                      "speaker": "Mr. Han",
+                      "text": "Different is good, Seo-yoon. It builds character. My decision stands.",
+                      "tone": "Firm and final.",
+                      "character_pose_expression": "Chin resting on interlaced fingers, cold and analytical gaze directed forward"
+                    },
+                    {
+                      "dialogue_id": "s2_b2_line3",
+                      "speaker": "Kang Ji-ho",
+                      "text": "[Laughing] Ouch. Rejected by the teacher. Don't worry, I won't bite.",
+                      "tone": "Hearty and amused.",
+                      "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s3_acceptance"
+                }
+              ],
+              "initial_location_name": "Classroom 2-B",
+              "initial_location_description": "A vibrant, sun-drenched high school classroom in a clean manhwa art style. Large windows show a clear blue sky. The chalkboard is filled with notes about the 'History Term Project', and students are buzzing with nervous energy in their wooden desks.",
+              "initial_bgm": "upbeat school atmosphere with a hint of tension"
+            }
+          },
+          {
+            "id": "act1_ch1_s3",
+            "title": "Oil and Water",
+            "summary": "Ji-ho drags his chair over to Seo-yoon\u2019s desk, the screech of the metal legs echoing her internal frustration. Seo-yoon immediately pulls out a meticulous project schedule, but Ji-ho dismisses it, jokingly suggesting they just 'wing it' or find a short YouTube video to summarize. The tension escalates as Seo-yoon calls him an 'academically indifferent jock' and Ji-ho counters by calling her a 'stiff, boring bookworm' who needs to learn how to breathe.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s3_1",
+                  "speaker": "Narrator",
+                  "text": "The peace of the afternoon is shattered by a sound akin to a dying banshee.",
+                  "tone": "Narrative and slightly dramatic.",
+                  "character_pose_expression": null,
+                  "trigger_sfx": "loud metal screech of a chair on tile"
+                },
+                {
+                  "dialogue_id": "s3_2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Do you absolutely have to announce your arrival with enough decibels to wake the dead?",
+                  "tone": "Sharp and clinical. Every word is articulated with precise irritation.",
+                  "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression.",
+                  "stage_action": "screen_shake"
+                },
+                {
+                  "dialogue_id": "s3_3",
+                  "speaker": "Kang Ji-ho",
+                  "text": "It\u2019s called an 'entrance,' Seo-yoon. You should try it sometime instead of blending into the furniture.",
+                  "tone": "Playful and smug. A low, vibrating confidence that suggests he's enjoying her reaction.",
+                  "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+                  "stage_action": "enter"
+                },
+                {
+                  "dialogue_id": "s3_4",
+                  "speaker": "Min Seo-yoon",
+                  "text": "I\u2019ve prepared the roadmap. This is a twenty-step project schedule, segmented by research, drafting, and cross-referencing. We start on step one... now.",
+                  "tone": "Focused and authoritative. The 'Teacher's Pet' tone\u2014high-pitched, fast-paced, and utterly serious.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+                },
+                {
+                  "dialogue_id": "s3_5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[sigh] A schedule? For a history project? Look at all those colors... it\u2019s giving me a headache just looking at it.",
+                  "tone": "Dismissive and lazy. The words are dragged out as if talking is a physical chore.",
+                  "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+                },
+                {
+                  "dialogue_id": "s3_6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Why don't we just wing it? I\u2019ll find a five-minute YouTube summary on the bus, we\u2019ll throw some slides together, and boom\u2014C-plus. Easy life.",
+                  "tone": "Casual and persuasive. Breezy, lighthearted, and completely lacking in academic ambition.",
+                  "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                },
+                {
+                  "dialogue_id": "s3_7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "A 'C-plus'? My GPA is not a playground for your laziness, you academically indifferent jock!",
+                  "tone": "High-strung and indignant. The 'Righteous Fury' tone\u2014sharp, piercing, and trembling with disbelief.",
+                  "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                  "stage_action": "flash"
+                },
+                {
+                  "dialogue_id": "s3_8",
+                  "speaker": "Kang Ji-ho",
+                  "text": "And my life isn't a library, you stiff, boring bookworm! Seriously, do you ever stop to breathe, or does the oxygen interfere with your memorization?",
+                  "tone": "Reactive and mocking. Sharp, defensive, but with an underlying edge of genuine exasperation.",
+                  "character_pose_expression": "Annoyed, rolling eyes while clicking his tongue, hand on hip, looking away."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Double down on the schedule.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_9a",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Oxygen is for people who have the brain capacity to use it. Now, open your notebook to page forty-two.",
+                      "tone": "Icy and uncompromising. A cold, flat delivery designed to shut down further debate.",
+                      "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                    },
+                    {
+                      "dialogue_id": "s3_10a",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Fine, fine. I'm opening it. Just stop looking at me like I'm a specimen in a lab.",
+                      "tone": "Defeated but grumbling. Muffled and low, like a scolded puppy.",
+                      "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+                    }
+                  ]
+                },
+                {
+                  "choice_text": "Try to meet him halfway.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_9b",
+                      "speaker": "Min Seo-yoon",
+                      "text": "[sigh] If we use the video for the introduction... will you at least promise to read the primary sources for the conclusion?",
+                      "tone": "Yielding but cautious. Softened edges, but still maintaining a shred of her standards.",
+                      "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose."
+                    },
+                    {
+                      "dialogue_id": "s3_10b",
+                      "speaker": "Kang Ji-ho",
+                      "text": "See? That wasn't so hard. Compromise! Look at us, actually communicating like normal humans.",
+                      "tone": "The 'Vocal Smile'. Bright, sunny, and explicitly inviting. You can hear the grin in his voice.",
+                      "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                    }
+                  ]
+                }
+              ],
+              "initial_location_name": "Seo-yoon's Desk",
+              "initial_location_description": "A tidy corner of a high school classroom in a vibrant manhwa style. Seo-yoon's desk is impeccably organized with color-coded highlighters and a thick textbook. Warm afternoon light filters through the window, catching dust motes in the air. Other desks are blurred in the background.",
+              "initial_bgm": "quirky and slightly stressful acoustic guitar"
+            }
+          },
+          {
+            "id": "act1_ch1_s4",
+            "title": "The Research Avalanche",
+            "summary": "In an attempt to prove how much work is required, Seo-yoon pulls out a literal mountain of research books from her bag. As Ji-ho reaches for his phone, his oversized athletic jacket catches the corner of the stack. In a slow-motion manhwa-style disaster, the books tumble across the floor with a series of loud thuds. The entire class goes silent, watching as the duo erupts into a public bickering match, with Seo-yoon accusing Ji-ho of being a walking disaster area.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s4_line1",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Do you have any idea how much work this project actually entails, Ji-ho? It's not just 'googling a few facts' and calling it a day.",
+                  "tone": "Determined and lecture-like; the voice of a student council president reaching her limit.",
+                  "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line2",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Relax, Seo-yoon. You worry enough for the both of us. It\u2019s a presentation, not a thesis for the Ministry of Education.",
+                  "tone": "Teasing and breezy, completely unfazed by her intensity.",
+                  "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Oh, is that so? Then maybe you should see the 'light reading' I've prepared for our first draft!",
+                  "tone": "Challenging; she's about to make a point and she knows she's right.",
+                  "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                  "stage_action": null,
+                  "trigger_sfx": "zipper sliding open quickly"
+                },
+                {
+                  "dialogue_id": "s4_line4",
+                  "speaker": "Narrator",
+                  "text": "With a flourish that could only be described as 'theatrical overachiever,' Seo-yoon begins hauling massive, leather-bound research volumes out of her bag. One, two... five... eight... they pile up into a precarious tower on the edge of the shared desk.",
+                  "tone": "Observational and slightly comedic.",
+                  "character_pose_expression": null,
+                  "stage_action": null,
+                  "trigger_sfx": "heavy book thuds"
+                },
+                {
+                  "dialogue_id": "s4_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Whoa! Are you trying to build a fortress or a bibliography? Wait, I think I just got a text...",
+                  "tone": "Stunned and slightly mocking, but quickly distracted.",
+                  "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line6",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho shifts his weight to reach into his pocket. His oversized varsity jacket\u2014loose and unzipped\u2014flares out like a cape.",
+                  "tone": "Descriptive of a looming disaster.",
+                  "character_pose_expression": null,
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Ji-ho, watch your sleeve\u2014! [gasp]",
+                  "tone": "Urgent and panicked.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "fabric snagging sound"
+                },
+                {
+                  "dialogue_id": "s4_line8",
+                  "speaker": "Narrator",
+                  "text": "It happens in slow motion. The corner of his sleeve catches the spine of the topmost book. The entire 'Research Mountain' tilts, wavers, and then succumbs to gravity.",
+                  "tone": "Dramatic manhwa-style narration.",
+                  "character_pose_expression": null,
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "loud cascading book thuds"
+                },
+                {
+                  "dialogue_id": "s4_line9",
+                  "speaker": "Mr. Han",
+                  "text": "What in the world is that racket?!",
+                  "tone": "Startled and authoritative, breaking the sudden silence of the class.",
+                  "character_pose_expression": "Shocked expression, eyes wide behind glasses, grip loosening on the wooden pointer.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line10",
+                  "speaker": "Lee Hana",
+                  "text": "Omo! Seo-yoon, are you okay? It looks like a library exploded over there!",
+                  "tone": "Shocked and slightly amused, looking over from her desk.",
+                  "character_pose_expression": "Deeply surprised, both hands on her cheeks, mouth in an 'O' shape.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line11",
+                  "speaker": "Min Seo-yoon",
+                  "text": "KANG JI-HO! You literal walking disaster area! Do you have any coordination at all?!",
+                  "tone": "Explosive and furious; her face is turning as red as a beet.",
+                  "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line12",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Me?! You're the one who brought an entire wing of the national library to school! It's a safety hazard!",
+                  "tone": "Defensive and loud, matching her energy to hide his embarrassment.",
+                  "character_pose_expression": "Aggressive stance, gritting teeth, sharp glare, fists clenched at his sides.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Keep shouting at him.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s4_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Safety hazard? My research is the only thing keeping this team's grades alive, you... you varsity-jacketed menace!",
+                      "tone": "Escalating frustration, her hands are shaking with anger.",
+                      "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s4_b1_line2",
+                      "speaker": "Mr. Han",
+                      "text": "That is enough! Both of you, pick up those books and see me after class. My ears are ringing!",
+                      "tone": "Strict and exhausted.",
+                      "character_pose_expression": "Sighing with eyes closed, hand rubbing the bridge of his nose, looking tired and overworked.",
+                      "stage_action": null,
+                      "trigger_sfx": "ruler slapping desk"
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s5_detention"
+                },
+                {
+                  "choice_text": "Stop and start cleaning up.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s4_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "[Deep breath] I... I can't even deal with you right now. Just... just help me pick them up before Mr. Han gives us a demerit.",
+                      "tone": "Controlled but icy, trying to regain her composure.",
+                      "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s4_b2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Fine. My bad, okay? I'll grab the heavy ones. You don't have to look like you're about to cry.",
+                      "tone": "Softening slightly, looking away to hide his guilt.",
+                      "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch1_s5_cleanup"
+                }
+              ],
+              "initial_location_name": "Classroom 2-B",
+              "initial_location_description": "A vibrant manhwa-style classroom with large windows letting in golden afternoon light. Desks are arranged in neat rows, and a chalkboard in the front is covered in complex literature notes. The atmosphere is thick with the post-lunch lethargy of high school students.",
+              "initial_bgm": "upbeat academic tension with light woodwinds"
+            }
+          },
+          {
+            "id": "act1_ch1_s5",
+            "title": "The Ultimatum",
+            "summary": "The argument is silenced by the shadow of Mr. Han looming over them. Looking unimpressed by their lack of cooperation, Mr. Han delivers a final blow: if they don't produce a viable draft of their project proposal by tomorrow morning, they will both be assigned two weeks of after-school detention and receive an automatic failing grade for the first milestone. Left with no choice, Seo-yoon and Ji-ho exchange a look of mutual dread, realizing they are forced to work together through the night.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s5_line1",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I told you already, Seo-yoon! If we just go with my summary, we\u2019ll be done in ten minutes. Why do you have to be so... so difficult?",
+                  "tone": "Staccato and sharp: Every word is punctuated with frustration, his voice rising in pitch as he tries to assert dominance.",
+                  "character_pose_expression": "Annoyed, rolling eyes while clicking his tongue, hand on hip, looking away.",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "desk being slammed lightly"
+                },
+                {
+                  "dialogue_id": "s5_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Efficiency doesn't matter if the logic is fundamentally flawed! Your summary is barely three sentences long. That\u2019s not a proposal, it\u2019s a... it\u2019s a tweet!",
+                  "tone": "The 'Defensive Tremor': Her voice is thin and shaky but filled with an underlying steeliness of academic conviction.",
+                  "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line3",
+                  "speaker": "Narrator",
+                  "text": "The air in the room suddenly grows cold. A massive, looming shadow stretches across the floor, swallowing the golden sunlight and stopping the argument in its tracks.",
+                  "tone": "Low and ominous.",
+                  "character_pose_expression": null,
+                  "stage_action": null,
+                  "trigger_sfx": "heavy, rhythmic footsteps"
+                },
+                {
+                  "dialogue_id": "s5_line4",
+                  "speaker": "Mr. Han",
+                  "text": "I was under the impression that this was a classroom, not a debating club for the ill-prepared.",
+                  "tone": "Ice-Cold Authority: The voice is low, resonant, and devoid of any warmth, making the listener feel small.",
+                  "character_pose_expression": "Looking over the top of his glasses, one eyebrow raised in suspicion.",
+                  "stage_action": "enter",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[Stammering] Mr. Han! We were just... uh, finalizing the structural integrity of our argument.",
+                  "tone": "The 'Cracked Bravado': High-pitched and frantic, the sound of someone trying\u2014and failing\u2014to sound cool under pressure.",
+                  "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line6",
+                  "speaker": "Min Seo-yoon",
+                  "text": "W-we\u2019re working on it, sir. It's just taking a little more time than we anticipated.",
+                  "tone": "The 'Submissive Whisper': Very quiet, breathy, and fearful of drawing more negative attention.",
+                  "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line7",
+                  "speaker": "Mr. Han",
+                  "text": "Time is a luxury you have squandered. I have zero interest in your excuses or your inability to cooperate.",
+                  "tone": "Measured Disgust: Each word is clipped and precise, like a surgeon making a clean cut.",
+                  "character_pose_expression": "Holding wooden pointer, tapping it against open palm, stern disciplinary look.",
+                  "trigger_sfx": "wood tapping sound"
+                },
+                {
+                  "dialogue_id": "s5_line8",
+                  "speaker": "Mr. Han",
+                  "text": "Listen carefully. If I do not see a viable, comprehensive draft of your proposal on my desk by 8:00 AM tomorrow...",
+                  "tone": "The 'Ultimatum': Deep, slow, and final. This is the point of no return.",
+                  "character_pose_expression": "Pointing the wooden pointer forward authoritatively, mouth open as if lecturing.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line9",
+                  "speaker": "Mr. Han",
+                  "text": "...You will both be assigned two weeks of after-school detention and receive an automatic failing grade for this milestone. Am I clear?",
+                  "tone": "Absolute Zero: The tone is so flat and final it leaves no room for negotiation.",
+                  "character_pose_expression": "Chin resting on interlaced fingers, cold and analytical gaze directed forward.",
+                  "trigger_sfx": "bass drop sound"
+                },
+                {
+                  "dialogue_id": "s5_line10",
+                  "speaker": "Min Seo-yoon",
+                  "text": "T-two weeks? A failing grade...?",
+                  "tone": "The 'Shattered Glass': Weak and fragile, as if her entire world is crumbling.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line11",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Tomorrow morning? Sir, that's impossible! I have basketball training and\u2014",
+                  "tone": "Desperate Plea: Raspy and urgent, filled with a sense of impending doom.",
+                  "character_pose_expression": "Aggressive stance, gritting teeth, sharp glare, fists clenched at his sides.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line12",
+                  "speaker": "Mr. Han",
+                  "text": "Then I suggest you start writing instead of complaining. I expect that draft. Good night.",
+                  "tone": "Finality: Curt and dismissive.",
+                  "character_pose_expression": "Standing straight, holding attendance book against chest, neutral expression",
+                  "stage_action": "exit",
+                  "trigger_sfx": "door closing"
+                },
+                {
+                  "dialogue_id": "s5_line13",
+                  "speaker": "Narrator",
+                  "text": "Mr. Han leaves, the click of the door echoing like a gavel. The classroom feels smaller now, the shadows longer. Seo-yoon and Ji-ho are left in a heavy silence.",
+                  "tone": "Somber and heavy.",
+                  "character_pose_expression": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line14",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Two weeks of detention... If my dad finds out, I'm literally dead. My spot on the starting lineup is gone.",
+                  "tone": "Hollow Despair: The arrogance has vanished, replaced by a raw, quiet panic.",
+                  "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line15",
+                  "speaker": "Min Seo-yoon",
+                  "text": "And my scholarship... I can't have a failing grade on my transcript. I can't.",
+                  "tone": "Trembling Resolve: She sounds like she's on the verge of tears, but her voice is tightening with a new purpose.",
+                  "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected.",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line16",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[Sigh] I guess we don't have a choice. We\u2019re staying here. All night if we have to.",
+                  "tone": "The 'Grudging Acceptance': Low and raspy, full of reluctant surrender.",
+                  "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+                  "trigger_sfx": null
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Initiate the peace treaty.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s5_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "If we're going to survive this night, we need to stop fighting. Let's combine your ideas with my structure.",
+                      "tone": "The 'Olive Branch': Warm but firm, an invitation to cooperate.",
+                      "character_pose_expression": "Offering the book toward the viewer with both hands, looking hopeful and slightly shy.",
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s5_b1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Fine. I'll admit, your structure isn't *terrible*. Let's get to work, partner.",
+                      "tone": "Softened Pride: A gentle, Crinkled-eye smile is audible in his voice.",
+                      "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch2_s1"
+                },
+                {
+                  "choice_text": "Demand he takes it seriously.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s5_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "If you slack off for even one minute, I will make sure the detention is the least of your worries. Put your phone away.",
+                      "tone": "The 'Disciplinarian': Sharp and commanding, sounding like a mini Mr. Han.",
+                      "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint.",
+                      "trigger_sfx": "sharp finger snap"
+                    },
+                    {
+                      "dialogue_id": "s5_b2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Whoa, okay, okay! Scary. I'm putting it away. Let's just... keep our heads on our shoulders, alright?",
+                      "tone": "The 'Playful Retreat': Light and airy, trying to de-escalate her intensity.",
+                      "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered.",
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_ch2_s1"
+                }
+              ],
+              "initial_location_name": "Classroom 2-B",
+              "initial_location_description": "A high school classroom in the late afternoon. Long, orange-hued shadows from the setting sun stretch across rows of empty wooden desks. The chalkboard is messy with half-erased equations and diagrams. The air looks dusty and still.",
+              "initial_bgm": "tense ambient with low piano notes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "chapter_2",
+        "title": "Dunks and Definitions",
+        "order": 2,
+        "scenes": [
+          {
+            "id": "act1_chapter2_scene1",
+            "title": "Silence in the Stacks",
+            "summary": "Seo-yoon sits at a secluded table, her books organized with military precision. Ji-ho arrives late, looking entirely out of place in the silent atmosphere. He tries to focus, but his leg bounces incessantly, and he keeps spinning his pen like a basketball. The tension between them is thick; Seo-yoon is frustrated by his lack of concentration, while Ji-ho feels suffocated by the dusty air and the weight of the textbooks. Every time Seo-yoon explains a concept, it seems to go over his head, leading to a series of awkward silences and heavy sighs.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s1_line1",
+                  "speaker": "Narrator",
+                  "text": "The library is a cathedral of silence, preserved in dust and the scent of old paper. Seo-yoon sits in the center of it, her workspace a masterpiece of organization.",
+                  "tone": "Neutral and descriptive, setting a tranquil mood."
+                },
+                {
+                  "dialogue_id": "s1_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[sigh] Three minutes late. He\u2019s already falling behind and we haven't even opened the book.",
+                  "tone": "The 'Studious Perfectionist': Crisp, precise, and layered with a hint of mounting impatience.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+                },
+                {
+                  "dialogue_id": "s1_line3",
+                  "speaker": "Narrator",
+                  "text": "The heavy silence is suddenly shattered by the sound of squeaking sneakers and the heavy thud of a designer backpack hitting the floor.",
+                  "tone": "Abrupt and jarring.",
+                  "trigger_sfx": "loud backpack thud"
+                },
+                {
+                  "dialogue_id": "s1_line4",
+                  "speaker": "Kang Ji-ho",
+                  "text": "My bad, my bad. The coach wouldn't let us off the court until I finished my free throws. It\u2019s like he thinks I actually care about my stats.",
+                  "tone": "Casual and breezy, trying to mask his discomfort with the quiet environment.",
+                  "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+                  "stage_action": "enter"
+                },
+                {
+                  "dialogue_id": "s1_line5",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Your 'stats' won't get you into a university if you fail this midterm. Sit down, Ji-ho. We're on page forty-two.",
+                  "tone": "Strict and authoritative, like a teacher who has run out of patience.",
+                  "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression."
+                },
+                {
+                  "dialogue_id": "s1_line6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Forty-two. Right. Got it. [whispering] Man, it\u2019s like a tomb in here. How do you breathe with all this dust?",
+                  "tone": "Muttered and restless, clearly feeling claustrophobic.",
+                  "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+                  "trigger_sfx": "chair scraping against floor"
+                },
+                {
+                  "dialogue_id": "s1_line7",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho sits, but 'settling in' is not in his vocabulary. His right leg begins to bounce rhythmically, vibrating the entire table. He pulls a pen from his pocket and begins spinning it around his thumb with practiced ease.",
+                  "tone": "Rhythmic and distracting.",
+                  "trigger_sfx": "pen clicking and spinning sound"
+                },
+                {
+                  "dialogue_id": "s1_line8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "The derivative of a function represents the rate of change... are you even listening? Your pen is making a clicking sound every time it hits the table.",
+                  "tone": "Strained patience; the sound of someone trying not to snap.",
+                  "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                },
+                {
+                  "dialogue_id": "s1_line9",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I'm listening! You said... rate of... something. Look, it\u2019s just hard to focus when I feel like a librarian is going to jump out and tackle me for breathing too loud.",
+                  "tone": "Defensive but playful, trying to deflect his lack of understanding.",
+                  "character_pose_expression": "Confused expression, tilting head to the side, hand ruffling his messy undercut hair."
+                },
+                {
+                  "dialogue_id": "s1_line10",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[heavy sigh] If you spent half as much energy on calculus as you do on spinning that pen, we\u2019d be done by now. Look at the graph. If 'x' approaches zero, what happens to the slope?",
+                  "tone": "Exhausted and clinical.",
+                  "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm."
+                },
+                {
+                  "dialogue_id": "s1_line11",
+                  "speaker": "Kang Ji-ho",
+                  "text": "The slope... it... uh... it goes on vacation? Man, I don't know. My brain feels like it's being squeezed by a vice.",
+                  "tone": "The 'Vocal Shrug': Dispirited and genuinely lost.",
+                  "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Scold him for his lack of effort.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Kang Ji-ho! This is serious. I\u2019m giving up my free time to help you, and you\u2019re treating this like a joke. Put the pen down and FOCUS.",
+                      "tone": "Sharp and commanding.",
+                      "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+                      "stage_action": "screen_shake"
+                    },
+                    {
+                      "dialogue_id": "br1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Whoa, okay, okay! Teacher Seo-yoon is in the building. Pen is down. See? Totally focused.",
+                      "tone": "Startled and slightly intimidated, but still trying to maintain his cool.",
+                      "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene2_strict"
+                },
+                {
+                  "choice_text": "Try to use a basketball analogy.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "[sigh] Fine. Think of the slope like the arc of your shot. If the angle is too steep, what happens to the ball's trajectory?",
+                      "tone": "Reluctant but helpful, simplifying her language.",
+                      "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                    },
+                    {
+                      "dialogue_id": "br2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "The arc? Oh! Well, it hits the backboard too hard. Wait... so the derivative is just the angle of the shot at a specific moment?",
+                      "tone": "Sudden realization; bright and energetic.",
+                      "character_pose_expression": "Leaning forward slightly, sharp cat-like eyes with a playful glint, one eyebrow raised."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene2_patience"
+                }
+              ],
+              "initial_location_name": "School Library - Secluded Corner",
+              "initial_location_description": "A quiet, dusty corner of the high school library. Shafts of golden afternoon light pierce through tall, narrow windows, illuminating dust motes dancing over rows of ancient, leather-bound books. A heavy oak table is covered in neatly organized notebooks and a single, thick calculus textbook.",
+              "initial_bgm": "low-fi academic ambient with a hint of ticking clock"
+            }
+          },
+          {
+            "id": "act1_chapter2_scene2",
+            "title": "The Full-Court Press Strategy",
+            "summary": "Recognizing that traditional teaching isn't working, Seo-yoon changes her tactics. In a comedic, manhwa-style montage, she begins drawing basketball courts on the margins of Ji-ho's history notes. She explains the Napoleonic Wars using 'offensive transitions' and 'zone defense' metaphors. Ji-ho\u2019s eyes finally light up as he starts to grasp the material. The scene features stylized visual humor, with 'chibi' versions of the duo appearing in his imagination to reenact historical battles as high-stakes basketball games. For the first time, they find a rhythm that works for both of them.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "act1_c2_s2_line1",
+                  "speaker": "Narrator",
+                  "text": "The air in the library is heavy with the scent of old paper and the palpable weight of Ji-ho's complete lack of interest in the 19th century.",
+                  "tone": "Neutral, descriptive narration"
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[sigh] Ji-ho, for the third time... Napoleon wasn't 'just camping' in the center. It was a strategic retreat to bait the coalition forces.",
+                  "tone": "The 'Academic Strain': Strained, slightly high-pitched, and words clipped with polite frustration.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line3",
+                  "speaker": "Kang Ji-ho",
+                  "text": "It sounds like a lot of walking just to get punched in the face, Seo-yoon. Why didn't he just go for the fast break?",
+                  "tone": "Dull and uninterested, voice dropping in pitch toward the end of the sentence.",
+                  "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line4",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[gasp] A fast break? Wait...",
+                  "tone": "The 'Moment of Realization': A sharp intake of breath followed by a sudden, intense focus.",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line5",
+                  "speaker": "Narrator",
+                  "text": "Seo-yoon notices a sketch of a basketball court in the margins of Ji-ho's notebook. She grabs his pen with a sudden, predatory speed.",
+                  "tone": "Intense, cinematic narration",
+                  "trigger_sfx": "pen scratching loudly on paper"
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line6",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Give me that. Look. This isn't a battlefield, Ji-ho. This is the fourth quarter. Napoleon is the point guard.",
+                  "tone": "The 'Tactical Shift': Deep, rhythmic, and full of newfound bravado. Like a coach in a locker room.",
+                  "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                },
+                {
+                  "dialogue_id": "act1_c2_s2_line7",
+                  "speaker": "Kang Ji-ho",
+                  "text": "...Napoleon is the point guard? Go on.",
+                  "tone": "Intrigued and surprised, voice rising in pitch.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                }
+              ],
+              "mid_scene_location_changes": [
+                {
+                  "trigger_after_dialogue_id": "act1_c2_s2_line7",
+                  "new_location_name": "Imaginary Manhwa Battlefield",
+                  "visual_description": "A stylized, manhwa-style background where a grassy 19th-century battlefield is overlaid with the glowing lines of a basketball court. Chibi versions of Napoleon and soldiers are wearing jerseys over their uniforms."
+                }
+              ],
+              "initial_location_name": "School Library",
+              "initial_location_description": "A quiet, sun-drenched school library with tall wooden bookshelves and rows of study desks. In the foreground, a messy table is covered in history textbooks and open notebooks. Dust motes dance in the light.",
+              "initial_bgm": "soft, studious acoustic guitar"
+            }
+          },
+          {
+            "id": "act1_chapter2_scene3",
+            "title": "From Books to Boards",
+            "summary": "The duo moves to the gym as Ji-ho\u2019s scheduled practice time begins. Seo-yoon sits on the bottom row of the bleachers, attempting to continue her own studies while Ji-ho warms up. The atmosphere shifts from the stuffy library to the energetic, echoing gym. Seo-yoon finds herself frequently distracted from her reading, watching Ji-ho\u2019s athletic grace and the intense focus he puts into every shot. She begins to see a side of him that isn't the 'lazy student' she initially assumed him to be.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s3_line1",
+                  "speaker": "Narrator",
+                  "text": "The quiet, dust-mote filled air of the library is replaced instantly by the sharp, rhythmic 'thwack' of a basketball hitting the hardwood.",
+                  "tone": "Descriptive and transitional",
+                  "character_pose_expression": null,
+                  "trigger_sfx": "Gym doors swinging open, followed by a rhythmic basketball bounce"
+                },
+                {
+                  "dialogue_id": "s3_line2",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Finally! I thought my lungs were going to shrivel up in that library. You can handle a little noise, right, Tutor-nim?",
+                  "tone": "Playful and energized",
+                  "character_pose_expression": "Standing tall, hands in pockets, signature arrogant smirk, varsity jacket slung over one shoulder.",
+                  "stage_action": "enter"
+                },
+                {
+                  "dialogue_id": "s3_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[sigh] Noise is an understatement. It's... very cavernous in here. I'll just sit over there. Don't mind me.",
+                  "tone": "Slightly overwhelmed but trying to remain composed",
+                  "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+                },
+                {
+                  "dialogue_id": "s3_line4",
+                  "speaker": "Narrator",
+                  "text": "Seo-yoon finds a spot on the lowest row of the bleachers, spreading her notes out like a small fortress of paper against the vastness of the gym.",
+                  "tone": "Narrative",
+                  "character_pose_expression": null
+                },
+                {
+                  "dialogue_id": "s3_line5",
+                  "speaker": "Min Seo-yoon",
+                  "text": "(Alright, Chapter 4: Macroeconomics. If I can just tune out the squeaking of his sneakers, I can finish this summary...)",
+                  "tone": "Determined internal monologue",
+                  "character_pose_expression": "Holding an open book in both hands, eyes looking down in a calm reading pose."
+                },
+                {
+                  "dialogue_id": "s3_line6",
+                  "speaker": "Narrator",
+                  "text": "A sudden, sharp *swish* draws her eyes upward. Ji-ho has already shed his jacket, and the change in his demeanor is startling.",
+                  "tone": "Intriguing and observant",
+                  "character_pose_expression": null,
+                  "trigger_sfx": "Basketball through a net"
+                },
+                {
+                  "dialogue_id": "s3_line7",
+                  "speaker": "Kang Ji-ho",
+                  "text": "...",
+                  "tone": "Silent, focused breathing",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                },
+                {
+                  "dialogue_id": "s3_line8",
+                  "speaker": "Narrator",
+                  "text": "He isn't lounging or yawning anymore. His movements are fluid, almost surgical. Every dribble is precise, every jump shot a display of calculated grace.",
+                  "tone": "Admiring and descriptive",
+                  "character_pose_expression": null
+                },
+                {
+                  "dialogue_id": "s3_line9",
+                  "speaker": "Min Seo-yoon",
+                  "text": "(He's... different. In the classroom, he looks like he's constantly trying to escape his own skin. But here...)",
+                  "tone": "Thoughtful and surprised",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                  "dialogue_id": "s3_line10",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho drives toward the hoop, his sneakers screeching against the floor, and dunks the ball with a force that makes the backboard vibrate.",
+                  "tone": "Action-oriented",
+                  "character_pose_expression": null,
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "Rim rattling loudly"
+                },
+                {
+                  "dialogue_id": "s3_line11",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[Gasp] Oh!",
+                  "tone": "Startled and impressed",
+                  "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise."
+                },
+                {
+                  "dialogue_id": "s3_line12",
+                  "speaker": "Kang Ji-ho",
+                  "text": "What's the matter, Seo-yoon? Is the 'lazy student' moving too fast for you to keep up?",
+                  "tone": "Teasing but with a hint of genuine pride",
+                  "character_pose_expression": "Wiping sweat from his forehead with the back of his hand, breathing heavily, athletic and focused."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Acknowledge his skill.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I didn't realize you took practice this seriously. You look... actually focused for once.",
+                      "tone": "Honest and slightly impressed",
+                      "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm."
+                    },
+                    {
+                      "dialogue_id": "s3_b1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Heh. Don't sound so shocked. Even I have things I don't want to lose at.",
+                      "tone": "The 'Vocal Smile': Bright, sunny, and explicitly inviting",
+                      "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene4"
+                },
+                {
+                  "choice_text": "Play it cool and refocus on the book.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "The backboard is just loud, that's all. If you have time to tease me, you have time to finish ten more free throws.",
+                      "tone": "Clinical and dismissive, hiding a blush",
+                      "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+                    },
+                    {
+                      "dialogue_id": "s3_b2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Scary... You\u2019re a slave driver, you know that? Fine, fine. Watch and learn.",
+                      "tone": "Amused and mock-exhausted",
+                      "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene4"
+                }
+              ],
+              "initial_location_name": "School Gym",
+              "initial_location_description": "A sprawling high school gymnasium with polished, honey-colored wooden floors that gleam under the bright LED rafters. Rows of blue retractable bleachers line the walls, and the distant sound of a clock buzzer echoes against the high ceiling. The air is cool but carries the faint, energetic scent of floor wax and athletic spirit.",
+              "initial_bgm": "Upbeat, rhythmic lo-fi with an echoing reverb to simulate a large hall"
+            }
+          },
+          {
+            "id": "act1_chapter2_scene4",
+            "title": "The Stray Ball",
+            "summary": "During a vigorous drill, a ball is deflected wildly toward the sidelines where Seo-yoon is sitting. Caught off guard while she was looking down at a page, she doesn't have time to react. The ball strikes her shoulder, knocking her off the bleacher bench. She falls to the floor, scraping her knee in the process. Ji-ho immediately stops his drill, ignoring the coach and his teammates, and sprints across the court with a look of genuine panic on his face.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s4_line1",
+                  "speaker": "Mr. Han",
+                  "text": "Keep your eyes on the ball! Rotation! Now!",
+                  "tone": "The 'Commanding Bark': A sharp, authoritative projection designed to cut through the noise of the gym. Hard consonants and a resonant chest voice.",
+                  "character_pose_expression": "Pointing the wooden pointer forward authoritatively, mouth open as if lecturing",
+                  "stage_action": null,
+                  "trigger_sfx": "Whistle blowing"
+                },
+                {
+                  "dialogue_id": "s4_line2",
+                  "speaker": "Narrator",
+                  "text": "The gym is a whirlwind of movement, but for Min Seo-yoon, the world is contained within the ink of her novel.",
+                  "tone": "Calm and observational.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[Internal] Almost... at the end of the chapter... just a few more pages...",
+                  "tone": "The 'Focused Murmur': Soft, internal, and rhythmic, reflecting a deep state of flow and quiet concentration.",
+                  "character_pose_expression": "Holding an open book in both hands, eyes looking down in a calm reading pose",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line4",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Hah! Not on my watch!",
+                  "tone": "The 'Athletic Exultation': Breathy, high-energy, and brimming with youthful confidence. Each word carries the physical weight of a jump.",
+                  "character_pose_expression": "Wiping sweat from his forehead with the back of his hand, breathing heavily, athletic and focused",
+                  "stage_action": null,
+                  "trigger_sfx": "Sneakers squeaking on wood"
+                },
+                {
+                  "dialogue_id": "s4_line5",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho leaps for a spike, but the ball clips the top of the net at a jagged angle, ricocheting with violent force toward the sidelines.",
+                  "tone": "Tense and sudden.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": "Loud rubbery impact"
+                },
+                {
+                  "dialogue_id": "s4_line6",
+                  "speaker": "Lee Hana",
+                  "text": "Seo-yoon! Look out!",
+                  "tone": "The 'Panic Spike': High-pitched, frantic, and sudden. The voice cracks slightly under the pressure of urgency.",
+                  "character_pose_expression": "Deeply surprised, both hands on her cheeks, mouth in an 'O' shape",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Huh\u2014?",
+                  "tone": "The 'Dazed Interruption': A short, breathy syllable that indicates a total lack of situational awareness.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open",
+                  "stage_action": "flash",
+                  "trigger_sfx": "Heavy thud"
+                },
+                {
+                  "dialogue_id": "s4_line8",
+                  "speaker": "Narrator",
+                  "text": "The ball slams into Seo-yoon\u2019s shoulder, the force knocking her backward off the bleacher bench. Her book skids across the floor as she lands hard on the gym tiles.",
+                  "tone": "Dramatic and heavy.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": "Body hitting the floor"
+                },
+                {
+                  "dialogue_id": "s4_line9",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Seo-yoon!!",
+                  "tone": "The 'Visceral Shout': Raw, unpolished, and loud. The arrogance is gone, replaced by a sharp, jagged edge of genuine fear.",
+                  "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line10",
+                  "speaker": "Mr. Han",
+                  "text": "Kang Ji-ho! Get back in the\u2014!",
+                  "tone": "The 'Ignored Authority': Sharp and annoyed, but trailing off as the teacher realizes the severity of the distraction.",
+                  "character_pose_expression": "Shocked expression, eyes wide behind glasses, grip loosening on the wooden pointer",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line11",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho doesn't even hear him. He clears the net in a single stride, sprinting across the court with a speed that makes the other students freeze in place.",
+                  "tone": "Fast-paced and intense.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": "Rapid footsteps"
+                },
+                {
+                  "dialogue_id": "s4_line12",
+                  "speaker": "Min Seo-yoon",
+                  "text": "O-ow... my knee...",
+                  "tone": "The 'Stifled Whimper': Thin, shaky, and strained. The voice is tight as she tries to hold back tears of shock.",
+                  "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s4_line13",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Don't move! Are you okay? Where does it hurt? Dammit, answer me!",
+                  "tone": "The 'Frenzied Protector': Rapid-fire questioning, breathless and shaky. The volume is high, but the tone is desperate, not angry.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Accept his help to stand up.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s4_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I... I think I scraped it. Can you help me?",
+                      "tone": "The 'Fragile Request': Small and hesitant, leaning into the vulnerability of the moment.",
+                      "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s4_b1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Easy. Put your weight on me. I've got you.",
+                      "tone": "The 'Low Reassurance': A sudden drop in volume to a deep, stabilizing hum. Protective and steady.",
+                      "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene5_infirmary"
+                },
+                {
+                  "choice_text": "Try to wave him off and stand alone.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s4_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I'm fine, Ji-ho. It's just a scrape. Go back to your drill.",
+                      "tone": "The 'Stubborn Flutter': Trying to sound composed while the voice still trembles from the fall.",
+                      "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s4_b2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Shut up and stay still. You're bleeding, you idiot. You're not going anywhere alone.",
+                      "tone": "The 'Gruff Caretaker': Sharp and abrasive on the surface, but the underlying concern is painfully obvious.",
+                      "character_pose_expression": "Protective stance, stepping forward, arm extended out to the side, fierce protective gaze",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene5_infirmary"
+                }
+              ],
+              "initial_location_name": "School Gym",
+              "initial_location_description": "A high school gymnasium with polished wooden floors reflecting the bright overhead lights. The rhythmic squeaking of sneakers and the heavy thud of volleyballs echo against the high ceiling. On the sidelines, wooden bleachers are mostly empty.",
+              "initial_bgm": "Upbeat and energetic sports theme"
+            }
+          },
+          {
+            "id": "act1_chapter2_scene5",
+            "title": "Careful Hands",
+            "summary": "Ji-ho reaches Seo-yoon and helps her sit up. He quickly retrieves a first aid kit from the equipment room. In a classic heart-fluttering manhwa moment, the 'camera' focuses on his gentle hands as he carefully cleans the small scrape on her knee with an antiseptic wipe. The physical proximity makes Seo-yoon\u2019s heart race, and she notices the contrast between his rough, calloused 'athlete' hands and the tenderness of his touch. He blows softly on the wound to dull the sting, causing a flush to creep up Seo-yoon\u2019s neck.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s5_line1",
+                  "speaker": "Narrator",
+                  "text": "The echoing squeaks of sneakers on the far court fade into the background as Ji-ho kneels beside Seo-yoon on the polished floor.",
+                  "tone": "Atmospheric and quiet."
+                },
+                {
+                  "dialogue_id": "s5_line2",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Easy there. Don't try to stand up too fast. You took a pretty hard spill.",
+                  "tone": "The 'Protective Hero': A grounded, steady register with a hint of concern. Lowered pitch to create an intimate, private space.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[whispering] I'm fine, really... It was just a clumsy trip. I should have been looking where I was going.",
+                  "tone": "The 'Shy Protagonist': Soft and slightly breathy, with a rising inflection at the end to show uncertainty and embarrassment.",
+                  "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line4",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Stay here. I'm getting the kit from the equipment room. Don't you dare move.",
+                  "tone": "The 'Arrogant but Caring': Commanding and firm, yet without any real bite. A playful authoritative edge.",
+                  "character_pose_expression": "Neutral, standing",
+                  "stage_action": "exit",
+                  "trigger_sfx": "footsteps receding"
+                },
+                {
+                  "dialogue_id": "s5_line5",
+                  "speaker": "Narrator",
+                  "text": "A moment later, Ji-ho returns with a white plastic box. He settles onto his haunches, the distance between them shrinking significantly.",
+                  "tone": "Observational and slightly romantic.",
+                  "stage_action": "enter",
+                  "trigger_sfx": "plastic case latch clicking"
+                },
+                {
+                  "dialogue_id": "s5_line6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Give me your leg. I need to clean this before it gets worse.",
+                  "tone": "The 'Focused Caretaker': Soft and direct. The tone is stripped of its usual bravado, replaced by genuine gentleness.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line7",
+                  "speaker": "Narrator",
+                  "text": "Seo-yoon watches as his large, calloused hands\u2014the hands of an athlete\u2014handle the antiseptic wipe with surprising delicacy. The contrast is startling; the same hands that aggressively dribble a ball are now barely brushing her skin.",
+                  "tone": "Descriptive and sensory-focused."
+                },
+                {
+                  "dialogue_id": "s5_line8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[Sharp intake of breath] ...It's cold.",
+                  "tone": "The 'Startled React': A quick, high-pitched gasp followed by a soft, trembling murmur.",
+                  "character_pose_expression": "blushing intensely and appearing shy.",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line9",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I know. It'll only sting for a second. Just look at me, okay?",
+                  "tone": "The 'Vocal Smile': Bright and inviting. You can hear the reassurance in the warmth of the tone.",
+                  "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s5_line10",
+                  "speaker": "Narrator",
+                  "text": "He leans down, his face inches from her knee. To her shock, he blows a soft, cool breath over the stinging scrape to dull the pain of the antiseptic.",
+                  "tone": "Intimate and breathless."
+                },
+                {
+                  "dialogue_id": "s5_line11",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[Internal] My heart... why is it beating so loud? He's so close I can smell the faint scent of his laundry detergent and the citrus of his shampoo.",
+                  "tone": "The 'Dazed Romantic': Dreamy, low-volume internal monologue, heavy with realization.",
+                  "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered.",
+                  "stage_action": null,
+                  "trigger_sfx": "heartbeat thumping"
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Thank him softly.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s5_branch1_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Thank you, Ji-ho. You... you're actually really good at this.",
+                      "tone": "Grateful and sincere with a shy smile.",
+                      "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                    },
+                    {
+                      "dialogue_id": "s5_branch1_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Don't get used to it. I don't play nurse for just anybody.",
+                      "tone": "Playful and smug, returning to his typical confident self.",
+                      "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene6"
+                },
+                {
+                  "choice_text": "Pull your leg away in embarrassment.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s5_branch2_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I can do the rest! Really! It's\u2014it's too much!",
+                      "tone": "High-pitched and flustered panic.",
+                      "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered."
+                    },
+                    {
+                      "dialogue_id": "s5_branch2_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Whoa! Careful! You're going to knock the kit over. Fine, fine, take the bandage.",
+                      "tone": "Surprised and slightly amused.",
+                      "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder."
+                    }
+                  ],
+                  "leads_to_scene_id": "act1_chapter2_scene6"
+                }
+              ],
+              "initial_location_name": "Gym Sidelines",
+              "initial_location_description": "The edge of a high school gymnasium. Polished amber wood floors reflecting the harsh overhead fluorescent lights. In the background, stacked blue gym mats and a mesh bin filled with basketballs are visible. The atmosphere is quiet and secluded compared to the main court area.",
+              "initial_bgm": "Soft, fluttering acoustic guitar melody"
+            }
+          },
+          {
+            "id": "act1_chapter2_scene6",
+            "title": "Unfiltered Truths",
+            "summary": "As the gym empties out after practice, Ji-ho and Seo-yoon remain on the bleachers. The vulnerability of the accident leads to a deeper conversation. Ji-ho confesses the immense pressure he\u2019s under; he isn't just playing for fun, but because a sports scholarship is his only way to afford university. In turn, Seo-yoon admits that her obsession with books and grades is a shield\u2014she uses them to hide because she\u2019s terrified of social interactions and being judged. They realize they both use their respective 'talents' as armor. The scene ends with a soft, understanding smile shared between them, the ice between them officially broken.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s6_line1",
+                  "speaker": "Narrator",
+                  "text": "The squeak of sneakers and the rhythmic bounce of basketballs have finally faded, leaving behind a silence that feels almost heavy.",
+                  "tone": "Contemplative and quiet; a 'Weighted Silence' that signals a shift from the day's frantic energy."
+                },
+                {
+                  "dialogue_id": "s6_line2",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[sighs] Everyone's gone. It's weird when it's this quiet. Makes you think too much.",
+                  "tone": "Exhausted honesty; the 'Post-Adrenaline Slump' where the bravado has been stripped away.",
+                  "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+                  "trigger_sfx": "distant hum of the school ventilation system"
+                },
+                {
+                  "dialogue_id": "s6_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Thinking isn't always a bad thing, Kang Ji-ho. Though... after today's accident, I suppose a little mental silence would be a relief.",
+                  "tone": "Soft and empathetic; the 'Library Whisper'\u2014gentle but carrying weight.",
+                  "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+                },
+                {
+                  "dialogue_id": "s6_line4",
+                  "speaker": "Kang Ji-ho",
+                  "text": "You probably think I'm just some arrogant jock who lives for the spotlight, right? That I do this because I love people screaming my name?",
+                  "tone": "Self-deprecating and cynical; a bitter 'Half-Laugh' that doesn't reach his eyes.",
+                  "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+                },
+                {
+                  "dialogue_id": "s6_line5",
+                  "speaker": "Min Seo-yoon",
+                  "text": "I... I try not to make assumptions. But you do seem to thrive on the attention.",
+                  "tone": "Cautious and observant; a 'Measured Response' that avoids direct confrontation.",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                  "dialogue_id": "s6_line6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I thrive on it because I have to. I'm not playing for fun. If I don't get a sports scholarship, there's no university. No future. My family... we can't afford it otherwise.",
+                  "tone": "Raw and vulnerable; 'The Brittle Truth'\u2014the sound of someone admitting a secret they\u2019ve kept hidden behind ego.",
+                  "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+                },
+                {
+                  "dialogue_id": "s6_line7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[whispering] A scholarship... so that's why you push yourself until you're literally breaking.",
+                  "tone": "Breathless realization; 'The Soft Epiphany' where the pieces finally click together.",
+                  "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise."
+                },
+                {
+                  "dialogue_id": "s6_line8",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Every missed shot feels like a door closing. It\u2019s not talent, Seo-yoon. It\u2019s armor. If I\u2019m the 'star player,' nobody sees how terrified I am of failing.",
+                  "tone": "Intense and focused; 'The Unmasked Gaze'\u2014direct and painfully honest.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                },
+                {
+                  "dialogue_id": "s6_line9",
+                  "speaker": "Min Seo-yoon",
+                  "text": "I think... I understand that better than I\u2019d like to admit. These books? The straight A's? They aren't just because I like studying.",
+                  "tone": "Quiet confession; 'The Trembling Truth'\u2014low-pitched and slightly shaky.",
+                  "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected."
+                },
+                {
+                  "dialogue_id": "s6_line10",
+                  "speaker": "Min Seo-yoon",
+                  "text": "They're a shield. If I'm busy reading, I don't have to talk to anyone. If I'm the 'top student,' I'm 'eccentric' instead of just... socially terrified. I use my grades to hide because I\u2019m scared of being judged for who I actually am.",
+                  "tone": "A 'Vulnerable Rush' of words; finally letting the pressure out after holding it in for years.",
+                  "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered."
+                },
+                {
+                  "dialogue_id": "s6_line11",
+                  "speaker": "Kang Ji-ho",
+                  "text": "So I'm a jock because I'm poor, and you're a genius because you're shy. We're both just playing parts, aren't we?",
+                  "tone": "Warm and gentle; a 'Knowing Smile'\u2014the tone is bright and explicitly inviting common ground.",
+                  "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Acknowledge the shared 'Armor'.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s6_branch1_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I guess we are. It\u2019s exhausting, isn't it? Carrying all that weight alone.",
+                      "tone": "Relieved and soft; 'The Shared Burden'\u2014a tone of deep connection.",
+                      "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                    },
+                    {
+                      "dialogue_id": "s6_branch1_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Yeah. But maybe... sitting here right now... the weight feels a little lighter.",
+                      "tone": "Sincere and peaceful; 'The Quiet Comfort'\u2014a relaxed, deep vocal quality.",
+                      "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking."
+                    }
+                  ]
+                },
+                {
+                  "choice_text": "Try to lighten the mood.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s6_branch2_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Well, at least your 'armor' involves a cool jacket. Mine just involves papercuts and ink stains.",
+                      "tone": "Playful and light; a 'Gentle Tease'\u2014the voice is airy and smiling.",
+                      "character_pose_expression": "One hand over her mouth, eyes closed, giggling softly with a light blush."
+                    },
+                    {
+                      "dialogue_id": "s6_branch2_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "[laughs] Hey, those ink stains are intimidating! Very scholarly. I'll stick to the sweat, thanks.",
+                      "tone": "A 'Hearty Laugh'; bright, resonant, and genuinely amused.",
+                      "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                    }
+                  ]
+                }
+              ],
+              "mid_scene_location_changes": [
+                {
+                  "trigger_after_dialogue_id": "s6_line8",
+                  "new_location_name": "Bleachers - Extreme Close Up",
+                  "visual_description": "The camera zooms in tightly on the two protagonists. The background is blurred into a bokeh of orange and gold. The focus is entirely on the sincerity in their eyes as the distance between them\u2014both physical and emotional\u2014decreases."
+                }
+              ],
+              "initial_location_name": "Empty Gym Bleachers",
+              "initial_location_description": "The high school gymnasium during golden hour. Long, orange light beams cut through the dust motes, reflecting off the polished wooden floors. The basketball hoops cast long, skeletal shadows. The silence is heavy and echoing, a stark contrast to the usual roar of the crowd.",
+              "initial_bgm": "melancholic acoustic guitar with soft, lingering piano notes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "chapter_3",
+        "title": "The Final Draft",
+        "order": 3,
+        "scenes": [
+          {
+            "id": "chapter_3_scene_1",
+            "title": "The Final Deadline",
+            "summary": "As the city lights of Seoul sparkle below, Seo-yoon and Ji-ho sit huddled over their laptops on the school rooftop. The air is cool, and the tension of the upcoming presentation hangs over them. They work in a comfortable rhythm, finalizing the last slides of their project. When the 'Save' icon finally stops spinning, they realize they\u2019ve finished hours ahead of schedule. The silence of the school at night creates an intimate bubble around them, shifting the mood from academic stress to quiet companionship.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s1_line1",
+                  "speaker": "Narrator",
+                  "text": "The only sounds are the distant hum of traffic and the rapid-fire tapping of keys on a keyboard.",
+                  "tone": "Atmospheric and quiet.",
+                  "character_pose_expression": null,
+                  "stage_action": null
+                },
+                {
+                  "dialogue_id": "s1_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Almost... there. I just need to reformat the references for the third slide and...",
+                  "tone": "Determined and focused, muttering under her breath.",
+                  "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious.",
+                  "trigger_sfx": "Rapid keyboard typing"
+                },
+                {
+                  "dialogue_id": "s1_line3",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I've got the final animations synced. Just hit that button, Seo-yoon. Let\u2019s put this thing to bed.",
+                  "tone": "Intense but eager, leaning into the work.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                },
+                {
+                  "dialogue_id": "s1_line4",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Done! [click] It's uploading now... and... saved.",
+                  "tone": "Exhaling a long-held breath, voice softening with relief.",
+                  "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face.",
+                  "trigger_sfx": "Digital chime of a successful upload"
+                },
+                {
+                  "dialogue_id": "s1_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Hell yes! Presentation finished, and it\u2019s not even midnight yet.",
+                  "tone": "Triumphant and energetic, a sudden burst of joy.",
+                  "character_pose_expression": "Victory pose, making a V-sign with his fingers, bright grin, designer sneakers visible.",
+                  "stage_action": "screen_shake"
+                },
+                {
+                  "dialogue_id": "s1_line6",
+                  "speaker": "Narrator",
+                  "text": "As the laptops go dim, the silence of the school rooftop becomes heavy, but no longer tense. The stress of the deadline evaporates, leaving something softer in its place.",
+                  "tone": "Introspective and gentle.",
+                  "character_pose_expression": null
+                },
+                {
+                  "dialogue_id": "s1_line7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Wait... the clock. Ji-ho, it's only 10:30 PM. We finished... three hours ahead of schedule?",
+                  "tone": "Shocked, eyes widening as she looks at her screen.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open."
+                },
+                {
+                  "dialogue_id": "s1_line8",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Guess we're a better team than we thought. Or maybe you're just a slave-driver who makes me work faster.",
+                  "tone": "Playful and teasing, with a hint of genuine admiration.",
+                  "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "The city looks beautiful from up here.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Look at all those lights. Everyone down there is still rushing around, but up here... it feels like time stopped.",
+                      "tone": "Dreamy and thoughtful, voice trailing off.",
+                      "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile."
+                    },
+                    {
+                      "dialogue_id": "br1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Yeah. It's rare to see it like this. Usually, I'm just looking at the road when I'm biking. It's... nice to just look.",
+                      "tone": "Soft and sincere, his gaze turning from the city to her.",
+                      "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                    }
+                  ],
+                  "leads_to_scene_id": "chapter_3_scene_2"
+                },
+                {
+                  "choice_text": "It's so quiet... I'm not used to this.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "Is it always this quiet at night? I can almost hear my own heart beating.",
+                      "tone": "Vulnerable and slightly embarrassed.",
+                      "character_pose_expression": "Pulling the oversized cardigan collar up to cover her mouth, looking embarrassed and flustered."
+                    },
+                    {
+                      "dialogue_id": "br2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Don't get too spooked. I'm right here. Besides, the silence is better than Mr. Han's lectures, right?",
+                      "tone": "Gentle teasing, trying to ease her nerves while leaning closer.",
+                      "character_pose_expression": "Leaning forward slightly, sharp cat-like eyes with a playful glint, one eyebrow raised."
+                    }
+                  ],
+                  "leads_to_scene_id": "chapter_3_scene_2"
+                }
+              ],
+              "initial_location_name": "School Rooftop",
+              "initial_location_description": "Nighttime rooftop of a prestigious Korean high school. The scene is bathed in deep blues and purples, contrasted by the warm, glittering golden grid of Seoul's skyline in the distance. Two laptops are open on a low concrete ledge, their screens casting a soft white-blue glow on the characters. A cool breeze lightly rustles their hair.",
+              "initial_bgm": "Lo-fi hip-hop with soft piano and ambient city wind noise"
+            }
+          },
+          {
+            "id": "chapter_3_scene_2",
+            "title": "Lines and Shadows",
+            "summary": "Seo-yoon compliments the professional quality of the illustrations they used in the presentation, assuming they were sourced online. Ji-ho hesitates before reaching into his bag and pulling out a worn, leather-bound sketchbook. He reveals that he is the artist behind every drawing. As Seo-yoon flips through the pages, she discovers not only the project work but dozens of candid, beautiful sketches of herself studying, laughing, and arguing during their late-night sessions. She is stunned by his secret talent and the obvious care he put into capturing her likeness.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s3_line1",
+                  "speaker": "Min Seo-yoon",
+                  "text": "I was looking over the final slides again, Ji-ho. I still can't get over those illustrations. Where did you even find them?",
+                  "tone": "Warm and appreciative. The 'Vocal Smile' is evident as she admires the work.",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "The style is so consistent... almost professional. Did you have to pay a high licensing fee for these? I should really reimburse you for half.",
+                  "tone": "Thoughtful and sincere, with a hint of concern about the cost.",
+                  "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line3",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Uh, no. There's no fee. I didn't get them from some stock image site, Seo-yoon.",
+                  "tone": "A bit hesitant and bashful, lacking his usual bravado.",
+                  "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line4",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Then where? A freelancer? You shouldn't have spent your own money on our group project like that.",
+                  "tone": "Inquisitive and slightly insistent.",
+                  "character_pose_expression": "Head tilted, scratching her cheek with one finger, looking confused and uncertain.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[sigh] Just... look. I've been meaning to show you this anyway.",
+                  "tone": "Quiet and vulnerable, exhaling as if letting go of a secret.",
+                  "character_pose_expression": "Neutral, standing",
+                  "stage_action": "enter",
+                  "trigger_sfx": "zipper opening"
+                },
+                {
+                  "dialogue_id": "s3_line6",
+                  "speaker": "Narrator",
+                  "text": "Ji-ho reaches into his bag and pulls out a worn, leather-bound sketchbook. The edges are frayed, and the leather is darkened by years of use.",
+                  "tone": "Atmospheric and observant.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": "thud of a heavy book"
+                },
+                {
+                  "dialogue_id": "s3_line7",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Here. Everything from the slides is in here. Along with... some other stuff.",
+                  "tone": "Soft and hopeful, though his voice wavers slightly.",
+                  "character_pose_expression": "Offering the book toward the viewer with both hands, looking hopeful and slightly shy.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "You... you drew these? Every single one of them?",
+                  "tone": "Breathless with shock and dawning realization.",
+                  "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+                  "stage_action": "screen_shake",
+                  "trigger_sfx": "paper rustling"
+                },
+                {
+                  "dialogue_id": "s3_line9",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Yeah. I didn't want to say anything while we were working. I didn't want you to feel... pressured to use them just because I was the one drawing.",
+                  "tone": "Earnest and gentle, eyes crinkling with a genuine warmth.",
+                  "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line10",
+                  "speaker": "Narrator",
+                  "text": "Seo-yoon takes the book, her fingers trembling slightly as she flips past the project sketches. But then, the subject matter changes.",
+                  "tone": "Tense and expectant.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": "rapid page turning"
+                },
+                {
+                  "dialogue_id": "s3_line11",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[gasps] Ji-ho... this is...",
+                  "tone": "Faint and overwhelmed with emotion.",
+                  "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise.",
+                  "stage_action": "flash",
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line12",
+                  "speaker": "Narrator",
+                  "text": "The pages are filled with her. Seo-yoon hunched over a desk, Seo-yoon laughing at a joke she tried to hide, Seo-yoon pouting over a difficult math problem. Every sketch is rendered with incredible detail and obvious affection.",
+                  "tone": "Romantic and descriptive.",
+                  "character_pose_expression": "Narrator",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line13",
+                  "speaker": "Min Seo-yoon",
+                  "text": "You've been watching me this whole time? You caught the way I look when I'm tired... even the way I hold my glasses...",
+                  "tone": "Vulnerable and deeply touched, her voice dropping to a whisper.",
+                  "character_pose_expression": "Clutching her book tightly to her chest, blushing intensely and appearing shy.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                },
+                {
+                  "dialogue_id": "s3_line14",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I, uh... you're a good subject! Very expressive! It's just... technical practice, I swear!",
+                  "tone": "Completely panicked and embarrassed, his face turning a deep crimson.",
+                  "character_pose_expression": "Completely flustered, face beet red, trying to hide his face with his varsity jacket.",
+                  "stage_action": null,
+                  "trigger_sfx": null
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Tell him they are beautiful.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_b1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "They're more than practice, Ji-ho. They're beautiful. I didn't know you saw me this way... it's like seeing myself through your eyes.",
+                      "tone": "Soft and relieved, a genuine connection forming.",
+                      "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s3_b1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "I... I'm glad you don't think it's creepy. I just couldn't help it. Every time you'd focus on something, the light would hit you and I just had to draw.",
+                      "tone": "Sincere and deeply honest.",
+                      "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "chapter_3_scene_3"
+                },
+                {
+                  "choice_text": "Tease him for being a 'secret fan.'",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_b2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "So, Kang Ji-ho is actually the president of my secret fan club? I should have known you were paying such close attention.",
+                      "tone": "Playful and teasing, trying to break the heavy tension.",
+                      "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    },
+                    {
+                      "dialogue_id": "s3_b2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Don't get cocky, Librarian! I just needed a model who didn't move much because they're always stuck in a book!",
+                      "tone": "Defensive but playful, returning to his usual banter though his blush remains.",
+                      "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out.",
+                      "stage_action": null,
+                      "trigger_sfx": null
+                    }
+                  ],
+                  "leads_to_scene_id": "chapter_3_scene_3"
+                }
+              ],
+              "initial_location_name": "School Rooftop",
+              "initial_location_description": "A scenic high school rooftop during the golden hour. The sky is a gradient of deep orange and soft violet. A chain-link fence lines the edge, with the city's silhouette in the distance. The lighting is warm and cinematic, casting long shadows across the concrete floor.",
+              "initial_bgm": "soft, melancholic acoustic guitar melody"
+            }
+          },
+          {
+            "id": "chapter_3_scene_3",
+            "title": "More Than a Game",
+            "summary": "Under the canopy of stars, the atmosphere becomes heavy with unspoken words. Ji-ho closes his sketchbook and looks out at the horizon. He admits that he used to see life like a video game\u2014something to be optimized and won. However, he confesses to Seo-yoon that the time they spent together, even the moments of bickering over the project, has felt more rewarding and 'real' than any high score he\u2019s ever achieved. He looks her in the eyes and tells her that he doesn't want the partnership to end just because the project is over.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s3_line1",
+                  "speaker": "Narrator",
+                  "text": "The air on the rooftop is chilly, but the silence between us feels even heavier. The city below hums, oblivious to the quiet tension up here.",
+                  "tone": "Atmospheric and quiet; setting a reflective mood."
+                },
+                {
+                  "dialogue_id": "s3_line2",
+                  "speaker": "Kang Ji-ho",
+                  "text": "[thud] ...That\u2019s the last of the sketches for the final presentation.",
+                  "tone": "A heavy, final exhale. The sound of a chapter closing.",
+                  "character_pose_expression": "Thinking posture, hand on chin, eyes looking up and to the side with a pensive look.",
+                  "trigger_sfx": "sketchbook closing firmly"
+                },
+                {
+                  "dialogue_id": "s3_line3",
+                  "speaker": "Min Seo-yoon",
+                  "text": "They look amazing, Ji-ho. We actually did it. I didn't think we'd finish the whole proposal by tonight.",
+                  "tone": "Soft and appreciative, with a hint of fatigue.",
+                  "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+                },
+                {
+                  "dialogue_id": "s3_line4",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Yeah. We did.",
+                  "tone": "Distracted and distant, as if his mind is elsewhere.",
+                  "character_pose_expression": "Adjusting his school uniform collar, looking into the distance with a cool, stoic expression."
+                },
+                {
+                  "dialogue_id": "s3_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "You know... I used to see everything as a series of mechanics. School, sports, even people.",
+                  "tone": "Introspective and vulnerable; dropping the usual arrogant facade.",
+                  "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+                },
+                {
+                  "dialogue_id": "s3_line6",
+                  "speaker": "Kang Ji-ho",
+                  "text": "Life was just a game to be optimized. If I wasn't winning, or if I wasn't the best, it was just wasted XP. A waste of time.",
+                  "tone": "Slightly bitter but honest self-reflection.",
+                  "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets."
+                },
+                {
+                  "dialogue_id": "s3_line7",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Ji-ho...",
+                  "tone": "A soft whisper of concern.",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                  "dialogue_id": "s3_line8",
+                  "speaker": "Kang Ji-ho",
+                  "text": "But this project... the hours we spent arguing over color palettes and character arcs... it didn't feel like a grind.",
+                  "tone": "Warm and nostalgic, even though the events just happened.",
+                  "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+                },
+                {
+                  "dialogue_id": "s3_line9",
+                  "speaker": "Kang Ji-ho",
+                  "text": "It felt... real. More real than any high score I've ever hit. Being with you... it changed the math.",
+                  "tone": "The 'Vocal Smile': You must hear the grin in the audio; bright, sunny, and explicitly inviting.",
+                  "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                },
+                {
+                  "dialogue_id": "s3_line10",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I don't want the partnership to end just because the project is over, Seo-yoon. I don't want to go back to just 'optimizing' my life alone.",
+                  "tone": "Steady and resolute, looking her directly in the eyes.",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "I don't want it to end either.",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br1_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I... I feel the same way. I was actually worried you'd be glad to finally be rid of my 'nagging'.",
+                      "tone": "Relieved and sweet, with a small emotional catch in her voice.",
+                      "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                    },
+                    {
+                      "dialogue_id": "br1_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Hah! Your nagging is the only thing that keeps my ego in check. It's a vital game mechanic now.",
+                      "tone": "Teasing and joyful.",
+                      "character_pose_expression": "Hands on hips, head tilted back, laughing heartily with eyes closed."
+                    }
+                  ]
+                },
+                {
+                  "choice_text": "Is this your way of asking for a Round 2?",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "br2_line1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "So... are you saying you're ready for a Round 2? Because I still have a lot of notes on your character designs.",
+                      "tone": "Playful and spirited, trying to hide her blushing face.",
+                      "character_pose_expression": "Holding the book behind her back, tilting her head with a gentle, questioning smile."
+                    },
+                    {
+                      "dialogue_id": "br2_line2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Bring it on, Seo-yoon. I'm not giving up my spot as your Player Two that easily.",
+                      "tone": "A cheeky, confident smirk.",
+                      "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                    }
+                  ]
+                }
+              ],
+              "initial_location_name": "School Rooftop",
+              "initial_location_description": "A high-angle view of the school rooftop under a deep indigo night sky sprinkled with brilliant stars. The city lights of Seoul twinkle like a distant galaxy on the horizon. A cold breeze rustles the laundry hanging on nearby lines, and the silver moonlight casts long, dramatic shadows across the concrete floor.",
+              "initial_bgm": "soft, pensive piano melody with a slight lo-fi beat"
+            }
+          },
+          {
+            "id": "chapter_3_scene_4",
+            "title": "A New Sunrise",
+            "summary": "The first hues of pink and gold begin to bleed into the night sky as dawn approaches. Seo-yoon meets Ji-ho's gaze, her own feelings finally surfacing. They stand close together at the rooftop railing, the morning wind ruffling their hair. In a classic romantic climax, Ji-ho leans in, closing the distance between them. The scene captures a 'will-they-won't-they' heartbeat of anticipation that culminates in a soft, meaningful kiss just as the sun breaks over the city, signaling the start of a new chapter in their lives beyond the classroom.",
+            "content": {
+              "main_dialogue": [
+                {
+                  "dialogue_id": "s3_4_line1",
+                  "speaker": "Narrator",
+                  "text": "The air on the rooftop is crisp, carrying the quiet stillness that only exists in the moments before the world wakes up.",
+                  "tone": "Atmospheric and peaceful"
+                },
+                {
+                  "dialogue_id": "s3_4_line2",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[softly] It's so quiet... I never imagined the school could feel this peaceful. Like we're the only two people left in the world.",
+                  "tone": "Breathless and contemplative",
+                  "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+                },
+                {
+                  "dialogue_id": "s3_4_line3",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I used to come up here to get away from the noise. But today... I don't feel like hiding anymore.",
+                  "tone": "Honest and vulnerable",
+                  "character_pose_expression": "Adjusting his school uniform collar, looking into the distance with a cool, stoic expression."
+                },
+                {
+                  "dialogue_id": "s3_4_line4",
+                  "speaker": "Min Seo-yoon",
+                  "text": "Ji-ho... after everything that happened with the club, and the exams... do you think things will really change for us?",
+                  "tone": "Apprehensive but hopeful",
+                  "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+                },
+                {
+                  "dialogue_id": "s3_4_line5",
+                  "speaker": "Kang Ji-ho",
+                  "text": "They already have. I'm not the same person I was when we first met. You did that to me, Seo-yoon.",
+                  "tone": "Deep and sincere",
+                  "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                },
+                {
+                  "dialogue_id": "s3_4_line6",
+                  "speaker": "Narrator",
+                  "text": "He steps closer, the gap between them narrowing until the only thing between them is the morning breeze.",
+                  "tone": "Heightened tension",
+                  "trigger_sfx": "Soft wind whistling"
+                },
+                {
+                  "dialogue_id": "s3_4_line7",
+                  "speaker": "Kang Ji-ho",
+                  "text": "I don't want to just be your 'project' or your classmate. I want to be the one standing next to you when the sun comes up every day.",
+                  "tone": "Intense and romantic",
+                  "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+                },
+                {
+                  "dialogue_id": "s3_4_line8",
+                  "speaker": "Min Seo-yoon",
+                  "text": "[whispering] Ji-ho...",
+                  "tone": "Emotional and vulnerable",
+                  "character_pose_expression": "Eyes closed, one hand on her chest, a soft and relieved smile on her face."
+                }
+              ],
+              "choices_and_branches": [
+                {
+                  "choice_text": "Lean in closer",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_4_b1_1",
+                      "speaker": "Narrator",
+                      "text": "Seo-yoon tilts her head up, her heart hammering against her ribs like a trapped bird.",
+                      "tone": "Dramatic and romantic"
+                    },
+                    {
+                      "dialogue_id": "s3_4_b1_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "Finally...",
+                      "tone": "A low, satisfied whisper",
+                      "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line.",
+                      "stage_action": "screen_shake",
+                      "trigger_sfx": "Sound of a heartbeat thumping"
+                    },
+                    {
+                      "dialogue_id": "s3_4_b1_3",
+                      "speaker": "Narrator",
+                      "text": "The first ray of golden light breaks over the horizon, catching the dust motes in the air as their lips finally meet in a soft, certain kiss.",
+                      "tone": "Crescendo",
+                      "stage_action": "flash"
+                    }
+                  ],
+                  "leads_to_scene_id": "epilogue_1"
+                },
+                {
+                  "choice_text": "Hold his hand",
+                  "branching_dialogue": [
+                    {
+                      "dialogue_id": "s3_4_b2_1",
+                      "speaker": "Min Seo-yoon",
+                      "text": "I'm not going anywhere. We'll face whatever comes next together.",
+                      "tone": "Determined and loving",
+                      "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge."
+                    },
+                    {
+                      "dialogue_id": "s3_4_b2_2",
+                      "speaker": "Kang Ji-ho",
+                      "text": "That's all I needed to hear.",
+                      "tone": "Relieved and tender",
+                      "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+                    },
+                    {
+                      "dialogue_id": "s3_4_b2_3",
+                      "speaker": "Narrator",
+                      "text": "Ji-ho doesn't wait for another word. He cups her cheek and leans down, sealing the promise with a kiss as the city below begins to glow with morning light.",
+                      "tone": "Warm and sweet",
+                      "stage_action": "flash"
+                    }
+                  ],
+                  "leads_to_scene_id": "epilogue_1"
+                }
+              ],
+              "mid_scene_location_changes": [
+                {
+                  "trigger_after_dialogue_id": "s3_4_line8",
+                  "new_location_name": "School Rooftop - Sunrise",
+                  "visual_description": "The sun has finally crested the horizon, flooding the rooftop in brilliant gold and vibrant orange light. The long shadows are being chased away, and the characters are illuminated in a warm, ethereal glow."
+                }
+              ],
+              "initial_location_name": "School Rooftop - Dawn",
+              "initial_location_description": "The rooftop of the high school under a bleeding predawn sky. Soft, painterly hues of indigo, violet, and pale gold stretch across the horizon. The metal railing is damp with dew, reflecting the first light. Manhwa style with high contrast between the cool shadows and the warm light of the approaching sun.",
+              "initial_bgm": "A swell of emotional piano and slow-building cinematic strings."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

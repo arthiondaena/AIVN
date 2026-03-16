@@ -1,0 +1,169 @@
+{
+    "scene_id": "ch2_s3_tamayos_intervention",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Tamayo"
+    ],
+    "initial_location_name": "Asakusa - Distraction Site",
+    "initial_location_description": "A bustling Asakusa street at night, now thrown into chaos. The cobblestones are slick with spilled blood, and the warm glow of traditional lanterns creates long, flickering shadows against the wooden storefronts. A crowd of panicked onlookers gathers at the edge of the scene.",
+    "initial_bgm": "tense and chaotic orchestral",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The man Muzan Kibutsuji scratched has transformed completely. He thrashes wildly, teeth bared, while Tanjiro desperately tries to restrain him without drawing his sword.",
+            "tone": "Suspenseful and descriptive.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "demon growling"
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "Please, stop! I don't want to hurt you, but I can't let you hurt anyone else!",
+            "tone": "Strained and desperate, his voice cracking with the physical effort of restraint.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Narrator",
+            "text": "Police officers rush into the light, their whistles piercing the night air as they brandish batons, mistaking Tanjiro's struggle for a common brawl.",
+            "tone": "Urgent and chaotic.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "police whistles"
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "[shouting] Stay back! Please, get away from here! This situation is more dangerous than you realize!",
+            "tone": "Authoritative and protective, projecting his voice over the noise of the crowd.",
+            "character_pose_expression": "Shielding someone, arms spread wide, protective glare",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Tamayo",
+            "text": "Even though he has become a demon... you still use the word 'person' to describe him. And you are trying to save him.",
+            "tone": "Serene and deeply impressed. Her voice is like a calm breeze cutting through the chaos.",
+            "character_pose_expression": "Neutral standing, hands folded in kimono sleeves, serene expression",
+            "stage_action": "enter",
+            "trigger_sfx": "soft chime"
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Narrator",
+            "text": "A woman of ethereal beauty steps from the shadows. She scratches her own arm, and as her blood spills, the air begins to shimmer with an impossible light.",
+            "tone": "Mystical and awe-struck.",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "shimmering magic sound"
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Tamayo",
+            "text": "Blood Demon Art: Visual Dream... Scent of Illusory Blood.",
+            "tone": "Measured and melodic. The 'Vocal Smile' is evident here; her tone is explicitly inviting and peaceful.",
+            "character_pose_expression": "Speaking firmly, head held high, authoritative but kind",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line8",
+            "speaker": "Tanjiro Kamado",
+            "text": "What is this? This scent... it's like a garden of flowers in full bloom. The police... they can't see anything!",
+            "tone": "Baffled and wonder-filled, his eyes searching the floral patterns manifesting in the air.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line9",
+            "speaker": "Tamayo",
+            "text": "I am a doctor. I wish to destroy that man, Kibutsuji, as much as you do. I have adjusted my own body to survive without harming humans.",
+            "tone": "Sincere and sorrowful, carrying the weight of centuries of regret.",
+            "character_pose_expression": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line10",
+            "speaker": "Tanjiro Kamado",
+            "text": "A demon... who wants to kill Kibutsuji? And you... you've broken his curse?",
+            "tone": "Shocked and hesitant, trying to process the impossibility of her statement.",
+            "character_pose_expression": "Puzzled expression, tilting his head to the side",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line11",
+            "speaker": "Tamayo",
+            "text": "I have. Come with me, young Demon Slayer. You and your sister will be safe in my clinic. We have much to discuss regarding a potential cure.",
+            "tone": "Compelling and warm, offering a glimmer of hope in the dark night.",
+            "character_pose_expression": "Reaching out a hand, expression of concern and gentle comfort",
+            "stage_action": null,
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Trust her and follow.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I can smell that you aren't lying. Your scent is kind... and sad. Please, help us.",
+                    "tone": "Determined and humble, bowing his head in gratitude.",
+                    "character_pose_expression": "Deep bow of respect, hands pressed to thighs",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s3_b1_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[muffled humming]",
+                    "tone": "Calm and agreeable, leaning toward Tamayo with trust.",
+                    "character_pose_expression": "Standing neutrally, hands folded in front, calm pink eyes",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch2_s4_the_hidden_clinic"
+        },
+        {
+            "choice_text": "Ask about the risk to Nezuko first.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "If I go with you... can you promise Nezuko will be safe? She's never tasted human blood.",
+                    "tone": "Protective and cautious, his hand instinctively reaching for Nezuko's shoulder.",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s3_b2_line2",
+                    "speaker": "Tamayo",
+                    "text": "I promise. In fact, her unique condition is exactly why I wish to speak with you. She is a miracle.",
+                    "tone": "Awed and reassuring, her eyes softening as she looks at Nezuko.",
+                    "character_pose_expression": "Gentle smile, head tilted slightly, hands tucked in sleeves",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch2_s4_the_hidden_clinic"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s3_line7",
+            "new_location_name": "Asakusa - Floral Illusion",
+            "visual_description": "The chaotic street is replaced by a dreamlike haze. Vibrant red and purple flower patterns swirl through the air like ink in water, obscuring the police and the crowd. The atmosphere is quiet, muffled, and heavy with the scent of blooming blossoms."
+        }
+    ]
+}

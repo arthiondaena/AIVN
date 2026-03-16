@@ -1,0 +1,153 @@
+{
+    "scene_id": "ch3_s4_the_train_merger",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Kyojuro Rengoku",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Mugen Train - Passenger Car",
+    "initial_location_description": "The interior of a steam-era passenger car is undergoing a horrific transformation; the floor and walls are being overtaken by pulsating, veiny masses of pink demon flesh and rows of blinking eyes.",
+    "initial_bgm": "tense orchestral with heavy brass and a heartbeat rhythm",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s4_line1",
+            "speaker": "Narrator",
+            "text": "The very steel of the Mugen Train groans as it twists, the metal melding with biological matter. The demon has become the vehicle itself.",
+            "tone": "Deep, ominous, and cinematic; painting a picture of overwhelming scale.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "metal groaning and squelching"
+        },
+        {
+            "dialogue_id": "s4_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] The scent... it's not coming from a single direction anymore. The entire train smells like a demon!",
+            "tone": "Urgent and strained; high-pitched with the realization of a nightmare.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": null,
+            "trigger_sfx": "heartbeat thumping"
+        },
+        {
+            "dialogue_id": "s4_line3",
+            "speaker": "Kyojuro Rengoku",
+            "text": "I should be ashamed! To think I fell into such a deep sleep that I allowed this to happen!",
+            "tone": "Booming and vibrant; even in a crisis, his voice carries an unwavering, fiery confidence.",
+            "character_pose_expression": "Neutral, standing straight, arms at sides, wide enthusiastic smile",
+            "stage_action": "flash",
+            "trigger_sfx": "sword unsheathing"
+        },
+        {
+            "dialogue_id": "s4_line4",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Kamado, boy! Young Hashibira! You two search for the neck! The rest of us will protect the passengers in these five cars!",
+            "tone": "Commanding and authoritative; every word is a strike of a hammer on an anvil.",
+            "character_pose_expression": "Action, pointing forward with determination, eyes wide and fiery, shouting",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s4_line5",
+            "speaker": "Inosuke Hashibira",
+            "text": "I ALREADY FOUND IT! I CAN FEEL THE VIBRATIONS OF THE WEAK POINT BENEATH THE FLOOR! FOLLOW THE KING OF THE MOUNTAIN!",
+            "tone": "Aggressive and boastful; muffled slightly by his mask but bursting with raw energy.",
+            "character_pose_expression": "Wearing boar mask, hands on hips, head tilted back, laughing loudly and aggressively",
+            "stage_action": "enter",
+            "trigger_sfx": "steam puffing"
+        },
+        {
+            "dialogue_id": "s4_line6",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "Thunder Breathing, First Form... Thunderclap and Flash... Sixfold!",
+            "tone": "Whisper-quiet but deadly; the 'Vocal Sleep'\u2014low, rhythmic, and devoid of his usual panic.",
+            "character_pose_expression": "Eyes closed, head tilted down in a deep sleep, hand resting on sword hilt",
+            "stage_action": "flash",
+            "trigger_sfx": "electric crackling"
+        },
+        {
+            "dialogue_id": "s4_line7",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled determined grunting]",
+            "tone": "Protective and fierce; though muffled by bamboo, the intensity of her resolve is clear.",
+            "character_pose_expression": "Determined look, furrowed brows, standing tall and protective",
+            "stage_action": null,
+            "trigger_sfx": "flesh tearing"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Coordinate with Inosuke to strike the engine floor.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b1_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Inosuke! We have to time this perfectly! If we don't cut through the bone in one go, he'll just regenerate!",
+                    "tone": "Strategic and focused; his voice is steady despite the chaos around them.",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s4_b1_2",
+                    "speaker": "Inosuke Hashibira",
+                    "text": "DON'T TELL ME WHAT TO DO! BUT I'LL DO IT ANYWAY! BREATH OF THE BEAST, PIERCE!",
+                    "tone": "Wild and frenetic; shouting at the top of his lungs with competitive spirit.",
+                    "character_pose_expression": "Wearing boar mask, charging forward with swords at sides, steam puffing from nostrils",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "swords clashing against meat"
+                },
+                {
+                    "dialogue_id": "s4_b1_3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Hinokami Kagura... Clear Blue Sky!",
+                    "tone": "A prayer-like intensity; the tone is transcendent, rising to a crescendo of pure willpower.",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "stage_action": "flash",
+                    "trigger_sfx": "roaring fire"
+                }
+            ],
+            "leads_to_scene_id": "ch3_s5_the_morning_after"
+        },
+        {
+            "choice_text": "Rely on your sense of smell to lead the way.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s4_b2_1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I can see the thread! The opening is right there, beneath the thickest mass of flesh!",
+                    "tone": "Hyper-focused; the 'Zen' tone where everything else falls away except the target.",
+                    "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+                    "stage_action": null,
+                    "trigger_sfx": "pulsating meat sounds"
+                },
+                {
+                    "dialogue_id": "s4_b2_2",
+                    "speaker": "Inosuke Hashibira",
+                    "text": "Move it, Monjiro! I'm the one who's going to tear this thing apart!",
+                    "tone": "Hot-blooded and impulsive; rushing headlong into the fray.",
+                    "character_pose_expression": "Wearing boar mask, crouching low, dual serrated swords drawn and crossed, intense combat stance",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "beast-like roar"
+                },
+                {
+                    "dialogue_id": "s4_b2_3",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Together, Inosuke! HINOKAMI KAGURA!",
+                    "tone": "Explosive and resolute; the finality of a hero's finishing blow.",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "stage_action": "flash",
+                    "trigger_sfx": "massive explosion"
+                }
+            ],
+            "leads_to_scene_id": "ch3_s5_the_morning_after"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s4_line7",
+            "new_location_name": "Mugen Train - Engine Room",
+            "visual_description": "The front of the train is a nightmare of organic architecture. A massive, white-calcified bone\u2014the demon's neck\u2014is exposed beneath a floor made of writhing, blood-soaked muscles."
+        }
+    ]
+}

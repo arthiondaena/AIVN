@@ -1,0 +1,154 @@
+{
+    "scene_id": "ch2_s5_battle_against_the_twelve_kizuki",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Tamayo"
+    ],
+    "initial_location_name": "The Courtyard of the Hidden House",
+    "initial_location_description": "A moonlit Japanese courtyard with shattered wooden floorboards and dust hanging in the air. The architecture of the hidden house is visible in the background, partially destroyed by explosive impact marks.",
+    "initial_bgm": "tense orchestral combat with high-paced strings",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_line1",
+            "speaker": "Narrator",
+            "text": "The air screams as multiple Temari balls tear through the atmosphere, their trajectories defying the laws of physics.",
+            "tone": "Suspenseful and fast-paced, emphasizing the supernatural danger.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "explosive whistling sound"
+        },
+        {
+            "dialogue_id": "s5_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting] I can't track them with my eyes alone! The scent... it's twisting! It\u2019s like the wind itself is being manipulated!",
+            "tone": "Determined and breathless; the actor should convey the physical strain of dodging heavy projectiles.",
+            "character_pose_expression": "Combat stance, knees bent, hand on sword hilt ready to draw",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line3",
+            "speaker": "Narrator",
+            "text": "From the shadows, Yahaba\u2019s eyes\u2014embedded in his palms\u2014blink open. Red arrows manifest on Tanjiro's body, dragging him toward the stone floor.",
+            "tone": "Menacing and cold narration.",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "magical shimmer"
+        },
+        {
+            "dialogue_id": "s5_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "Ugh! My body... it's being pulled! I have to... I have to find the source of these arrows!",
+            "tone": "Strained and grunting, as if fighting against an invisible physical force.",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "heavy thud"
+        },
+        {
+            "dialogue_id": "s5_line5",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled growl of intense focus]",
+            "tone": "Fierce and protective; a low, guttural sound through her bamboo muzzle.",
+            "character_pose_expression": "Aggressive combat stance, lowered center of gravity, veins bulging on forehead, sharp slit pupils",
+            "stage_action": "enter",
+            "trigger_sfx": "clothing rustle"
+        },
+        {
+            "dialogue_id": "s5_line6",
+            "speaker": "Narrator",
+            "text": "Nezuko launches herself into the air, her leg glowing with demonic strength. She kicks a Temari ball with enough force to send it whistling back at the darkness.",
+            "tone": "Action-oriented and impactful.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "loud kick impact"
+        },
+        {
+            "dialogue_id": "s5_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko! Thank you! I see them now... the vectors! I can use the Water Breathing to flow with the arrows instead of resisting them!",
+            "tone": "A sudden realization; the 'Aha!' moment. Voices shifts from panic to tactical clarity.",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line8",
+            "speaker": "Tanjiro Kamado",
+            "text": "Total Concentration... Water Breathing, Tenth Form: Constant Flux!",
+            "tone": "Commanding and heroic, shouting the technique with maximum conviction.",
+            "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+            "stage_action": null,
+            "trigger_sfx": "rushing water sound"
+        },
+        {
+            "dialogue_id": "s5_line9",
+            "speaker": "Narrator",
+            "text": "Tanjiro becomes a blur of blue and white waves. He rides the momentum of the red arrows, spinning his blade in a cycle of increasing power.",
+            "tone": "Epic and climactic.",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "sword slashing"
+        },
+        {
+            "dialogue_id": "s5_line10",
+            "speaker": "Narrator",
+            "text": "The blade connects. Yahaba's head is severed cleanly, but his eyes remain open, wide with a final, vengeful spite.",
+            "tone": "Dark and ominous, signaling that the threat isn't over.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "wet slice"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Brace for the final impact!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "He's putting everything into this last attack! I can't let go of my sword!",
+                    "tone": "Desperate and gritty.",
+                    "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "heavy wind pressure"
+                },
+                {
+                    "dialogue_id": "s5_b1_line2",
+                    "speaker": "Narrator",
+                    "text": "Dozens of arrows slam into Tanjiro's back, pinning him to the earth as the demon fades into dust. The ground cracks beneath him.",
+                    "tone": "Heavily dramatic.",
+                    "character_pose_expression": null,
+                    "stage_action": null,
+                    "trigger_sfx": "stone cracking"
+                }
+            ],
+            "leads_to_scene_id": "ch2_s6_aftermath"
+        },
+        {
+            "choice_text": "Call out to Nezuko for help!",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Nezuko! Look out! The arrows are... they're uncontrolled!",
+                    "tone": "Urgent and protective.",
+                    "character_pose_expression": "Shielding someone, arms spread wide, protective glare",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s5_b2_line2",
+                    "speaker": "Nezuko Kamado",
+                    "text": "[muffled cry of concern]",
+                    "tone": "Panic and devotion in a single sound.",
+                    "character_pose_expression": "Surprised, jumping back slightly with hands raised in the air",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "impact"
+                }
+            ],
+            "leads_to_scene_id": "ch2_s6_aftermath"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

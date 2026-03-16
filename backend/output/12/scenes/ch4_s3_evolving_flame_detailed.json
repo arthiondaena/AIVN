@@ -1,0 +1,126 @@
+{
+    "scene_id": "ch4_s3_evolving_flame",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado"
+    ],
+    "initial_location_name": "Forest Near the Village",
+    "initial_location_description": "A dense forest illuminated by the chaotic glow of elemental attacks. Trees are splintered and the ground is scorched from the manifestations' relentless assault. Smoke and dust hang heavy in the air.",
+    "initial_bgm": "Tense orchestral with heavy percussion and frantic violins",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The air vibrates with the screeching wind of Urogi and the crushing weight of Karaku's fans. The manifestations of Hantengu are everywhere, their coordination mechanical and lethal.",
+            "tone": "Suspenseful and cinematic with a hint of looming dread",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "explosive wind blast"
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Tanjiro Kamado",
+            "text": "[panting heavily] My... my body... it's getting heavy. The vibration from those attacks is rattling my very bones.",
+            "tone": "Exhausted and strained, the voice thin and wavering from physical toll",
+            "character_pose_expression": "Exhausted and panting, leaning forward, sweat on his face",
+            "stage_action": null,
+            "trigger_sfx": "rapid heartbeat"
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Nezuko Kamado",
+            "text": "[muffled growl of defiance]",
+            "tone": "Low-pitched, animalistic, and fiercely protective",
+            "character_pose_expression": "Aggressive combat stance, lowered center of gravity, veins bulging on forehead, sharp slit pupils",
+            "stage_action": null,
+            "trigger_sfx": "demonic growling"
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Narrator",
+            "text": "Suddenly, a blur of pink and green streaks through the canopy. A ribbon-like blade dances through the air, parrying the manifestations' strikes with incredible speed.",
+            "tone": "Vibrant, rhythmic, and hopeful with an upbeat tempo",
+            "character_pose_expression": null,
+            "stage_action": "flash",
+            "trigger_sfx": "whip-like sword whistle"
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Narrator",
+            "text": "The Love Hashira, Mitsuri Kanroji, has joined the fray. Her unique Love Breathing creates the opening Tanjiro desperately needs.",
+            "tone": "Grand and awe-inspiring, acknowledging a hero's arrival",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Tanjiro Kamado",
+            "text": "She's... she's incredible! I can't let her fight alone. I have to find it... the interval of the thread!",
+            "tone": "Determined and inspired, voice rising with renewed purpose",
+            "character_pose_expression": "Battle-damaged, clothes torn, fierce and resolute look",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "[whispering] Total Concentration Breathing... Sun Breathing. Hinokami Kagura. Combine the flow... become the flame.",
+            "tone": "Quiet, rhythmic, and intensely focused; the sound of air being pulled through the teeth",
+            "character_pose_expression": "Serious concentration, eyes focused, sword drawn and held low",
+            "stage_action": null,
+            "trigger_sfx": "sharp intake of breath"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Focus on extreme speed",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "The Hinokami Kagura... Clear Blue Sky! I have to be faster than their regeneration!",
+                    "tone": "Sharp, commanding, and swift",
+                    "character_pose_expression": "Determined running pose, looking forward, hand on sword",
+                    "stage_action": "flash",
+                    "trigger_sfx": "sizzling flame sound"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Narrator",
+                    "text": "Tanjiro becomes a streak of fire, his blade refining into a thin line of solar heat that shears through the hardened necks of the manifestations.",
+                    "tone": "High-energy and triumphant",
+                    "character_pose_expression": null,
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "clean sword slice"
+                }
+            ],
+            "leads_to_scene_id": "ch4_s4_aftermath"
+        },
+        {
+            "choice_text": "Focus on explosive power",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I'll pour every ounce of my soul into this one strike! Flame Dance!",
+                    "tone": "Deeply resonant and powerful, shouting from the core",
+                    "character_pose_expression": "Combat stance, knees bent, hand on sword hilt ready to draw",
+                    "stage_action": "flash",
+                    "trigger_sfx": "heavy explosion"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Narrator",
+                    "text": "The air ignites. Tanjiro's blade grows heavy with the weight of the sun, crushing the manifestations' defenses and severing them with brute solar force.",
+                    "tone": "Weighted and impactful, emphasizing pure strength",
+                    "character_pose_expression": null,
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "roaring fire"
+                }
+            ],
+            "leads_to_scene_id": "ch4_s4_aftermath"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

@@ -1,0 +1,113 @@
+{
+    "scene_id": "act1_ch1_s3",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "Seo-yoon's Desk",
+    "initial_location_description": "A tidy corner of a high school classroom in a vibrant manhwa style. Seo-yoon's desk is impeccably organized with color-coded highlighters and a thick textbook. Warm afternoon light filters through the window, catching dust motes in the air. Other desks are blurred in the background.",
+    "initial_bgm": "quirky and slightly stressful acoustic guitar",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_1",
+            "speaker": "Narrator",
+            "text": "The peace of the afternoon is shattered by a sound akin to a dying banshee.",
+            "tone": "Narrative and slightly dramatic.",
+            "character_pose_expression": null,
+            "trigger_sfx": "loud metal screech of a chair on tile"
+        },
+        {
+            "dialogue_id": "s3_2",
+            "speaker": "Min Seo-yoon",
+            "text": "Do you absolutely have to announce your arrival with enough decibels to wake the dead?",
+            "tone": "Sharp and clinical. Every word is articulated with precise irritation.",
+            "character_pose_expression": "Pouting, arms crossed over her book, looking away with a slightly annoyed expression.",
+            "stage_action": "screen_shake"
+        },
+        {
+            "dialogue_id": "s3_3",
+            "speaker": "Kang Ji-ho",
+            "text": "It\u2019s called an 'entrance,' Seo-yoon. You should try it sometime instead of blending into the furniture.",
+            "tone": "Playful and smug. A low, vibrating confidence that suggests he's enjoying her reaction.",
+            "character_pose_expression": "Sitting on an invisible chair, one leg crossed over the other, leaning chin on palm, smirking.",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s3_4",
+            "speaker": "Min Seo-yoon",
+            "text": "I\u2019ve prepared the roadmap. This is a twenty-step project schedule, segmented by research, drafting, and cross-referencing. We start on step one... now.",
+            "tone": "Focused and authoritative. The 'Teacher's Pet' tone\u2014high-pitched, fast-paced, and utterly serious.",
+            "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+        },
+        {
+            "dialogue_id": "s3_5",
+            "speaker": "Kang Ji-ho",
+            "text": "[sigh] A schedule? For a history project? Look at all those colors... it\u2019s giving me a headache just looking at it.",
+            "tone": "Dismissive and lazy. The words are dragged out as if talking is a physical chore.",
+            "character_pose_expression": "Slumping slightly, leaning against an invisible wall, hand over mouth while yawning."
+        },
+        {
+            "dialogue_id": "s3_6",
+            "speaker": "Kang Ji-ho",
+            "text": "Why don't we just wing it? I\u2019ll find a five-minute YouTube summary on the bus, we\u2019ll throw some slides together, and boom\u2014C-plus. Easy life.",
+            "tone": "Casual and persuasive. Breezy, lighthearted, and completely lacking in academic ambition.",
+            "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+        },
+        {
+            "dialogue_id": "s3_7",
+            "speaker": "Min Seo-yoon",
+            "text": "A 'C-plus'? My GPA is not a playground for your laziness, you academically indifferent jock!",
+            "tone": "High-strung and indignant. The 'Righteous Fury' tone\u2014sharp, piercing, and trembling with disbelief.",
+            "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+            "stage_action": "flash"
+        },
+        {
+            "dialogue_id": "s3_8",
+            "speaker": "Kang Ji-ho",
+            "text": "And my life isn't a library, you stiff, boring bookworm! Seriously, do you ever stop to breathe, or does the oxygen interfere with your memorization?",
+            "tone": "Reactive and mocking. Sharp, defensive, but with an underlying edge of genuine exasperation.",
+            "character_pose_expression": "Annoyed, rolling eyes while clicking his tongue, hand on hip, looking away."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Double down on the schedule.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_9a",
+                    "speaker": "Min Seo-yoon",
+                    "text": "Oxygen is for people who have the brain capacity to use it. Now, open your notebook to page forty-two.",
+                    "tone": "Icy and uncompromising. A cold, flat delivery designed to shut down further debate.",
+                    "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint."
+                },
+                {
+                    "dialogue_id": "s3_10a",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Fine, fine. I'm opening it. Just stop looking at me like I'm a specimen in a lab.",
+                    "tone": "Defeated but grumbling. Muffled and low, like a scolded puppy.",
+                    "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile."
+                }
+            ]
+        },
+        {
+            "choice_text": "Try to meet him halfway.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_9b",
+                    "speaker": "Min Seo-yoon",
+                    "text": "[sigh] If we use the video for the introduction... will you at least promise to read the primary sources for the conclusion?",
+                    "tone": "Yielding but cautious. Softened edges, but still maintaining a shred of her standards.",
+                    "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose."
+                },
+                {
+                    "dialogue_id": "s3_10b",
+                    "speaker": "Kang Ji-ho",
+                    "text": "See? That wasn't so hard. Compromise! Look at us, actually communicating like normal humans.",
+                    "tone": "The 'Vocal Smile'. Bright, sunny, and explicitly inviting. You can hear the grin in his voice.",
+                    "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": null
+}

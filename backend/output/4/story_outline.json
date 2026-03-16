@@ -1,0 +1,52 @@
+{
+    "title": "Love in the Margin",
+    "logline": "When a reclusive top student and the school's star basketball player are paired for a mandatory history project, they discover that life's most important lessons aren't found in textbooks or on the court.",
+    "main_characters": [
+        {
+            "name": "Min Seo-yoon",
+            "role": "Protagonist",
+            "gender": "female",
+            "appearance": "Classic Manhwa heroine aesthetic. She has long, soft-wavy midnight black hair that falls to her waist, often tucked behind her ears. She wears oversized, rose-gold round glasses that highlight her large, expressive brown eyes. Her skin is pale, and she often has a light blush. She wears her school uniform with a cozy, oversized lavender knit cardigan. She usually carries a thick hardcover book and has a shy, slightly flustered expression when startled."
+        },
+        {
+            "name": "Kang Ji-ho",
+            "role": "Protagonist",
+            "gender": "male",
+            "appearance": "Top-tier Manhwa male lead aesthetic. Tall and lean with an athletic build. He has messy, styled chestnut brown hair with an undercut. His eyes are sharp and cat-like with a playful glint. He wears his school uniform stylishly, with the top button undone and a varsity jacket slung over one shoulder. He often has a confident, slightly arrogant smirk but transitions to a warm, genuine smile. He usually wears high-end designer sneakers."
+        }
+    ],
+    "side_characters": [
+        {
+            "name": "Mr. Han",
+            "role": "Teacher",
+            "gender": "male",
+            "appearance": "A middle-aged man with a stern, tired face. He has thin, wire-rimmed glasses and neat, salt-and-pepper hair parted precisely. He wears a grey suit vest over a crisp white shirt. He is always seen holding a wooden pointer or a thick attendance book."
+        },
+        {
+            "name": "Lee Hana",
+            "role": "Best Friend",
+            "gender": "female",
+            "appearance": "A bubbly, energetic girl with a trendy blonde bob and colorful hair clips. She has large, sparkling eyes and wears vibrant pink lip gloss. Her school uniform is heavily customized with cute enamel pins and a bright yellow backpack."
+        }
+    ],
+    "main_chapters": [
+        {
+            "chapter_id": "chapter_1",
+            "title": "The Unlucky Draw",
+            "primary_location": "Classroom 3-B",
+            "plot_summary": "The chapter opens with Mr. Han announcing a high-stakes history project on local heritage that determines 40% of the final grade. To Seo-yoon's horror, she is paired with Kang Ji-ho, the school\u2019s most popular but academically indifferent basketball star. The initial interaction is frosty; Seo-yoon is frustrated by Ji-ho\u2019s laid-back attitude, while Ji-ho thinks Seo-yoon is a stiff 'boring bookworm.' After a humorous sequence where Ji-ho accidentally knocks over Seo-yoon\u2019s mountain of research books, sparking a public bickering match, Mr. Han threatens them both with detention unless they show a draft by the next morning."
+        },
+        {
+            "chapter_id": "chapter_2",
+            "title": "Dunks and Definitions",
+            "primary_location": "School Library & Basketball Court",
+            "plot_summary": "Attempting to find common ground, the duo meets in the library. Ji-ho struggles to focus, leading to a comedic 'studying montage' where Seo-yoon uses basketball metaphors to explain historical strategies. Later, they move to the gym because Ji-ho has practice. Seo-yoon ends up getting hit by a stray ball, and Ji-ho rushes to help her, leading to a soft, heart-fluttering moment where he cleans a small scrape on her knee. They share a personal conversation where Ji-ho reveals the pressure he feels to get an athletic scholarship, and Seo-yoon admits she uses books to hide from her social anxiety. The ice begins to melt as they realize they aren't so different."
+        },
+        {
+            "chapter_id": "chapter_3",
+            "title": "The Final Draft",
+            "primary_location": "School Rooftop",
+            "plot_summary": "It's the night before the presentation. They meet on the school rooftop to put the finishing touches on their project. Under a canopy of stars and shimmering city lights\u2014a classic Manhwa romantic setting\u2014they finish the work early. Ji-ho surprises Seo-yoon by showing her a sketchbook he\u2019s kept; he\u2019s actually a talented artist who drew all the illustrations for their project. The atmosphere becomes charged with tension as Ji-ho confesses that he enjoyed their time together more than any game he's ever won. The story concludes with a heartfelt confession and a 'will-they-won't-they' kiss as the morning sun rises, marking the start of a new, unexpected relationship."
+        }
+    ]
+}

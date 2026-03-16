@@ -1,0 +1,141 @@
+{
+    "scene_id": "ch3_s1_boarding_the_mugen",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira",
+        "Kyojuro Rengoku"
+    ],
+    "initial_location_name": "Mugen Train - Passenger Car",
+    "initial_location_description": "The interior of a luxurious Taisho-era steam train car featuring deep red velvet seats, polished dark wood paneling, and warm brass gaslight fixtures that cast a flickering golden light through the cabin as it vibrates with the rhythm of the tracks.",
+    "initial_bgm": "energetic woodwinds with a rhythmic, train-like percussion",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s1_l1",
+            "speaker": "Inosuke Hashibira",
+            "text": "WOOOO-HOOOO! Look at this! We're inside the belly of the beast! It's even bigger on the inside than it is on the outside!",
+            "tone": "Wildly aggressive and boisterous; his voice is filled with animalistic excitement and a lack of social grace.",
+            "character_pose_expression": "Wearing boar mask, hands on hips, head tilted back, laughing loudly and aggressively",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "steam train whistle blowing"
+        },
+        {
+            "dialogue_id": "s1_l2",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "Quiet down, you loud-mouthed pig! People are staring! And stop calling it a beast, it's just a train! [whimpering] Oh no, why is it so cramped? We're trapped in here!",
+            "tone": "High-pitched and frantic; the quintessential 'nervous wreck' voice with a sharp, comedic edge.",
+            "character_pose_expression": "Hands on head, mouth wide open in a panicked scream",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_l3",
+            "speaker": "Tanjiro Kamado",
+            "text": "Now, now, Zenitsu. Let's focus on finding Rengoku-san. He should be in this car... [sniffing] Wait, I smell something delicious. And... very intense.",
+            "tone": "Calm and grounding; his voice is warm and sincere, acting as the anchor for the group's chaos.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_l4",
+            "speaker": "Kyojuro Rengoku",
+            "text": "UMAI! UMAI! UMAI!",
+            "tone": "The 'Vocal Smile': booming, bright, and thunderously enthusiastic. Each word is a celebration of flavor.",
+            "character_pose_expression": "Eating, holding a bento box, eyes closed in delight, mouth open shouting Umai",
+            "stage_action": "flash",
+            "trigger_sfx": "loud clacking of bento lids"
+        },
+        {
+            "dialogue_id": "s1_l5",
+            "speaker": "Tanjiro Kamado",
+            "text": "Uh... excuse me? Are you Kyojuro Rengoku-san, the Flame Hashira?",
+            "tone": "Polite and slightly hesitant; he is caught off guard by the sheer volume of the man.",
+            "character_pose_expression": "Puzzled expression, tilting his head to the side",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_l6",
+            "speaker": "Kyojuro Rengoku",
+            "text": "UMAI! [gulp] Yes! I am Kyojuro Rengoku! And you must be the boy with the box! Welcome to the Mugen Train!",
+            "tone": "Intensely friendly and direct; he speaks with a relentless, sun-like energy that leaves no room for doubt.",
+            "character_pose_expression": "Neutral, standing straight, arms at sides, wide enthusiastic smile",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_l7",
+            "speaker": "Narrator",
+            "text": "The group gathers around the Flame Hashira, who sits surrounded by a small mountain of empty bento boxes. Despite his eccentric arrival, his presence radiates a searing, protective aura.",
+            "tone": "Atmospheric and guiding.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s1_l8",
+            "speaker": "Kyojuro Rengoku",
+            "text": "Sit! Relax! But stay alert. This train has become a graveyard. Over forty people have vanished from this vessel, along with several of our own swordsmen who were sent to investigate!",
+            "tone": "Authoritative and grave, yet maintaining an unwavering confidence that inspires courage.",
+            "character_pose_expression": "Confident, arms crossed over chest, chin up, bold grin",
+            "stage_action": null,
+            "trigger_sfx": "low orchestral drone"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Ask how the demon is hiding.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_br1_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "Forty people... and you can't find a trace? How can a demon hide its scent so well on a moving train?",
+                    "tone": "Inquisitive and analytical; his voice carries the weight of a seasoned hunter.",
+                    "character_pose_expression": "Thinking deeply, hand on chin, eyes closed",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s1_br1_l2",
+                    "speaker": "Kyojuro Rengoku",
+                    "text": "A fair question! Demons are cunning! But no matter where it hides, my blade will find its neck! We shall protect every passenger on this train!",
+                    "tone": "Fiery and resolute; his voice swells with pride and martial spirit.",
+                    "character_pose_expression": "Action, pointing forward with determination, eyes wide and fiery, shouting",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ]
+        },
+        {
+            "choice_text": "Reassure the terrified Zenitsu.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s1_br2_l1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "It's alright, Zenitsu. We have a Hashira with us. We'll get through this together.",
+                    "tone": "Soft and comforting; the gentle tone of a big brother.",
+                    "character_pose_expression": "Gentle laughter, eyes closed, hand partially covering mouth",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s1_br2_l2",
+                    "speaker": "Zenitsu Agatsuma",
+                    "text": "A Hashira? You mean this guy who just yells about food?! We're doomed! We're all going to be eaten by the train monster!",
+                    "tone": "Explosive and shrill; a comedic peak of pure terror.",
+                    "character_pose_expression": "Crying heavily with snot bubbles, clutching his yellow haori",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "comical sliding whistle"
+                }
+            ]
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s1_l8",
+            "new_location_name": "Mugen Train - Deepening Night",
+            "visual_description": "The view through the train windows darkens as the sun disappears, replaced by the blurred, ghostly shapes of trees rushing past in the moonlight."
+        }
+    ]
+}

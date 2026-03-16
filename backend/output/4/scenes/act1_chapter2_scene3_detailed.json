@@ -1,0 +1,144 @@
+{
+    "scene_id": "act1_chapter2_scene3",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho"
+    ],
+    "initial_location_name": "School Gym",
+    "initial_location_description": "A sprawling high school gymnasium with polished, honey-colored wooden floors that gleam under the bright LED rafters. Rows of blue retractable bleachers line the walls, and the distant sound of a clock buzzer echoes against the high ceiling. The air is cool but carries the faint, energetic scent of floor wax and athletic spirit.",
+    "initial_bgm": "Upbeat, rhythmic lo-fi with an echoing reverb to simulate a large hall",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s3_line1",
+            "speaker": "Narrator",
+            "text": "The quiet, dust-mote filled air of the library is replaced instantly by the sharp, rhythmic 'thwack' of a basketball hitting the hardwood.",
+            "tone": "Descriptive and transitional",
+            "character_pose_expression": null,
+            "trigger_sfx": "Gym doors swinging open, followed by a rhythmic basketball bounce"
+        },
+        {
+            "dialogue_id": "s3_line2",
+            "speaker": "Kang Ji-ho",
+            "text": "Finally! I thought my lungs were going to shrivel up in that library. You can handle a little noise, right, Tutor-nim?",
+            "tone": "Playful and energized",
+            "character_pose_expression": "Standing tall, hands in pockets, signature arrogant smirk, varsity jacket slung over one shoulder.",
+            "stage_action": "enter"
+        },
+        {
+            "dialogue_id": "s3_line3",
+            "speaker": "Min Seo-yoon",
+            "text": "[sigh] Noise is an understatement. It's... very cavernous in here. I'll just sit over there. Don't mind me.",
+            "tone": "Slightly overwhelmed but trying to remain composed",
+            "character_pose_expression": "Standing straight, clutching a thick book to her chest, neutral expression with a soft gaze."
+        },
+        {
+            "dialogue_id": "s3_line4",
+            "speaker": "Narrator",
+            "text": "Seo-yoon finds a spot on the lowest row of the bleachers, spreading her notes out like a small fortress of paper against the vastness of the gym.",
+            "tone": "Narrative",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s3_line5",
+            "speaker": "Min Seo-yoon",
+            "text": "(Alright, Chapter 4: Macroeconomics. If I can just tune out the squeaking of his sneakers, I can finish this summary...)",
+            "tone": "Determined internal monologue",
+            "character_pose_expression": "Holding an open book in both hands, eyes looking down in a calm reading pose."
+        },
+        {
+            "dialogue_id": "s3_line6",
+            "speaker": "Narrator",
+            "text": "A sudden, sharp *swish* draws her eyes upward. Ji-ho has already shed his jacket, and the change in his demeanor is startling.",
+            "tone": "Intriguing and observant",
+            "character_pose_expression": null,
+            "trigger_sfx": "Basketball through a net"
+        },
+        {
+            "dialogue_id": "s3_line7",
+            "speaker": "Kang Ji-ho",
+            "text": "...",
+            "tone": "Silent, focused breathing",
+            "character_pose_expression": "Intense focus, leaning in close, sharp eyes fixed forward, lips set in a thin line."
+        },
+        {
+            "dialogue_id": "s3_line8",
+            "speaker": "Narrator",
+            "text": "He isn't lounging or yawning anymore. His movements are fluid, almost surgical. Every dribble is precise, every jump shot a display of calculated grace.",
+            "tone": "Admiring and descriptive",
+            "character_pose_expression": null
+        },
+        {
+            "dialogue_id": "s3_line9",
+            "speaker": "Min Seo-yoon",
+            "text": "(He's... different. In the classroom, he looks like he's constantly trying to escape his own skin. But here...)",
+            "tone": "Thoughtful and surprised",
+            "character_pose_expression": "Leaning forward slightly, looking over the rim of her glasses with a curious expression."
+        },
+        {
+            "dialogue_id": "s3_line10",
+            "speaker": "Narrator",
+            "text": "Ji-ho drives toward the hoop, his sneakers screeching against the floor, and dunks the ball with a force that makes the backboard vibrate.",
+            "tone": "Action-oriented",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "Rim rattling loudly"
+        },
+        {
+            "dialogue_id": "s3_line11",
+            "speaker": "Min Seo-yoon",
+            "text": "[Gasp] Oh!",
+            "tone": "Startled and impressed",
+            "character_pose_expression": "Startled, holding the book high to hide the lower half of her face, eyes wide with surprise."
+        },
+        {
+            "dialogue_id": "s3_line12",
+            "speaker": "Kang Ji-ho",
+            "text": "What's the matter, Seo-yoon? Is the 'lazy student' moving too fast for you to keep up?",
+            "tone": "Teasing but with a hint of genuine pride",
+            "character_pose_expression": "Wiping sweat from his forehead with the back of his hand, breathing heavily, athletic and focused."
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Acknowledge his skill.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "I didn't realize you took practice this seriously. You look... actually focused for once.",
+                    "tone": "Honest and slightly impressed",
+                    "character_pose_expression": "One hand on her chin, looking upward thoughtfully while holding her book under one arm."
+                },
+                {
+                    "dialogue_id": "s3_b1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Heh. Don't sound so shocked. Even I have things I don't want to lose at.",
+                    "tone": "The 'Vocal Smile': Bright, sunny, and explicitly inviting",
+                    "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene4"
+        },
+        {
+            "choice_text": "Play it cool and refocus on the book.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s3_b2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "The backboard is just loud, that's all. If you have time to tease me, you have time to finish ten more free throws.",
+                    "tone": "Clinical and dismissive, hiding a blush",
+                    "character_pose_expression": "Adjusting her rose-gold glasses with her middle finger, looking focused and studious."
+                },
+                {
+                    "dialogue_id": "s3_b2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Scary... You\u2019re a slave driver, you know that? Fine, fine. Watch and learn.",
+                    "tone": "Amused and mock-exhausted",
+                    "character_pose_expression": "Teasing posture, winking with a cheeky grin, tongue slightly peeking out."
+                }
+            ],
+            "leads_to_scene_id": "act1_chapter2_scene4"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

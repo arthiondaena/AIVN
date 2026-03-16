@@ -1,0 +1,192 @@
+{
+    "scene_id": "act1_ch1_s5",
+    "characters_present": [
+        "Min Seo-yoon",
+        "Kang Ji-ho",
+        "Mr. Han"
+    ],
+    "initial_location_name": "Classroom 2-B",
+    "initial_location_description": "A high school classroom in the late afternoon. Long, orange-hued shadows from the setting sun stretch across rows of empty wooden desks. The chalkboard is messy with half-erased equations and diagrams. The air looks dusty and still.",
+    "initial_bgm": "tense ambient with low piano notes",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_line1",
+            "speaker": "Kang Ji-ho",
+            "text": "I told you already, Seo-yoon! If we just go with my summary, we\u2019ll be done in ten minutes. Why do you have to be so... so difficult?",
+            "tone": "Staccato and sharp: Every word is punctuated with frustration, his voice rising in pitch as he tries to assert dominance.",
+            "character_pose_expression": "Annoyed, rolling eyes while clicking his tongue, hand on hip, looking away.",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "desk being slammed lightly"
+        },
+        {
+            "dialogue_id": "s5_line2",
+            "speaker": "Min Seo-yoon",
+            "text": "Efficiency doesn't matter if the logic is fundamentally flawed! Your summary is barely three sentences long. That\u2019s not a proposal, it\u2019s a... it\u2019s a tweet!",
+            "tone": "The 'Defensive Tremor': Her voice is thin and shaky but filled with an underlying steeliness of academic conviction.",
+            "character_pose_expression": "Determined gaze, holding the book firmly in both hands as if preparing for a challenge.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line3",
+            "speaker": "Narrator",
+            "text": "The air in the room suddenly grows cold. A massive, looming shadow stretches across the floor, swallowing the golden sunlight and stopping the argument in its tracks.",
+            "tone": "Low and ominous.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "heavy, rhythmic footsteps"
+        },
+        {
+            "dialogue_id": "s5_line4",
+            "speaker": "Mr. Han",
+            "text": "I was under the impression that this was a classroom, not a debating club for the ill-prepared.",
+            "tone": "Ice-Cold Authority: The voice is low, resonant, and devoid of any warmth, making the listener feel small.",
+            "character_pose_expression": "Looking over the top of his glasses, one eyebrow raised in suspicion.",
+            "stage_action": "enter",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line5",
+            "speaker": "Kang Ji-ho",
+            "text": "[Stammering] Mr. Han! We were just... uh, finalizing the structural integrity of our argument.",
+            "tone": "The 'Cracked Bravado': High-pitched and frantic, the sound of someone trying\u2014and failing\u2014to sound cool under pressure.",
+            "character_pose_expression": "Startled expression, eyes wide, mouth slightly open, jacket slipping off his shoulder.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line6",
+            "speaker": "Min Seo-yoon",
+            "text": "W-we\u2019re working on it, sir. It's just taking a little more time than we anticipated.",
+            "tone": "The 'Submissive Whisper': Very quiet, breathy, and fearful of drawing more negative attention.",
+            "character_pose_expression": "Hands clasped together over her book, bowing her head slightly in an apologetic pose.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line7",
+            "speaker": "Mr. Han",
+            "text": "Time is a luxury you have squandered. I have zero interest in your excuses or your inability to cooperate.",
+            "tone": "Measured Disgust: Each word is clipped and precise, like a surgeon making a clean cut.",
+            "character_pose_expression": "Holding wooden pointer, tapping it against open palm, stern disciplinary look.",
+            "trigger_sfx": "wood tapping sound"
+        },
+        {
+            "dialogue_id": "s5_line8",
+            "speaker": "Mr. Han",
+            "text": "Listen carefully. If I do not see a viable, comprehensive draft of your proposal on my desk by 8:00 AM tomorrow...",
+            "tone": "The 'Ultimatum': Deep, slow, and final. This is the point of no return.",
+            "character_pose_expression": "Pointing the wooden pointer forward authoritatively, mouth open as if lecturing.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line9",
+            "speaker": "Mr. Han",
+            "text": "...You will both be assigned two weeks of after-school detention and receive an automatic failing grade for this milestone. Am I clear?",
+            "tone": "Absolute Zero: The tone is so flat and final it leaves no room for negotiation.",
+            "character_pose_expression": "Chin resting on interlaced fingers, cold and analytical gaze directed forward.",
+            "trigger_sfx": "bass drop sound"
+        },
+        {
+            "dialogue_id": "s5_line10",
+            "speaker": "Min Seo-yoon",
+            "text": "T-two weeks? A failing grade...?",
+            "tone": "The 'Shattered Glass': Weak and fragile, as if her entire world is crumbling.",
+            "character_pose_expression": "Hands thrown up slightly in shock, about to drop her book, jaw slightly open.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line11",
+            "speaker": "Kang Ji-ho",
+            "text": "Tomorrow morning? Sir, that's impossible! I have basketball training and\u2014",
+            "tone": "Desperate Plea: Raspy and urgent, filled with a sense of impending doom.",
+            "character_pose_expression": "Aggressive stance, gritting teeth, sharp glare, fists clenched at his sides.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line12",
+            "speaker": "Mr. Han",
+            "text": "Then I suggest you start writing instead of complaining. I expect that draft. Good night.",
+            "tone": "Finality: Curt and dismissive.",
+            "character_pose_expression": "Standing straight, holding attendance book against chest, neutral expression",
+            "stage_action": "exit",
+            "trigger_sfx": "door closing"
+        },
+        {
+            "dialogue_id": "s5_line13",
+            "speaker": "Narrator",
+            "text": "Mr. Han leaves, the click of the door echoing like a gavel. The classroom feels smaller now, the shadows longer. Seo-yoon and Ji-ho are left in a heavy silence.",
+            "tone": "Somber and heavy.",
+            "character_pose_expression": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line14",
+            "speaker": "Kang Ji-ho",
+            "text": "Two weeks of detention... If my dad finds out, I'm literally dead. My spot on the starting lineup is gone.",
+            "tone": "Hollow Despair: The arrogance has vanished, replaced by a raw, quiet panic.",
+            "character_pose_expression": "Somber expression, looking down at the ground, shadows over his eyes, hands deep in pockets.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line15",
+            "speaker": "Min Seo-yoon",
+            "text": "And my scholarship... I can't have a failing grade on my transcript. I can't.",
+            "tone": "Trembling Resolve: She sounds like she's on the verge of tears, but her voice is tightening with a new purpose.",
+            "character_pose_expression": "Head tilted down, book hanging loosely by her side, looking sad and dejected.",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line16",
+            "speaker": "Kang Ji-ho",
+            "text": "[Sigh] I guess we don't have a choice. We\u2019re staying here. All night if we have to.",
+            "tone": "The 'Grudging Acceptance': Low and raspy, full of reluctant surrender.",
+            "character_pose_expression": "Hand behind head rubbing neck, looking away with a slight blush, genuine embarrassed smile.",
+            "trigger_sfx": null
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Initiate the peace treaty.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b1_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "If we're going to survive this night, we need to stop fighting. Let's combine your ideas with my structure.",
+                    "tone": "The 'Olive Branch': Warm but firm, an invitation to cooperate.",
+                    "character_pose_expression": "Offering the book toward the viewer with both hands, looking hopeful and slightly shy.",
+                    "trigger_sfx": null
+                },
+                {
+                    "dialogue_id": "s5_b1_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Fine. I'll admit, your structure isn't *terrible*. Let's get to work, partner.",
+                    "tone": "Softened Pride: A gentle, Crinkled-eye smile is audible in his voice.",
+                    "character_pose_expression": "Warm, genuine smile, eyes crinkling at the corners, one hand extended as if reaching out.",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "act1_ch2_s1"
+        },
+        {
+            "choice_text": "Demand he takes it seriously.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b2_line1",
+                    "speaker": "Min Seo-yoon",
+                    "text": "If you slack off for even one minute, I will make sure the detention is the least of your worries. Put your phone away.",
+                    "tone": "The 'Disciplinarian': Sharp and commanding, sounding like a mini Mr. Han.",
+                    "character_pose_expression": "Pointing forward with a serious expression, glasses reflecting a slight glint.",
+                    "trigger_sfx": "sharp finger snap"
+                },
+                {
+                    "dialogue_id": "s5_b2_line2",
+                    "speaker": "Kang Ji-ho",
+                    "text": "Whoa, okay, okay! Scary. I'm putting it away. Let's just... keep our heads on our shoulders, alright?",
+                    "tone": "The 'Playful Retreat': Light and airy, trying to de-escalate her intensity.",
+                    "character_pose_expression": "Waving one hand dismissively in a panic, blushing heavily, eyes looking flustered.",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "act1_ch2_s1"
+        }
+    ],
+    "mid_scene_location_changes": null
+}

@@ -1,0 +1,88 @@
+{
+    "title": "Demon Slayer: The Scarlet Bond",
+    "logline": "A kind-hearted boy becomes a demon slayer to restore his sister's humanity and avenge his slaughtered family in a war against the progenitor of all demons.",
+    "main_characters": [
+        {
+            "name": "Tanjiro Kamado",
+            "role": "Protagonist",
+            "gender": "male",
+            "appearance": "A young man with ruffled burgundy hair and dark red eyes. He wears a distinctive green-and-black checkered haori over the standard dark brown Demon Slayer uniform. On his forehead is a prominent flame-like scar. He carries a wooden box on his back and wears hanafuda earrings."
+        },
+        {
+            "name": "Nezuko Kamado",
+            "role": "Key Supporting Character",
+            "gender": "female",
+            "appearance": "A petite girl with long black hair that fades into orange at the tips. She has large, soft pink eyes and wears a light pink kimono with a hemp leaf pattern. A small bamboo muzzle is secured around her mouth with red cord, and her pupils are slit like a cat's."
+        },
+        {
+            "name": "Muzan Kibutsuji",
+            "role": "Antagonist",
+            "gender": "male",
+            "appearance": "An unnervingly pale man with sharp, aristocratic features and plum-red eyes with vertical slit pupils. He wears a black fedora and an expensive Western-style white suit with a black shirt and tie. His presence radiates a cold, murderous aura."
+        },
+        {
+            "name": "Giyu Tomioka",
+            "role": "Mentor",
+            "gender": "male",
+            "appearance": "A tall swordsman with messy black hair tied into a low ponytail. He wears a unique haori split down the middle: one side is solid red-maroon, and the other is a green, orange, and yellow geometric pattern. His expression is stoic and his eyes are a deep, dark blue."
+        }
+    ],
+    "side_characters": [
+        {
+            "name": "Zenitsu Agatsuma",
+            "role": "Ally",
+            "gender": "male",
+            "appearance": "A boy with short, bright yellow hair with orange tips, cut in a bowl style. He wears a yellow haori with white triangle patterns over his uniform. He often has a panicked or tearful expression and carries a gold-hilted Nichirin sword."
+        },
+        {
+            "name": "Inosuke Hashibira",
+            "role": "Ally",
+            "gender": "male",
+            "appearance": "A muscular, bare-chested young man wearing a grey boar's head mask. When the mask is removed, he has a surprisingly feminine face with large green eyes and dark hair. He wears deer-fur leggings and carries two serrated swords with bandaged hilts."
+        },
+        {
+            "name": "Kyojuro Rengoku",
+            "role": "Hashira",
+            "gender": "male",
+            "appearance": "A man with long, bright yellow hair with red streaks that look like licking flames. He has large yellow eyes and thick black eyebrows. His haori has a flame-patterned gradient at the hem, and he wears a constant, enthusiastic smile."
+        },
+        {
+            "name": "Tamayo",
+            "role": "Ally",
+            "gender": "female",
+            "appearance": "A beautiful, serene woman with dark hair styled in a traditional bun held by a floral pin. She wears a dark purple kimono with a flower pattern. Her eyes are a misty purple, reflecting her status as a demon who has regained her humanity."
+        }
+    ],
+    "main_chapters": [
+        {
+            "chapter_id": "ch1_snow_and_blood",
+            "title": "The Crimson Snow",
+            "primary_location": "The Kamado Family Mountain",
+            "plot_summary": "After a day of selling charcoal, Tanjiro returns home to find his entire family murdered by a demon, save for his sister Nezuko, who has been turned into one. When Giyu Tomioka arrives to execute her, he is shocked by Nezuko's protectiveness of her brother. Giyu spares them and directs Tanjiro to seek out Sakonji Urokodaki on Mt. Sagiri. For two years, Tanjiro undergoes grueling training to master Water Breathing, eventually slicing a massive boulder to earn his right to enter the Final Selection."
+        },
+        {
+            "chapter_id": "ch2_asakusa_encounter",
+            "title": "Shadows of the City",
+            "primary_location": "Asakusa, Tokyo",
+            "plot_summary": "Now a formal Demon Slayer, Tanjiro travels to the bustling city of Asakusa. He catches the scent of the demon who killed his family and confronts Muzan Kibutsuji, who is hiding in plain sight as a human father. Muzan creates a distraction by turning a passerby into a demon. Tanjiro meets Tamayo and Yushiro, who offer to help cure Nezuko. A battle ensues against Muzan's assassins, Susamaru and Yahaba, which Tanjiro wins with the help of his new allies and Nezuko's burgeoning strength."
+        },
+        {
+            "chapter_id": "ch3_mugen_train",
+            "title": "Nightmare on the Rails",
+            "primary_location": "The Mugen Train",
+            "plot_summary": "Tanjiro, Zenitsu, and Inosuke join the Flame Hashira, Kyojuro Rengoku, on a train where passengers are disappearing. They fall under the spell of Enmu, Lower Moon One, who traps them in dreams. Tanjiro forces himself awake and defeats Enmu, but the Upper Moon Three demon, Akaza, appears immediately after. Rengoku fights Akaza to the death to protect the boys and the passengers. Despite Rengoku's passing, he leaves Tanjiro with a message to keep his heart burning and seek the secrets of the Hinokami Kagura."
+        },
+        {
+            "chapter_id": "ch4_sun_conqueror",
+            "title": "The Village of the Smiths",
+            "primary_location": "The Swordsmith Village",
+            "plot_summary": "Tanjiro visits the hidden village to have his sword repaired and encounters the Mist and Love Hashira. The village is suddenly attacked by Upper Moons Four and Five. During the desperate struggle, Tanjiro refines his Sun Breathing techniques. In the final moments of the battle against Hantengu, Nezuko is exposed to the rising sun. Instead of disintegrating, she survives and gains the ability to walk in daylight, making her the primary target for Muzan\u2019s final conquest."
+        },
+        {
+            "chapter_id": "ch5_eternal_dawn",
+            "title": "The Sunrise of Peace",
+            "primary_location": "The Infinity Castle",
+            "plot_summary": "Muzan launches a direct assault on the Demon Slayer headquarters, trapping everyone in the shifting Infinity Castle. The slayers fight through the remaining Upper Moons at great cost. A final, cataclysmic battle against a poisoned, weakening Muzan breaks out on the streets as dawn approaches. Muzan is vaporized by the sun but attempts to possess Tanjiro, turning him into a Demon King. Through the combined efforts of Nezuko and Kanao, Tanjiro is restored to humanity. The story ends with the disbanding of the Corps and a peaceful transition to a modern era where their descendants live without fear."
+        }
+    ]
+}

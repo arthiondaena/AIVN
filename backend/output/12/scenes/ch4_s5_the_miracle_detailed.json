@@ -1,0 +1,118 @@
+{
+    "scene_id": "ch4_s5_the_miracle",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Muzan Kibutsuji"
+    ],
+    "initial_location_name": "Sun-Drenched Clearing",
+    "initial_location_description": "A grassy clearing at the edge of a forest, the horizon glowing with the intense, golden light of the rising sun. Dust motes dance in the air as the first rays hit the ground.",
+    "initial_bgm": "Tense orchestral swell shifting into emotional piano",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s5_line1",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Desperately] No! Nezuko! Shrink down! Get back into the box! The sun... it's already here!",
+            "tone": "Pure, raw panic. The voice cracks under the weight of impending loss.",
+            "character_pose_expression": "Shielding someone, arms spread wide, protective glare",
+            "stage_action": "screen_shake",
+            "trigger_sfx": "Rising wind and searing heat sound"
+        },
+        {
+            "dialogue_id": "s5_line2",
+            "speaker": "Narrator",
+            "text": "The golden light of dawn spills over the clearing, mercilessly illuminating everything it touches. Tanjiro braces for the smell of burning flesh, for the sound of his sister turning to ash.",
+            "tone": "Solemn and heavy with dread.",
+            "character_pose_expression": "Narrator",
+            "stage_action": "flash",
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line3",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Sobbing] I'm sorry... I'm so sorry I couldn't protect you... I'm so\u2014",
+            "tone": "Agonized weeping, thick with grief and exhaustion.",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line4",
+            "speaker": "Narrator",
+            "text": "Suddenly, a small, firm hand pushes against Tanjiro's shoulder. He feels no smoke, no heat of combustion\u2014only a gentle, steady warmth.",
+            "tone": "A shift toward awe and mystery.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": "Heartbeat thump"
+        },
+        {
+            "dialogue_id": "s5_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko...? You're... you're not...",
+            "tone": "Breathless shock, transitioning from despair to disbelief.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line6",
+            "speaker": "Nezuko Kamado",
+            "text": "Good... morning.",
+            "tone": "Soft, melodic, and slightly hesitant, as if rediscovering the use of her vocal cords.",
+            "character_pose_expression": "Standing neutrally, hands folded in front, calm pink eyes",
+            "stage_action": null,
+            "trigger_sfx": "Birds chirping softly"
+        },
+        {
+            "dialogue_id": "s5_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "[Laughing through tears] You spoke... You're standing in the sun, and you spoke! Thank heavens... thank the heavens!",
+            "tone": "Radiant, overwhelming joy. Every syllable is a celebration of a miracle.",
+            "character_pose_expression": "Gentle laughter, eyes closed, hand partially covering mouth",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s5_line8",
+            "speaker": "Narrator",
+            "text": "The bond between them transcends the laws of nature. But miles away, a dark presence feels the equilibrium of the world shatter.",
+            "tone": "Darkly cinematic and ominous.",
+            "character_pose_expression": "Narrator",
+            "stage_action": null,
+            "trigger_sfx": "Deep, rumbling bass note"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Embrace the miracle.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "s5_b1_line1",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "It has happened... Finally. After a thousand years of searching for that wretched flower...",
+                    "tone": "Whispered intensity, vibrating with a terrifying new purpose.",
+                    "character_pose_expression": "Eyes widened in genuine shock, pupils shrinking to tiny points.",
+                    "stage_action": null,
+                    "trigger_sfx": "Dropping a glass vial, shattering sound"
+                },
+                {
+                    "dialogue_id": "s5_b1_line2",
+                    "speaker": "Muzan Kibutsuji",
+                    "text": "The Blue Spider Lily is irrelevant now. I don't need it. I only need to consume that girl.",
+                    "tone": "Cold, predatory hunger. The voice of a god seeing his ultimate conquest within reach.",
+                    "character_pose_expression": "Smirking cruelly, one hand touching his chin thoughtfully.",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch5_s1_the_hunt_begins"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s5_line8",
+            "new_location_name": "Infinity Castle",
+            "visual_description": "An impossible, multidimensional space of shifting wooden hallways, upside-down stairs, and deep shadows lit by flickering lanterns."
+        }
+    ]
+}

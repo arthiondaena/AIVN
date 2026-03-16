@@ -1,0 +1,153 @@
+{
+    "scene_id": "ch3_s2_the_dream_trap",
+    "characters_present": [
+        "Tanjiro Kamado",
+        "Nezuko Kamado",
+        "Kyojuro Rengoku",
+        "Zenitsu Agatsuma",
+        "Inosuke Hashibira"
+    ],
+    "initial_location_name": "Mugen Train - Passenger Carriage",
+    "initial_location_description": "The interior of a steam train carriage at night, dimly lit by flickering lamps. The air is thick with a strange, swirling violet mist. Passengers and demon slayers are slumped in their seats, eyes closed in an unnaturally deep, heavy sleep.",
+    "initial_bgm": "A rhythmic, hypnotic ticking sound layered with a soft, ethereal humming and the distant sound of wind.",
+    "main_dialogue": [
+        {
+            "dialogue_id": "s2_line1",
+            "speaker": "Narrator",
+            "text": "The rhythmic clatter of the train wheels against the tracks begins to distort, slowing down until it becomes the steady beat of a distant heart.",
+            "tone": "Suspenseful and immersive; the voice should feel like it's drifting away into a fog.",
+            "character_pose_expression": null,
+            "stage_action": null,
+            "trigger_sfx": "rhythmic train tracks fading into a heartbeat"
+        },
+        {
+            "dialogue_id": "s2_line2",
+            "speaker": "Kyojuro Rengoku",
+            "text": "[muttering] Umai... Umai... tasty... [soft snoring]",
+            "tone": "Cheerful even in sleep, but muffled and distant.",
+            "character_pose_expression": "Neutral, standing straight, arms at sides, wide enthusiastic smile",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line3",
+            "speaker": "Zenitsu Agatsuma",
+            "text": "Nezuko-chan... I'll protect you... the peach blossoms... [whimpering]",
+            "tone": "Whining and dreamily romantic, accompanied by a small sleep-mutter.",
+            "character_pose_expression": "Eyes closed, head tilted down in a deep sleep, hand resting on sword hilt",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line4",
+            "speaker": "Tanjiro Kamado",
+            "text": "[gasping] Where... where did the train go? Why is it so cold?",
+            "tone": "Disoriented and shivering, breath hitching in the sudden chill.",
+            "character_pose_expression": "Surprised, eyes wide, mouth open in shock",
+            "stage_action": "flash",
+            "trigger_sfx": "sharp wind gust"
+        },
+        {
+            "dialogue_id": "s2_line5",
+            "speaker": "Tanjiro Kamado",
+            "text": "This smell... it's charcoal. And snow. It's... it's home?",
+            "tone": "Trembling with a mixture of disbelief and heartbreaking hope.",
+            "character_pose_expression": "Sniffing the air intently, nose scrunched, serious expression",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line6",
+            "speaker": "Nezuko Kamado",
+            "text": "Onii-chan! You're back! Did you finish selling the charcoal?",
+            "tone": "The 'Vocal Smile': Bright, sunny, and explicitly inviting, full of innocent familial love.",
+            "character_pose_expression": "Waving one hand enthusiastically, bright and cheerful eyes",
+            "stage_action": "enter",
+            "trigger_sfx": "crunching snow footsteps"
+        },
+        {
+            "dialogue_id": "s2_line7",
+            "speaker": "Tanjiro Kamado",
+            "text": "Nezuko? You're... you're in the sun. You're human. I must be dreaming, but... it feels so real.",
+            "tone": "Choked up, voice cracking with suppressed sobs.",
+            "character_pose_expression": "Crying with a pained expression, hand clutching his chest",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line8",
+            "speaker": "Nezuko Kamado",
+            "text": "What are you talking about, silly? Come inside, everyone is waiting for you. It's warm by the fire!",
+            "tone": "Gently teasing and warm, radiating a calm aura of domestic peace.",
+            "character_pose_expression": "Leaning forward with hands behind her back, curious gaze",
+            "stage_action": null,
+            "trigger_sfx": null
+        },
+        {
+            "dialogue_id": "s2_line9",
+            "speaker": "Narrator",
+            "text": "While Tanjiro is pulled into the warmth of the cabin, back on the train, shadows creep toward the sleeping slayers. Enmu's human agents prepare their ropes.",
+            "tone": "Dark and ominous, contrasting the warmth of the dream with the cold reality of the threat.",
+            "character_pose_expression": null,
+            "stage_action": "screen_shake",
+            "trigger_sfx": "creaking floorboards"
+        }
+    ],
+    "choices_and_branches": [
+        {
+            "choice_text": "Step into the house and embrace the dream.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br1_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I... I just want to stay like this for a little while. Just a moment.",
+                    "tone": "Defeated by longing, a soft and weary whisper.",
+                    "character_pose_expression": "Looking down in somber reflection, hand near his forehead scar",
+                    "stage_action": null,
+                    "trigger_sfx": "crackling fire"
+                },
+                {
+                    "dialogue_id": "br1_line2",
+                    "speaker": "Narrator",
+                    "text": "The warmth of the family hearth envelops him, masking the growing rot of the demon's trap as the agents find his spiritual core.",
+                    "tone": "Tragic and heavy, like a fading sunset.",
+                    "character_pose_expression": null,
+                    "stage_action": null,
+                    "trigger_sfx": "dull thud"
+                }
+            ],
+            "leads_to_scene_id": "ch3_s3_spiritual_core_breach"
+        },
+        {
+            "choice_text": "Reject the vision and look for a way out.",
+            "branching_dialogue": [
+                {
+                    "dialogue_id": "br2_line1",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "No... this isn't right! The smell is off. There's a demon here, hiding in the sweetness!",
+                    "tone": "Shouting with sudden, sharp clarity and mounting anger.",
+                    "character_pose_expression": "Shouting angrily, brows furrowed, pointing forward",
+                    "stage_action": "screen_shake",
+                    "trigger_sfx": "sword unsheathing"
+                },
+                {
+                    "dialogue_id": "br2_line2",
+                    "speaker": "Tanjiro Kamado",
+                    "text": "I'm sorry, Nezuko... but I have to wake up!",
+                    "tone": "Determined and fierce, despite the tears in his eyes.",
+                    "character_pose_expression": "Combat stance, knees bent, hand on sword hilt ready to draw",
+                    "stage_action": null,
+                    "trigger_sfx": null
+                }
+            ],
+            "leads_to_scene_id": "ch3_s3_severing_the_dream"
+        }
+    ],
+    "mid_scene_location_changes": [
+        {
+            "trigger_after_dialogue_id": "s2_line4",
+            "new_location_name": "Snowy Mountain Path - Kamado Home",
+            "visual_description": "A breathtaking winter landscape in the mountains. Tall pines are heavy with snow under a soft, pale sun. In the distance, a small charcoal-burner's hut puffing white smoke looks incredibly inviting against the cold."
+        }
+    ]
+}
