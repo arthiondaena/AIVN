@@ -87,8 +87,8 @@ class StoryWorkflowService:
         main_characters = outline_data.get("main_characters", [])
         side_characters = outline_data.get("side_characters", [])
         
-        # await self._generate_characters_base_only(story.id, main_characters, style, is_side=False)
-        # await self._generate_characters_base_only(story.id, side_characters, style, is_side=True)
+        await self._generate_characters_base_only(story.id, main_characters, style, is_side=False)
+        await self._generate_characters_base_only(story.id, side_characters, style, is_side=True)
         
         return story, outline_data
 
