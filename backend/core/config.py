@@ -10,7 +10,6 @@ class Settings(BaseSettings):
     GOOGLE_CLOUD_BUCKET: str = "aivn"
     DATABASE_URL: str = "sqlite:///vn_story.db"
     GEMINI_API_KEY: str = None
-    REMOVEBG_API_KEY: str = None
 
     # Models
     STORY_MODEL: str = "gemini-2.5-flash"
