@@ -54,7 +54,7 @@ jobs:
             --cpu 1 \
             --port 8000 \
             --timeout 300 \
-            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}"
+            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }},GOOGLE_APPLICATION_CREDENTIALS=${{ secrets.GCP_SA_KEY }}"
 
   deploy-frontend:
     name: Deploy Frontend to Cloud Run
