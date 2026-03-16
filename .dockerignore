@@ -1,0 +1,11 @@
+.venv/
+backend/.venv/
+frontend/node_modules/
+**/__pycache__/
+**/.git/
+**/.github/
+**/.vscode/
+output/
+cache/
+static/
+*.pyc

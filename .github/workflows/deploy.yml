@@ -1,0 +1,98 @@
+# .github/workflows/deploy.yml
+name: CI/CD to Google Cloud Run
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }} # Set this in GitHub Secrets
+  REGION: us-central1 # Update with your preferred region
+  BACKEND_SERVICE_NAME: aivn-backend
+  FRONTEND_SERVICE_NAME: aivn-frontend
+
+jobs:
+  deploy-backend:
+    name: Deploy Backend to Cloud Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Log in to Google Cloud with Service Account Key
+      # Or use Workload Identity (preferred) via `auth` action
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker to use Artifact Registry
+        run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
+
+      - name: Build and Push Backend Image
+        working-directory: ./backend
+        run: |
+          # Use GCB or Local Docker Build. Using Docker for transparency.
+          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${BACKEND_SERVICE_NAME}:${GITHUB_SHA}"
+          docker build -t ${IMAGE_TAG} .
+          docker push ${IMAGE_TAG}
+
+      - name: Deploy Backend to Cloud Run
+        run: |
+          gcloud run deploy ${BACKEND_SERVICE_NAME} \
+            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${BACKEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --region ${REGION} \
+            --platform managed \
+            --allow-unauthenticated \
+            --memory 1Gi \
+            --cpu 1 \
+            --port 8080
+
+  deploy-frontend:
+    name: Deploy Frontend to Cloud Run
+    runs-on: ubuntu-latest
+    needs: deploy-backend # Deploy frontend after backend to easily reference URLs if needed
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker to use Artifact Registry
+        run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
+
+      - name: Build and Push Frontend Image
+        working-directory: ./frontend
+        run: |
+          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA}"
+          # Injecting backend URL into build-time environment variable if needed by your Vite setup
+          # You should set VITE_API_URL in GitHub Secrets or as an env var here.
+          docker build \
+            --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
+            -t ${IMAGE_TAG} .
+          docker push ${IMAGE_TAG}
+
+      - name: Deploy Frontend to Cloud Run
+        run: |
+          gcloud run deploy ${FRONTEND_SERVICE_NAME} \
+            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --region ${REGION} \
+            --platform managed \
+            --allow-unauthenticated \
+            --memory 512Mi \
+            --cpu 1 \
+            --port 8080

@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Suspense, lazy } from 'react';
 
 // Static import for home only to ensure something loads immediately
+import Landing from './views/Landing';
 import Dashboard from './views/Dashboard';
 
 // Lazy imports for others with direct paths
@@ -26,7 +27,8 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<div className="flex h-screen w-screen items-center justify-center">Loading production environment...</div>}>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/create/setup" element={<CreateSetup />} />
             <Route path="/story/:id/editor" element={<OutlineEditor />} />
             <Route path="/story/:id/generating" element={<GenerationScreen />} />

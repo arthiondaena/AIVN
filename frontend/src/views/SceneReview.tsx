@@ -32,7 +32,7 @@ export default function SceneReview() {
         <div className="flex flex-col h-screen bg-neutral-50 font-sans">
             <header className="bg-white border-b border-neutral-200 px-8 py-4 flex justify-between items-center sticky top-0 z-50">
                 <div className="flex items-center gap-4">
-                    <Link to="/" className="text-neutral-500 font-bold hover:text-neutral-700 transition-colors uppercase tracking-widest text-xs">DASHBOARD</Link>
+                    <Link to="/dashboard" className="text-neutral-500 font-bold hover:text-neutral-700 transition-colors uppercase tracking-widest text-xs">DASHBOARD</Link>
                     <ChevronRight size={16} className="text-neutral-300" />
                     <h1 className="text-xl font-bold text-neutral-900">Script Review</h1>
                 </div>

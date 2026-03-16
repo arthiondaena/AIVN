@@ -63,7 +63,6 @@ ArtStyle = Literal[
     "chibi style",
 ]
 
-# ── Request models ─────────────────────────────────────────────────────────────
 
 class StoryOutlineRequest(BaseModel):
     synopsis: str = Field(..., description="Story synopsis written by the user.")

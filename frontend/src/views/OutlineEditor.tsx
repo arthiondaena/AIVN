@@ -20,7 +20,7 @@ export default function OutlineEditor() {
         } else {
             // In a real app, we'd fetch the outline here if not passed in state
             // For now, redirecting to dashboard if no data
-            navigate('/');
+            navigate('/dashboard');
         }
     }, [location.state, navigate]);
 

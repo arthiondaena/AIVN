@@ -47,7 +47,9 @@ export default function CreateSetup() {
         setLoading(true);
         try {
             const response = await storyApi.createOutline(synopsis, artStyle);
-            navigate(`/story/${response.story_id}/editor`, { state: response });
+            // Omit character_images (base64) from navigation state to prevent exceeding the browser's 2MB history state limit.
+            const { character_images, ...safeState } = response;
+            navigate(`/story/${response.story_id}/editor`, { state: safeState });
         } catch (error) {
             console.error('Failed to create outline:', error);
             setLoading(false);
