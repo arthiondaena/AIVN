@@ -14,15 +14,23 @@ from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import select
 
 from vn_engine.headless import HeadlessGameEngine
-from core.database import get_db
-from core.orm import Story, Character, Chapter
+from core.database import get_db, engine
+from core.orm import Story, Character, Chapter, Base
 from services.story_workflow import StoryWorkflowService
 from vn_engine.converter import StoryConverter
 from models.story_outline_models import MainStoryOutline
 
 logger = logging.getLogger(__name__)
 
+# Create database tables automatically
+def create_db_tables():
+    Base.metadata.create_all(bind=engine)
+
 app = FastAPI(title="AIVN Web Game Engine")
+
+@app.on_event("startup")
+async def startup_event():
+    create_db_tables()
 
 app.add_middleware(
     CORSMiddleware,
