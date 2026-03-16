@@ -9,7 +9,7 @@ import type {
     CharacterImageResponse
 } from '../types';
 
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://aivn-backend-771191326524.us-central1.run.app';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
