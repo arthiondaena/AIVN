@@ -12,6 +12,8 @@ RUN apk add --no-cache git && \
 
 # Copy source and build
 COPY . .
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 # Using --skipLibCheck and --noEmit (if needed) but essentially we want to bypass 
 # strict unused variable checks during the production build containerization 
 # if they are blocking the build. Alternatively, we can just run vite build.
