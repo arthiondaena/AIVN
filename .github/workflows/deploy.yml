@@ -36,17 +36,11 @@ jobs:
       - name: Configure Docker to use Artifact Registry
         run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
 
-      - name: Build and Push Backend Image
+      - name: Deploy Backend to Cloud Run
         working-directory: ./backend
         run: |
-          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${BACKEND_SERVICE_NAME}:${GITHUB_SHA}"
-          docker build -t ${IMAGE_TAG} .
-          docker push ${IMAGE_TAG}
-
-      - name: Deploy Backend to Cloud Run
-        run: |
           gcloud run deploy ${BACKEND_SERVICE_NAME} \
-            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${BACKEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --source . \
             --region ${REGION} \
             --platform managed \
             --allow-unauthenticated \
@@ -77,24 +71,15 @@ jobs:
       - name: Configure Docker to use Artifact Registry
         run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
 
-      - name: Build and Push Frontend Image
+      - name: Deploy Frontend to Cloud Run
         working-directory: ./frontend
         run: |
-          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA}"
-          # Injecting backend URL into build-time environment variable if needed by your Vite setup
-          # You should set VITE_API_URL in GitHub Secrets or as an env var here.
-          docker build \
-            --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
-            -t ${IMAGE_TAG} .
-          docker push ${IMAGE_TAG}
-
-      - name: Deploy Frontend to Cloud Run
-        run: |
           gcloud run deploy ${FRONTEND_SERVICE_NAME} \
-            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --source . \
             --region ${REGION} \
             --platform managed \
             --allow-unauthenticated \
             --memory 512Mi \
             --cpu 1 \
-            --port 8080
+            --port 8080 \
+            --set-env-vars "VITE_API_URL=${{ secrets.VITE_API_URL }}"
