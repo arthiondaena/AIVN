@@ -53,8 +53,7 @@ jobs:
             --memory 1Gi \
             --cpu 1 \
             --port 8000 \
-            --timeout 300 \
-            --set-env-vars PORT=8000
+            --timeout 300
 
   deploy-frontend:
     name: Deploy Frontend to Cloud Run

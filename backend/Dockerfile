@@ -21,5 +21,6 @@ COPY . /app/
 
 EXPOSE 8000
 
-# Cloud Run sets the PORT env variable. We must listen on $PORT.
-CMD ["uv", "run", "uvicorn", "api_app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Command to run the app using Uvicorn
+# We use the PORT environment variable provided by Cloud Run.
+CMD ["sh", "-c", "uv run uvicorn api_app:app --host 0.0.0.0 --port ${PORT:-8000}"]
