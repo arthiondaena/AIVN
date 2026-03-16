@@ -9,6 +9,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }} # Set this in GitHub Secrets
   REGION: us-central1 # Update with your preferred region
+  REPOSITORY: aivn-images # The name of your Artifact Registry repository
   BACKEND_SERVICE_NAME: aivn-backend
   FRONTEND_SERVICE_NAME: aivn-frontend
 
@@ -38,15 +39,14 @@ jobs:
       - name: Build and Push Backend Image
         working-directory: ./backend
         run: |
-          # Use GCB or Local Docker Build. Using Docker for transparency.
-          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${BACKEND_SERVICE_NAME}:${GITHUB_SHA}"
+          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${BACKEND_SERVICE_NAME}:${GITHUB_SHA}"
           docker build -t ${IMAGE_TAG} .
           docker push ${IMAGE_TAG}
 
       - name: Deploy Backend to Cloud Run
         run: |
           gcloud run deploy ${BACKEND_SERVICE_NAME} \
-            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${BACKEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${BACKEND_SERVICE_NAME}:${GITHUB_SHA} \
             --region ${REGION} \
             --platform managed \
             --allow-unauthenticated \
@@ -78,7 +78,7 @@ jobs:
       - name: Build and Push Frontend Image
         working-directory: ./frontend
         run: |
-          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA}"
+          IMAGE_TAG="${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA}"
           # Injecting backend URL into build-time environment variable if needed by your Vite setup
           # You should set VITE_API_URL in GitHub Secrets or as an env var here.
           docker build \
@@ -89,7 +89,7 @@ jobs:
       - name: Deploy Frontend to Cloud Run
         run: |
           gcloud run deploy ${FRONTEND_SERVICE_NAME} \
-            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA} \
+            --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${FRONTEND_SERVICE_NAME}:${GITHUB_SHA} \
             --region ${REGION} \
             --platform managed \
             --allow-unauthenticated \
