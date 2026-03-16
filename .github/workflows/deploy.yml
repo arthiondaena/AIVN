@@ -52,7 +52,7 @@ jobs:
             --allow-unauthenticated \
             --memory 1Gi \
             --cpu 1 \
-            --port 8080
+            --port 8000
 
   deploy-frontend:
     name: Deploy Frontend to Cloud Run
