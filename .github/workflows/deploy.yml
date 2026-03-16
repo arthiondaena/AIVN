@@ -48,7 +48,8 @@ jobs:
             --cpu 1 \
             --port 8000 \
             --timeout 300 \
-            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}"
+            --set-env-vars "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" \
+            --quiet
 
   deploy-frontend:
     name: Deploy Frontend to Cloud Run
@@ -82,4 +83,5 @@ jobs:
             --memory 512Mi \
             --cpu 1 \
             --port 8080 \
-            --set-env-vars "VITE_API_URL=${{ secrets.VITE_API_URL }}"
+            --set-env-vars "VITE_API_URL=${{ secrets.VITE_API_URL }}" \
+            --quiet
