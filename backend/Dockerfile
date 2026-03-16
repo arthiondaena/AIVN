@@ -21,6 +21,5 @@ COPY . /app/
 
 EXPOSE 8000
 
-# Cloud Run sets the PORT env variable.
-# We use uv run to execute the app within the managed environment.
+# Cloud Run sets the PORT env variable. We must listen on $PORT.
 CMD ["uv", "run", "uvicorn", "api_app:app", "--host", "0.0.0.0", "--port", "8000"]
