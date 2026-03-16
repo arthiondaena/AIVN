@@ -91,6 +91,8 @@ class HeadlessGameEngine:
                         break
 
             if pose_path:
+                if not "transparent" in pose_path:
+                    pose_path = pose_path.replace(".png", "_transparent.png")
                 formatted_chars[char_name] = f"/assets/{pose_path.replace(chr(92), '/')}"
             else:
                 # If all else fails, log it and don't send a broken URL
